@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "bibliografia.html#em-português",
+    "href": "bibliografia.html#em-português",
+    "title": "Bibliografia",
+    "section": "Em Português",
+    "text": "Caio Lente, Athos Damiani, Beatriz Milz, Daniel Falbel, Fernando Correa, Julio Trecenti, Tereza Lacerda, William Amorim. Zen do R. Disponível em: https://curso-r.github.io/zen-do-r/git-github.html\nAthos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Correa, Julio Tricenti, Nicole Luduvice, William Amorim. Ciência de Dados em R. Disponível em: https://livro.curso-r.com/9-relatorios.html"
+  },
+  {
+    "objectID": "bibliografia.html#em-inglês",
+    "href": "bibliografia.html#em-inglês",
+    "title": "Bibliografia",
+    "section": "Em Inglês",
+    "text": "Yihui Xie, J. J. Allaire, Garrett Grolemund. R Markdown: The Definitive Guide. 2019. Chapman & Hall/CRC. Disponível em: https://bookdown.org/yihui/rmarkdown/\nYihui Xie, Christophe Dervieux, Emily Riederer. R Markdown Cookbook. 2021. Chapman & Hall/CRC. Disponível em: https://bookdown.org/yihui/rmarkdown-cookbook/\nJenny Bryan, the STAT 545 TAs, Jim Hester. Happy Git and GitHub for the useR. Disponível em: https://happygitwithr.com/\nThe Carpentries & Data Carpentry. Reproducible Research Introduction. Disponível em: https://datacarpentry.org/rr-intro/\nNational Center for Ecological Analysis and Synthesis (NCEAS). Reproducible Analysis With R. Disponível em: https://nceas.github.io/sasap-training/materials/reproducible_research_in_r_fairbanks/"
+  },
+  {
+    "objectID": "profs.html",
+    "href": "profs.html",
+    "title": "Docentes",
+    "section": "",
+    "text": "Informações Adicionais Quem é a instrutora?\nhttp://lattes.cnpq.br/5150665880581477 https://www.linkedin.com/in/beatrizmilz/\nhttps://beatrizmilz.com/"
+  },
+  {
+    "objectID": "index.html#descrição",
+    "href": "index.html#descrição",
+    "title": "Relatórios reprodutíveis com R  Curso de Verão IME-USP 2022",
+    "section": "Descrição",
+    "text": "No curso utilizaremos a linguagem de programação R e a interface de desenvolvimento RStudio. Primeiramente será apresentada uma introdução ao conceito de reprodutibilidade no contexto de desenvolvimento em R, e discutiremos boas práticas ao longo do curso.\nUtilizaremos o RMarkdown (https://rmarkdown.rstudio.com/), um pacote que possibilita criar relatórios reprodutíveis no R, como: listas de exercícios, relatórios, apresentações em HTML, apresentações em powerpoint, relatórios em word, relatórios interativos, entre outros.\nAprenderemos também a criar relatórios reprodutíveis utilizando relatórios parametrizados, que permitem especificar parâmetros para customizar a análise, o que é muito útil para criar relatórios que podem ser reutilizados.\nAlém disso, o conceito de controle de versão com Git será apresentado e também como podemos configurar o Git e o GitHub no RStudio para que seja possível versionar os projetos que criaremos em R. Também aprenderemos a disponibilizar o conteúdo criado no curso de forma online, através do GitHub."
+  },
+  {
+    "objectID": "index.html#público-alvo",
+    "href": "index.html#público-alvo",
+    "title": "Relatórios reprodutíveis com R  Curso de Verão IME-USP 2022",
+    "section": "Público Alvo",
+    "text": "Estudantes de graduação que desejam se aprofundar no conhecimento do R.\nProfissionais do mercado de trabalho que usam o R e desejam aprimorar os seus conhecimentos.\nPessoas na academia com interesse em tornar suas análises e códigos mais legíveis, reprodutíveis, eficientes e organizados."
+  },
+  {
+    "objectID": "index.html#pré-requisitos",
+    "href": "index.html#pré-requisitos",
+    "title": "Relatórios reprodutíveis com R  Curso de Verão IME-USP 2022",
+    "section": "Pré-requisitos",
+    "text": "É recomendado que as pessoas participantes estejam familiarizadas com o conteúdo do curso Introdução à programação em R."
+  },
+  {
+    "objectID": "index.html#método-avaliativo",
+    "href": "index.html#método-avaliativo",
+    "title": "Relatórios reprodutíveis com R  Curso de Verão IME-USP 2022",
+    "section": "Método avaliativo",
+    "text": "Exercícios (em classe e extraclasse)\nProjeto prático final (extraclasse)"
+  },
+  {
+    "objectID": "index.html#informações-gerais",
+    "href": "index.html#informações-gerais",
+    "title": "Relatórios reprodutíveis com R  Curso de Verão IME-USP 2022",
+    "section": "Informações gerais",
+    "text": "Carga horária: 15h (5 aulas de 3h)\nLocal: Online\nDatas: 2, 7, 9, 14, 16 de fevereiro de 2022 (2ª e 4ª)\nHorário: Manhã (09h-12h)\nVagas: 75\n\nInformações em breve no site do Programa de Verão IME-USP."
+  },
+  {
+    "objectID": "faq.html",
+    "href": "faq.html",
+    "title": "Perguntas Frequentes (FAQ)",
+    "section": "",
+    "text": "O curso será online ou presencial?\n\n\nO curso será oferecido de forma online.\n\n\nApenas alunos da USP podem participar do curso?\n\n\nAs inscrições serão abertas para todas as pessoas interessadas.\n\n\nComo posso me inscrever?\n\n\nA inscrição será realizada através do IME-USP. Acompanhe as informações na página do Programa de Verão do IME-USP: https://www.ime.usp.br/~verao/"
+  }
+]

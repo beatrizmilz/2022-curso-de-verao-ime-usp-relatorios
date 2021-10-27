@@ -1,0 +1,24 @@
+project:
+  type: site
+  output-dir: docs
+
+site:
+  title: "Relatórios reprodutíveis com R"
+  navbar:
+    type: dark
+    background: primary
+    left:
+      - href: index.qmd
+        text: Página inicial
+      - profs.qmd
+      - bibliografia.qmd
+      - faq.qmd
+
+format:
+  html:
+    theme: yeti
+    css: styles.css
+    toc: true
+
+
+
