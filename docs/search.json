@@ -28,39 +28,39 @@
     "text": "Carol Moreno\nTereza Lacerda"
   },
   {
-    "objectID": "index.html#descrição",
-    "href": "index.html#descrição",
-    "title": "Relatórios reprodutíveis com R  Curso de Verão IME-USP 2022",
-    "section": "Descrição",
-    "text": "No curso utilizaremos a linguagem de programação R e a interface de desenvolvimento RStudio. Primeiramente será apresentada uma introdução ao conceito de reprodutibilidade no contexto de desenvolvimento em R, e discutiremos boas práticas ao longo do curso.\nUtilizaremos o RMarkdown (https://rmarkdown.rstudio.com/), um pacote que possibilita criar relatórios reprodutíveis no R, como: listas de exercícios, relatórios, apresentações em HTML, apresentações em powerpoint, relatórios em word, relatórios interativos, entre outros.\nAprenderemos também a criar relatórios reprodutíveis utilizando relatórios parametrizados, que permitem especificar parâmetros para customizar a análise, o que é muito útil para criar relatórios que podem ser reutilizados.\nAlém disso, o conceito de controle de versão com Git será apresentado e também como podemos configurar o Git e o GitHub no RStudio para que seja possível versionar os projetos que criaremos em R. Também aprenderemos a disponibilizar o conteúdo criado no curso de forma online, através do GitHub."
-  },
-  {
-    "objectID": "index.html#público-alvo",
-    "href": "index.html#público-alvo",
-    "title": "Relatórios reprodutíveis com R  Curso de Verão IME-USP 2022",
+    "objectID": "informacoes-gerais.html#público-alvo",
+    "href": "informacoes-gerais.html#público-alvo",
+    "title": "Informações gerais",
     "section": "Público Alvo",
     "text": "Estudantes de graduação que desejam se aprofundar no conhecimento do R.\nProfissionais do mercado de trabalho que usam o R e desejam aprimorar os seus conhecimentos.\nPessoas na academia com interesse em tornar suas análises e códigos mais legíveis, reprodutíveis, eficientes e organizados."
   },
   {
-    "objectID": "index.html#pré-requisitos",
-    "href": "index.html#pré-requisitos",
-    "title": "Relatórios reprodutíveis com R  Curso de Verão IME-USP 2022",
+    "objectID": "informacoes-gerais.html#pré-requisitos",
+    "href": "informacoes-gerais.html#pré-requisitos",
+    "title": "Informações gerais",
     "section": "Pré-requisitos",
     "text": "É recomendado que as pessoas participantes estejam familiarizadas com o conteúdo do curso Introdução à programação em R."
   },
   {
-    "objectID": "index.html#método-avaliativo",
-    "href": "index.html#método-avaliativo",
-    "title": "Relatórios reprodutíveis com R  Curso de Verão IME-USP 2022",
+    "objectID": "informacoes-gerais.html#método-avaliativo",
+    "href": "informacoes-gerais.html#método-avaliativo",
+    "title": "Informações gerais",
     "section": "Método avaliativo",
     "text": "Exercícios (em classe e extraclasse)\nProjeto prático final (extraclasse)"
   },
   {
-    "objectID": "index.html#informações-gerais",
-    "href": "index.html#informações-gerais",
-    "title": "Relatórios reprodutíveis com R  Curso de Verão IME-USP 2022",
+    "objectID": "informacoes-gerais.html#informações-gerais",
+    "href": "informacoes-gerais.html#informações-gerais",
+    "title": "Informações gerais",
     "section": "Informações gerais",
     "text": "Carga horária: 15h (5 aulas de 3h)\nLocal: Online\nDatas: 2, 7, 9, 14, 16 de fevereiro de 2022 (2ª e 4ª)\nHorário: Manhã (09h-12h)\nVagas: 75\n\nInformações em breve no site do Programa de Verão IME-USP."
+  },
+  {
+    "objectID": "index.html#descrição",
+    "href": "index.html#descrição",
+    "title": "Relatórios reprodutíveis com R",
+    "section": "Descrição",
+    "text": "No curso utilizaremos a linguagem de programação R e a interface de desenvolvimento RStudio. Primeiramente será apresentada uma introdução ao conceito de reprodutibilidade no contexto de desenvolvimento em R, e discutiremos boas práticas ao longo do curso.\nUtilizaremos o RMarkdown (https://rmarkdown.rstudio.com/), um pacote que possibilita criar relatórios reprodutíveis no R, como: listas de exercícios, relatórios, apresentações em HTML, apresentações em powerpoint, relatórios em word, relatórios interativos, entre outros.\nAprenderemos também a criar relatórios reprodutíveis utilizando relatórios parametrizados, que permitem especificar parâmetros para customizar a análise, o que é muito útil para criar relatórios que podem ser reutilizados.\nAlém disso, o conceito de controle de versão com Git será apresentado e também como podemos configurar o Git e o GitHub no RStudio para que seja possível versionar os projetos que criaremos em R. Também aprenderemos a disponibilizar o conteúdo criado no curso de forma online, através do GitHub.\n\nMais informações na página de informações gerais sobre o curso. Informações em breve no site do Programa de Verão IME-USP."
   },
   {
     "objectID": "faq.html",

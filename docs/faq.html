@@ -28,10 +28,12 @@
   <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
   <script src="site_libs/quarto-html/anchor.min.js"></script>
   <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-  <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <link class="quarto-color-scheme" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css">
   <script src="site_libs/bootstrap/bootstrap.min.js"></script>
   <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-  <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link class="quarto-color-scheme" href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" href="site_libs/bootstrap/bootstrap-dark.min.css">
   <script id="quarto-search-options" type="application/json">{
     "location": "navbar",
     "copy-button": false,
@@ -46,8 +48,9 @@
 <div id="quarto-search-results"></div>
 <header id="quarto-header" class="headroom fixed-top">
 <nav class="navbar navbar-expand-lg navbar-light ">
-    <div class="container-fluid">
+    <div class="container-fluid mx-auto">
   <a class="navbar-brand" href="./index.html">
+    <img src="https://www.ime.usp.br/verao/assets/images/logo_verao.png" alt="">
     <span class="navbar-title">Relatórios reprodutíveis com R</span>
   </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -56,7 +59,10 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">Página inicial</a>
+    <a class="nav-link active" href="./index.html" aria-current="page">Página inicial</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./informacoes-gerais.html">Informações gerais</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./profs.html">Docentes</a>
@@ -65,23 +71,68 @@
     <a class="nav-link" href="./bibliografia.html">Bibliografia</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./faq.html" aria-current="page">Perguntas Frequentes (FAQ)</a>
+    <a class="nav-link" href="./faq.html">Perguntas Frequentes (FAQ)</a>
   </li>  
 </ul>
+          <div>
+            <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+          </div>
           <div id="quarto-search" class="mb-0 " title="Search">
 </div>
       </div> <!-- /navcollapse -->
   </div> <!-- /container-fluid -->
 </nav>
+<nav class="quarto-secondary-nav py-2 d-lg-none d-md-block " data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <div class="container-fluid d-flex justify-content-between">
+    <h1 class="quarto-secondary-nav-title mb-0 fs-3 d-inline">Perguntas Frequentes (FAQ)</h1>
+    <button type="button" class="quarto-btn-toggle btn d-lg-none py-0 px-1 d-inline-block border-0 ">
+      <i class="bi bi-chevron-right"></i>
+    </button>
+  </div>
+</nav>
 </header>
  <!-- /navbar/sidebar -->
 <div class="container-fluid quarto-container d-flex flex-column page-layout-article" id="quarto-content">
 <div class="row flex-fill">
+  <div id="quarto-sidebar" class="col col-12 col-lg-3 d-lg-flex px-0 pt-0 sidebar collapse sidebar-navigation">
+    <nav class="ms-lg-auto floating overflow-auto">
+  <div class="sidebar-menu-container"> 
+  <ul class="list-unstyled mt-1 px-3">
+      <ul class="list-unstyled sidebar-section depth1">
+    <li class="">
+        <div class="me-auto">
+            <a class="sidebar-section-item d-inline-flex text-start w-100 " data-bs-toggle="collapse" data-bs-target="#informaçõessobreocurso-collapse" aria-expanded="true">
+              <div class="me-auto sidebar-section-item">Informações sobre o curso</div>
+            <div><i class="bi bi-chevron-right ms-2"></i></div>
+            </a>
+        </div>
+      <div class="collapse  show" id="informaçõessobreocurso-collapse">
+        <ul class="list-unstyled sidebar-item-contents">
+          <li class="sidebar-item">
+  <a href="./index.html" class="">Página inicial</a>
+</li>
+          <li class="sidebar-item">
+  <a href="./profs.html" class="">Docentes</a>
+</li>
+          <li class="sidebar-item">
+  <a href="./bibliografia.html" class="">Bibliografia</a>
+</li>
+          <li class="sidebar-item">
+  <a href="./faq.html" class="active">Perguntas Frequentes (FAQ)</a>
+</li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+  </ul>
+  </div>
+</nav>
+  </div>
   <div id="quarto-toc-sidebar" class=" pt-0 col col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-toc order-last"></div>
-  <div class="col mx-auto col-sm-12 col-md-9 col-lg-8 col-xl-7 px-lg-4 pe-xxl-4 ps-xxl-0">
+  <div class="col mx-auto col-sm-12 col-md-9 col-lg-7 col-xl-7 px-lg-4 pe-xxl-4 ps-xxl-3">
 <main>
 <header id="title-block-header">
-<h1 class="title display-7">Perguntas Frequentes (FAQ)</h1>
+<h1 class="title d-none d-lg-block display-7">Perguntas Frequentes (FAQ)</h1>
 </header>
 <ol type="1">
 <li>O curso será online ou presencial?</li>
@@ -105,6 +156,102 @@
 
 <script type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('div.sidebar-toc .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+    } else {
+      disableStylesheet(alternateStylesheets);
+    }
+    manageTransitions('.quarto-toc-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      return window.localStorage.getItem("quarto-color-scheme");
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = null;
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.id = "quarto-color-scheme-toggle";
+    a.classList.add('top-right');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -184,6 +331,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
 </div> <!-- /main column -->
 </div> <!-- /row -->
+<div class="row">
+  <div class="nav-footer">
+      <div class="nav-footer-center me-auto ms-auto">Página criada usando <a href="https://quarto.org/">quarto</a>. Estes materiais são disponibilizados com a licença Creative Commons Atribuição-CompartilhaIgual (CC BY-SA), ou seja, você pode compartilhar e adaptar este material, porém deve atribuir os créditos para as pessoas autoras, adicionando um link para o material original, e o seu material também deve ter este mesmo tipo de licença.</div>
+  </div>
+</div>
 </div> <!-- /container fluid -->
 
 

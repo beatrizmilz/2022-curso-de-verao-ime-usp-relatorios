@@ -1,6 +1,9 @@
 ---
-title: "Relatórios reprodutíveis com R <br><br> Curso de Verão IME-USP 2022"
+title: "Relatórios reprodutíveis com R"
 ---
+
+<h3> ![](https://www.ime.usp.br/verao/assets/images/logo_verao.png){fig-align="center"} Curso de Verão IME-USP 2022 </h3>
+
 
 ## Descrição
 
@@ -14,36 +17,5 @@ Além disso, o conceito de controle de versão com Git será apresentado e tamb�
 
 
 
-## Público Alvo
-
-- Estudantes de graduação que desejam se aprofundar no conhecimento do R.
-
-- Profissionais do mercado de trabalho que usam o R e desejam aprimorar os seus conhecimentos.
-
-- Pessoas na academia com interesse em tornar suas análises e códigos mais legíveis, reprodutíveis, eficientes e organizados.
-
-## Pré-requisitos
-
-É recomendado que as pessoas participantes estejam familiarizadas com o conteúdo do curso Introdução à programação em R.
-
-## Método avaliativo
-
-- Exercícios (em classe e extraclasse)
-
-- Projeto prático final (extraclasse)
-
-
-## Informações gerais
-
-**Carga horária:** 15h (5 aulas de 3h)
-
-**Local:** Online
-
-**Datas:** 2, 7, 9, 14, 16 de fevereiro de 2022 (2ª e 4ª)
-
-**Horário:** Manhã (09h-12h)
-
-**Vagas:** 75
-
-> Informações em breve no site do [Programa de Verão IME-USP](https://www.ime.usp.br/~verao/).
+> Mais informações na página de [informações gerais sobre o curso](informacoes-gerais.qmd). Informações em breve no site do [Programa de Verão IME-USP](https://www.ime.usp.br/~verao/).
  

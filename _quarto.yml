@@ -4,19 +4,36 @@ project:
 
 site:
   title: "Relatórios reprodutíveis com R"
+  footer: "Página criada usando [quarto](https://quarto.org/). Estes materiais são disponibilizados com a licença Creative Commons Atribuição-CompartilhaIgual (CC BY-SA), ou seja, você pode compartilhar e adaptar este material, porém deve atribuir os créditos para as pessoas autoras, adicionando um link para o material original, e o seu material também deve ter este mesmo tipo de licença."
+  repo-url: https://github.com/beatrizmilz/2022-curso-de-verao-ime-usp-relatorios
   navbar:
     type: dark
     background: primary
     left:
       - href: index.qmd
         text: Página inicial
+      - informacoes-gerais.qmd
       - profs.qmd
-      - bibliografia.qmd
       - faq.qmd
+    logo: https://www.ime.usp.br/verao/assets/images/logo_verao.png
+  sidebar:
+    style: "floating"
+    search: true
+    contents:
+      - section: "Informações sobre o curso"
+        contents:
+          - href: index.qmd
+            text: Página inicial
+          - informacoes-gerais.qmd
+          - profs.qmd
+          - bibliografia.qmd
+          - faq.qmd
 
 format:
   html:
-    theme: yeti
+    theme:
+      light: yeti
+      dark: superhero
     css: styles.css
     toc: true
 
