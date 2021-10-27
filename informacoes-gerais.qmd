@@ -2,6 +2,10 @@
 title: "Informações gerais"
 ---
 
+:::{.callout-tip}
+Incrições em breve no site do [Programa de Verão IME-USP](https://www.ime.usp.br/~verao/).
+:::
+
 ## Público Alvo
 
 - Estudantes de graduação que desejam se aprofundar no conhecimento do R.
@@ -33,5 +37,4 @@ title: "Informações gerais"
 
 **Vagas:** 75
 
-> Informações em breve no site do [Programa de Verão IME-USP](https://www.ime.usp.br/~verao/).
- 
+

@@ -5,7 +5,6 @@ title: "Relatórios reprodutíveis com R"
 <h3> ![](https://www.ime.usp.br/verao/assets/images/logo_verao.png){fig-align="center"} Curso de Verão IME-USP 2022 </h3>
 
 
-## Descrição
 
  No curso utilizaremos a linguagem de programação R e a interface de desenvolvimento RStudio. Primeiramente será apresentada uma introdução ao conceito de reprodutibilidade no contexto de desenvolvimento em R, e discutiremos boas práticas ao longo do curso. 
  
@@ -16,6 +15,6 @@ Aprenderemos também a criar relatórios reprodutíveis utilizando relatórios p
 Além disso, o conceito de controle de versão com Git será apresentado e também como podemos configurar o Git e o GitHub no RStudio para que seja possível versionar os projetos que criaremos em R. Também aprenderemos a disponibilizar o conteúdo criado no curso de forma online, através do GitHub.
 
 
-
-> Mais informações na página de [informações gerais sobre o curso](informacoes-gerais.qmd). Informações em breve no site do [Programa de Verão IME-USP](https://www.ime.usp.br/~verao/).
- 
+:::{.callout-tip}
+Mais informações na página de [informações gerais sobre o curso](informacoes-gerais.qmd). Informações em breve no site do [Programa de Verão IME-USP](https://www.ime.usp.br/~verao/).
+:::
