@@ -1,6 +1,14 @@
 library(magrittr)
-tibble::tribble(~ url_foto, ~nome, ~atividade,
-                ~url_github, ~url_twitter, ~url_facebook, ~url_site, ~mini_bio) %>%
+tibble::tribble(
+  ~ url_foto,
+  ~ nome,
+  ~ atividade,
+  ~ url_github,
+  ~ url_twitter,
+  ~ url_facebook,
+  ~ url_site,
+  ~ mini_bio
+) %>%
 
 
   # Infos BEA
@@ -25,20 +33,22 @@ tibble::tribble(~ url_foto, ~nome, ~atividade,
     url_foto = "https://pbs.twimg.com/profile_images/858423807022964736/x1Sjv9bJ_400x400.jpg",
     nome = "Ana Carolina Moreno",
     atividade = "Monitora",
-   # url_github = "",
+    url_github = "https://github.com/anacarolinamoreno",
     url_twitter = "https://twitter.com/anarina",
     url_facebook = "https://www.facebook.com/anacarolinamoreno/",
-    mini_bio = "Em breve" ) %>%
+    mini_bio = "Em breve"
+  ) %>%
 
   # Infos Tereza
 
-tibble::add_row(
-  url_foto = "https://avatars.githubusercontent.com/u/83192430?v=4",
-  nome = "Tereza Lacerda",
-  atividade = "Monitora",
-   url_github = "https://github.com/terezalacerda",
-  url_twitter = "https://twitter.com/tereza_lacerda",
-  mini_bio = "Em breve" ) %>%
+  tibble::add_row(
+    url_foto = "https://avatars.githubusercontent.com/u/83192430?v=4",
+    nome = "Tereza Lacerda",
+    atividade = "Monitora",
+    url_github = "https://github.com/terezalacerda",
+    url_twitter = "https://twitter.com/tereza_lacerda",
+    mini_bio = "Em breve"
+  ) %>%
 
 
 
