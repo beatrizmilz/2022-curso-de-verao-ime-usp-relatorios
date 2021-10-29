@@ -38,6 +38,7 @@ format:
       dark: superhero
     css: styles.css
     toc: true
+    toc-title: "Nessa página"
 
 
 
