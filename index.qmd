@@ -16,5 +16,6 @@ Além disso, o conceito de controle de versão com Git será apresentado e tamb�
 
 
 :::{.callout-tip}
+## Dica
 Mais informações na página de [informações gerais sobre o curso](informacoes-gerais.qmd). Informações em breve no site do [Programa de Verão IME-USP](https://www.ime.usp.br/~verao/).
 :::

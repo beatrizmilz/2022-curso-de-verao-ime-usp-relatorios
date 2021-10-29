@@ -3,6 +3,7 @@ title: "Informações gerais"
 ---
 
 :::{.callout-tip}
+## Dica
 Inscrições em breve no site do [Programa de Verão IME-USP](https://www.ime.usp.br/~verao/).
 :::
 
