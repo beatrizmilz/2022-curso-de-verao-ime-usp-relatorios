@@ -1,5 +1,7 @@
 ---
 title: "Perguntas Frequentes (FAQ)"
+params: 
+  link_inscricao: "https://www.ime.usp.br/~verao/"
 ---
 
 1. O curso será online ou presencial?
@@ -12,5 +14,9 @@ title: "Perguntas Frequentes (FAQ)"
 
 3. Como posso me inscrever?
 
-> A inscrição será realizada através do IME-USP. Acompanhe as informações na página do Programa de Verão do IME-USP: <https://www.ime.usp.br/~verao/>
+> A inscrição será realizada através do IME-USP. Acompanhe as informações na página do Programa de Verão do IME-USP:  <`r params$link_inscricao`>
+
+4. O curso é gratuito?
+
+> Não, o curso é pago. Acompanhe as informações na página do Programa de Verão do IME-USP: <`r params$link_inscricao`>
 
