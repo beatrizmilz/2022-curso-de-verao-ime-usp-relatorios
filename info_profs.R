@@ -36,7 +36,8 @@ tibble::tribble(
     url_github = "https://github.com/anacarolinamoreno",
     url_twitter = "https://twitter.com/anarina",
     url_facebook = "https://www.facebook.com/anacarolinamoreno/",
-    mini_bio = "Em breve"
+    mini_bio = "- Jornalista de dados, focada atualmente na cobertura da pandemia com análises de dados usando R. <br>
+    - Participa do R-Ladies SP desde janeiro de 2019."
   ) %>%
 
   # Infos Tereza
