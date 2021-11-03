@@ -48,8 +48,13 @@ tibble::tribble(
     atividade = "Monitora",
     url_github = "https://github.com/terezalacerda",
     url_twitter = "https://twitter.com/tereza_lacerda",
-    mini_bio = "Em breve"
+    mini_bio = "- Estudante de Estatística na Universidade de São Paulo (IME/USP) <br>
+- Estagiária na <a href='https://curso-r.com/'>Curso-R</a> <br>
+- Interessada em Análise de Dados Musicais"
   ) %>%
+
+
+
 
 
 
