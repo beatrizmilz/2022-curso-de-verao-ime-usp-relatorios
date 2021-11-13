@@ -29,7 +29,7 @@ dplyr::mutate(
   
   
   destaque = glue::glue("{mini_bio}"),
-  foto = glue::glue("<center><img src='{url_foto}' width='100' style='border-radius: 50%;'><br><b>{nome}</b> <br> {icon_site} {icon_github} {icon_twitter} {icon_facebook}</center>")
+  foto = glue::glue("<center><img src='{url_foto}' width='100' style='border-radius: 50%;'><br><b>{nome}</b> <br> {icon_site} {icon_github} {icon_linkedin} {icon_twitter} {icon_facebook}</center>")
     ) %>%  
   dplyr::arrange(nome) %>% 
   dplyr::select(foto,  atividade, destaque) 
