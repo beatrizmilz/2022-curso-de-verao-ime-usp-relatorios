@@ -1,11 +1,16 @@
 project:
   type: site
   output-dir: docs
-
+lang: pt
 site:
   title: "Relatórios reprodutíveis com R"
   footer: "Página criada usando [quarto](https://quarto.org/). <br>Licença de uso: [Creative Commons Atribuição-Compartilha Igual (CC BY-SA)](licenca.qmd)."
   repo-url: https://github.com/beatrizmilz/2022-curso-de-verao-ime-usp-relatorios
+  twitter-card: true
+  creator: "@beamilz"
+  site: "@beamilz"
+  site-url: "https://www.ime.usp.br/verao/assets/images/logo_verao.png"
+  image: "img/preview.png"
   navbar:
     type: dark
     background: primary
