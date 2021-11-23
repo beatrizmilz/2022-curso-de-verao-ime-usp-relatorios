@@ -70,6 +70,18 @@ tibble::tribble(
   ) %>%
 
 
+  # Infos Julia
+  tibble::add_row(
+    url_foto = "img/julia.jpeg",
+    nome = "Julia Cansado",
+    atividade = "Monitoria",
+    url_github = "https://github.com/JuliaCansado",
+    url_linkedin = "https://www.linkedin.com/in/julia-cansado/",
+    mini_bio = "- Estudante de Arquitetura e Urbanismo na Universidade de São Paulo (FAU/USP) <br>
+- Estagiária no Laboratório Quapá / Projeto Mapbiomas"
+  ) %>%
+
+
 
 
 

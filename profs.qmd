@@ -9,7 +9,9 @@ execute:
 #| message: FALSE
 #| echo: FALSE
 library(magrittr)
-df_profs <- readr::read_rds("info_profs.rds") %>% 
+
+
+df_profs <- readr::read_rds("info_profs.Rds")%>% 
   
 dplyr::mutate(
   icon_github = dplyr::case_when(!is.na(url_github) ~ glue::glue('<a href="{url_github}" target="_blank"><i class="fab fa-github"></i></a>'),
