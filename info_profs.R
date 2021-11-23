@@ -72,7 +72,7 @@ tibble::tribble(
 
   # Infos Julia
   tibble::add_row(
-    url_foto = "img/julia.jpeg",
+    url_foto = "img/julia.jpg",
     nome = "Julia Cansado",
     atividade = "Monitoria",
     url_github = "https://github.com/JuliaCansado",
