@@ -10,8 +10,11 @@ execute:
 #| echo: FALSE
 library(magrittr)
 
+googlesheets4::gs4_auth()
+sheet_profs <- googlesheets4::read_sheet("1CN9PmWmNa4CEM9HI5jgYqHSK48K92n--BZWXglH5NVE", sheet = "info-profs")
+  
 
-df_profs <- readr::read_rds("info_profs.Rds")%>% 
+df_profs <- sheet_profs %>% 
   
 dplyr::mutate(
   icon_github = dplyr::case_when(!is.na(url_github) ~ glue::glue('<a href="{url_github}" target="_blank"><i class="fab fa-github"></i></a>'),
