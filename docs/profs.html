@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
   <meta charset="utf-8">
-  <meta name="generator" content="quarto-0.2.273">
+  <meta name="generator" content="quarto-0.2.232">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>Relatórios reprodutíveis com R - Docentes</title>
   <style>
@@ -40,72 +40,63 @@
     "collapse-after": 2,
     "panel-placement": "end",
     "type": "overlay",
-    "limit": 20,
-    "language": {
-      "search-no-results-text": "Nenhum resultado",
-      "search-matching-documents-text": "documentos correspondentes",
-      "search-copy-link-title": "Copiar link para a pesquisa",
-      "search-hide-matches-text": "Esconder correspondências adicionais",
-      "search-more-match-text": "mais correspondência neste documento",
-      "search-more-matches-text": "mais correspondências neste documento",
-      "search-clear-button-title": "Limpar",
-      "search-detached-cancel-button-title": "Cancelar",
-      "search-submit-button-title": "Enviar"
-    }
+    "limit": 20
   }</script>
   <script src="site_libs/core-js-2.5.3/shim.min.js"></script>
   <script src="site_libs/react-17.0.0/react.min.js"></script>
   <script src="site_libs/react-17.0.0/react-dom.min.js"></script>
   <script src="site_libs/reactwidget-1.0.0/react-tools.js"></script>
-  <script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+  <script src="site_libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
   <script src="site_libs/reactable-binding-0.2.3/reactable.js"></script>
   <link rel="stylesheet" href="styles.css">
 <meta name="twitter:title" content="Relatórios reprodutíveis com R - Docentes">
 <meta name="twitter:image" content="https://www.ime.usp.br/verao/assets/images/logo_verao.png/img/preview.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
-<body class="floating">
+<body>
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-light ">
-      <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="./index.html">
+<header id="quarto-header" class="headroom fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light ">
+    <div class="container-fluid mx-auto">
+  <a class="navbar-brand" href="./index.html">
     <img src="https://www.ime.usp.br/verao/assets/images/logo_verao.png" alt="">
     <span class="navbar-title">Relatórios reprodutíveis com R</span>
   </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/beatrizmilz/2022-curso-de-verao-ime-usp-relatorios"><i class="bi-github" role="img">
 </i> 
  </a>
   </li>  
 </ul>
-              <div>
-                <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
-          </div> <!-- /navcollapse -->
-      </div> <!-- /container-fluid -->
-    </nav>
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Docentes</h1>
-      <button type="button" class="quarto-btn-toggle btn">
-        <i class="bi bi-chevron-right"></i>
-      </button>
-    </div>
-  </nav>
+          <div>
+            <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+          </div>
+          <div id="quarto-search" class="mb-0 " title="Search">
+</div>
+      </div> <!-- /navcollapse -->
+  </div> <!-- /container-fluid -->
+</nav>
+<nav class="quarto-secondary-nav py-2 d-lg-none d-md-block " data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <div class="container-fluid d-flex justify-content-between">
+    <h1 class="quarto-secondary-nav-title mb-0 fs-3 d-inline">Docentes</h1>
+    <button type="button" class="quarto-btn-toggle btn d-lg-none py-0 px-1 d-inline-block border-0 ">
+      <i class="bi bi-chevron-right"></i>
+    </button>
+  </div>
+</nav>
 </header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
-<!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+ <!-- /navbar/sidebar -->
+<div class="container-fluid quarto-container d-flex flex-column page-layout-article" id="quarto-content">
+<div class="row flex-fill">
+  <div id="quarto-sidebar" class="col col-12 col-lg-3 d-lg-flex px-0 pt-0 sidebar collapse sidebar-navigation">
+    <nav class="ms-lg-auto floating overflow-auto">
   <div class="sidebar-menu-container"> 
-  <ul class="list-unstyled mt-1">
+  <ul class="list-unstyled mt-1 px-3">
       <ul class="list-unstyled sidebar-section depth1">
     <li class="">
         <div class="me-auto">
@@ -155,15 +146,15 @@
   </ul>
   </div>
 </nav>
-<!-- toc -->
-    <nav id="TOC" role="doc-toc" class="sidebar sidebar-toc">
+  </div>
+  <div id="quarto-toc-sidebar" class=" pt-0 col col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-toc order-last"><nav id="TOC" role="doc-toc">
 <h2 id="toc-title">Nessa página</h2>
 <ul>
 <li><a href="#monitoria-em-ordem-alfabética" class="nav-link active" data-scroll-target="#monitoria-em-ordem-alfabética">Monitoria (em ordem alfabética)</a></li>
 </ul>
-</nav>
-<!-- main -->
-<main class="content">
+</nav></div>
+  <div class="col mx-auto col-sm-12 col-md-9 col-lg-7 col-xl-7 px-lg-4 pe-xxl-4 ps-xxl-3">
+<main>
 <header id="title-block-header">
 <h1 class="title d-none d-lg-block display-7">Docentes</h1>
 </header>
@@ -173,16 +164,16 @@
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="htmlwidget-18d0d98bbb2150fecc79" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-18d0d98bbb2150fecc79">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"foto":["<center><img src='https://beatrizmilz.com/about/sidebar/avatar.jpeg' width='100' style='border-radius: 50%;'><br><b>Beatriz Milz<\/b> <br> <a href=\"https://beatrizmilz.com/\" target=\"_blank\"><i class=\"fas fa-home\"><\/i><\/a> <a href=\"https://github.com/beatrizmilz\" target=\"_blank\"><i class=\"fab fa-github\"><\/i><\/a> <a href=\"https://www.linkedin.com/in/beatrizmilz/\" target=\"_blank\"><i class=\"fab fa-linkedin\"><\/i><\/a> <a href=\"https://twitter.com/BeaMilz\" target=\"_blank\"><i class=\"fab fa-twitter\"><\/i><\/a> <\/center>"],"destaque":["- Doutoranda em Ciência Ambiental na\n    Universidade de São Paulo (PROCAM/IEE/USP). <br>\n    - <a href='https://education.rstudio.com/trainers/people/milz+beatriz/'>Instrutora de tidyverse certificada pela RStudio<\/a>.<br>\n    - Co-organizadora da <a href='https://linktr.ee/rladies_sp'>R-Ladies SP<\/a>, uma comunidade que tem como\n    objetivo promover a diversidade de gênero na comunidade da linguagem R. <br>\n    "]},"columns":[{"accessor":"foto","name":"Docente","type":["glue","character"],"html":true,"maxWidth":250},{"accessor":"destaque","name":"","type":["glue","character"],"html":true}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"3917fbade00ce7594be9109ca29aacd2","key":"3917fbade00ce7594be9109ca29aacd2"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-2c7c20a88a95034f0cee" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-2c7c20a88a95034f0cee">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"foto":["<center><img src='https://beatrizmilz.com/about/sidebar/avatar.jpeg' width='100' style='border-radius: 50%;'><br><b>Beatriz Milz<\/b> <br> <a href=\"https://beatrizmilz.com/\" target=\"_blank\"><i class=\"fas fa-home\"><\/i><\/a> <a href=\"https://github.com/beatrizmilz\" target=\"_blank\"><i class=\"fab fa-github\"><\/i><\/a> <a href=\"https://www.linkedin.com/in/beatrizmilz/\" target=\"_blank\"><i class=\"fab fa-linkedin\"><\/i><\/a> <a href=\"https://twitter.com/BeaMilz\" target=\"_blank\"><i class=\"fab fa-twitter\"><\/i><\/a> <\/center>"],"destaque":["- Doutoranda em Ciência Ambiental na\n    Universidade de São Paulo (PROCAM/IEE/USP). <br>\n    - <a href='https://education.rstudio.com/trainers/people/milz+beatriz/'>Instrutora de tidyverse certificada pela RStudio<\/a>.<br>\n    - Co-organizadora da <a href='https://linktr.ee/rladies_sp'>R-Ladies SP<\/a>, uma comunidade que tem como\n    objetivo promover a diversidade de gênero na comunidade da linguagem R. <br>\n    "]},"columns":[{"accessor":"foto","name":"Docente","type":["glue","character"],"html":true,"maxWidth":250},{"accessor":"destaque","name":"","type":["glue","character"],"html":true}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"3917fbade00ce7594be9109ca29aacd2","key":"3917fbade00ce7594be9109ca29aacd2"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <section id="monitoria-em-ordem-alfabética" class="level2">
 <h2 class="anchored" data-anchor-id="monitoria-em-ordem-alfabética">Monitoria (em ordem alfabética)</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="htmlwidget-817254882c72f1d56383" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-817254882c72f1d56383">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"foto":["<center><img src='img/alan.jpeg' width='100' style='border-radius: 50%;'><br><b>Alan da Silva<\/b> <br>  <a href=\"https://github.com/Alandasilva\" target=\"_blank\"><i class=\"fab fa-github\"><\/i><\/a> <a href=\"https://www.linkedin.com/in/alan-silva-341600196/\" target=\"_blank\"><i class=\"fab fa-linkedin\"><\/i><\/a>  <a href=\"https://www.facebook.com/profile.php?id=100003267154291\" target=\"_blank\"><i class=\"fab fa-facebook\"><\/i><\/a><\/center>","<center><img src='https://pbs.twimg.com/profile_images/858423807022964736/x1Sjv9bJ_400x400.jpg' width='100' style='border-radius: 50%;'><br><b>Ana Carolina Moreno<\/b> <br>  <a href=\"https://github.com/anacarolinamoreno\" target=\"_blank\"><i class=\"fab fa-github\"><\/i><\/a> <a href=\"https://www.linkedin.com/in/anacarolinamoreno/\" target=\"_blank\"><i class=\"fab fa-linkedin\"><\/i><\/a> <a href=\"https://twitter.com/anarina\" target=\"_blank\"><i class=\"fab fa-twitter\"><\/i><\/a> <a href=\"https://www.facebook.com/anacarolinamoreno/\" target=\"_blank\"><i class=\"fab fa-facebook\"><\/i><\/a><\/center>","<center><img src='img/julia.jpg' width='100' style='border-radius: 50%;'><br><b>Julia Cansado<\/b> <br>  <a href=\"https://github.com/JuliaCansado\" target=\"_blank\"><i class=\"fab fa-github\"><\/i><\/a> <a href=\"https://www.linkedin.com/in/julia-cansado/\" target=\"_blank\"><i class=\"fab fa-linkedin\"><\/i><\/a>  <\/center>","<center><img src='https://avatars.githubusercontent.com/u/83192430?v=4' width='100' style='border-radius: 50%;'><br><b>Tereza Lacerda<\/b> <br>  <a href=\"https://github.com/terezalacerda\" target=\"_blank\"><i class=\"fab fa-github\"><\/i><\/a> <a href=\"https://www.linkedin.com/in/terezalacerda/\" target=\"_blank\"><i class=\"fab fa-linkedin\"><\/i><\/a> <a href=\"https://twitter.com/tereza_lacerda\" target=\"_blank\"><i class=\"fab fa-twitter\"><\/i><\/a> <\/center>"],"destaque":["- Doutorando em Estatística pela Universidade de São Paulo (IME/USP) <br>\n- Participou da manutenção/atualizações do pacote <a href='https://ipeagit.github.io/geobr/'>geobr<\/a>, um pacote R que tem como objetivo facilitar o acesso de base de dados espaciais oficiais do Brasil.","- Jornalista de dados, focada atualmente na cobertura da pandemia com análises de dados usando R. <br>\n    - Participa da <a href='https://linktr.ee/rladies_sp'>R-Ladies SP<\/a> desde janeiro de 2019.","- Estudante de Arquitetura e Urbanismo na Universidade de São Paulo (FAU/USP) <br>\n- Estagiária no Laboratório Quapá / Projeto Mapbiomas","- Estudante de Estatística na Universidade de São Paulo (IME/USP) <br>\n- Estagiária na <a href='https://curso-r.com/'>Curso-R<\/a> <br>\n- Interessada em Análise de Dados Musicais"]},"columns":[{"accessor":"foto","name":"","type":["glue","character"],"html":true,"maxWidth":250},{"accessor":"destaque","name":"","type":["glue","character"],"html":true}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"5096d0e5f7d844325a8ff75a16f872af","key":"5096d0e5f7d844325a8ff75a16f872af"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-dce25721f19ddd9fe074" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-dce25721f19ddd9fe074">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"foto":["<center><img src='img/alan.jpeg' width='100' style='border-radius: 50%;'><br><b>Alan da Silva<\/b> <br>  <a href=\"https://github.com/Alandasilva\" target=\"_blank\"><i class=\"fab fa-github\"><\/i><\/a> <a href=\"https://www.linkedin.com/in/alan-silva-341600196/\" target=\"_blank\"><i class=\"fab fa-linkedin\"><\/i><\/a>  <a href=\"https://www.facebook.com/profile.php?id=100003267154291\" target=\"_blank\"><i class=\"fab fa-facebook\"><\/i><\/a><\/center>","<center><img src='https://pbs.twimg.com/profile_images/858423807022964736/x1Sjv9bJ_400x400.jpg' width='100' style='border-radius: 50%;'><br><b>Ana Carolina Moreno<\/b> <br>  <a href=\"https://github.com/anacarolinamoreno\" target=\"_blank\"><i class=\"fab fa-github\"><\/i><\/a> <a href=\"https://www.linkedin.com/in/anacarolinamoreno/\" target=\"_blank\"><i class=\"fab fa-linkedin\"><\/i><\/a> <a href=\"https://twitter.com/anarina\" target=\"_blank\"><i class=\"fab fa-twitter\"><\/i><\/a> <a href=\"https://www.facebook.com/anacarolinamoreno/\" target=\"_blank\"><i class=\"fab fa-facebook\"><\/i><\/a><\/center>","<center><img src='img/julia.jpg' width='100' style='border-radius: 50%;'><br><b>Julia Cansado<\/b> <br>  <a href=\"https://github.com/JuliaCansado\" target=\"_blank\"><i class=\"fab fa-github\"><\/i><\/a> <a href=\"https://www.linkedin.com/in/julia-cansado/\" target=\"_blank\"><i class=\"fab fa-linkedin\"><\/i><\/a>  <\/center>","<center><img src='https://avatars.githubusercontent.com/u/83192430?v=4' width='100' style='border-radius: 50%;'><br><b>Tereza Lacerda<\/b> <br>  <a href=\"https://github.com/terezalacerda\" target=\"_blank\"><i class=\"fab fa-github\"><\/i><\/a> <a href=\"https://www.linkedin.com/in/terezalacerda/\" target=\"_blank\"><i class=\"fab fa-linkedin\"><\/i><\/a> <a href=\"https://twitter.com/tereza_lacerda\" target=\"_blank\"><i class=\"fab fa-twitter\"><\/i><\/a> <\/center>"],"destaque":["- Doutorando em Estatística pela Universidade de São Paulo (IME/USP) <br>\n- Participou da manutenção/atualizações do pacote <a href='https://ipeagit.github.io/geobr/'>geobr<\/a>, um pacote R que tem como objetivo facilitar o acesso de base de dados espaciais oficiais do Brasil.","- Jornalista de dados, focada atualmente na cobertura da pandemia com análises de dados usando R. <br>\n    - Participa da <a href='https://linktr.ee/rladies_sp'>R-Ladies SP<\/a> desde janeiro de 2019.","- Estudante de Arquitetura e Urbanismo na Universidade de São Paulo (FAU/USP) <br>\n- Estagiária no Laboratório Quapá / Projeto Mapbiomas","- Estudante de Estatística na Universidade de São Paulo (IME/USP) <br>\n- Estagiária na <a href='https://curso-r.com/'>Curso-R<\/a> <br>\n- Interessada em Análise de Dados Musicais"]},"columns":[{"accessor":"foto","name":"","type":["glue","character"],"html":true,"maxWidth":250},{"accessor":"destaque","name":"","type":["glue","character"],"html":true}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"5096d0e5f7d844325a8ff75a16f872af","key":"5096d0e5f7d844325a8ff75a16f872af"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <!-- inicio font awesome -->
@@ -315,21 +306,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     e.clearSelection();
   });
   function tippyHover(el, contentFn) {
-    const config = {
+    window.tippy(el, {
       allowHTML: true,
       content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
       placement: 'bottom-start'
-    };
-    window.tippy(el, config); 
+    }); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
   for (var i=0; i<noterefs.length; i++) {
@@ -363,19 +350,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</main> <!-- /main -->
-<nav class="page-navigation">
+</main>
+<div class="page-navigation ">
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
   </div>
-</nav>
-</div> <!-- /content -->
-<footer class="footer">
+</div>
+</div> <!-- /main column -->
+</div> <!-- /row -->
+<div class="row">
   <div class="nav-footer">
-      <div class="nav-footer-center">Página criada usando <a href="https://quarto.org/">quarto</a>. <br>Licença de uso: <a href="./licenca.html">Creative Commons Atribuição-Compartilha Igual (CC BY-SA)</a>.</div>
+      <div class="nav-footer-center me-auto ms-auto">Página criada usando <a href="https://quarto.org/">quarto</a>. <br>Licença de uso: <a href="./licenca.html">Creative Commons Atribuição-Compartilha Igual (CC BY-SA)</a>.</div>
   </div>
-</footer>
+</div>
+</div> <!-- /container fluid -->
 
 
 </body></html>

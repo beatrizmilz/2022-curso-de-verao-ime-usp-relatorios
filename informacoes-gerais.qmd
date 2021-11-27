@@ -2,9 +2,9 @@
 title: "Informações gerais"
 ---
 
-:::{.callout-tip}
-## Dica
-Inscrições em breve no site do [Programa de Verão IME-USP](https://www.ime.usp.br/~verao/).
+:::{.callout-warning}
+## Atenção!
+**Inscrições abertas** exclusivamente no site do [Programa de Verão IME-USP](https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php).
 :::
 
 ## Público Alvo
