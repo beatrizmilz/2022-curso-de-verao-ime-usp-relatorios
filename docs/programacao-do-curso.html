@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="quarto-0.2.232">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Relatórios reprodutíveis com R - Docentes</title>
+  <title>Relatórios reprodutíveis com R - Programação do curso</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -42,14 +42,8 @@
     "type": "overlay",
     "limit": 20
   }</script>
-  <script src="site_libs/core-js-2.5.3/shim.min.js"></script>
-  <script src="site_libs/react-17.0.0/react.min.js"></script>
-  <script src="site_libs/react-17.0.0/react-dom.min.js"></script>
-  <script src="site_libs/reactwidget-1.0.0/react-tools.js"></script>
-  <script src="site_libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
-  <script src="site_libs/reactable-binding-0.2.3/reactable.js"></script>
   <link rel="stylesheet" href="styles.css">
-<meta name="twitter:title" content="Relatórios reprodutíveis com R - Docentes">
+<meta name="twitter:title" content="Relatórios reprodutíveis com R - Programação do curso">
 <meta name="twitter:image" content="https://www.ime.usp.br/verao/assets/images/logo_verao.png/img/preview.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -115,7 +109,7 @@
 </nav>
 <nav class="quarto-secondary-nav py-2 d-lg-none d-md-block " data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <div class="container-fluid d-flex justify-content-between">
-    <h1 class="quarto-secondary-nav-title mb-0 fs-3 d-inline">Docentes</h1>
+    <h1 class="quarto-secondary-nav-title mb-0 fs-3 d-inline">Programação do curso</h1>
     <button type="button" class="quarto-btn-toggle btn d-lg-none py-0 px-1 d-inline-block border-0 ">
       <i class="bi bi-chevron-right"></i>
     </button>
@@ -132,24 +126,32 @@
       <ul class="list-unstyled sidebar-section depth1">
     <li class="">
         <div class="me-auto">
-            <a class="sidebar-section-item d-inline-flex text-start w-100 " data-bs-toggle="collapse" data-bs-target="#informaçõessobreocurso-collapse" aria-expanded="true">
-              <div class="me-auto sidebar-section-item">Informações sobre o curso</div>
+            <a class="sidebar-section-item d-inline-flex text-start w-100 " data-bs-toggle="collapse" data-bs-target="#aulas-collapse" aria-expanded="true">
+              <div class="me-auto sidebar-section-item">Aulas</div>
             <div><i class="bi bi-chevron-right ms-2"></i></div>
             </a>
         </div>
-      <div class="collapse  show" id="informaçõessobreocurso-collapse">
+      <div class="collapse  show" id="aulas-collapse">
         <ul class="list-unstyled sidebar-item-contents">
           <li class="sidebar-item">
-  <a href="./informacoes-gerais.html" class="">Informações gerais</a>
+  <a href="./programacao-do-curso.html" class="active">Programação do curso</a>
 </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+      <ul class="list-unstyled sidebar-section depth1">
+    <li class="">
+        <div class="me-auto">
+            <a class="sidebar-section-item d-inline-flex text-start w-100 " data-bs-toggle="collapse" data-bs-target="#sobreomaterial-collapse" aria-expanded="true">
+              <div class="me-auto sidebar-section-item">Sobre o material</div>
+            <div><i class="bi bi-chevron-right ms-2"></i></div>
+            </a>
+        </div>
+      <div class="collapse  show" id="sobreomaterial-collapse">
+        <ul class="list-unstyled sidebar-item-contents">
           <li class="sidebar-item">
-  <a href="./profs.html" class="active">Docentes</a>
-</li>
-          <li class="sidebar-item">
-  <a href="./bibliografia.html" class="">Bibliografia</a>
-</li>
-          <li class="sidebar-item">
-  <a href="./faq.html" class="">Perguntas Frequentes (FAQ)</a>
+  <a href="./licenca.html" class="">Licença de uso</a>
 </li>
         </ul>
       </div>
@@ -162,37 +164,151 @@
   <div id="quarto-toc-sidebar" class=" pt-0 col col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-toc order-last"><nav id="TOC" role="doc-toc">
 <h2 id="toc-title">Nessa página</h2>
 <ul>
-<li><a href="#monitoria-em-ordem-alfabética" class="nav-link active" data-scroll-target="#monitoria-em-ordem-alfabética">Monitoria (em ordem alfabética)</a></li>
+<li><a href="#semana-1---reprodutibilidade-e-rmarkdown" class="nav-link active" data-scroll-target="#semana-1---reprodutibilidade-e-rmarkdown">Semana 1 - Reprodutibilidade e RMarkdown</a>
+<ul class="collapse">
+<li><a href="#aula-1-02022022" class="nav-link" data-scroll-target="#aula-1-02022022">Aula 1 (02/02/2022)</a></li>
+<li><a href="#aula-2-07022022" class="nav-link" data-scroll-target="#aula-2-07022022">Aula 2 (07/02/2022)</a></li>
+</ul></li>
+<li><a href="#semana-2---controle-de-versão-e-disponibilização-dos-resultados" class="nav-link" data-scroll-target="#semana-2---controle-de-versão-e-disponibilização-dos-resultados">Semana 2 - Controle de versão e disponibilização dos resultados</a>
+<ul class="collapse">
+<li><a href="#aula-3-09022022" class="nav-link" data-scroll-target="#aula-3-09022022">Aula 3 (09/02/2022)</a></li>
+<li><a href="#aula-4-14022022" class="nav-link" data-scroll-target="#aula-4-14022022">Aula 4 (14/02/2022)</a></li>
+</ul></li>
+<li><a href="#semana-3---exemplo-prático-final" class="nav-link" data-scroll-target="#semana-3---exemplo-prático-final">Semana 3 - Exemplo prático final</a>
+<ul class="collapse">
+<li><a href="#aula-5-16022022" class="nav-link" data-scroll-target="#aula-5-16022022">Aula 5 (16/02/2022)</a></li>
+</ul></li>
 </ul>
 </nav></div>
   <div class="col mx-auto col-sm-12 col-md-9 col-lg-7 col-xl-7 px-lg-4 pe-xxl-4 ps-xxl-0">
 <main>
 <header id="title-block-header">
-<h1 class="title d-none d-lg-block display-7">Docentes</h1>
+<h1 class="title d-none d-lg-block display-7">Programação do curso</h1>
 </header>
 
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Atenção!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Página sujeita à alterações.</p>
+</div>
+</div>
 <div class="cell">
 
 </div>
-<div class="cell">
-<div class="cell-output-display">
-<div id="htmlwidget-d0f105ae7fa74003b7e9" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-d0f105ae7fa74003b7e9">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"foto":["<center><img src='https://beatrizmilz.com/about/sidebar/avatar.jpeg' width='100' style='border-radius: 50%;'><br><b>Beatriz Milz<\/b> <br> <a href=\"https://beatrizmilz.com/\" target=\"_blank\"><i class=\"fas fa-home\"><\/i><\/a> <a href=\"https://github.com/beatrizmilz\" target=\"_blank\"><i class=\"fab fa-github\"><\/i><\/a> <a href=\"https://www.linkedin.com/in/beatrizmilz/\" target=\"_blank\"><i class=\"fab fa-linkedin\"><\/i><\/a> <a href=\"https://twitter.com/BeaMilz\" target=\"_blank\"><i class=\"fab fa-twitter\"><\/i><\/a> <\/center>"],"destaque":["- Doutoranda em Ciência Ambiental na\n  Universidade de São Paulo (PROCAM/IEE/USP). <br>\n  - <a href='https://education.rstudio.com/trainers/people/milz+beatriz/'>Instrutora de tidyverse certificada pela RStudio<\/a>.<br>\n  - Co-organizadora da <a href='https://linktr.ee/rladies_sp'>R-Ladies SP<\/a>, uma comunidade que tem como\n  objetivo promover a diversidade de gênero na comunidade da linguagem R. <br>"]},"columns":[{"accessor":"foto","name":"Docente","type":["glue","character"],"html":true,"maxWidth":250},{"accessor":"destaque","name":"","type":["glue","character"],"html":true}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"c66e067c37bb2a53f13239fe7e65ed9b","key":"c66e067c37bb2a53f13239fe7e65ed9b"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-<section id="monitoria-em-ordem-alfabética" class="level2">
-<h2 class="anchored" data-anchor-id="monitoria-em-ordem-alfabética">Monitoria (em ordem alfabética)</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div id="htmlwidget-34e6bbd103ec00fa0bc6" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-34e6bbd103ec00fa0bc6">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"foto":["<center><img src='img/alan.jpeg' width='100' style='border-radius: 50%;'><br><b>Alan da Silva<\/b> <br>  <a href=\"https://github.com/Alandasilva\" target=\"_blank\"><i class=\"fab fa-github\"><\/i><\/a> <a href=\"https://www.linkedin.com/in/alan-silva-341600196/\" target=\"_blank\"><i class=\"fab fa-linkedin\"><\/i><\/a>  <a href=\"https://www.facebook.com/profile.php?id=100003267154291\" target=\"_blank\"><i class=\"fab fa-facebook\"><\/i><\/a><\/center>","<center><img src='https://pbs.twimg.com/profile_images/858423807022964736/x1Sjv9bJ_400x400.jpg' width='100' style='border-radius: 50%;'><br><b>Ana Carolina Moreno<\/b> <br>  <a href=\"https://github.com/anacarolinamoreno\" target=\"_blank\"><i class=\"fab fa-github\"><\/i><\/a> <a href=\"https://www.linkedin.com/in/anacarolinamoreno/\" target=\"_blank\"><i class=\"fab fa-linkedin\"><\/i><\/a> <a href=\"https://twitter.com/anarina\" target=\"_blank\"><i class=\"fab fa-twitter\"><\/i><\/a> <a href=\"https://www.facebook.com/anacarolinamoreno/\" target=\"_blank\"><i class=\"fab fa-facebook\"><\/i><\/a><\/center>","<center><img src='img/julia.jpg' width='100' style='border-radius: 50%;'><br><b>Julia Cansado<\/b> <br>  <a href=\"https://github.com/JuliaCansado\" target=\"_blank\"><i class=\"fab fa-github\"><\/i><\/a> <a href=\"https://www.linkedin.com/in/julia-cansado/\" target=\"_blank\"><i class=\"fab fa-linkedin\"><\/i><\/a>  <\/center>","<center><img src='https://avatars.githubusercontent.com/u/83192430?v=4' width='100' style='border-radius: 50%;'><br><b>Tereza Lacerda<\/b> <br>  <a href=\"https://github.com/terezalacerda\" target=\"_blank\"><i class=\"fab fa-github\"><\/i><\/a> <a href=\"https://www.linkedin.com/in/terezalacerda/\" target=\"_blank\"><i class=\"fab fa-linkedin\"><\/i><\/a> <a href=\"https://twitter.com/tereza_lacerda\" target=\"_blank\"><i class=\"fab fa-twitter\"><\/i><\/a> <\/center>"],"destaque":["- Doutorando em Estatística pela Universidade de São Paulo (IME/USP) <br>\n - Participou da manutenção/atualizações do pacote <a href='https://ipeagit.github.io/geobr/'>geobr<\/a>, um pacote R que tem como objetivo facilitar o acesso de base de dados espaciais oficiais do Brasil.","- Jornalista de dados, focada atualmente na cobertura da pandemia com análises de dados usando R. <br>\n  - Participa da <a href='https://linktr.ee/rladies_sp'>R-Ladies SP<\/a> desde janeiro de 2019.","- Estudante de Arquitetura e Urbanismo na Universidade de São Paulo (FAU/USP) <br>\n - Estagiária no Laboratório Quapá / Projeto Mapbiomas","- Estudante de Estatística na Universidade de São Paulo (IME/USP) <br>\n - Estagiária na <a href='https://curso-r.com/'>Curso-R<\/a> <br>\n - Interessada em Análise de Dados Musicais"]},"columns":[{"accessor":"foto","name":"","type":["glue","character"],"html":true,"maxWidth":250},{"accessor":"destaque","name":"","type":["glue","character"],"html":true}],"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"377fdbf98fac1aedfa57a5271a4cfa41","key":"377fdbf98fac1aedfa57a5271a4cfa41"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-<!-- inicio font awesome -->
-<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
-<!-- final font awesome -->
+<section id="semana-1---reprodutibilidade-e-rmarkdown" class="level2">
+<h2 class="anchored" data-anchor-id="semana-1---reprodutibilidade-e-rmarkdown">Semana 1 - Reprodutibilidade e RMarkdown</h2>
+<section id="aula-1-02022022" class="level3">
+<h3 class="anchored" data-anchor-id="aula-1-02022022">Aula 1 (02/02/2022)</h3>
+<p><strong>Conteúdo</strong></p>
+<ul>
+<li><p>Introdução ao curso</p></li>
+<li><p>Introdução ao conceito de reprodutibilidade</p></li>
+<li><p>Reprodutibilidade no contexto do desenvolvimento em R: o uso de projetos do RStudio</p></li>
+<li><p>RMarkdown</p>
+<ul>
+<li>Introdução ao pacote RMarkdown</li>
+<li>Como criar arquivos <code>.Rmd</code></li>
+<li>Como adicionar elementos no <code>.Rmd</code>, como: marcações com Markdown, imagens, tabelas, gráficos, códigos e resultados.</li>
+</ul></li>
+</ul>
+<p><strong>Tarefas</strong></p>
+<ul>
+<li><a href="https://curso-r.github.io/zen-do-r/rproj-dir.html">Ler o capítulo 3 do livro Zen do R - Rproj e diretórios</a></li>
+</ul>
+</section>
+<section id="aula-2-07022022" class="level3">
+<h3 class="anchored" data-anchor-id="aula-2-07022022">Aula 2 (07/02/2022)</h3>
+<p><strong>Conteúdo</strong></p>
+<ul>
+<li>RMarkdown (continuação)
+<ul>
+<li>Criando <code>.Rmd</code> a partir de templates</li>
+<li>Gerando diferentes tipos de relatórios: <code>.html</code>, <code>.docx</code>, <code>.pdf</code></li>
+<li>Usando e gerenciando bibliografias com arquivos <code>.bib</code></li>
+<li>Relatórios com parâmetros</li>
+</ul></li>
+</ul>
+<p><strong>Tarefas</strong></p>
+<ul>
+<li><p>Criar um documento usando RMarkdown que gere um <code>.html</code>.</p></li>
+<li><p>Conferir os exemplos de arquivos que podemos gerar com RMarkdown, e votar em um para ser usado no exemplo final do curso.</p></li>
+</ul>
+</section>
+</section>
+<section id="semana-2---controle-de-versão-e-disponibilização-dos-resultados" class="level2">
+<h2 class="anchored" data-anchor-id="semana-2---controle-de-versão-e-disponibilização-dos-resultados">Semana 2 - Controle de versão e disponibilização dos resultados</h2>
+<section id="aula-3-09022022" class="level3">
+<h3 class="anchored" data-anchor-id="aula-3-09022022">Aula 3 (09/02/2022)</h3>
+<p><strong>Conteúdo</strong></p>
+<ul>
+<li>Git e GitHub
+<ul>
+<li>Introdução ao controle de versão</li>
+<li>Diferença entre Git e GitHub</li>
+<li>Como configurar o Git e o GitHub no RStudio usando o pacote {usethis}</li>
+</ul></li>
+</ul>
+<p><strong>Tarefas</strong></p>
+<ul>
+<li><p>Criar uma conta no GitHub (caso não tenha feito anteriormente).</p></li>
+<li><p>Fazer a configuração do Git e GitHub no RStudio.</p></li>
+<li><p><a href="https://curso-r.github.io/zen-do-r/git-github.html">Ler o capítulo 4 do livro Zen do R - Git e GitHub</a>.</p></li>
+</ul>
+</section>
+<section id="aula-4-14022022" class="level3">
+<h3 class="anchored" data-anchor-id="aula-4-14022022">Aula 4 (14/02/2022)</h3>
+<p><strong>Conteúdo</strong></p>
+<ul>
+<li>Git e GitHub (continuação)
+<ul>
+<li>Fluxo de trabalho em projetos no RStudio usando controle de versão com Git e GitHub</li>
+<li>Trabalhando colaborativamente no GitHub: Criando um Pull Request</li>
+<li>Disponibilizar os relatórios gerados em <code>.html</code> na internet
+<ul>
+<li>Com GitHub Pages</li>
+<li>Com Netlify</li>
+</ul></li>
+</ul></li>
+</ul>
+<p><strong>Tarefas</strong></p>
+<ul>
+<li><p>Criar um repositório e disponibilizar o relatório criado na Semana 1 na internet (com GitHub Pages ou Netlify).</p></li>
+<li><p>Fazer um Pull Request para adicionar o link do relatório criado no material do curso.</p></li>
+</ul>
+</section>
+</section>
+<section id="semana-3---exemplo-prático-final" class="level2">
+<h2 class="anchored" data-anchor-id="semana-3---exemplo-prático-final">Semana 3 - Exemplo prático final</h2>
+<section id="aula-5-16022022" class="level3">
+<h3 class="anchored" data-anchor-id="aula-5-16022022">Aula 5 (16/02/2022)</h3>
+<p><strong>Conteúdo</strong></p>
+<ul>
+<li>Exemplo prático do ciclo completo:
+<ul>
+<li>Criar um projeto no RStudio</li>
+<li>Iniciar o {renv}</li>
+<li>Iniciar o controle de versão com Git</li>
+<li>Iniciar um repositório no GitHub</li>
+<li>Criar um documento RMarkdown - O tipo de documento será escolhido previamente pela turma!</li>
+<li>Adicionar conteúdo no <code>.Rmd</code>: parâmetros, código e resultados, código em linha, tabela, gráfico, imagens, etc.</li>
+<li>Disponibilizar o documento na internet com GitHub Pages ou Netlify</li>
+<li>Fazer alterações no <code>.Rmd</code> e atualizar a versão que está online</li>
+</ul></li>
+</ul>
+<p><strong>Tarefas</strong></p>
+<ul>
+<li>Entregar o trabalho final.</li>
+</ul>
 
 
+</section>
 </section>
 <script type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
