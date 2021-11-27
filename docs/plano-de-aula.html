@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="quarto-0.2.232">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Relatórios reprodutíveis com R</title>
+  <title>Relatórios reprodutíveis com R - Plano de aula</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -43,7 +43,7 @@
     "limit": 20
   }</script>
   <link rel="stylesheet" href="styles.css">
-<meta name="twitter:title" content="Relatórios reprodutíveis com R">
+<meta name="twitter:title" content="Relatórios reprodutíveis com R - Plano de aula">
 <meta name="twitter:image" content="https://www.ime.usp.br/verao/assets/images/logo_verao.png/img/preview.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -90,10 +90,8 @@
   </li>  
     </ul>
   </li>
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/beatrizmilz/2022-curso-de-verao-ime-usp-relatorios"><i class="bi-anchor" role="img">
-</i> 
- </a>
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Relatórios reprodutíveis com R</a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/beatrizmilz/2022-curso-de-verao-ime-usp-relatorios"><i class="bi-github" role="img">
@@ -109,51 +107,98 @@
       </div> <!-- /navcollapse -->
   </div> <!-- /container-fluid -->
 </nav>
+<nav class="quarto-secondary-nav py-2 d-lg-none d-md-block " data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <div class="container-fluid d-flex justify-content-between">
+    <h1 class="quarto-secondary-nav-title mb-0 fs-3 d-inline">Plano de aula</h1>
+    <button type="button" class="quarto-btn-toggle btn d-lg-none py-0 px-1 d-inline-block border-0 ">
+      <i class="bi bi-chevron-right"></i>
+    </button>
+  </div>
+</nav>
 </header>
  <!-- /navbar/sidebar -->
-<div class="container-fluid quarto-container d-flex flex-column page-layout-article" id="quarto-content">
-<div class="row flex-fill">
-  <div id="quarto-toc-sidebar" class=" pt-0 col col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-toc order-last"></div>
-  <div class="col mx-auto col-sm-12 col-md-9 col-lg-8 col-xl-7 px-lg-4 pe-xxl-4 ps-xxl-0">
+<div class="container-fluid quarto-container d-flex flex-column page-layout-article">
+<div class="row flex-fill" id="quarto-content">
+  <div id="quarto-sidebar" class="col col-12 col-lg-3 d-lg-flex px-0 pt-0 sidebar collapse sidebar-navigation">
+    <nav class="me-lg-auto docked overflow-auto">
+  <div class="sidebar-menu-container"> 
+  <ul class="list-unstyled mt-1 px-3">
+      <ul class="list-unstyled sidebar-section depth1">
+    <li class="">
+        <div class="me-auto">
+            <a class="sidebar-section-item d-inline-flex text-start w-100 " data-bs-toggle="collapse" data-bs-target="#aulas-collapse" aria-expanded="true">
+              <div class="me-auto sidebar-section-item">Aulas</div>
+            <div><i class="bi bi-chevron-right ms-2"></i></div>
+            </a>
+        </div>
+      <div class="collapse  show" id="aulas-collapse">
+        <ul class="list-unstyled sidebar-item-contents">
+          <li class="sidebar-item">
+  <a href="./plano-de-aula.html" class="active">Plano de aula</a>
+</li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+      <ul class="list-unstyled sidebar-section depth1">
+    <li class="">
+        <div class="me-auto">
+            <a class="sidebar-section-item d-inline-flex text-start w-100 " data-bs-toggle="collapse" data-bs-target="#sobreomaterial-collapse" aria-expanded="true">
+              <div class="me-auto sidebar-section-item">Sobre o material</div>
+            <div><i class="bi bi-chevron-right ms-2"></i></div>
+            </a>
+        </div>
+      <div class="collapse  show" id="sobreomaterial-collapse">
+        <ul class="list-unstyled sidebar-item-contents">
+          <li class="sidebar-item">
+  <a href="./licenca.html" class="">Licença de uso</a>
+</li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+  </ul>
+  </div>
+</nav>
+  </div>
+  <div id="quarto-toc-sidebar" class=" pt-0 col col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-toc order-last"><nav id="TOC" role="doc-toc">
+<h2 id="toc-title">Nessa página</h2>
+<ul>
+<li><a href="#aula-1-02022022" class="nav-link active" data-scroll-target="#aula-1-02022022">Aula 1 (02/02/2022)</a></li>
+<li><a href="#aula-2-07022022" class="nav-link" data-scroll-target="#aula-2-07022022">Aula 2 (07/02/2022)</a></li>
+<li><a href="#aula-3-09022022" class="nav-link" data-scroll-target="#aula-3-09022022">Aula 3 (09/02/2022)</a></li>
+<li><a href="#aula-4-14022022" class="nav-link" data-scroll-target="#aula-4-14022022">Aula 4 (14/02/2022)</a></li>
+<li><a href="#aula-5-16022022" class="nav-link" data-scroll-target="#aula-5-16022022">Aula 5 (16/02/2022)</a></li>
+</ul>
+</nav></div>
+  <div class="col mx-auto col-sm-12 col-md-9 col-lg-7 col-xl-7 px-lg-4 pe-xxl-4 ps-xxl-0">
 <main>
 <header id="title-block-header">
-<h1 class="title display-7">Relatórios reprodutíveis com R</h1>
+<h1 class="title d-none d-lg-block display-7">Plano de aula</h1>
 </header>
-<h3 class="anchored">
-<img src="https://www.ime.usp.br/verao/assets/images/logo_verao.png" class="img-fluid" data-fig-align="center"> Curso de Verão IME-USP 2022
-</h3>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Atenção!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Inscrições abertas</strong> exclusivamente no site do <a href="https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php">Programa de Verão IME-USP</a>.</p>
-</div>
-</div>
-<p>No curso utilizaremos a linguagem de programação R e a interface de desenvolvimento RStudio. Primeiramente será apresentada uma introdução ao conceito de reprodutibilidade no contexto de desenvolvimento em R, e discutiremos boas práticas ao longo do curso.</p>
-<p>Utilizaremos o RMarkdown (<a href="https://rmarkdown.rstudio.com/" class="uri">https://rmarkdown.rstudio.com/</a>), um pacote que possibilita criar relatórios reprodutíveis no R, como: listas de exercícios, relatórios, apresentações em HTML, apresentações em powerpoint, relatórios em word, relatórios interativos, entre outros.</p>
-<p>Aprenderemos também a criar relatórios reprodutíveis utilizando relatórios parametrizados, que permitem especificar parâmetros para customizar a análise, o que é muito útil para criar relatórios que podem ser reutilizados.</p>
-<p>Além disso, o conceito de controle de versão com Git será apresentado e também como podemos configurar o Git e o GitHub no RStudio para que seja possível versionar os projetos que criaremos em R. Também aprenderemos a disponibilizar o conteúdo criado no curso de forma online, através do GitHub.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Dica
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Mais informações na página de <a href="informacoes-gerais.qmd">informações gerais sobre o curso</a>.</p>
-</div>
-</div>
+
+<section id="aula-1-02022022" class="level3">
+<h3 class="anchored" data-anchor-id="aula-1-02022022">Aula 1 (02/02/2022)</h3>
+<p>Em breve</p>
+</section>
+<section id="aula-2-07022022" class="level3">
+<h3 class="anchored" data-anchor-id="aula-2-07022022">Aula 2 (07/02/2022)</h3>
+<p>Em breve</p>
+</section>
+<section id="aula-3-09022022" class="level3">
+<h3 class="anchored" data-anchor-id="aula-3-09022022">Aula 3 (09/02/2022)</h3>
+<p>Em breve</p>
+</section>
+<section id="aula-4-14022022" class="level3">
+<h3 class="anchored" data-anchor-id="aula-4-14022022">Aula 4 (14/02/2022)</h3>
+<p>Em breve</p>
+</section>
+<section id="aula-5-16022022" class="level3">
+<h3 class="anchored" data-anchor-id="aula-5-16022022">Aula 5 (16/02/2022)</h3>
+<p>Em breve</p>
 
 
+</section>
 <script type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const disableStylesheet = (stylesheets) => {
@@ -323,7 +368,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </main>
-<div class="page-navigation ">
+<div class="page-navigation page-navigation-docked">
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">

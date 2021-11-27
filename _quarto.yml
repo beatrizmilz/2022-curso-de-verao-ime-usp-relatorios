@@ -12,28 +12,42 @@ site:
   site-url: "https://www.ime.usp.br/verao/assets/images/logo_verao.png"
   image: "img/preview.png"
   navbar:
+    sidebar-menus: true
     type: dark
     background: primary
     left:
     logo: https://www.ime.usp.br/verao/assets/images/logo_verao.png
     right:
+      - sidebar:infos
+      - sidebar:material
       - icon: github
         href: https://github.com/beatrizmilz/2022-curso-de-verao-ime-usp-relatorios
   sidebar:
-    style: "floating"
-    search: true
-    contents:
-      - section: "Informações sobre o curso"
-        contents:
-          - href: index.qmd
-            text: Página inicial
-          - informacoes-gerais.qmd
-          - profs.qmd
-          - bibliografia.qmd
-          - faq.qmd
-      - section: "Outras informações"
-        contents:
-          - licenca.qmd
+    - id: infos
+      title: "Sobre o curso"
+      style: "docked"
+      collapse-level: 2
+      align: left
+      contents:
+        - section: "Informações sobre o curso"
+          contents:
+           - informacoes-gerais.qmd
+           - profs.qmd
+           - bibliografia.qmd
+           - faq.qmd
+    - id: material
+      title: "Material"
+      style: "docked"
+      collapse-level: 2
+      align: left
+      contents:
+        - section: "Aulas"
+          contents:
+           - plano-de-aula.qmd
+        - section: "Sobre o material"
+          contents:
+           - licenca.qmd
+
 
 
 format:
@@ -44,6 +58,3 @@ format:
     css: styles.css
     toc: true
     toc-title: "Nessa página"
-
-
-
