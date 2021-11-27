@@ -1,0 +1,66 @@
+---
+title: "Programação do curso"
+---
+
+
+:::{.callout-warning}
+## Atenção!
+Página sujeita à alterações.
+:::
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(magrittr)
+googlesheets4::gs4_auth("milz.bea@gmail.com")
+
+sheet_semanas <- googlesheets4::read_sheet("1CN9PmWmNa4CEM9HI5jgYqHSK48K92n--BZWXglH5NVE", sheet = "semanas")
+
+sheet_tarefas <- googlesheets4::read_sheet("1CN9PmWmNa4CEM9HI5jgYqHSK48K92n--BZWXglH5NVE", sheet = "tarefas")
+
+sheet_aulas <- googlesheets4::read_sheet("1CN9PmWmNa4CEM9HI5jgYqHSK48K92n--BZWXglH5NVE", sheet = "aulas") %>% 
+  dplyr::mutate(data_aula_formatado = format(data_aula, "%d/%m/%Y"))
+
+
+aulas_completo <- sheet_aulas %>% dplyr::left_join(sheet_semanas, "numero_semana") 
+
+```
+
+
+```{r, results="asis", echo=FALSE, message=FALSE, warning=FALSE}
+for(sem in 1:nrow(sheet_semanas)) {
+  semana <- sheet_semanas %>% dplyr::filter(numero_semana == sem)
+  
+  cat(glue::glue("## Semana {semana$numero_semana} - {semana$tema_semana} \n\n"))
+  
+  aulas_semana <-
+    aulas_completo %>% dplyr::filter(numero_semana == semana$numero_semana)
+  
+  for (posic_aula in 1:nrow(aulas_semana)) {
+    
+    aula <-  aulas_semana[posic_aula, ]
+  
+    cat(glue::glue(
+      "### Aula {aula$numero_aula} ({aula$data_aula_formatado})  \n\n"
+    ))
+    
+    cat("**Conteúdo**  \n\n")
+    cat(aula$conteudo, "  \n\n")
+    
+    
+    cat("**Tarefas**  \n\n")
+    
+     tarefa_aula <- dplyr::left_join(aula, sheet_tarefas)
+
+    tarefa_aula %>%
+      dplyr::pull(descricao_tarefa) %>%
+      paste0(., "\n\n") %>%
+      cat()
+
+    #cat(aula$tarefas, "  \n\n")
+    
+  }
+}
+
+
+```
+

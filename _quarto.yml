@@ -43,7 +43,7 @@ site:
       contents:
         - section: "Aulas"
           contents:
-           - plano-de-aula.qmd
+           - programacao-do-curso.qmd
         - section: "Sobre o material"
           contents:
            - licenca.qmd
