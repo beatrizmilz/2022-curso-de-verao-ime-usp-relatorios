@@ -1,0 +1,8 @@
+---
+title: "Aula 4"
+params:
+  num_aula: 4
+---
+
+```{r, child=c('conteudo_aulas.qmd')}
+```

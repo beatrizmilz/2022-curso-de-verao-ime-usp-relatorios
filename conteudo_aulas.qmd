@@ -1,7 +1,3 @@
----
-title: "Programação do curso"
----
-
 
 :::{.callout-warning}
 ## Atenção!
@@ -21,24 +17,15 @@ sheet_aulas <- googlesheets4::read_sheet("1CN9PmWmNa4CEM9HI5jgYqHSK48K92n--BZWXg
   dplyr::mutate(data_aula_formatado = format(data_aula, "%d/%m/%Y"))
 
 
-aulas_completo <- sheet_aulas %>% dplyr::left_join(sheet_semanas, "numero_semana") 
+aulas_completo <- sheet_aulas %>% dplyr::left_join(sheet_semanas, "numero_semana")
+
+aula <- aulas_completo |> dplyr::filter(numero_aula == params$num_aula)
 
 ```
 
 
 ```{r, results="asis", echo=FALSE, message=FALSE, warning=FALSE}
-for(sem in 1:nrow(sheet_semanas)) {
-  semana <- sheet_semanas %>% dplyr::filter(numero_semana == sem)
-  
-  cat(glue::glue("## Semana {semana$numero_semana} - {semana$tema_semana} \n\n"))
-  
-  aulas_semana <-
-    aulas_completo %>% dplyr::filter(numero_semana == semana$numero_semana)
-  
-  for (posic_aula in 1:nrow(aulas_semana)) {
-    
-    aula <-  aulas_semana[posic_aula, ]
-  
+
     cat(glue::glue(
       "### Aula {aula$numero_aula} ({aula$data_aula_formatado})  \n\n"
     ))
@@ -46,21 +33,15 @@ for(sem in 1:nrow(sheet_semanas)) {
     cat("**Conteúdo**  \n\n")
     cat(aula$conteudo, "  \n\n")
     
-    # 
-    # cat("**Tarefas**  \n\n")
-    # 
-    #  tarefa_aula <- dplyr::left_join(aula, sheet_tarefas)
-    # 
-    # tarefa_aula %>%
-    #   dplyr::pull(descricao_tarefa) %>%
-    #   paste0(., "\n\n") %>%
-    #   cat()
-
-    #cat(aula$tarefas, "  \n\n")
     
-  }
-}
+    cat("**Tarefas**  \n\n")
+    
+     tarefa_aula <- dplyr::left_join(aula, sheet_tarefas)
 
+    tarefa_aula %>%
+      dplyr::pull(descricao_tarefa) %>%
+      paste0(., "\n\n") %>%
+      cat()
 
 ```
 

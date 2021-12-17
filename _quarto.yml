@@ -41,9 +41,14 @@ site:
       collapse-level: 2
       align: left
       contents:
+        - programacao-do-curso.qmd
         - section: "Aulas"
           contents:
-           - programacao-do-curso.qmd
+           - aula1.qmd
+           - aula2.qmd
+           - aula3.qmd
+           - aula4.qmd
+           - aula5.qmd
         - section: "Sobre o material"
           contents:
            - licenca.qmd

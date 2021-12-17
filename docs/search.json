@@ -74,20 +74,55 @@
     "href": "programacao-do-curso.html#semana-1---reprodutibilidade-e-rmarkdown",
     "title": "Programação do curso",
     "section": "Semana 1 - Reprodutibilidade e RMarkdown",
-    "text": "Aula 1 (02/02/2022)\nConteúdo\n\nIntrodução ao curso\nIntrodução ao conceito de reprodutibilidade\nReprodutibilidade no contexto do desenvolvimento em R: o uso de projetos do RStudio\nRMarkdown\n\nIntrodução ao pacote RMarkdown\nComo criar arquivos .Rmd\nComo adicionar elementos no .Rmd, como: marcações com Markdown, imagens, tabelas, gráficos, códigos e resultados.\n\n\nTarefas\n\nLer o capítulo 3 do livro Zen do R - Rproj e diretórios\nLer o capítulo 4 do livro Ciência de Dados em R - Relatórios\n\n\n\nAula 2 (07/02/2022)\nConteúdo\n\nRMarkdown (continuação)\n\nCriando .Rmd a partir de templates\nGerando diferentes tipos de relatórios: .html, .docx, .pdf\nUsando e gerenciando bibliografias com arquivos .bib\nRelatórios com parâmetros\n\n\nTarefas\n\nCriar um documento usando RMarkdown que gere um .html.\nConferir os exemplos de arquivos que podemos gerar com RMarkdown, e votar em um para ser usado no exemplo final do curso."
+    "text": "Aula 1 (02/02/2022)\nConteúdo\n\nIntrodução ao curso\nIntrodução ao conceito de reprodutibilidade\nReprodutibilidade no contexto do desenvolvimento em R: o uso de projetos do RStudio\nRMarkdown\n\nIntrodução ao pacote RMarkdown\nComo criar arquivos .Rmd\nComo adicionar elementos no .Rmd, como: marcações com Markdown, imagens, tabelas, gráficos, códigos e resultados.\n\n\n\n\nAula 2 (07/02/2022)\nConteúdo\n\nRMarkdown (continuação)\n\nCriando .Rmd a partir de templates\nGerando diferentes tipos de relatórios: .html, .docx, .pdf\nUsando e gerenciando bibliografias com arquivos .bib\nRelatórios com parâmetros"
   },
   {
     "objectID": "programacao-do-curso.html#semana-2---controle-de-versão-e-disponibilização-dos-resultados",
     "href": "programacao-do-curso.html#semana-2---controle-de-versão-e-disponibilização-dos-resultados",
     "title": "Programação do curso",
     "section": "Semana 2 - Controle de versão e disponibilização dos resultados",
-    "text": "Aula 3 (09/02/2022)\nConteúdo\n\nGit e GitHub\n\nIntrodução ao controle de versão\nDiferença entre Git e GitHub\nComo configurar o Git e o GitHub no RStudio usando o pacote {usethis}\n\n\nTarefas\n\nCriar uma conta no GitHub (caso não tenha feito anteriormente).\nFazer a configuração do Git e GitHub no RStudio.\nLer o capítulo 4 do livro Zen do R - Git e GitHub.\n\n\n\nAula 4 (14/02/2022)\nConteúdo\n\nGit e GitHub (continuação)\n\nFluxo de trabalho em projetos no RStudio usando controle de versão com Git e GitHub\nTrabalhando colaborativamente no GitHub: Criando um Pull Request\nDisponibilizar os relatórios gerados em .html na internet\n\nCom GitHub Pages\nCom Netlify\n\n\n\nTarefas\n\nCriar um repositório e disponibilizar o relatório criado na Semana 1 na internet (com GitHub Pages ou Netlify).\nFazer um Pull Request para adicionar o link do relatório criado no material do curso."
+    "text": "Aula 3 (09/02/2022)\nConteúdo\n\nGit e GitHub\n\nIntrodução ao controle de versão\nDiferença entre Git e GitHub\nComo configurar o Git e o GitHub no RStudio usando o pacote {usethis}\n\n\n\n\nAula 4 (14/02/2022)\nConteúdo\n\nGit e GitHub (continuação)\n\nFluxo de trabalho em projetos no RStudio usando controle de versão com Git e GitHub\nTrabalhando colaborativamente no GitHub: Criando um Pull Request\nDisponibilizar os relatórios gerados em .html na internet\n\nCom GitHub Pages\nCom Netlify"
   },
   {
     "objectID": "programacao-do-curso.html#semana-3---exemplo-prático-final",
     "href": "programacao-do-curso.html#semana-3---exemplo-prático-final",
     "title": "Programação do curso",
     "section": "Semana 3 - Exemplo prático final",
-    "text": "Aula 5 (16/02/2022)\nConteúdo\n\nExemplo prático do ciclo completo:\n\nCriar um projeto no RStudio\nIniciar o {renv}\nIniciar o controle de versão com Git\nIniciar um repositório no GitHub\nCriar um documento RMarkdown - O tipo de documento será escolhido previamente pela turma!\nAdicionar conteúdo no .Rmd: parâmetros, código e resultados, código em linha, tabela, gráfico, imagens, etc.\nDisponibilizar o documento na internet com GitHub Pages ou Netlify\nFazer alterações no .Rmd e atualizar a versão que está online\n\n\nTarefas\n\nEntregar o trabalho final."
+    "text": "Aula 5 (16/02/2022)\nConteúdo\n\nExemplo prático do ciclo completo:\n\nCriar um projeto no RStudio\nIniciar o {renv}\nIniciar o controle de versão com Git\nIniciar um repositório no GitHub\nCriar um documento RMarkdown - O tipo de documento será escolhido previamente pela turma!\nAdicionar conteúdo no .Rmd: parâmetros, código e resultados, código em linha, tabela, gráfico, imagens, etc.\nDisponibilizar o documento na internet com GitHub Pages ou Netlify\nFazer alterações no .Rmd e atualizar a versão que está online"
+  },
+  {
+    "objectID": "aula1.html",
+    "href": "aula1.html",
+    "title": "Aula 1",
+    "section": "",
+    "text": "Atenção!\n\n\n\nPágina sujeita à alterações.\n\n\n\n\n\n\nAula 1 (02/02/2022)\nConteúdo\n\nIntrodução ao curso\nIntrodução ao conceito de reprodutibilidade\nReprodutibilidade no contexto do desenvolvimento em R: o uso de projetos do RStudio\nRMarkdown\n\nIntrodução ao pacote RMarkdown\nComo criar arquivos .Rmd\nComo adicionar elementos no .Rmd, como: marcações com Markdown, imagens, tabelas, gráficos, códigos e resultados.\n\n\nTarefas\n\nLer o capítulo 3 do livro Zen do R - Rproj e diretórios\nLer o capítulo 4 do livro Ciência de Dados em R - Relatórios"
+  },
+  {
+    "objectID": "aula2.html",
+    "href": "aula2.html",
+    "title": "Aula 2",
+    "section": "",
+    "text": "Atenção!\n\n\n\nPágina sujeita à alterações.\n\n\n\n\n\n\nAula 2 (07/02/2022)\nConteúdo\n\nRMarkdown (continuação)\n\nCriando .Rmd a partir de templates\nGerando diferentes tipos de relatórios: .html, .docx, .pdf\nUsando e gerenciando bibliografias com arquivos .bib\nRelatórios com parâmetros\n\n\nTarefas\n\nCriar um documento usando RMarkdown que gere um .html.\nConferir os exemplos de arquivos que podemos gerar com RMarkdown, e votar em um para ser usado no exemplo final do curso."
+  },
+  {
+    "objectID": "aula3.html",
+    "href": "aula3.html",
+    "title": "Aula 3",
+    "section": "",
+    "text": "Atenção!\n\n\n\nPágina sujeita à alterações.\n\n\n\n\n\n\nAula 3 (09/02/2022)\nConteúdo\n\nGit e GitHub\n\nIntrodução ao controle de versão\nDiferença entre Git e GitHub\nComo configurar o Git e o GitHub no RStudio usando o pacote {usethis}\n\n\nTarefas\n\nCriar uma conta no GitHub (caso não tenha feito anteriormente).\nFazer a configuração do Git e GitHub no RStudio.\nLer o capítulo 4 do livro Zen do R - Git e GitHub."
+  },
+  {
+    "objectID": "aula4.html",
+    "href": "aula4.html",
+    "title": "Aula 4",
+    "section": "",
+    "text": "Atenção!\n\n\n\nPágina sujeita à alterações.\n\n\n\n\n\n\nAula 4 (14/02/2022)\nConteúdo\n\nGit e GitHub (continuação)\n\nFluxo de trabalho em projetos no RStudio usando controle de versão com Git e GitHub\nTrabalhando colaborativamente no GitHub: Criando um Pull Request\nDisponibilizar os relatórios gerados em .html na internet\n\nCom GitHub Pages\nCom Netlify\n\n\n\nTarefas\n\nCriar um repositório e disponibilizar o relatório criado na Semana 1 na internet (com GitHub Pages ou Netlify).\nFazer um Pull Request para adicionar o link do relatório criado no material do curso."
+  },
+  {
+    "objectID": "aula5.html",
+    "href": "aula5.html",
+    "title": "Aula 5",
+    "section": "",
+    "text": "Atenção!\n\n\n\nPágina sujeita à alterações.\n\n\n\n\n\n\nAula 5 (16/02/2022)\nConteúdo\n\nExemplo prático do ciclo completo:\n\nCriar um projeto no RStudio\nIniciar o {renv}\nIniciar o controle de versão com Git\nIniciar um repositório no GitHub\nCriar um documento RMarkdown - O tipo de documento será escolhido previamente pela turma!\nAdicionar conteúdo no .Rmd: parâmetros, código e resultados, código em linha, tabela, gráfico, imagens, etc.\nDisponibilizar o documento na internet com GitHub Pages ou Netlify\nFazer alterações no .Rmd e atualizar a versão que está online\n\n\nTarefas\n\nEntregar o trabalho final."
   }
 ]
