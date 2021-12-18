@@ -40,7 +40,7 @@ for(sem in 1:nrow(sheet_semanas)) {
     aula <-  aulas_semana[posic_aula, ]
   
     cat(glue::glue(
-      "### Aula {aula$numero_aula} ({aula$data_aula_formatado})  \n\n"
+      "### [Aula {aula$numero_aula} ({aula$data_aula_formatado})](/aula{aula$numero_aula}.html) \n\n"
     ))
     
     cat("**Conteúdo**  \n\n")
