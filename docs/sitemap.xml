@@ -1,51 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.ime.usp.br/verao/assets/images/logo_verao.png/conteudo_aulas.html</loc>
+    <lastmod>2021-12-18T21:44:20.131Z</lastmod>
+  </url>
+  <url>
     <loc>https://www.ime.usp.br/verao/assets/images/logo_verao.png/bibliografia.html</loc>
-    <lastmod>2021-12-17T18:49:58.035Z</lastmod>
+    <lastmod>2021-12-18T21:44:20.473Z</lastmod>
   </url>
   <url>
     <loc>https://www.ime.usp.br/verao/assets/images/logo_verao.png/licenca.html</loc>
-    <lastmod>2021-12-17T18:49:58.442Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.ime.usp.br/verao/assets/images/logo_verao.png/profs.html</loc>
-    <lastmod>2021-12-17T18:50:04.374Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.ime.usp.br/verao/assets/images/logo_verao.png/informacoes-gerais.html</loc>
-    <lastmod>2021-12-17T18:50:04.665Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.ime.usp.br/verao/assets/images/logo_verao.png/index.html</loc>
-    <lastmod>2021-12-17T18:50:04.942Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.ime.usp.br/verao/assets/images/logo_verao.png/faq.html</loc>
-    <lastmod>2021-12-17T18:50:05.824Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.ime.usp.br/verao/assets/images/logo_verao.png/programacao-do-curso.html</loc>
-    <lastmod>2021-12-17T18:56:55.229Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.ime.usp.br/verao/assets/images/logo_verao.png/aula1.html</loc>
-    <lastmod>2021-12-17T19:05:08.521Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.ime.usp.br/verao/assets/images/logo_verao.png/aula2.html</loc>
-    <lastmod>2021-12-17T19:06:54.821Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.ime.usp.br/verao/assets/images/logo_verao.png/aula3.html</loc>
-    <lastmod>2021-12-17T19:07:27.260Z</lastmod>
+    <lastmod>2021-12-18T21:44:20.754Z</lastmod>
   </url>
   <url>
     <loc>https://www.ime.usp.br/verao/assets/images/logo_verao.png/aula4.html</loc>
-    <lastmod>2021-12-17T19:08:10.267Z</lastmod>
+    <lastmod>2021-12-18T21:44:24.195Z</lastmod>
   </url>
   <url>
     <loc>https://www.ime.usp.br/verao/assets/images/logo_verao.png/aula5.html</loc>
-    <lastmod>2021-12-17T19:08:26.960Z</lastmod>
+    <lastmod>2021-12-18T21:44:27.532Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.ime.usp.br/verao/assets/images/logo_verao.png/profs.html</loc>
+    <lastmod>2021-12-18T21:44:29.880Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.ime.usp.br/verao/assets/images/logo_verao.png/aula1.html</loc>
+    <lastmod>2021-12-18T21:44:33.382Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.ime.usp.br/verao/assets/images/logo_verao.png/informacoes-gerais.html</loc>
+    <lastmod>2021-12-18T21:44:33.670Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.ime.usp.br/verao/assets/images/logo_verao.png/aula2.html</loc>
+    <lastmod>2021-12-18T21:44:37.192Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.ime.usp.br/verao/assets/images/logo_verao.png/index.html</loc>
+    <lastmod>2021-12-18T21:44:37.473Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.ime.usp.br/verao/assets/images/logo_verao.png/aula3.html</loc>
+    <lastmod>2021-12-18T21:44:40.946Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.ime.usp.br/verao/assets/images/logo_verao.png/faq.html</loc>
+    <lastmod>2021-12-18T21:44:41.708Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.ime.usp.br/verao/assets/images/logo_verao.png/programacao-do-curso.html</loc>
+    <lastmod>2021-12-18T21:44:45.168Z</lastmod>
   </url>
 </urlset>

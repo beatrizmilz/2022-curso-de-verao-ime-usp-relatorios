@@ -1,3 +1,7 @@
+---
+params:
+  num_aula: 0
+---
 
 :::{.callout-warning}
 ## Atenção!
