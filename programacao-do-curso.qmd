@@ -2,6 +2,8 @@
 title: "Programação do curso"
 ---
 
+<!-- https://docs.google.com/spreadsheets/d/1CN9PmWmNa4CEM9HI5jgYqHSK48K92n--BZWXglH5NVE/edit#gid=34134925 -->
+
 
 :::{.callout-warning}
 ## Atenção!
