@@ -84,6 +84,13 @@
     "text": "Carga horária: 15h (5 aulas de 3h)\nLocal: Online\nDatas: 2, 7, 9, 14, 16 de fevereiro de 2022 (2ª e 4ª)\nHorário: Manhã (09h-12h)\nVagas: 75"
   },
   {
+    "objectID": "informacoes-gerais.html#política-de-isenção-de-taxa-de-inscrição",
+    "href": "informacoes-gerais.html#política-de-isenção-de-taxa-de-inscrição",
+    "title": "Informações gerais",
+    "section": "Política de isenção de taxa de inscrição",
+    "text": "Segue abaixo a política de Isenção que está no sistema para os cursos de verão:\n\n\nPolítica de Isenções ISENÇÃO O aluno deverá fazer sua inscrição on-line no curso que desejar e efetuar o pagamento, para assegurar sua vaga. Após dois dias úteis solicitar isenção (via Sistema Web do Verão). O sorteio das isenções, bem como, a divulgação dos contemplados ocorrerá no mês de dezembro. Aqueles que NÃO forem sorteados e desistirem de realizar o curso deverão solicitar a devolução da taxa de inscrição, na Secretaria do Programa de Verão.  No caso de ausência de interessados em alguma categoria, as vagas serão remanejadas de acordo com a procura ou será substituído por isenção para alunos indicados por docentes. A devolução da taxa, referente a isenção será feita via depósito em conta bancária."
+  },
+  {
     "objectID": "aula2.html",
     "href": "aula2.html",
     "title": "Aula 2",
@@ -131,12 +138,5 @@
     "title": "Programação do curso",
     "section": "Semana 3 - Exemplo prático final",
     "text": "Aula 5 (16/02/2022)\nConteúdo\n\nExemplo prático do ciclo completo:\n\nCriar um projeto no RStudio\nIniciar o {renv}\nIniciar o controle de versão com Git\nIniciar um repositório no GitHub\nCriar um documento RMarkdown - O tipo de documento será escolhido previamente pela turma!\nAdicionar conteúdo no .Rmd: parâmetros, código e resultados, código em linha, tabela, gráfico, imagens, etc.\nDisponibilizar o documento na internet com GitHub Pages ou Netlify\nFazer alterações no .Rmd e atualizar a versão que está online"
-  },
-  {
-    "objectID": "informacoes-gerais.html#política-de-isenção-de-taxa-de-inscrição",
-    "href": "informacoes-gerais.html#política-de-isenção-de-taxa-de-inscrição",
-    "title": "Informações gerais",
-    "section": "Política de isenção de taxa de inscrição",
-    "text": "Segue abaixo a política de Isenção que está no sistema para os cursos de verão:\n\n\nPolítica de Isenções ISENÇÃO O aluno deverá fazer sua inscrição on-line no curso que desejar e efetuar o pagamento, para assegurar sua vaga. Após dois dias úteis solicitar isenção (via Sistema Web do Verão). O sorteio das isenções, bem como, a divulgação dos contemplados ocorrerá no mês de dezembro. Aqueles que NÃO forem sorteados e desistirem de realizar o curso deverão solicitar a devolução da taxa de inscrição, na Secretaria do Programa de Verão.  No caso de ausência de interessados em alguma categoria, as vagas serão remanejadas de acordo com a procura ou será substituído por isenção para alunos indicados por docentes. A devolução da taxa, referente a isenção será feita via depósito em conta bancária."
   }
 ]

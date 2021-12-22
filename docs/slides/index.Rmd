@@ -1,0 +1,521 @@
+---
+title: "Relatórios reprodutíveis com R"
+subtitle: 'Curso de Verão IME-USP 2022' 
+author: 
+  - "<h3>Ministrante: <br> Beatriz Milz</h3>"
+  - "<h3>Monitoria: <br> Ana Carolina Moreno <br> Tereza Lacerda <br> Alan da Silva <br> Julia Cansado</h3>"
+#date: 'Fevereiro 2022'
+output:
+  xaringan::moon_reader:
+    css: [xaringan-themer.css, custom.css]
+    nature:
+      slideNumberFormat: "<a href='https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/'><i class='fas fa-external-link-alt'></i> Página do curso</a> - <a href='#sumario'>Guia</a> - %current%/%total%"
+      titleSlideClass: ["title-slide", "rascunho"]
+      highlightStyle: github
+      highlightLines: true
+      ratio: '16:9'
+      countIncrementalSlides: true
+# rmarkdown::render(input = "docs/slides/index.Rmd")  
+
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  fig.align = "center",
+  out.width = "100%",
+  cache = FALSE,
+  echo = FALSE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE
+)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "#1094AB",
+  title_slide_background_color = "#ffffff",
+  title_slide_text_color = "#1094AB",
+  inverse_text_color = "#826b37",
+  inverse_header_color = "#FDB525",
+  inverse_background_color = "#f2f2f2",
+  secondary_color = "#FDB525",
+  background_color = "#FFFFFF",
+  code_inline_background_color = "#faf0f4",
+ 
+  
+  header_font_google = google_font("Quicksand"),
+  text_font_google   = google_font("Work Sans", "300", "300i"),
+  code_font_google   = google_font("Fira Code"),
+  base_font_size = "27px",
+  extra_css = list(".remark-code-line" = list("background-color" = "#f2f2f2"))
+)
+
+```
+
+
+## Ministrantes e monitoria
+
+```{r echo=FALSE, results='asis'}
+# googlesheets4::gs4_auth()
+# sheet_profs <- googlesheets4::read_sheet("1CN9PmWmNa4CEM9HI5jgYqHSK48K92n--BZWXglH5NVE", sheet = "info-profs")
+# 
+# readr::write_rds(x = sheet_profs, "data/sheet_profs.Rds")
+
+sheet_profs <- readr::read_rds("data/sheet_profs.Rds")
+
+profs <- sheet_profs |> 
+  dplyr::mutate(texto = glue::glue("- **{nome}** {
+mini_bio
+} <br><br>"))
+
+profs |>
+  dplyr::slice(1:3) |>
+  dplyr::pull(texto)
+
+```
+
+---
+
+## Ministrantes e monitoria
+
+
+```{r echo=FALSE, results='asis'}
+profs |>
+  dplyr::slice(4:5) |>
+  dplyr::pull(texto)
+```
+
+
+
+
+
+---
+name: sumario
+
+## Guia
+
+- [Sobre o curso](#sobre-o-curso)
+
+- [Introdução ao conceito de reprodutibilidade](#reprodutibilidade)
+
+- [Usando projetos do RStudio](#rprojs)
+
+- [RMarkdown](#rmarkdown)
+
+- [Git e GitHub](#git-e-github)
+
+
+---
+name: sobre-o-curso
+class: middle, center, inverse
+
+## Sobre o curso
+
+---
+
+### Objetivos de aprendizagem
+
+Que vocês saibam ao final do curso:
+
+- Como como noções de reprodutibilidade
+
+- Como criar documentos usando RMarkdown.
+
+- Como exportar esses documentos em word, PDF e HTML.
+
+- Como controlar as versões do documento usando o Git e GitHub.
+
+- Como disponibilizar o documento na internet. 
+
+---
+
+### Dinâminca de aula
+
+- São 5 aulas: 
+
+  - Aulas 1 e 2: conceito de reprodutibilidade, usar projetos em R e introdução ao pacote RMarkdown.
+  
+  - Aulas 3 e 4: introdução ao Git e GitHub no RStudio.
+  
+  - Aula 5: exemplo para praticar os conteúdos das aulas anteriores.
+  
+
+- Pratique depois da aula! Dica: [Podcast Naruhodo: Powerpoint é útil para a aprendizagem?](https://www.b9.com.br/shows/naruhodo/naruhodo-205-powerpoint-e-util-para-a-aprendizagem/)
+
+---
+
+### Informações gerais
+
+- Gravação das aulas: caso não queira aparecer na gravação, mantenha sua câmera fechada.
+
+- Dúvidas:
+
+  - Durante as aulas: enviem dúvidas no chat.
+
+  - Fora do horário de aulas:
+      - Durante o oferecimento do curso: [na plataforma USP Extensão](https://cursosextensao.usp.br/)
+      - Após a finalização do curso: [Fórum da Curso-R](https://discourse.curso-r.com/)
+
+
+---
+
+### Requisitos para o certificado
+
+- Ter frequência igual ou superior à 75% (ou seja, pode ter 1 falta).
+
+- [TO DO: preencher depois sobre os exercícios e trabalho final]
+
+
+
+---
+
+### Check-list
+
+
+- Instalar:
+  - [R](https://livro.curso-r.com/1-1-instalacao-do-r.html)
+  - [RStudio](https://livro.curso-r.com/1-1-instalacao-do-r.html) 
+  - [Git](https://git-scm.com/)
+
+- [Criar uma conta no GitHub](https://github.com/)
+
+- Pacotes necessários:
+
+```{r eval=FALSE, include=TRUE}
+pacotes_necessarios <- c("usethis", "rmarkdown", "knitr", "pagedown", "xaringan")
+
+install.packages(pacotes_necessarios)
+```
+
+
+---
+
+### Guia dos slides
+
+- As cores do lado vertical indicam o tipo de conteúdo!
+
+  - Cinza: conteúdo teórico, expositivo.
+  
+  - Azul: demonstração, mostraremos como é feito no RStudio.
+  
+  - Amarelo: vocês fazem exercícios para praticar o que foi apresentado.
+
+---
+name: reprodutibilidade
+class: middle, center, inverse
+
+## Introdução ao conceito de reprodutibilidade
+
+---
+class: teoria
+
+### Reprodutibilidade
+
+TO DO
+
+---
+name: rprojs
+class: middle, center, inverse
+
+
+## Usando projetos do RStudio
+
+
+---
+class:  teoria
+
+### Projetos do RStudio
+
+
+- TO DO:
+
+  - O que são
+
+  - Importância
+
+---
+class: livecoding
+
+## Criando um projeto
+
+- Criar um projeto no RStudio facilita muito para organizar os arquivos, posteriormente sincronizar com o GitHub, entre outros. Neste capítulo do livro Zen do R, da [Curso-R](https://www.curso-r.com), tem mais informações sobre [RProj e diretórios](https://curso-r.github.io/zen-do-r/rproj-dir.html).
+
+  - File > New Project > New Directory > New Project
+  
+  - Dê um nome para seu projeto (será o nome da pasta), escolha a pasta no seu computador, e clique em `Create Project`.
+  
+
+
+---
+class:  teoria
+
+#### Os arquivos .RData e .Rhistory 
+
+- Em sua configuração padrão, a IDE manterá na "memória" todos os últimos comandos executados, todos os dados utilizados e todos os objetos criados.
+
+- Ao fechar e abrir o RStudio, essas informações serão recarregadas na memória como se o usuário nunca tivesse saído do programa. Esse recurso é tornado possível pela criação de dois arquivos ocultos: `.RData` e `.Rhistory`.
+
+- O primeiro abriga absolutamente todos os objetos criados por uma sessão R, enquanto o segundo contém uma lista com os últimos comandos executados. 
+
+- Ao reabrir o RStudio, o conteúdo armazenados nestes arquivos será carregado no ambiente de trabalho atual como se nada tivesse acontecido.
+
+.footnote[Leia mais [neste capítulo do livro Zen do R](https://curso-r.github.io/zen-do-r/rdata-rhistory.html)]
+
+> <i class="far fa-flag"></i> [Slide](https://curso-r.github.io/main-pacotes/slides/index.html) do curso de [Pacotes](https://curso-r.com/cursos/pacotes/), da [Curso-R](https://curso-r.com/).
+
+
+---
+class:  teoria
+
+
+#### Por que desistir do .RData e .Rhistory 
+
+- Se todos os resultados parciais de uma análise estiverem disponíveis a qualquer momento, **diminui o incentivo para a escrita de código reprodutível**
+
+- Ao dependermos ativamente do `.Rdata`, **se acidentalmente sobrescrevemos um objeto** relevante e o código para recriá-lo não estiver mais acessível, **não haverá nenhuma forma confiável de recuperá-lo**.
+
+- O R trata todos os objetos guardados na memória igualmente. Isso significa que ele também irá armazenar nos arquivos ocultos todas as bases de dados da sessão. Assim, o `.RData` **pode ser um arquivo de múltiplos gigabytes**
+
+> <i class="far fa-flag"></i> [Slide](https://curso-r.github.io/main-pacotes/slides/index.html) do curso de [Pacotes](https://curso-r.com/cursos/pacotes/), da [Curso-R](https://curso-r.com/).
+
+
+---
+class:  livecoding
+
+
+#### Como desabilitar .RData e .Rhistory
+
+- Na barra superior: **Tools > Global Options...**
+
+```{r, echo=FALSE, out.width="40%"}
+knitr::include_graphics("https://curso-r.github.io/zen-do-r/static/rdata-rhistory/config.png")
+```
+
+> <i class="far fa-flag"></i> [Slide](https://curso-r.github.io/main-pacotes/slides/index.html) do curso de [Pacotes](https://curso-r.com/cursos/pacotes/), da [Curso-R](https://curso-r.com/).
+
+---
+class: exercicios
+
+### Colocar em prática: 
+
+- Crie um projeto no RStudio para armazenar o que vamos criar durante o curso. Salve em algum lugar no seu computador que seja fácil de encontrar.
+
+- Desabilite o .RData e .Rhistory no seu RStudio
+
+
+
+---
+name: rmarkdown
+class: middle, center, inverse
+
+## RMarkdown
+
+---
+class:  teoria
+
+
+### Ciclo da ciência de dados
+
+
+```{r, out.width="65%"}
+knitr::include_graphics("https://beatrizmilz.github.io/python-brasil-2021-reticulate/img/environmental-data-science-r4ds-general.png")
+```
+
+
+Fonte: Conceito do ciclo de ciência de dados apresentado por [Hadley Wickham no livro R for Data Science](https://r4ds.had.co.nz/introduction.html), ilustração por [Allison Horst](https://github.com/allisonhorst).
+
+---
+class:  teoria
+
+
+### Pacote R Markdown
+
+.pull-left[
+
+
+
+- Criado e mantido pela [RStudio](https://rstudio.com/)
+
+- Princípio: arquivos onde escrevemos textos e marcamos com `markdown`, mas também podemos adicionar códigos que são executados.
+
+- Extensão `.Rmd`
+
+- Possibilita a utilização de códigos `R`, `Python`, `Markdown`, `HTML`, `CSS`, `SQL`, e outros em um único arquivo.
+
+]
+
+.pull-right[
+```{r, out.width="70%", fig.cap="<center><b>Logo: <a href='https://rmarkdown.rstudio.com'>Pacote rmarkdown</a></b></center>"}
+knitr::include_graphics("https://beatrizmilz.github.io/python-brasil-2021-reticulate/img/hex-rmarkdown.png")
+```
+]
+
+---
+class:  teoria
+
+
+### Pacote R Markdown
+
+
+.pull-left[
+- A reprodutibilidade é algo importante para o R Markdown.
+
+-  A comunidade de R, e a equipe da RStudio, desenvolveram outros pacotes que integram bem com R Markdown para  gerar diversos produtos de análise de dados diferentes, com arquivos .Rmd. 
+
+]
+
+.pull-right[
+```{r, out.width="70%", fig.cap="<center><b>Fonte: <a href='https://rmarkdown.rstudio.com'>Pacote `rmarkdown`</a></b></center>"}
+knitr::include_graphics("https://beatrizmilz.github.io/slidesR/img/rmarkdown/markdown.png")
+```
+]
+
+
+---
+class:  teoria
+
+
+### Exemplos
+
+- Apresentações com o pacote [xaringan](https://slides.yihui.org/xaringan/): 
+  - Exemplo: Essa apresentação! 
+  
+- Livros com o pacote [bookdown](https://bookdown.org/home/).
+  - Exemplo: [Livro Ciência de Dados em R](https://livro.curso-r.com/) da [Curso-R](https://curso-r.com/)
+
+- Blogs com o pacote [blogdown](https://pkgs.rstudio.com/blogdown/)
+  - Exemplo: [meu blog](https://beatrizmilz.com/blog/)
+
+- Relatórios com o pacote [pagedown](https://github.com/rstudio/pagedown)
+  - Exemplo: o [relatório](https://abjur.github.io/obsRJRJ/relatorio/obs_rjrj_abj.pdf) do [Observatório da insolvência: Rio de Janeiro](https://abj.org.br/cases/obsrjrj/), feito pela [Associação Brasileira de Jurimetria (ABJ)](https://abj.org.br/)
+  
+---
+class:  livecoding
+
+
+### Começando com o R Markdown 
+
+- **Criando um arquivo**:
+
+  - `File > New File > R Markdown`
+
+- **Estrutura do arquivo**: 
+
+  - YAML - metadados do documento
+  - Code chunks - Campos de código (pode receber código em R, SQL, Python, entre outros)
+  - Textos marcados com Markdown ou HTML
+
+- **Transformar o .Rmd no arquivo final**
+  - Botão Knit, ou usando o atalho: `Ctrl + Shift + K`
+  - Boa prática: faça isso com frequência. 
+  
+---
+class: exercicios
+
+### Colocar em prática: 
+  
+- Dentro do projeto do RStudio criado, crie um novo arquivo RMarkdown que gera um HTML. 
+
+- O arquivo já vem com alguns conteúdos para servir de exemplo. Observe a estrutura deste arquivo! Tente imaginar o que será gerado.
+
+- Aperte o botão `knit` para gerar o resultado final. Veja o resultado: é o que você imaginou?
+
+- Faça pequenas alterações e aperte o botão `knit` novamente, para ver como ficou. Sugestões:
+  - Altere o título, adicione seu nome, mude a data.
+  - Escreva algo diferente no corpo do arquivo.
+  
+
+---
+class:  teoria
+
+
+### Markdown
+
+- O RMarkdown possibilita a utilização da linguagem de marcação simples Markdown. Essa linguagem de marcação foi elaborada para ser fácil de ler e  fácil de escrever.
+
+* Confira as cheatsheets: [`rmarkdown` Cheatsheet 2.0](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) e [`rmarkdown` Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf).
+
+
+- O RStudio Visual Editor facilita o uso do Markdown no RStudio.
+
+---
+class: livecoding
+
+### Markdown
+
+.pull-left[
+- Negrito, itálico, tachado
+
+- Criar títulos
+
+- Listas
+  - Enumerada
+  - Não enumerada
+]
+
+.pull-right[
+- Marcar como código
+
+- Marcar como citação
+
+- Links
+
+- Imagens
+]
+
+---
+class: teoria
+
+### Outros elementos - Adicionar equações
+  
+- Equação centralizada: Envolver a equação por dois `$`.
+
+$${\text{Média}=\frac {a_{1}+a_{2}+\cdots +a_{n}}{n}}$$
+
+  - Equação junto ao texto: Envolver a equação por um `$`.
+
+> Ou também na linha ${\text{Média}=\frac {a_{1}+a_{2}+\cdots +a_{n}}{n}}$, junto ao texto!
+
+**Código Markdown:**
+
+
+```md
+$${\text{Média}=\frac {a_{1}+a_{2}+\cdots +a_{n}}{n}}$$
+```
+
+.small[Dica: [Equações em LaTeX no Mettzer](https://app.mettzer.com/latex), ou pesquise no google por "Equações em LaTeX".]
+
+---
+class: teoria
+
+### Outros elementos - Adicionar referências
+
+
+
+
+
+
+---
+class: center
+
+## Agradecemos a atenção!
+
+
+Lembre-se de enviar as dúvidas no [discourse da Curso-R](https://discourse.curso-r.com/)!
+
+Slides criados usando os pacotes em R  📦 :
+
+[**xaringan**](https://github.com/yihui/xaringan)<br>
+[gadenbuie/xaringanthemer](https://github.com/gadenbuie/xaringanthemer)
+
+O chakra vem da biblioteca javascript [remark.js](https://remarkjs.com), e os pacotes  [**knitr**](http://yihui.name/knitr), e [R Markdown](https://rmarkdown.rstudio.com).
+
+
+<!-- inicio font awesome -->
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
+
+<!-- final font awesome -->
