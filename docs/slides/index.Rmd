@@ -497,6 +497,12 @@ class: teoria
 
 
 
+---
+name: git-e-github
+class: middle, center, inverse
+
+
+## Git e GitHub
 
 
 ---
