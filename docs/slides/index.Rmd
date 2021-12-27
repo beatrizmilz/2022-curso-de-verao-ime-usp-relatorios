@@ -59,7 +59,11 @@ style_duo_accent(
 
 ```{r, include=FALSE}
 ref_pacotes_curso_r <- function(){
-  cat('.topnote[<i class="far fa-flag"></i> [Slide](https://curso-r.github.io/main-pacotes/slides/index.html) do curso de [Pacotes](https://curso-r.com/cursos/pacotes/), da [Curso-R](https://curso-r.com/).]')
+  cat('.topnote[<i class="far fa-flag"></i> [Slide](https://curso-r.github.io/main-pacotes/slides/index.html) adaptado do curso de [Pacotes](https://curso-r.com/cursos/pacotes/), da [Curso-R](https://curso-r.com/).]')
+}
+
+ref_relatorios_curso_r <- function(){
+  cat('.topnote[<i class="far fa-flag"></i> Slide adaptado do curso de [Relatórios](https://loja.curso-r.com/relatorios-e-apresentacoes-automaticas.html), da [Curso-R](https://curso-r.com/).]')
 }
 ```
 
@@ -364,10 +368,12 @@ class: middle, center, inverse
   - O que é Markdown?
   
   - Como adicionar conteúdo em um arquivo rmarkdown?
+
+  - Como gerar outros tipos de documentos?
   
   - Como adicionar parâmetros no documento?
   
-  - Como gerar outros tipos de documentos?
+
 
 ]
 
@@ -432,24 +438,6 @@ knitr::include_graphics("https://beatrizmilz.github.io/slidesR/img/rmarkdown/mar
 ]
 
 
----
-class:  teoria
-
-
-### Exemplos
-
-- Apresentações com o pacote [xaringan](https://slides.yihui.org/xaringan/): 
-  - Exemplo: Essa apresentação! 
-  
-- Livros com o pacote [bookdown](https://bookdown.org/home/).
-  - Exemplo: [Livro Ciência de Dados em R](https://livro.curso-r.com/) da [Curso-R](https://curso-r.com/)
-
-- Blogs com o pacote [blogdown](https://pkgs.rstudio.com/blogdown/)
-  - Exemplo: [meu blog](https://beatrizmilz.com/blog/)
-
-- Relatórios com o pacote [pagedown](https://github.com/rstudio/pagedown)
-  - Exemplo: o [relatório](https://abjur.github.io/obsRJRJ/relatorio/obs_rjrj_abj.pdf) do [Observatório da insolvência: Rio de Janeiro](https://abj.org.br/cases/obsrjrj/), feito pela [Associação Brasileira de Jurimetria (ABJ)](https://abj.org.br/)
-  
 ---
 class:  livecoding
 
@@ -725,6 +713,136 @@ Se descobrir, tente verificar o que há de errado no código (pode ser a falta d
 
   - Todos os objetos e pacotes usados no seu script precisam estar disponíveis no seu `.Rmd`. Verifique isso :)
 
+---
+class: livecoding
+
+### Gerando outros tipos de arquivos
+
+- Alterando o output no YAML. Ex:
+
+  - Word: `output: word_document`
+
+  - HTML: `output: html_document`  
+  
+- Gerando PDFs a partir de HTML:
+
+  - Usando a função `pagedown::chrome_print("caminho/ate/arquivo.html")`
+  
+  - Adicionando a linha no YAML: 
+  `knit: pagedown::chrome_print`
+  
+---
+class: livecoding
+
+### Templates de R Markdown
+
+.pull-left[
+
+  -  Pacotes também oferecem templates (`File > New File > R Markdown > From template`).
+  
+  - Os templates disponíveis dependem dos pacotes instalados.
+  
+]
+
+.pull-right[  
+```{r, out.width="90%"}
+knitr::include_graphics("img/rmd-from-template.png")
+```
+]
+
+---
+class: teoria
+### Exemplos
+
+.small[
+```{r echo=FALSE}
+exemplos_rmd <- tibble::tibble(pacote = as.character(),
+               desc = as.character(),
+               exemplos = as.character()) |> 
+  
+  tibble::add_row(pacote = "[blogdown](https://bookdown.org/yihui/blogdown/)",
+                  desc = "Blogs e sites",
+                  exemplos = "- [Site da Curso-R](https://curso-r.com/) <br> - [Site da Associação Brasileira de Jurimetria (ABJ)](https://abj.org.br/)") |> 
+  
+  tibble::add_row(pacote = "[distill](https://rstudio.github.io/distill/)",
+                  desc = "Blogs e sites",
+                  exemplos = "- [RStudio AI Blog](https://blogs.rstudio.com/ai/) <br> - [Laboratório da Associação Brasileira de Jurimetria (ABJ)](https://lab.abj.org.br/)") |> 
+  
+  tibble::add_row(pacote = "[bookdown](https://bookdown.org/)",
+                  desc = "Livros",
+                  exemplos = "- [Livro Ciência de Dados em R](https://livro.curso-r.com/) <br> - [R for Data Science](https://r4ds.had.co.nz/)") |> 
+  
+  tibble::add_row(pacote = "[xaringan](https://github.com/yihui/xaringan)",
+                  desc = "Apresentações",
+                  exemplos = "- Essa apresentação <br> - [Build Your Own Universe - Garrick Aden-Buie & Travis Gerke](https://www.garrickadenbuie.com/talk/build-your-own-universe/)") |> 
+  
+  tibble::add_row(pacote = "[pagedown](https://github.com/rstudio/pagedown)",
+                  desc = "Currículos, cartas e trabalhos acadêmicos",
+                  exemplos = "- [Relatório do Observatório da Insolvência](https://abjur.github.io/obsFase2/relatorio/obs_recuperacoes_abj.pdf) <br>  - [Meu currículo](https://beatrizmilz.github.io/resume/index.html) ") |> 
+
+
+  tibble::add_row(pacote = "[learnr](https://rstudio.github.io/learnr/)",
+                  desc = "Tutoriais interativos",
+                  exemplos = "- [Text mining with tidy data principles](https://juliasilge.shinyapps.io/learntidytext/) <br> - [Teacups, Giraffes,  & Statistics](https://tinystats.github.io/teacups-giraffes-and-statistics/)") |> 
+  
+  tibble::add_row(pacote = "[rticles](https://github.com/rstudio/rticles)",
+                  desc = "Artigos científicos",
+                  exemplos = "   ") |>  
+  tibble::add_row(pacote = " ",
+                  desc = "Outros exemplos",
+                  exemplos = "[Newsletter Garimpo](https://nucleo.jor.br/newsletters/garimpo)") 
+  
+
+
+exemplos_rmd |> 
+  dplyr::slice(1:6) |>  
+  knitr::kable(col.names = c("Pacote", "O que podemos fazer?", "Exemplos"))
+```
+]
+
+```{r echo=FALSE, results='asis'}
+ref_relatorios_curso_r()
+```
+
+
+---
+class: teoria
+
+### Parâmetros
+
+
+.pull-left[
+
+Devemos adicionar os parâmetros (e algum valor padrão) no YAML. 
+
+Ex:
+
+
+```
+---
+title: "Relatório com Parâmentros"
+author: "Beatriz"
+date: "Fevereiro de 2022"
+output: html_document
+params:
+  mes: 12
+  ano: 2021
+---
+```
+]
+
+
+.pull-right[
+
+Para acessar os parâmetros, usamos: `params$nome_parametro`.
+
+Ex: `params$mes` para acessar o mês, ou `params$ano`.
+
+
+Recomendação de leitura: [R Markdown: The Definitive Guide - Chapter 15 Parameterized reports](https://bookdown.org/yihui/rmarkdown/parameterized-reports.html)
+
+]
+
 
 ---
 class: teoria
@@ -754,6 +872,10 @@ class: teoria
 ### Extra: Adicionar referências
 
 TO DO!
+
+- https://www.zotero.org/
+
+- https://retorque.re/zotero-better-bibtex/installation/
 
 
 ---
@@ -791,8 +913,581 @@ class: middle, center, inverse
 
 
 ---
+class: teoria
 
-TO DO
+### Git
+
+- Git é um **sistema de versionamento**, criado por Linus Torvalds, autor do Linux.
+
+- É capaz de guardar o histórico de alterações de todos os arquivos dentro de uma pasta, que chamamos de repositório.
+
+- Funciona como o "*Track changes*" do word, mas muito melhor.
+
+- Torna-se importante à medida que seu trabalho é __colaborativo__.
+
+- Git é um software que você instala no computador.
+
+```{r echo=FALSE, out.width="30%", fig.align='center'}
+knitr::include_graphics("img/git.png")
+```
+
+
+```{r echo=FALSE, results='asis'}
+ref_pacotes_curso_r()
+```
+
+
+---
+class: teoria
+
+### GitHub
+
+- GitHub é um site onde você coloca e compartilha repositórios Git.
+
+- Utilizado por milhões de pessoas em projetos de código aberto ou fechado.
+
+- Útil para colaborar com outros programadores em projetos de ciência de dados.
+
+- Existem alternativas, como [GitLab](https://about.gitlab.com/) e [BitBucket](https://bitbucket.org/product).
+
+- GitHub é um site que você acessa na internet.
+
+<br>
+
+```{r echo=FALSE, out.width="30%", fig.align='center'}
+knitr::include_graphics("img/github.png")
+```
+
+```{r echo=FALSE, results='asis'}
+ref_pacotes_curso_r()
+```
+
+---
+
+class: teoria
+
+
+### Configurando o Git e GitHub no RStudio
+
+
+
+####  Usando protocolo https
+
+- `r emo::ji("white_large_square")` Ter o pacote `usethis` instalado 
+
+- `r emo::ji("white_large_square")` Se apresentar para o `git` 
+
+- `r emo::ji("white_large_square")` Criar um GitHub Token/PAT
+
+- `r emo::ji("white_large_square")` Armazenar o GitHub Token/PAT 
+
+- `r emo::ji("white_large_square")` Reiniciar o RStudio
+
+
+```{r echo=FALSE, results='asis'}
+ref_pacotes_curso_r()
+```
+
+
+
+---
+
+class: teoria
+
+### Configurando o Git e GitHub no RStudio
+
+
+#### Usando protocolo ssh
+
+- `r emo::ji("white_large_square")` Todas as etapas para o protocolo https (listadas no slide anterior)
+
+- `r emo::ji("white_large_square")` Criar as chaves SSH no RStudio
+
+- `r emo::ji("white_large_square")` Adicionar a chave ssh no ssh-agent
+
+- `r emo::ji("white_large_square")` Adicionar as chaves públicas no  GitHub
+
+- `r emo::ji("white_large_square")` Alterar o protocolo padrão no arquivo `.Rprofile`
+
+- `r emo::ji("white_large_square")` Reiniciar o RStudio
+
+
+
+Obs: Se você utiliza Linux, recomendamos usar `ssh`.
+
+
+
+```{r echo=FALSE, results='asis'}
+ref_pacotes_curso_r()
+```
+
+
+---
+
+class: teoria
+
+### Configure seu usuário do Git
+
+Antes de começarmos a versionar o código do nosso projeto, vamos configurar o Git e o GitHub no RStudio. 
+
+Esse processo precisa ser feito apenas uma vez!
+
+```
+usethis::use_git_config(
+  user.name = "SEU NOME NO GITHUB",
+  user.email = "seu_email_no@github.com"
+)
+```
+
+- Em `user.name`, pode ser seu nome mesmo, não precisa ser o nickname.
+
+- O `user.email` precisa ser o que está vinculado à sua conta do GitHub.
+
+---
+
+class: teoria
+
+### Configure o Personal Access Token 
+
+- Ao conectar com o GitHub, você será instruída(o) a criar um *Personal Access Token* (PAT).
+
+- O PAT serve para autenticar ao GitHub, podendo ser utilizado como senha de acesso ou internamente para automatizar tarefas (como criar um repositório).
+
+- Para criar um novo PAT, use a função `usethis::create_github_token()`. Uma janela do navegador será aberta, e você deve autenticar no GitHub (se necessário), criar o novo token, e copiá-lo. 
+
+```{r echo=TRUE, eval=FALSE}
+usethis::create_github_token()
+```
+
+
+```{r echo=FALSE, results='asis'}
+ref_pacotes_curso_r()
+```
+
+
+---
+
+class: teoria
+
+### Armazenar o Personal Access Token 
+
+#### Método 1 - `gitcreds::gitcreds_set()`
+
+
+.pull-left[
+```{r echo=TRUE, eval=FALSE}
+gitcreds::gitcreds_set()
+# -> Your current credentials for 'https://github.com':
+#   protocol: https
+#   host    : github.com
+#   username: beatrizmilz
+#   password: <-- hidden -->
+#     
+# -> What would you like to do? 
+# 1: Keep these credentials
+# 2: Replace these credentials
+# 3: See the password / token
+```
+]
+
+
+.pull-right[
+Siga as instruções e cole o PAT quando for solicitado as credenciais.
+
+```{r echo=TRUE, eval=FALSE}
+# -> Adding new credentials...
+# -> Removing credetials from cache...
+# -> Done.
+```
+]
+
+
+
+```{r echo=FALSE, results='asis'}
+ref_pacotes_curso_r()
+```
+
+
+
+---
+
+class: teoria
+
+#### Método 2 - Armazenar manualmente no `.Renviron`
+
+- Use a função `usethis::edit_r_environ()` para abrir o arquivo `.Renviron` para salvar seu token. 
+
+```{r echo=TRUE, eval=FALSE}
+usethis::edit_r_environ()
+# ● Modify 'C:/Users/beatr/Documents/.Renviron'
+# ● Restart R for changes to take effect
+```
+
+- Crie uma nova linha na forma `GITHUB_PAT=SEU_TOKEN`, adicione o token, **pule uma linha** e salve o arquivo. Se certifique que o arquivo termina com uma linha vazia!
+
+
+Use essa estrutura, substituindo os 0 pelo código copiado na etapa anterior:
+
+```{r echo=TRUE, eval=FALSE}
+GITHUB_PAT="0000000000000000000000000000000000000000"
+```
+
+
+
+```{r echo=FALSE, results='asis'}
+ref_pacotes_curso_r()
+```
+
+
+---
+
+class: teoria
+
+### Git Situation Report
+
+- Utilize a função `usethis::git_sitrep()` e leia o resultado que aparece no console. A mensagem abaixo foi cortada para mostrar os trechos de interesse!
+
+
+```r
+usethis::git_sitrep()
+#> Git config (global)
+#> ● Name: 'SEU NOME DEVE APARECER AQUI'
+#> ● Email: 'SEU EMAIL DEVE APARECER AQUI'
+
+#> GitHub
+#> ● Default GitHub host: 'https://github.com'
+#> ● Personal access token for 'https://github.com': '<discovered>' ***IMPORTANTE ESTAR COMO DISCOVERED***
+#> ● GitHub user: 'SEU NOME DE USUÁRIO(A) DEVE APARECER AQUI'
+#> ● Token scopes: 'gist, repo, user, workflow'
+#> ● Email(s): 'SEU EMAIL DEVE APARECER AQUI'
+```
+
+```{r echo=FALSE, results='asis'}
+ref_pacotes_curso_r()
+```
+
+
+---
+
+class: teoria
+
+### Configurando com o SSH (Parte 1)
+
+
+
+.pull-left[
+
+- Se você utiliza Linux, recomendamos usar o protocolo `ssh`.
+
+- Além das etapas anteriores (se apresentar para o `git` e configurar o PAT), é necessário seguir os seguintes passos: 
+
+** CRIANDO UMA CHAVE SSH**
+
+- No RStudio, clique em `Tools` -> `Global Options...` -> `Git/SVN`. No campo `SSH RSA Key`, clique em `Create RSA Key`.
+
+
+
+Referência: https://happygitwithr.com/ssh-keys.html 
+
+]
+
+.pull-right[
+
+```{r echo=FALSE, fig.align='center', out.width="90%"}
+knitr::include_graphics("img/ssh/etapa-1.png")
+```
+
+]
+
+
+
+
+```{r echo=FALSE, results='asis'}
+ref_pacotes_curso_r()
+```
+
+
+---
+
+class: teoria
+
+### Configurando com o SSH (Parte 2)
+
+
+.pull-left[
+
+** CRIANDO UMA CHAVE SSH**
+
+- Não altere o primeiro campo, mas você pode adicionar uma senha caso queira. Porém você precisará informar essa senha todas as vezes que quiser fazer algumas ações como Pull ou Push. Clique em `Create`.
+
+A sua senha será criada e aparecerá uma caixinha com ela. Pode clicar em `Close`.
+
+Após fechar, veja se o campo `SSA RSA KEY` está preenchido.
+
+Referência: https://happygitwithr.com/ssh-keys.html 
+
+]
+
+.pull-right[
+
+
+```{r echo=FALSE, fig.align='center', out.width="90%"}
+knitr::include_graphics("img/ssh/etapa-2.png")
+```
+
+]
+
+```{r echo=FALSE, results='asis'}
+ref_pacotes_curso_r()
+```
+
+
+
+---
+
+
+class: teoria
+
+### Configurando com o SSH (Parte 3)
+
+
+.pull-left[
+
+**Verificando se o ssh-agent está funcionando**
+
+
+
+
+
+Referência: https://happygitwithr.com/ssh-keys.html#add-key-to-ssh-agent
+
+]
+
+.pull-right[
+
+- **Mac OS ou Linux** - no terminal, escreva:
+
+```
+eval "$(ssh-agent -s)"
+```
+
+
+- **Windows** - no Git Bash shell, escreva:
+
+```
+eval $(ssh-agent -s)
+```
+
+
+
+<br><br><br><br>
+A resposta esperada, nessa etapa, é algo como:
+```
+Agent pid 14198
+```
+
+
+]
+
+
+```{r echo=FALSE, results='asis'}
+ref_pacotes_curso_r()
+```
+
+
+
+---
+
+
+class: teoria
+
+### Configurando com o SSH (Parte 4)
+
+
+.pull-left[
+
+**Adicionando a chave ssh no ssh-agent**
+
+- Se você definiu uma senha ao criar a chave ssh, ela será solicitada nessa etapa.
+
+
+- **Linux** - no terminal, escreva:
+
+```
+ssh-add ~/.ssh/id_rsa
+```
+
+
+- **Mac OS** - no terminal, escreva:
+
+```
+ssh-add -K ~/.ssh/id_rsa
+```
+
+
+- **Windows** - no Git Bash shell, escreva:
+
+```
+ssh-add ~/.ssh/id_rsa
+```
+<br>
+
+Referência: https://happygitwithr.com/ssh-keys.html#add-key-to-ssh-agent
+
+]
+
+.pull-right[
+
+A resposta esperada, nessa etapa, é algo como:
+```
+Identity added: /home/bea/.ssh/id_rsa
+```
+
+```{r echo=FALSE, fig.align='center', out.width="100%"}
+knitr::include_graphics("img/ssh/etapa-5.png")
+```
+
+]
+
+
+```{r echo=FALSE, results='asis'}
+ref_pacotes_curso_r()
+```
+
+
+
+---
+
+
+class: teoria
+
+### Configurando com o SSH (Parte 5)
+
+
+
+**Adicionando a chave pública no GitHub**
+
+- No GitHub, vá em `Settings` -> `SSH and GPG keys` -> `New ssh key` (ou clique aqui: https://github.com/settings/ssh/new )  
+
+
+- No RStudio, clique em `Tools` -> `Global Options...` -> `Git/SVN`. No campo `SSH RSA Key`, clique em `View Public Key`.
+
+- Uma janela vai abrir com a chave pública e você deve copiar o conteúdo todo.
+
+- No campo `Title`, escreva algo que ajude você a lembrar em qual computador essa chave está sendo usada. No campo `Key`, cole todo o conteúdo copiado na etapa anterior. Clique em `Add SSH key`.
+
+
+
+<br>
+
+Referência: https://happygitwithr.com/ssh-keys.html#add-key-to-ssh-agent
+
+
+```{r echo=FALSE, results='asis'}
+ref_pacotes_curso_r()
+```
+
+
+
+---
+
+
+class: teoria
+
+### Configurando com o SSH (Parte 6)
+
+
+
+**Dicas**
+
+
+- Confira se está funcionando executando o seguinte código na aba Terminal, no RStudio: 
+```
+ssh -T git@github.com
+```
+
+- Ao clonar um projeto, é importante utilizar o protocolo que foi configurado. O protocolo padrão utilizado pelo usethis é o `https`. Para alterar para o `ssh` , altere no `.Rprofile` o protocolo padrão a ser utilizado: 
+
+  - Abrir o arquivo o `.Rprofile`: 
+  
+```
+usethis::edit_r_profile()
+```
+
+  - Adicione a seguinte linha neste arquivo:
+  
+```
+options(usethis.protocol = "ssh")
+```
+
+  - Salve o arquivo e reinicie o RStudio.
+
+
+<br>
+
+Referência: https://usethis.r-lib.org/reference/git_protocol.html
+
+```{r echo=FALSE, results='asis'}
+ref_pacotes_curso_r()
+```
+
+
+---
+
+class: teoria
+
+### Versione com o Git e o GitHub
+
+```{r, eval=FALSE}
+usethis::use_git()
+```
+
+- Rodando o comando acima na pasta do projeto (a nova aba do RStudio que
+apareceu) você adiciona controle de versão.
+
+- Você receberá algumas instruções para seguir, mas está tudo certo.
+
+```{r, eval=FALSE}
+usethis::use_github()
+```
+
+- O comando acima sincroniza a pasta com o GitHub.
+
+- Mais uma vez, você receberá algumas instruções, mas lembre-se  de alterar para o protocolo `ssh` caso tenha feito a configuração usando esse protocolo. Para isso, use o argumento `protocol = ssh`.
+
+```{r echo=FALSE, results='asis'}
+ref_pacotes_curso_r()
+```
+
+
+---
+
+class: teoria
+
+### Resumo
+
+1. Repositório: Criar projeto/pacote
+
+2. Adicionar Git
+
+3. Adicionar GitHub
+
+4. Commit: Edite e "Commite" as mudanças no código
+
+5. Push: Suba os commits para o GitHub
+
+6. Pull (extra): Baixe o estado atual do projeto
+
+### Cuidados
+
+- Se uma base de dados tem mais do que 50Mb de tamanho, ela não deveria estar no seu repositório.
+
+- Nem sempre o comando Pull dá certo. Às vezes, você e a colega de trabalho fizeram mudanças no mesmo arquivo e, quando vão juntar, ocorre um conflito.
+
+```{r echo=FALSE, results='asis'}
+ref_pacotes_curso_r()
+```
+
 
 ---
 class: revisao
