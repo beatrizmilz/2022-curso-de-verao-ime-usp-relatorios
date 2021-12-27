@@ -640,18 +640,138 @@ Para configurar as opções globais de chunk, modifique o código abaixo e insir
 
 
 
+---
+class:  teoria
+
+### Adicionando imagens usando o knitr
+
+.pull-left[
+- Função: `knitr::include_graphics()`
+
+-  Opções de Chunk: 
+
+  - `out.width = "30%"` - Largura da imagem
+
+  - `fig.align = 'center'`  - Alinhamento da imagem
+
+  - `fig.cap="Logo R"` - Legenda da imagem 
+]
+
+.pull-right[
+
+Exemplo:
+
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="https://www.r-project.org/Rlogo.png" alt="Logo R" width="30%" /&gt;
+&lt;p class="caption"&gt;Logo R&lt;/p&gt;
+&lt;/div&gt;
+
+Sugestão de leitura: [Opções do knitr](https://yihui.name/knitr/options/#chunk-options)
+
+
+]
+
+
+---
+class:  teoria
+
+### Tabelas com R
+
+
+```r
+knitr::kable(x = head(dplyr::starwars[1:6]), format = "html")
+```
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; name &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; height &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; mass &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; hair_color &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; skin_color &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; eye_color &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Luke Skywalker &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 172 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 77 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; blond &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; fair &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; blue &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; C-3PO &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 167 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 75 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; gold &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; yellow &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; R2-D2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 96 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 32 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; white, blue &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; red &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Darth Vader &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 202 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 136 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; none &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; white &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; yellow &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Leia Organa &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 150 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 49 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; brown &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; light &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; brown &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Owen Lars &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 178 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 120 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; brown, grey &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; light &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; blue &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+- Outra opção:  `DT::datatable(dplyr::starwars)`  
 
 
 
+---
+class:  teoria
 
+### Erros!
 
+- Boa prática: compilar com frequência. 
 
+- É bem comum dar erro ao compilar o arquivo pois **qualquer** código errado causa isso. Algumas coisas pra se observar:
+
+  - **YAML header** - se algo estiver errado, vai dar erro ao compilar. 
+Muito cuidado com a identação!
+
+  - **Código nos chunks** - teste o _Run All Chunks_ e veja se aparece erro em algum chunk específico.
+Se descobrir, tente verificar o que há de errado no código (pode ser a falta de um parênteses, vírgula, entre outros).
+
+  - Todos os objetos e pacotes usados no seu script precisam estar disponíveis no seu `.Rmd`. Verifique isso :)
 
 
 ---
 class: teoria
 
-### Outros elementos - Adicionar equações
+### Extra: Adicionar equações
   
 - Equação centralizada: Envolver a equação por dois `$`.
 
@@ -673,7 +793,7 @@ $${\text{Média}=\frac {a_{1}+a_{2}+\cdots +a_{n}}{n}}$$
 ---
 class: teoria
 
-### Outros elementos - Adicionar referências
+### Extra: Adicionar referências
 
 
 

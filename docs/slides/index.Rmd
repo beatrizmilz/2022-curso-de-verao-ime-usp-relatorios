@@ -663,18 +663,73 @@ Para configurar as opções globais de chunk, modifique o código abaixo e insir
 
 
 
+---
+class:  teoria
+
+### Adicionando imagens usando o knitr
+
+.pull-left[
+- Função: `knitr::include_graphics()`
+
+-  Opções de Chunk: 
+
+  - `out.width = "30%"` - Largura da imagem
+
+  - `fig.align = 'center'`  - Alinhamento da imagem
+
+  - `fig.cap="Logo R"` - Legenda da imagem 
+]
+
+.pull-right[
+
+Exemplo:
+
+
+```{r  out.width = "30%", fig.align = 'center', fig.cap="Logo R"}
+knitr::include_graphics("https://www.r-project.org/Rlogo.png")
+```
+
+Sugestão de leitura: [Opções do knitr](https://yihui.name/knitr/options/#chunk-options)
+
+
+]
+
+
+---
+class:  teoria
+
+### Tabelas com R
+
+```{r echo=TRUE}
+knitr::kable(x = head(dplyr::starwars[1:6]), format = "html")
+```
+
+- Outra opção:  `DT::datatable(dplyr::starwars)`  
 
 
 
+---
+class:  teoria
 
+### Erros!
 
+- Boa prática: compilar com frequência. 
 
+- É bem comum dar erro ao compilar o arquivo pois **qualquer** código errado causa isso. Algumas coisas pra se observar:
+
+  - **YAML header** - se algo estiver errado, vai dar erro ao compilar. 
+Muito cuidado com a identação!
+
+  - **Código nos chunks** - teste o _Run All Chunks_ e veja se aparece erro em algum chunk específico.
+Se descobrir, tente verificar o que há de errado no código (pode ser a falta de um parênteses, vírgula, entre outros).
+
+  - Todos os objetos e pacotes usados no seu script precisam estar disponíveis no seu `.Rmd`. Verifique isso :)
 
 
 ---
 class: teoria
 
-### Outros elementos - Adicionar equações
+### Extra: Adicionar equações
   
 - Equação centralizada: Envolver a equação por dois `$`.
 
@@ -696,8 +751,9 @@ $${\text{Média}=\frac {a_{1}+a_{2}+\cdots +a_{n}}{n}}$$
 ---
 class: teoria
 
-### Outros elementos - Adicionar referências
+### Extra: Adicionar referências
 
+TO DO!
 
 
 ---
