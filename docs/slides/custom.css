@@ -60,9 +60,35 @@ h4 {
   font-size: 0.8em;
 }
 
+.revisao {
+  border-left-width: 24px;
+  border-left-style: solid;
+  padding-left: 20px;
+  border-color: #ff5b5b;
+}
+
+.revisao:after {
+  content: "Revisão";
+  color: #FFFFFF;
+  transform: rotate(270deg);
+  font-weight: bold;
+  position: fixed;
+  top: 5%;
+  left: -2.1%;
+  font-size: 0.8em;
+}
+
 
 .small{
    font-size: 0.8em;
+}
+
+.remark-code-line{
+   font-size: 0.9em;
+}
+
+.smaller{
+   font-size: 0.6em;
 }
 
 .rascunho::after{
@@ -75,4 +101,23 @@ h4 {
     width: 140%;
     opacity: 70%;
     font-size: 1.5em;
+}
+
+.topnote {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 0.9em;
+}
+
+.left-code {
+  color: #777;
+  width: 38%;
+  height: 92%;
+  float: left;
+}
+.right-plot {
+  width: 60%;
+  float: right;
+  padding-left: 1%;
 }

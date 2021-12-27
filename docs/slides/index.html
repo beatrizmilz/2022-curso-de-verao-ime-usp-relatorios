@@ -28,6 +28,9 @@ Monitoria: <br> Ana Carolina Moreno <br> Tereza Lacerda <br> Alan da Silva <br> 
 
 
 
+
+
+
 ## Ministrantes e monitoria
 
 - **Beatriz Milz** - Doutoranda em Ciência Ambiental na
@@ -64,7 +67,6 @@ name: sumario
 
 - [Introdução ao conceito de reprodutibilidade](#reprodutibilidade)
 
-- [Usando projetos do RStudio](#rprojs)
 
 - [RMarkdown](#rmarkdown)
 
@@ -83,7 +85,7 @@ class: middle, center, inverse
 
 Que vocês saibam ao final do curso:
 
-- Como como noções de reprodutibilidade
+- Noções de reprodutibilidade
 
 - Como criar documentos usando RMarkdown.
 
@@ -145,28 +147,54 @@ Que vocês saibam ao final do curso:
 
 - [Criar uma conta no GitHub](https://github.com/)
 
-- Pacotes necessários:
+---
 
+### Check-list
 
+- Instalar pacotes necessários:
+
+```r
+pacotes_necessarios &lt;- c("usethis",
+                         "rmarkdown",
+                         "knitr",
+                         "pagedown",
+                         "xaringan")
+
+install.packages(pacotes_necessarios)
+```
 
 
 ---
 
 ### Guia dos slides
 
-- As cores do lado vertical indicam o tipo de conteúdo!
+- As cores da linha vertical indicam o tipo de conteúdo dos slides!
 
   - Cinza: conteúdo teórico, expositivo.
   
   - Azul: demonstração, mostraremos como é feito no RStudio.
   
   - Amarelo: vocês fazem exercícios para praticar o que foi apresentado.
+  
+  - Coral: pontos principais para revisão teórica.
 
 ---
 name: reprodutibilidade
 class: middle, center, inverse
 
 ## Introdução ao conceito de reprodutibilidade
+
+.left[
+- O que vamos aprender:
+
+  - O que é uma análise reprodutível?
+
+  - O que são projetos no RStudio, e qual é a importância de usá-los? 
+
+  - O que são caminhos relativos e absolutos?
+
+  - Como desabilitar a funcionalidade do RStudio que armazena automaticamente os objetos e o histórico?
+]
 
 ---
 class: teoria
@@ -175,12 +203,7 @@ class: teoria
 
 TO DO
 
----
-name: rprojs
-class: middle, center, inverse
 
-
-## Usando projetos do RStudio
 
 
 ---
@@ -198,7 +221,7 @@ class:  teoria
 ---
 class: livecoding
 
-## Criando um projeto
+### Criando um projeto
 
 - Criar um projeto no RStudio facilita muito para organizar os arquivos, posteriormente sincronizar com o GitHub, entre outros. Neste capítulo do livro Zen do R, da [Curso-R](https://www.curso-r.com), tem mais informações sobre [RProj e diretórios](https://curso-r.github.io/zen-do-r/rproj-dir.html).
 
@@ -211,7 +234,7 @@ class: livecoding
 ---
 class:  teoria
 
-#### Os arquivos .RData e .Rhistory 
+### Os arquivos .RData e .Rhistory 
 
 - Em sua configuração padrão, a IDE manterá na "memória" todos os últimos comandos executados, todos os dados utilizados e todos os objetos criados.
 
@@ -223,14 +246,15 @@ class:  teoria
 
 .footnote[Leia mais [neste capítulo do livro Zen do R](https://curso-r.github.io/zen-do-r/rdata-rhistory.html)]
 
-&gt; &lt;i class="far fa-flag"&gt;&lt;/i&gt; [Slide](https://curso-r.github.io/main-pacotes/slides/index.html) do curso de [Pacotes](https://curso-r.com/cursos/pacotes/), da [Curso-R](https://curso-r.com/).
+
+.topnote[&lt;i class="far fa-flag"&gt;&lt;/i&gt; [Slide](https://curso-r.github.io/main-pacotes/slides/index.html) do curso de [Pacotes](https://curso-r.com/cursos/pacotes/), da [Curso-R](https://curso-r.com/).]
 
 
 ---
 class:  teoria
 
 
-#### Por que desistir do .RData e .Rhistory 
+### Por que desistir do .RData e .Rhistory 
 
 - Se todos os resultados parciais de uma análise estiverem disponíveis a qualquer momento, **diminui o incentivo para a escrita de código reprodutível**
 
@@ -238,20 +262,20 @@ class:  teoria
 
 - O R trata todos os objetos guardados na memória igualmente. Isso significa que ele também irá armazenar nos arquivos ocultos todas as bases de dados da sessão. Assim, o `.RData` **pode ser um arquivo de múltiplos gigabytes**
 
-&gt; &lt;i class="far fa-flag"&gt;&lt;/i&gt; [Slide](https://curso-r.github.io/main-pacotes/slides/index.html) do curso de [Pacotes](https://curso-r.com/cursos/pacotes/), da [Curso-R](https://curso-r.com/).
+.topnote[&lt;i class="far fa-flag"&gt;&lt;/i&gt; [Slide](https://curso-r.github.io/main-pacotes/slides/index.html) do curso de [Pacotes](https://curso-r.com/cursos/pacotes/), da [Curso-R](https://curso-r.com/).]
 
 
 ---
 class:  livecoding
 
 
-#### Como desabilitar .RData e .Rhistory
+### Como desabilitar .RData e .Rhistory
 
 - Na barra superior: **Tools &gt; Global Options...**
 
 &lt;img src="https://curso-r.github.io/zen-do-r/static/rdata-rhistory/config.png" width="40%" style="display: block; margin: auto;" /&gt;
 
-&gt; &lt;i class="far fa-flag"&gt;&lt;/i&gt; [Slide](https://curso-r.github.io/main-pacotes/slides/index.html) do curso de [Pacotes](https://curso-r.com/cursos/pacotes/), da [Curso-R](https://curso-r.com/).
+.topnote[&lt;i class="far fa-flag"&gt;&lt;/i&gt; [Slide](https://curso-r.github.io/main-pacotes/slides/index.html) do curso de [Pacotes](https://curso-r.com/cursos/pacotes/), da [Curso-R](https://curso-r.com/).]
 
 ---
 class: exercicios
@@ -262,13 +286,40 @@ class: exercicios
 
 - Desabilite o .RData e .Rhistory no seu RStudio
 
+---
+class: revisao
 
+### Revisão - Reprodutibilidade
+
+- ....
+
+
+- ....
+
+- ....
 
 ---
 name: rmarkdown
 class: middle, center, inverse
 
 ## RMarkdown
+
+.left[
+- O que vamos aprender:
+
+  - O que é o pacote rmarkdown?
+
+  - Qual é a estrutura de um arquivo rmarkdown?
+  
+  - O que é Markdown?
+  
+  - Como adicionar conteúdo em um arquivo rmarkdown?
+  
+  - Como adicionar parâmetros no documento?
+  
+  - Como gerar outros tipos de documentos?
+
+]
 
 ---
 class:  teoria
@@ -423,6 +474,180 @@ class: livecoding
 - Imagens
 ]
 
+
+---
+class:  teoria
+
+### Chunks de Código em R
+
+- Os chunks são campos onde podemos inserir código de R (ou Python, SQL,  Bash...) em um arquivo RMarkdown. 
+
+- Existe um atalho do teclado para criar chunks no RStudio:  `Ctrl + ALt + I`. 
+
+- Também é possível criar um chunk clicando no seguinte botão do RStudio:
+
+
+&lt;img src="img/create-chunk.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+
+class:  teoria
+
+#### Exemplo:
+
+
+
+```r
+summary(dplyr::starwars[1:4])
+```
+
+```
+##      name               height           mass        
+##  Length:87          Min.   : 66.0   Min.   :  15.00  
+##  Class :character   1st Qu.:167.0   1st Qu.:  55.60  
+##  Mode  :character   Median :180.0   Median :  79.00  
+##                     Mean   :174.4   Mean   :  97.31  
+##                     3rd Qu.:191.0   3rd Qu.:  84.50  
+##                     Max.   :264.0   Max.   :1358.00  
+##                     NA's   :6       NA's   :28       
+##   hair_color       
+##  Length:87         
+##  Class :character  
+##  Mode  :character  
+##                    
+##                    
+##                    
+## 
+```
+
+---
+class:  teoria
+
+#### Exemplo:
+
+.left-code[
+
+```r
+library(ggplot2)
+ggplot(mtcars) +
+  aes(x = hp,
+      y = mpg,
+      colour = cyl) +
+  geom_point(size = 2L)
+```
+]
+
+.right-plot[
+![](index_files/figure-html/plot-exemplo-ggplot2-1.png)
+]
+
+
+---
+class:  teoria
+
+### Opções de Chunk
+
+- Há uma variedade de opções de chunk que podem afetar como os chunks de código são compilados. Exemplos: 
+
+- `echo=FALSE`- evita que o próprio código apareça
+
+- `eval=FALSE` - mostra o código, mas ele não é executado
+
+- `warning=FALSE` e `message=FALSE` - oculta mensagens de avisos produzidas
+
+- `out.width` - controla o a largura das figuras, gráficos, tabelas geradas (Ex: out.width = "100%")
+
+- Ex de configuração do chunk: `{r, warning=FALSE, message=FALSE}`
+
+
+---
+class:  teoria
+
+### Códigos em R - Opções de chunk
+
+.pull-left[
+#### Código + Resultado
+- `echo=TRUE`
+
+```r
+nrow(mtcars)
+```
+
+```
+## [1] 32
+```
+]
+
+.pull-right[
+
+#### Apenas código
+- `echo=TRUE, eval=FALSE`
+
+```r
+nrow(mtcars)
+```
+
+#### Apenas resultado
+- `echo=FALSE`
+
+```
+## [1] 32
+```
+
+]
+
+
+---
+class:  teoria
+
+### Código inline
+
+- É útil para adicionar resultados de código em R dentro de parágrafos.
+
+
+**Exemplo:**
+
+A base mtcars possui 32 carros.
+As colunas presentes na base são 
+mpg, cyl, disp, hp, drat, wt, qsec, vs, am, gear, e carb.
+
+**Código Markdown:**
+
+
+
+```r
+A base mtcars possui `r nrow(mtcars)` carros.
+As colunas presentes na base são 
+`r knitr::combine_words(names(mtcars), and = "e ")`.
+```
+
+
+
+
+---
+class:  teoria
+
+### Opções globais de Chunk
+
+As opções globais de chunk são opções de chunk que são válidas para o documento inteiro. Algumas opções são úteis, como `fig.align = "center"`.
+Para configurar as opções globais de chunk, modifique o código abaixo e insira após o código `YAML` (retire os `#` no início de cada linha):
+
+- Ex:
+  - Configurações do chunk:
+`{r setup, include=FALSE}`
+  - Conteúdo do chunk:
+`knitr::opts_chunk$set(...)`
+
+
+
+
+
+
+
+
+
+
+
 ---
 class: teoria
 
@@ -452,6 +677,18 @@ class: teoria
 
 
 
+---
+class: revisao
+
+### Revisão - R Markdown
+
+- ....
+
+
+- ....
+
+- ....
+
 
 ---
 name: git-e-github
@@ -459,6 +696,36 @@ class: middle, center, inverse
 
 
 ## Git e GitHub
+
+.left[
+- O que vamos aprender:
+
+  - O que é controle de versão de arquivos?
+  
+  - O que é Git? O que é GitHub?
+  
+  - Como configurar de forma que possamos usar o Git e GitHub diretamente do RStudio?
+  
+  - Como disponibilizar um documento que fiz em RMarkdown na internet, usando o GitHub?
+
+]
+
+
+---
+
+TO DO
+
+---
+class: revisao
+
+### Revisão - Git e GitHub
+
+- ....
+
+
+- ....
+
+- ....
 
 
 ---
