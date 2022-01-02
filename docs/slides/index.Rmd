@@ -56,6 +56,10 @@ style_duo_accent(
 
 ```
 
+```{r xaringanExtra-clipboard, echo=FALSE}
+xaringanExtra::use_clipboard()
+```
+
 
 ```{r, include=FALSE}
 ref_pacotes_curso_r <- function(){
@@ -233,7 +237,7 @@ class: middle, center, inverse
 .left[
 - O que vamos aprender:
 
-  - O que é uma análise reprodutível?
+  - O que é reprodutibilidade?
 
   - O que são projetos no RStudio, e qual é a importância de usá-los? 
 
@@ -245,10 +249,63 @@ class: middle, center, inverse
 ---
 class: teoria
 
+.pull-left[
 ### Reprodutibilidade
 
-TO DO
+- "É um conceito que não tem uma definição única e comum". [(Gundersen, 2021)](https://doi.org/10.1098/rsta.2020.0210)
 
+- "Para alguém fazer uma afirmação científica legítima, ele deve ser capaz de reproduzir totalmente seus resultados a partir de seus dados brutos (e de preferência outros devem ser capazes de reproduzi-los também)". [Dr. John Paul Helveston](https://jhelvy.github.io/r4aPrimer/L6-reproducible-reporting.html)
+
+ 
+]
+
+--
+
+.pull-right[
+
+Quais fatores contribuem com  pesquisa não reprodutível? Fonte: <a href='https://doi.org/10.1038/533452a'>Baker (2016)</a>
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("img/irreproducible.png")
+```
+
+
+]
+
+
+
+---
+class: teoria
+
+.pull-left[
+
+### Reprodutibilidade
+
+
+> “Reprodutibilidade é como escovar os dentes. Isso é bom para você, mas leva tempo e esforço. Depois de aprender, torna-se um hábito.” - Irakli Loladze, Bryan College of Health Sciences em Lincoln, Nebraska.  
+  > .small[Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). https://doi.org/10.1038/533452a]
+
+]
+
+--
+
+.pull-right[
+- Exemplos:
+
+  - Boas práticas, como: não usar caracteres especiais nos caminhos, variáveis, nomes de coluna, etc; armazenar os arquivos de forma consistente; escrever códigos que podem ser executados no seu computador e no computador de outras pessoas também.
+
+  - Registrar a versão do R e dos pacotes utilizados
+  
+  - Documentar a análise
+  
+  - Controlar a versão dos arquivos
+]
+
+???
+
+Outras referências interessantes:
+
+- [Introduction to bioinformatics -  Chapter 8 Reproducible research, - Laurent Gatto](https://uclouvain-cbio.github.io/WSBIM1207/sec-rr.html)
 
 
 
@@ -275,7 +332,14 @@ class: livecoding
   
   - Dê um nome para seu projeto (será o nome da pasta), escolha a pasta no seu computador, e clique em `Create Project`.
   
+---
+class:  teoria
 
+### Caminhos
+
+- O que são caminhos relativos e absolutos?
+
+> TO DO
 
 ---
 class:  teoria
@@ -318,7 +382,6 @@ ref_pacotes_curso_r()
 ---
 class:  livecoding
 
-
 ### Como desabilitar .RData e .Rhistory
 
 - Na barra superior: **Tools > Global Options...**
@@ -340,6 +403,20 @@ class: exercicios
 
 - Desabilite o .RData e .Rhistory no seu RStudio
 
+- Execute o seguinte código no console, verifique o resultado: `devtools::session_info()`
+
+
+---
+class: livecoding
+
+- Exemplo do Session Info
+
+.smaller[
+```{r echo=TRUE}
+devtools::session_info()
+```
+]
+
 ---
 class: revisao
 
@@ -347,10 +424,15 @@ class: revisao
 
 - ....
 
-
 - ....
 
-- ....
+<!-- - Conceito ... -->
+
+<!-- - Projetos... -->
+
+<!-- - Caminhos ... -->
+
+<!-- - History e data -->
 
 ---
 name: rmarkdown
