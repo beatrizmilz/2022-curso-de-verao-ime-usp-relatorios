@@ -8,7 +8,6 @@ lang: pt
 :::{.callout-warning}
 ## Atenção!
 **Inscrições abertas** exclusivamente no site do [Programa de Verão IME-USP](https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php). <br>
-Saiba mais sobre a [política de isenção de taxa de inscrição](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/informacoes-gerais.html#pol%C3%ADtica-de-isen%C3%A7%C3%A3o-de-taxa-de-inscri%C3%A7%C3%A3o).
 :::
 
  No curso utilizaremos a linguagem de programação R e a interface de desenvolvimento RStudio. Primeiramente será apresentada uma introdução ao conceito de reprodutibilidade no contexto de desenvolvimento em R, e discutiremos boas práticas ao longo do curso. 
