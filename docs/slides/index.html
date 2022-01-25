@@ -60,6 +60,47 @@ Monitoria: <br> Ana Carolina Moreno <br> Tereza Lacerda <br> Alan da Silva <br> 
 - **Julia Cansado** - Estudante de Arquitetura e Urbanismo na Universidade de São Paulo (FAU/USP) &lt;br&gt;
  - Estagiária no Laboratório Quapá / Projeto Mapbiomas &lt;br&gt;&lt;br&gt;
 
+---
+
+## Curso sobre R no Programa de Verão IME/USP
+
+- De 2015 à 2017, um grupo de alunos do IME/USP ofereceu um curso sobre R que apresentava temas de introdutórios até intermediário/avançado. 
+  - Material de 2016: https://curso-r.github.io/verao2016/
+  - Material de 2017: https://curso-r.github.io/verao2017/
+  - Em 2018 este grupo criou a Curso-R: https://curso-r.com/
+
+
+- Nathália Demétrio começou a ministrar  o curso de 'Introdução à Programação em R'.
+
+- Em 2022, os cursos de 'Princípios de Visualização de Dados com R' e 'Relatórios Reprodutíveis com R' foram adicionados ao Programa de Verão IME/USP.
+
+---
+
+.pull-left[
+
+## R-Ladies
+
+
+- R-Ladies é uma organização mundial cuja missão é promover a diversidade de gênero na comunidade da linguagem R.
+
+
+
+- Público-alvo são as pessoas que se identificam com gêneros sub-representados na comunidade R, portanto: mulheres cis, mulheres trans, homens trans, pessoas não-binárias e queer.
+
+- Links: https://linktr.ee/rladies_sp
+
+
+]
+
+.pull-right[
+
+&lt;br&gt;
+
+&lt;center&gt;&lt;img src= 'https://beatrizmilz.github.io/slidesR/rladies/img/allisonhorst/community1.jpg' width = '90%' alt='Author: Allison Horst'&gt;&lt;/br&gt;&lt;p&gt;Ilustração por &lt;a href='https://twitter.com/allison_horst' target=_blank&gt;@allison_horst&lt;/a&gt;&lt;/p&gt;&lt;/center&gt;
+
+
+
+]
 
 
 
@@ -155,7 +196,7 @@ Que vocês saibam ao final do curso:
 
 ---
 
-### Check-list
+### Check-list de pacotes
 
 - Instalar pacotes necessários:
 
@@ -164,7 +205,8 @@ pacotes_necessarios &lt;- c("usethis",
                          "rmarkdown",
                          "knitr",
                          "pagedown",
-                         "xaringan")
+                         "xaringan",
+                         "readr")
 
 install.packages(pacotes_necessarios)
 ```
@@ -246,7 +288,7 @@ class: teoria
 .pull-right[
 - Exemplos:
 
-  - Boas práticas, como: não usar caracteres especiais nos caminhos, variáveis, nomes de coluna, etc; armazenar os arquivos de forma consistente; escrever códigos que podem ser executados no seu computador e no computador de outras pessoas também.
+  - Boas práticas, como: não usar caracteres especiais nos caminhos, variáveis, nomes de coluna, etc; armazenar os arquivos de forma consistente.
 
   - Registrar a versão do R e dos pacotes utilizados
   
@@ -268,32 +310,109 @@ class:  teoria
 
 ### Projetos do RStudio
 
+.pull-left[
 
-- TO DO:
+- O RStudio permite a criação de Projetos.
 
-  - O que são
 
-  - Importância
+- O projeto é uma pasta no computador, onde devemos armazenar todos os arquivos usados ou criados em uma análise. Essa pasta irá conter também um arquivo com o nome do projeto e a extensão `.Rproj`.
+
+- Para cada análise, lembre-se de criar um `.Rproj` correspondente.
+
+
+
+]
+
+.pull-right[
+
+- Usar projetos no RStudio facilita a organização dos arquivos, posteriormente sincronizar com o GitHub, entre outros.
+
+&lt;img src="img/rprojs.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+]
+
 
 ---
 class: livecoding
 
 ### Criando um projeto
 
-- Criar um projeto no RStudio facilita muito para organizar os arquivos, posteriormente sincronizar com o GitHub, entre outros. Neste capítulo do livro Zen do R, da [Curso-R](https://www.curso-r.com), tem mais informações sobre [RProj e diretórios](https://curso-r.github.io/zen-do-r/rproj-dir.html).
+- Criando um projeto em uma nova pasta:
 
   - File &gt; New Project &gt; New Directory &gt; New Project
   
   - Dê um nome para seu projeto (será o nome da pasta), escolha a pasta no seu computador, e clique em `Create Project`.
+  
+  
+---
+class:  teoria
+
+### Diretório de trabalho/Working Directory
+
+- O diretório de trabalho é a pasta em que o R irá:
+  - procurar arquivos na hora de ler informações;
+  - gravar arquivos na hora de salvar objetos.
+
+
+- Quando usamos Projetos do RStudio, o nosso diretório de trabalho é a pasta principal do projeto. 
+
+- A função `getwd()` serve para conferir o diretório de trabalho: 
+
+```r
+&gt; getwd()
+[1] "/Users/beatrizmilz/GitHub/2022-curso-de-verao-ime-usp-relatorios"
+```
+
+- A função `setwd()` serve para alterar o diretório de trabalho. **NÃO É RECOMENDADO O USO! Isso torna o código não reprodutível.**
+
   
 ---
 class:  teoria
 
 ### Caminhos
 
-- O que são caminhos relativos e absolutos?
+- Caminhos são textos que representam o endereço do arquivo no computador. 
 
-&gt; TO DO
+- É muito importante entender como funcionam! Caso contrário, ficará difícil fazer coisas como importar dados para o R.
+
+- Caminhos podem ser relativos ou absolutos.
+
+- Caminhos absolutos: tem início na pasta raiz do seu computador/usuário. **NÃO É RECOMENDADO O USO! Isso torna o código não reprodutível.**
+
+- Caminhos relativos: tem início no diretório de trabalho da sessão. Caso você esteja usando projetos, os caminhos relativos tem início na pasta inicial do projeto. 
+
+
+- **Utilize sempre que possível caminhos relativos.**
+
+---
+class:  teoria
+
+### Exemplos de caminhos
+
+Exemplos acessando o mesmo arquivo:
+
+- Caminho absoluto:
+```
+"/Users/beatrizmilz/GitHub/2022-curso-de-verao-ime-usp-relatorios/docs/slides/img/rprojs.png"
+```
+
+- Caminho relativo:
+```
+"docs/slides/img/rprojs.png"
+```
+
+
+???
+O pacote `here` também possui funções úteis para escrever caminhos: 
+
+
+```r
+here::here()
+```
+
+```
+## [1] "/Users/beatrizmilz/GitHub/2022-curso-de-verao-ime-usp-relatorios"
+```
 
 ---
 class:  teoria
@@ -343,13 +462,32 @@ class:  livecoding
 ---
 class: exercicios
 
-### Colocar em prática: 
+### Colocar em prática
 
-- Crie um projeto no RStudio para armazenar o que vamos criar durante o curso. Salve em algum lugar no seu computador que seja fácil de encontrar.
+1) Crie um projeto no RStudio para armazenar o que vamos criar durante o curso. Salve em algum lugar no seu computador que seja fácil de encontrar.
 
-- Desabilite o .RData e .Rhistory no seu RStudio
+2) Desabilite o .RData e .Rhistory no seu RStudio
 
-- Execute o seguinte código no console, verifique o resultado: `devtools::session_info()`
+3) Execute o seguinte código no console, verifique o resultado: `devtools::session_info()`
+
+4) Dentro do projeto criado, crie uma pasta chamada "dados", e salve o seguinte arquivo na mesma: [clique aqui para baixar o arquivo `pinguins.csv`](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/dados/pinguins.csv)
+
+Dados originais: https://allisonhorst.github.io/palmerpenguins/
+
+Dados traduzidos para Português: https://cienciadedatos.github.io/dados/
+
+---
+class: exercicios
+
+### Colocar em prática: Continuação
+
+5) Crie um R Script, copie e cole o código abaixo, e substitua o caminho correto para ler a base de pinguins. Aproveite que o RStudio nos ajuda a buscar caminhos: dentro das aspas, experimente clicar a tecla TAB.
+
+```r
+caminho &lt;- "...." 
+pinguins &lt;- readr::read_csv(caminho)
+```
+6) Verifique no painel Environment do RStudio se a base de Pinguins foi importada corretamente.
 
 
 ---
@@ -364,179 +502,121 @@ devtools::session_info()
 ```
 
 ```
-## ─ Session info ────────────────────────────────────────────────────
-##  setting  value                       
+## ─ Session info ────────────────────────────────────────────────────────────
+##  setting  value
 ##  version  R version 4.1.0 (2021-05-18)
-##  os       macOS Big Sur 11.5.2        
-##  system   x86_64, darwin17.0          
-##  ui       RStudio                     
-##  language (EN)                        
-##  collate  en_US.UTF-8                 
-##  ctype    en_US.UTF-8                 
-##  tz       America/Sao_Paulo           
-##  date     2022-01-02                  
+##  os       macOS Big Sur 11.5.2
+##  system   x86_64, darwin17.0
+##  ui       RStudio
+##  language (EN)
+##  collate  en_US.UTF-8
+##  ctype    en_US.UTF-8
+##  tz       America/Sao_Paulo
+##  date     2022-01-25
+##  rstudio  2021.09.0+351 Ghost Orchid (desktop)
+##  pandoc   2.14.0.3 @ /Applications/RStudio.app/Contents/MacOS/pandoc/ (via rmarkdown)
 ## 
-## ─ Packages ────────────────────────────────────────────────────────
-##  package        * version    date       lib
-##  assertthat       0.2.1      2019-03-21 [1]
-##  bslib            0.3.1      2021-10-06 [1]
-##  cachem           1.0.6      2021-08-19 [1]
-##  callr            3.7.0      2021-04-20 [1]
-##  cellranger       1.1.0      2016-07-27 [1]
-##  cli              3.1.0      2021-10-27 [1]
-##  colorspace       2.0-2      2021-06-24 [1]
-##  crayon           1.4.2      2021-10-29 [1]
-##  DBI              1.1.1      2021-01-15 [1]
-##  desc             1.4.0      2021-09-28 [1]
-##  devtools       * 2.4.2      2021-06-07 [1]
-##  digest           0.6.29     2021-12-01 [1]
-##  dplyr            1.0.7      2021-06-18 [1]
-##  ellipsis         0.3.2      2021-04-29 [1]
-##  emo              0.0.0.9000 2021-08-12 [1]
-##  evaluate         0.14       2019-05-28 [1]
-##  fansi            0.5.0      2021-05-25 [1]
-##  farver           2.1.0      2021-02-28 [1]
-##  fastmap          1.1.0      2021-01-25 [1]
-##  fs               1.5.2      2021-12-08 [1]
-##  generics         0.1.1      2021-10-25 [1]
-##  ggplot2        * 3.3.5      2021-06-25 [1]
-##  glue             1.5.1      2021-11-30 [1]
-##  gtable           0.3.0      2019-03-25 [1]
-##  highr            0.9        2021-04-16 [1]
-##  hms              1.1.1      2021-09-26 [1]
-##  htmltools        0.5.2      2021-08-25 [1]
-##  jquerylib        0.1.4      2021-04-26 [1]
-##  jsonlite         1.7.2      2020-12-09 [1]
-##  knitr            1.36       2021-09-29 [1]
-##  labeling         0.4.2      2020-10-20 [1]
-##  lifecycle        1.0.1      2021-09-24 [1]
-##  lubridate        1.8.0      2021-10-07 [1]
-##  magick           2.7.3      2021-08-18 [1]
-##  magrittr         2.0.1      2020-11-17 [1]
-##  memoise          2.0.0      2021-01-26 [1]
-##  munsell          0.5.0      2018-06-12 [1]
-##  pagedown         0.15.8     2021-11-21 [1]
-##  pillar           1.6.4      2021-10-18 [1]
-##  pkgbuild         1.2.0      2020-12-15 [1]
-##  pkgconfig        2.0.3      2019-09-22 [1]
-##  pkgload          1.2.3      2021-10-13 [1]
-##  prettyunits      1.1.1      2020-01-24 [1]
-##  processx         3.5.2      2021-04-30 [1]
-##  ps               1.6.0      2021-02-28 [1]
-##  purrr            0.3.4      2020-04-17 [1]
-##  R6               2.5.1      2021-08-19 [1]
-##  Rcpp             1.0.7      2021-07-07 [1]
-##  readr            2.1.1      2021-11-30 [1]
-##  readxl           1.3.1      2019-03-13 [1]
-##  remotes          2.4.0      2021-06-02 [1]
-##  rlang            0.4.12     2021-10-18 [1]
-##  rmarkdown        2.11       2021-09-14 [1]
-##  rprojroot        2.0.2      2020-11-15 [1]
-##  rstudioapi       0.13       2020-11-12 [1]
-##  sass             0.4.0      2021-05-12 [1]
-##  scales           1.1.1      2020-05-11 [1]
-##  sessioninfo      1.1.1      2018-11-05 [1]
-##  showtext         0.9-4      2021-08-14 [1]
-##  showtextdb       3.0        2020-06-04 [1]
-##  stringi          1.7.6      2021-11-29 [1]
-##  stringr          1.4.0      2019-02-10 [1]
-##  sysfonts         0.8.5      2021-08-09 [1]
-##  testthat         3.1.0      2021-10-04 [1]
-##  tibble           3.1.6      2021-11-07 [1]
-##  tidyselect       1.1.1      2021-04-30 [1]
-##  tzdb             0.2.0      2021-10-27 [1]
-##  usethis        * 2.1.3      2021-10-27 [1]
-##  utf8             1.2.2      2021-07-24 [1]
-##  uuid             1.0-3      2021-11-01 [1]
-##  vctrs            0.3.8      2021-04-29 [1]
-##  whisker          0.4        2019-08-28 [1]
-##  withr            2.4.3      2021-11-30 [1]
-##  xaringan         0.22       2021-06-23 [1]
-##  xaringanExtra    0.5.4      2021-08-12 [1]
-##  xaringanthemer * 0.4.0      2021-06-24 [1]
-##  xfun             0.28       2021-11-04 [1]
-##  yaml             2.2.1      2020-02-01 [1]
-##  source                                  
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  Github (hadley/emo@3f03b11)             
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  Github (rstudio/pagedown@b2fd54b)       
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  Github (gadenbuie/xaringanExtra@5e2d80b)
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
-##  CRAN (R 4.1.0)                          
+## ─ Packages ────────────────────────────────────────────────────────────────
+##  package        * version    date (UTC) lib source
+##  AmesHousing      0.0.4      2020-06-23 [1] CRAN (R 4.1.0)
+##  assertthat       0.2.1      2019-03-21 [1] CRAN (R 4.1.0)
+##  babynames        1.0.1      2021-04-12 [1] CRAN (R 4.1.0)
+##  bit              4.0.4      2020-08-04 [1] CRAN (R 4.1.0)
+##  bit64            4.0.5      2020-08-30 [1] CRAN (R 4.1.0)
+##  bslib            0.3.1      2021-10-06 [1] CRAN (R 4.1.0)
+##  cachem           1.0.6      2021-08-19 [1] CRAN (R 4.1.0)
+##  callr            3.7.0      2021-04-20 [1] CRAN (R 4.1.0)
+##  cellranger       1.1.0      2016-07-27 [1] CRAN (R 4.1.0)
+##  cli              3.1.1      2022-01-20 [1] CRAN (R 4.1.2)
+##  colorspace       2.0-2      2021-06-24 [1] CRAN (R 4.1.0)
+##  crayon           1.4.2      2021-10-29 [1] CRAN (R 4.1.0)
+##  dados            0.0.0.9000 2021-10-25 [1] Github (cienciadedatos/dados@0aac90a)
+##  DBI              1.1.2      2021-12-20 [1] CRAN (R 4.1.0)
+##  desc             1.4.0      2021-09-28 [1] CRAN (R 4.1.0)
+##  devtools       * 2.4.3      2021-11-30 [1] CRAN (R 4.1.0)
+##  digest           0.6.29     2021-12-01 [1] CRAN (R 4.1.0)
+##  dplyr            1.0.7      2021-06-18 [1] CRAN (R 4.1.0)
+##  ellipsis         0.3.2      2021-04-29 [1] CRAN (R 4.1.0)
+##  emo              0.0.0.9000 2021-08-12 [1] Github (hadley/emo@3f03b11)
+##  evaluate         0.14       2019-05-28 [1] CRAN (R 4.1.0)
+##  fansi            1.0.2      2022-01-14 [1] CRAN (R 4.1.2)
+##  farver           2.1.0      2021-02-28 [1] CRAN (R 4.1.0)
+##  fastmap          1.1.0      2021-01-25 [1] CRAN (R 4.1.0)
+##  forcats          0.5.1      2021-01-27 [1] CRAN (R 4.1.0)
+##  fs               1.5.2      2021-12-08 [1] CRAN (R 4.1.0)
+##  fueleconomy      1.0.0      2020-03-23 [1] CRAN (R 4.1.0)
+##  gapminder        0.3.0      2017-10-31 [1] CRAN (R 4.1.0)
+##  gargle           1.2.0      2021-07-02 [1] CRAN (R 4.1.0)
+##  generics         0.1.1      2021-10-25 [1] CRAN (R 4.1.0)
+##  ggplot2        * 3.3.5      2021-06-25 [1] CRAN (R 4.1.0)
+##  glue             1.6.1      2022-01-22 [1] CRAN (R 4.1.0)
+##  googledrive      2.0.0      2021-07-08 [1] CRAN (R 4.1.0)
+##  googlesheets4    1.0.0      2021-07-21 [1] CRAN (R 4.1.0)
+##  gtable           0.3.0      2019-03-25 [1] CRAN (R 4.1.0)
+##  here             1.0.1      2020-12-13 [1] CRAN (R 4.1.0)
+##  highr            0.9        2021-04-16 [1] CRAN (R 4.1.0)
+##  hms              1.1.1      2021-09-26 [1] CRAN (R 4.1.0)
+##  htmltools        0.5.2      2021-08-25 [1] CRAN (R 4.1.0)
+##  jquerylib        0.1.4      2021-04-26 [1] CRAN (R 4.1.0)
+##  jsonlite         1.7.3      2022-01-17 [1] CRAN (R 4.1.0)
+##  knitr            1.37       2021-12-16 [1] CRAN (R 4.1.0)
+##  labeling         0.4.2      2020-10-20 [1] CRAN (R 4.1.0)
+##  Lahman           9.0-0      2021-04-09 [1] CRAN (R 4.1.0)
+##  lifecycle        1.0.1      2021-09-24 [1] CRAN (R 4.1.0)
+##  lubridate        1.8.0      2021-10-07 [1] CRAN (R 4.1.0)
+##  magrittr         2.0.1      2020-11-17 [1] CRAN (R 4.1.0)
+##  memoise          2.0.1      2021-11-26 [1] CRAN (R 4.1.0)
+##  metathis         1.1.1      2021-06-29 [1] CRAN (R 4.1.0)
+##  munsell          0.5.0      2018-06-12 [1] CRAN (R 4.1.0)
+##  nasaweather      0.1        2014-07-22 [1] CRAN (R 4.1.0)
+##  nycflights13     1.0.2      2021-04-12 [1] CRAN (R 4.1.0)
+##  palmerpenguins   0.1.0      2020-07-23 [1] CRAN (R 4.1.0)
+##  pillar           1.6.4      2021-10-18 [1] CRAN (R 4.1.0)
+##  pixarfilms       0.2.1      2021-07-27 [1] CRAN (R 4.1.0)
+##  pkgbuild         1.3.1      2021-12-20 [1] CRAN (R 4.1.0)
+##  pkgconfig        2.0.3      2019-09-22 [1] CRAN (R 4.1.0)
+##  pkgload          1.2.4      2021-11-30 [1] CRAN (R 4.1.0)
+##  prettyunits      1.1.1      2020-01-24 [1] CRAN (R 4.1.0)
+##  processx         3.5.2      2021-04-30 [1] CRAN (R 4.1.0)
+##  ps               1.6.0      2021-02-28 [1] CRAN (R 4.1.0)
+##  purrr            0.3.4      2020-04-17 [1] CRAN (R 4.1.0)
+##  R6               2.5.1      2021-08-19 [1] CRAN (R 4.1.0)
+##  readr            2.1.1      2021-11-30 [1] CRAN (R 4.1.0)
+##  remotes          2.4.2      2021-11-30 [1] CRAN (R 4.1.0)
+##  rlang            0.4.12     2021-10-18 [1] CRAN (R 4.1.0)
+##  rmarkdown        2.11       2021-09-14 [1] CRAN (R 4.1.0)
+##  rprojroot        2.0.2      2020-11-15 [1] CRAN (R 4.1.0)
+##  rsconnect        0.8.25     2021-11-19 [1] CRAN (R 4.1.0)
+##  rstudioapi       0.13       2020-11-12 [1] CRAN (R 4.1.0)
+##  sass             0.4.0      2021-05-12 [1] CRAN (R 4.1.0)
+##  scales           1.1.1      2020-05-11 [1] CRAN (R 4.1.0)
+##  sessioninfo      1.2.2      2021-12-06 [1] CRAN (R 4.1.0)
+##  showtext         0.9-4      2021-08-14 [1] CRAN (R 4.1.0)
+##  showtextdb       3.0        2020-06-04 [1] CRAN (R 4.1.0)
+##  stringi          1.7.6      2021-11-29 [1] CRAN (R 4.1.0)
+##  stringr          1.4.0      2019-02-10 [1] CRAN (R 4.1.0)
+##  sysfonts         0.8.5      2021-08-09 [1] CRAN (R 4.1.0)
+##  testthat         3.1.1      2021-12-03 [1] CRAN (R 4.1.0)
+##  tibble           3.1.6      2021-11-07 [1] CRAN (R 4.1.0)
+##  tidyr            1.1.4      2021-09-27 [1] CRAN (R 4.1.0)
+##  tidyselect       1.1.1      2021-04-30 [1] CRAN (R 4.1.0)
+##  tzdb             0.2.0      2021-10-27 [1] CRAN (R 4.1.0)
+##  usethis        * 2.1.5      2021-12-09 [1] CRAN (R 4.1.0)
+##  utf8             1.2.2      2021-07-24 [1] CRAN (R 4.1.0)
+##  uuid             1.0-3      2021-11-01 [1] CRAN (R 4.1.0)
+##  vctrs            0.3.8      2021-04-29 [1] CRAN (R 4.1.0)
+##  vroom            1.5.7      2021-11-30 [1] CRAN (R 4.1.0)
+##  whisker          0.4        2019-08-28 [1] CRAN (R 4.1.0)
+##  withr            2.4.3      2021-11-30 [1] CRAN (R 4.1.0)
+##  xaringan         0.22       2021-06-23 [1] CRAN (R 4.1.0)
+##  xaringanExtra    0.5.4      2021-08-12 [1] Github (gadenbuie/xaringanExtra@5e2d80b)
+##  xaringanthemer * 0.4.1      2021-11-21 [1] CRAN (R 4.1.0)
+##  xfun             0.29       2021-12-14 [1] CRAN (R 4.1.0)
+##  yaml             2.2.1      2020-02-01 [1] CRAN (R 4.1.0)
 ## 
-## [1] /Library/Frameworks/R.framework/Versions/4.1/Resources/library
+##  [1] /Library/Frameworks/R.framework/Versions/4.1/Resources/library
+## 
+## ───────────────────────────────────────────────────────────────────────────
 ```
 ]
 
@@ -545,17 +625,16 @@ class: revisao
 
 ### Revisão - Reprodutibilidade
 
-- ....
+- Em um código reprodutível, devemos ser capazes de reproduzir totalmente os resultados a partir dos dados brutos, assim como outras pessoas (em computadores diferentes) também devem ser capazes de reproduzir esses mesmos resultados a partir dos dados brutos.
 
-- ....
+- Utilizar boas práticas aumentam as chances de escrever um código reprodutível. 
+- Exemplos de boas práticas:
 
-&lt;!-- - Conceito ... --&gt;
+  - Utilizar Projetos do RStudio. Quando usamos projetos do RStudio, o diretório de trabalho será a pasta principal do projeto.
 
-&lt;!-- - Projetos... --&gt;
+  - Desabilitar o .Rhistory e .Rdata.
 
-&lt;!-- - Caminhos ... --&gt;
-
-&lt;!-- - History e data --&gt;
+  - Utilizar caminhos relativos.
 
 ---
 name: rmarkdown
@@ -745,22 +824,14 @@ summary(dplyr::starwars[1:4])
 ```
 
 ```
-##      name               height           mass        
-##  Length:87          Min.   : 66.0   Min.   :  15.00  
-##  Class :character   1st Qu.:167.0   1st Qu.:  55.60  
-##  Mode  :character   Median :180.0   Median :  79.00  
-##                     Mean   :174.4   Mean   :  97.31  
-##                     3rd Qu.:191.0   3rd Qu.:  84.50  
-##                     Max.   :264.0   Max.   :1358.00  
-##                     NA's   :6       NA's   :28       
-##   hair_color       
-##  Length:87         
-##  Class :character  
-##  Mode  :character  
-##                    
-##                    
-##                    
-## 
+##      name               height           mass          hair_color       
+##  Length:87          Min.   : 66.0   Min.   :  15.00   Length:87         
+##  Class :character   1st Qu.:167.0   1st Qu.:  55.60   Class :character  
+##  Mode  :character   Median :180.0   Median :  79.00   Mode  :character  
+##                     Mean   :174.4   Mean   :  97.31                     
+##                     3rd Qu.:191.0   3rd Qu.:  84.50                     
+##                     Max.   :264.0   Max.   :1358.00                     
+##                     NA's   :6       NA's   :28
 ```
 
 ---

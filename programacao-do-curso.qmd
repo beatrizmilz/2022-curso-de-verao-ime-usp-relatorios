@@ -32,7 +32,7 @@ aulas_completo <- sheet_aulas %>% dplyr::left_join(sheet_semanas, "numero_semana
 for(sem in 1:nrow(sheet_semanas)) {
   semana <- sheet_semanas %>% dplyr::filter(numero_semana == sem)
   
-  cat(glue::glue("## Semana {semana$numero_semana} - {semana$tema_semana} \n\n"))
+  cat(glue::glue("##  Parte {semana$numero_semana} - {semana$tema_semana} \n\n"))
   
   aulas_semana <-
     aulas_completo %>% dplyr::filter(numero_semana == semana$numero_semana)

@@ -104,6 +104,47 @@ profs |>
   dplyr::pull(texto)
 ```
 
+---
+
+## Curso sobre R no Programa de Verão IME/USP
+
+- De 2015 à 2017, um grupo de alunos do IME/USP ofereceu um curso sobre R que apresentava temas de introdutórios até intermediário/avançado. 
+  - Material de 2016: https://curso-r.github.io/verao2016/
+  - Material de 2017: https://curso-r.github.io/verao2017/
+  - Em 2018 este grupo criou a Curso-R: https://curso-r.com/
+
+
+- Nathália Demétrio começou a ministrar  o curso de 'Introdução à Programação em R'.
+
+- Em 2022, os cursos de 'Princípios de Visualização de Dados com R' e 'Relatórios Reprodutíveis com R' foram adicionados ao Programa de Verão IME/USP.
+
+---
+
+.pull-left[
+
+## R-Ladies
+
+
+- R-Ladies é uma organização mundial cuja missão é promover a diversidade de gênero na comunidade da linguagem R.
+
+
+
+- Público-alvo são as pessoas que se identificam com gêneros sub-representados na comunidade R, portanto: mulheres cis, mulheres trans, homens trans, pessoas não-binárias e queer.
+
+- Links: https://linktr.ee/rladies_sp
+
+
+]
+
+.pull-right[
+
+<br>
+
+<center><img src= 'https://beatrizmilz.github.io/slidesR/rladies/img/allisonhorst/community1.jpg' width = '90%' alt='Author: Allison Horst'></br><p>Ilustração por <a href='https://twitter.com/allison_horst' target=_blank>@allison_horst</a></p></center>
+
+
+
+]
 
 
 
@@ -199,7 +240,7 @@ Que vocês saibam ao final do curso:
 
 ---
 
-### Check-list
+### Check-list de pacotes
 
 - Instalar pacotes necessários:
 
@@ -208,7 +249,8 @@ pacotes_necessarios <- c("usethis",
                          "rmarkdown",
                          "knitr",
                          "pagedown",
-                         "xaringan")
+                         "xaringan",
+                         "readr")
 
 install.packages(pacotes_necessarios)
 ```
@@ -292,7 +334,7 @@ class: teoria
 .pull-right[
 - Exemplos:
 
-  - Boas práticas, como: não usar caracteres especiais nos caminhos, variáveis, nomes de coluna, etc; armazenar os arquivos de forma consistente; escrever códigos que podem ser executados no seu computador e no computador de outras pessoas também.
+  - Boas práticas, como: não usar caracteres especiais nos caminhos, variáveis, nomes de coluna, etc; armazenar os arquivos de forma consistente.
 
   - Registrar a versão do R e dos pacotes utilizados
   
@@ -314,32 +356,106 @@ class:  teoria
 
 ### Projetos do RStudio
 
+.pull-left[
 
-- TO DO:
+- O RStudio permite a criação de Projetos.
 
-  - O que são
 
-  - Importância
+- O projeto é uma pasta no computador, onde devemos armazenar todos os arquivos usados ou criados em uma análise. Essa pasta irá conter também um arquivo com o nome do projeto e a extensão `.Rproj`.
+
+- Para cada análise, lembre-se de criar um `.Rproj` correspondente.
+
+
+
+]
+
+.pull-right[
+
+- Usar projetos no RStudio facilita a organização dos arquivos, posteriormente sincronizar com o GitHub, entre outros.
+
+```{r echo=FALSE, out.width="50%"}
+knitr::include_graphics("img/rprojs.png")
+```
+
+]
+
 
 ---
 class: livecoding
 
 ### Criando um projeto
 
-- Criar um projeto no RStudio facilita muito para organizar os arquivos, posteriormente sincronizar com o GitHub, entre outros. Neste capítulo do livro Zen do R, da [Curso-R](https://www.curso-r.com), tem mais informações sobre [RProj e diretórios](https://curso-r.github.io/zen-do-r/rproj-dir.html).
+- Criando um projeto em uma nova pasta:
 
   - File > New Project > New Directory > New Project
   
   - Dê um nome para seu projeto (será o nome da pasta), escolha a pasta no seu computador, e clique em `Create Project`.
+  
+  
+---
+class:  teoria
+
+### Diretório de trabalho/Working Directory
+
+- O diretório de trabalho é a pasta em que o R irá:
+  - procurar arquivos na hora de ler informações;
+  - gravar arquivos na hora de salvar objetos.
+
+
+- Quando usamos Projetos do RStudio, o nosso diretório de trabalho é a pasta principal do projeto. 
+
+- A função `getwd()` serve para conferir o diretório de trabalho: 
+
+```r
+> getwd()
+[1] "/Users/beatrizmilz/GitHub/2022-curso-de-verao-ime-usp-relatorios"
+```
+
+- A função `setwd()` serve para alterar o diretório de trabalho. **NÃO É RECOMENDADO O USO! Isso torna o código não reprodutível.**
+
   
 ---
 class:  teoria
 
 ### Caminhos
 
-- O que são caminhos relativos e absolutos?
+- Caminhos são textos que representam o endereço do arquivo no computador. 
 
-> TO DO
+- É muito importante entender como funcionam! Caso contrário, ficará difícil fazer coisas como importar dados para o R.
+
+- Caminhos podem ser relativos ou absolutos.
+
+- Caminhos absolutos: tem início na pasta raiz do seu computador/usuário. **NÃO É RECOMENDADO O USO! Isso torna o código não reprodutível.**
+
+- Caminhos relativos: tem início no diretório de trabalho da sessão. Caso você esteja usando projetos, os caminhos relativos tem início na pasta inicial do projeto. 
+
+
+- **Utilize sempre que possível caminhos relativos.**
+
+---
+class:  teoria
+
+### Exemplos de caminhos
+
+Exemplos acessando o mesmo arquivo:
+
+- Caminho absoluto:
+```
+"/Users/beatrizmilz/GitHub/2022-curso-de-verao-ime-usp-relatorios/docs/slides/img/rprojs.png"
+```
+
+- Caminho relativo:
+```
+"docs/slides/img/rprojs.png"
+```
+
+
+???
+O pacote `here` também possui funções úteis para escrever caminhos: 
+
+```{r echo=TRUE}
+here::here()
+```
 
 ---
 class:  teoria
@@ -397,13 +513,32 @@ ref_pacotes_curso_r()
 ---
 class: exercicios
 
-### Colocar em prática: 
+### Colocar em prática
 
-- Crie um projeto no RStudio para armazenar o que vamos criar durante o curso. Salve em algum lugar no seu computador que seja fácil de encontrar.
+1) Crie um projeto no RStudio para armazenar o que vamos criar durante o curso. Salve em algum lugar no seu computador que seja fácil de encontrar.
 
-- Desabilite o .RData e .Rhistory no seu RStudio
+2) Desabilite o .RData e .Rhistory no seu RStudio
 
-- Execute o seguinte código no console, verifique o resultado: `devtools::session_info()`
+3) Execute o seguinte código no console, verifique o resultado: `devtools::session_info()`
+
+4) Dentro do projeto criado, crie uma pasta chamada "dados", e salve o seguinte arquivo na mesma: [clique aqui para baixar o arquivo `pinguins.csv`](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/dados/pinguins.csv)
+
+Dados originais: https://allisonhorst.github.io/palmerpenguins/
+
+Dados traduzidos para Português: https://cienciadedatos.github.io/dados/
+
+---
+class: exercicios
+
+### Colocar em prática: Continuação
+
+5) Crie um R Script, copie e cole o código abaixo, e substitua o caminho correto para ler a base de pinguins. Aproveite que o RStudio nos ajuda a buscar caminhos: dentro das aspas, experimente clicar a tecla TAB.
+
+```r
+caminho <- "...." 
+pinguins <- readr::read_csv(caminho)
+```
+6) Verifique no painel Environment do RStudio se a base de Pinguins foi importada corretamente.
 
 
 ---
@@ -422,17 +557,16 @@ class: revisao
 
 ### Revisão - Reprodutibilidade
 
-- ....
+- Em um código reprodutível, devemos ser capazes de reproduzir totalmente os resultados a partir dos dados brutos, assim como outras pessoas (em computadores diferentes) também devem ser capazes de reproduzir esses mesmos resultados a partir dos dados brutos.
 
-- ....
+- Utilizar boas práticas aumentam as chances de escrever um código reprodutível. 
+- Exemplos de boas práticas:
 
-<!-- - Conceito ... -->
+  - Utilizar Projetos do RStudio. Quando usamos projetos do RStudio, o diretório de trabalho será a pasta principal do projeto.
 
-<!-- - Projetos... -->
+  - Desabilitar o .Rhistory e .Rdata.
 
-<!-- - Caminhos ... -->
-
-<!-- - History e data -->
+  - Utilizar caminhos relativos.
 
 ---
 name: rmarkdown

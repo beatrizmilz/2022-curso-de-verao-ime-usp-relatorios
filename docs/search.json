@@ -138,5 +138,47 @@
     "title": "Programação do curso",
     "section": "Semana 3 - Exemplo prático final",
     "text": "Aula 5 (16/02/2022)\nConteúdo\n\nExemplo prático do ciclo completo:\n\nCriar um projeto no RStudio\nIniciar o controle de versão com Git\nIniciar um repositório no GitHub\nCriar um documento RMarkdown - O tipo de documento será escolhido previamente pela turma!\nAdicionar conteúdo no .Rmd: parâmetros, código e resultados, código em linha, tabela, gráfico, imagens, etc.\nDisponibilizar o documento na internet com GitHub Pages ou Netlify\nFazer alterações no .Rmd e atualizar a versão que está online"
+  },
+  {
+    "objectID": "programacao-do-curso.html#tema-1---reprodutibilidade-e-rmarkdown",
+    "href": "programacao-do-curso.html#tema-1---reprodutibilidade-e-rmarkdown",
+    "title": "Programação do curso",
+    "section": "Tema 1 - Reprodutibilidade e RMarkdown",
+    "text": "Aula 1 (02/02/2022)\nConteúdo\n\nIntrodução ao curso - Slides\nIntrodução ao conceito de reprodutibilidade - Slides\n\nReprodutibilidade no contexto do desenvolvimento em R: Usando projetos do RStudio (.Rprojs)\n\nRMarkdown - Slides\n\nIntrodução ao pacote RMarkdown\nComo criar arquivos .Rmd\nComo textos marcados com markdown no .Rmd\n\n\n\n\nAula 2 (07/02/2022)\nConteúdo\n\nRMarkdown (continuação) - Slides\n\nComo adicionar elementos no .Rmd, como: imagens, tabelas, gráficos, códigos e resultados.\nCriando .Rmd a partir de templates\nGerando diferentes tipos de relatórios: .html, .docx, .pdf\nUsando e gerenciando bibliografias com arquivos .bib\nRelatórios com parâmetros"
+  },
+  {
+    "objectID": "programacao-do-curso.html#tema-2---controle-de-versão-e-disponibilização-dos-resultados",
+    "href": "programacao-do-curso.html#tema-2---controle-de-versão-e-disponibilização-dos-resultados",
+    "title": "Programação do curso",
+    "section": "Tema 2 - Controle de versão e disponibilização dos resultados",
+    "text": "Aula 3 (09/02/2022)\nConteúdo\n\nGit e GitHub - Slides\n\nIntrodução ao controle de versão\nDiferença entre Git e GitHub\nComo configurar o Git e o GitHub no RStudio usando o pacote {usethis}\n\n\n\n\nAula 4 (14/02/2022)\nConteúdo\n\nGit e GitHub (continuação) - Slides\n\nFluxo de trabalho em projetos no RStudio usando controle de versão com Git e GitHub\nTrabalhando colaborativamente no GitHub: Criando um Pull Request\nDisponibilizar os relatórios gerados em .html na internet\n\nCom GitHub Pages\nCom Netlify"
+  },
+  {
+    "objectID": "programacao-do-curso.html#tema-3---exemplo-prático-final",
+    "href": "programacao-do-curso.html#tema-3---exemplo-prático-final",
+    "title": "Programação do curso",
+    "section": "Tema 3 - Exemplo prático final",
+    "text": "Aula 5 (16/02/2022)\nConteúdo\n\nExemplo prático do ciclo completo:\n\nCriar um projeto no RStudio\nIniciar o controle de versão com Git\nIniciar um repositório no GitHub\nCriar um documento RMarkdown - O tipo de documento será escolhido previamente pela turma!\nAdicionar conteúdo no .Rmd: parâmetros, código e resultados, código em linha, tabela, gráfico, imagens, etc.\nDisponibilizar o documento na internet com GitHub Pages ou Netlify\nFazer alterações no .Rmd e atualizar a versão que está online"
+  },
+  {
+    "objectID": "programacao-do-curso.html#parte-1---reprodutibilidade-e-rmarkdown",
+    "href": "programacao-do-curso.html#parte-1---reprodutibilidade-e-rmarkdown",
+    "title": "Programação do curso",
+    "section": "Parte 1 - Reprodutibilidade e RMarkdown",
+    "text": "Aula 1 (02/02/2022)\nConteúdo\n\nIntrodução ao curso - Slides\nIntrodução ao conceito de reprodutibilidade - Slides\n\nReprodutibilidade no contexto do desenvolvimento em R: Usando projetos do RStudio (.Rprojs)\n\nRMarkdown - Slides\n\nIntrodução ao pacote RMarkdown\nComo criar arquivos .Rmd\nComo textos marcados com markdown no .Rmd\n\n\n\n\nAula 2 (07/02/2022)\nConteúdo\n\nRMarkdown (continuação) - Slides\n\nComo adicionar elementos no .Rmd, como: imagens, tabelas, gráficos, códigos e resultados.\nCriando .Rmd a partir de templates\nGerando diferentes tipos de relatórios: .html, .docx, .pdf\nUsando e gerenciando bibliografias com arquivos .bib\nRelatórios com parâmetros"
+  },
+  {
+    "objectID": "programacao-do-curso.html#parte-2---controle-de-versão-e-disponibilização-dos-resultados",
+    "href": "programacao-do-curso.html#parte-2---controle-de-versão-e-disponibilização-dos-resultados",
+    "title": "Programação do curso",
+    "section": "Parte 2 - Controle de versão e disponibilização dos resultados",
+    "text": "Aula 3 (09/02/2022)\nConteúdo\n\nGit e GitHub - Slides\n\nIntrodução ao controle de versão\nDiferença entre Git e GitHub\nComo configurar o Git e o GitHub no RStudio usando o pacote {usethis}\n\n\n\n\nAula 4 (14/02/2022)\nConteúdo\n\nGit e GitHub (continuação) - Slides\n\nFluxo de trabalho em projetos no RStudio usando controle de versão com Git e GitHub\nTrabalhando colaborativamente no GitHub: Criando um Pull Request\nDisponibilizar os relatórios gerados em .html na internet\n\nCom GitHub Pages\nCom Netlify"
+  },
+  {
+    "objectID": "programacao-do-curso.html#parte-3---exemplo-prático-final",
+    "href": "programacao-do-curso.html#parte-3---exemplo-prático-final",
+    "title": "Programação do curso",
+    "section": "Parte 3 - Exemplo prático final",
+    "text": "Aula 5 (16/02/2022)\nConteúdo\n\nExemplo prático do ciclo completo:\n\nCriar um projeto no RStudio\nIniciar o controle de versão com Git\nIniciar um repositório no GitHub\nCriar um documento RMarkdown - O tipo de documento será escolhido previamente pela turma!\nAdicionar conteúdo no .Rmd: parâmetros, código e resultados, código em linha, tabela, gráfico, imagens, etc.\nDisponibilizar o documento na internet com GitHub Pages ou Netlify\nFazer alterações no .Rmd e atualizar a versão que está online"
   }
 ]
