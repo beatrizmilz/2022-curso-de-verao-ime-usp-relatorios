@@ -180,5 +180,47 @@
     "title": "Programação do curso",
     "section": "Parte 3 - Exemplo prático final",
     "text": "Aula 5 (16/02/2022)\nConteúdo\n\nExemplo prático do ciclo completo:\n\nCriar um projeto no RStudio\nIniciar o controle de versão com Git\nIniciar um repositório no GitHub\nCriar um documento RMarkdown - O tipo de documento será escolhido previamente pela turma!\nAdicionar conteúdo no .Rmd: parâmetros, código e resultados, código em linha, tabela, gráfico, imagens, etc.\nDisponibilizar o documento na internet com GitHub Pages ou Netlify\nFazer alterações no .Rmd e atualizar a versão que está online"
+  },
+  {
+    "objectID": "teste.html#r-markdown",
+    "href": "teste.html#r-markdown",
+    "title": "Untitled",
+    "section": "R Markdown",
+    "text": "This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.\nWhen you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:\n\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00"
+  },
+  {
+    "objectID": "teste.html#including-plots",
+    "href": "teste.html#including-plots",
+    "title": "Untitled",
+    "section": "Including Plots",
+    "text": "You can also embed plots, for example:\n\n\n\n\n\nNote that the echo = FALSE parameter was added to the code chunk to prevent printing of the R code that generated the plot."
+  },
+  {
+    "objectID": "Untitled.html#a-new-output-format",
+    "href": "Untitled.html#a-new-output-format",
+    "title": "Your Document Title",
+    "section": "A New Output Format",
+    "text": "html_pretty in the prettydoc package is a new output format for creating HTML documents from R Markdown files. html_pretty is more lightweight compared to html_document, and is more stylish than html_vignette when creating package vignettes."
+  },
+  {
+    "objectID": "Untitled.html#new-styles",
+    "href": "Untitled.html#new-styles",
+    "title": "Your Document Title",
+    "section": "New Styles",
+    "text": "html_pretty currently supports three page themes (cayman, tactile and architect), and two syntax highlight styles (github and vignette). The theme and highlight styles can be specified in the document metadata, for example:\noutput:\n  prettydoc::html_pretty:\n    theme: architect\n    highlight: github"
+  },
+  {
+    "objectID": "Untitled.html#your-familiar-tools",
+    "href": "Untitled.html#your-familiar-tools",
+    "title": "Your Document Title",
+    "section": "Your Familiar Tools",
+    "text": "Feel free to use the knitr infrastructure with dozens of tunable options in your document.\n\nset.seed(123)\nn <- 1000\nx1  <- matrix(rnorm(n), ncol = 2)\nx2  <- matrix(rnorm(n, mean = 3, sd = 1.5), ncol = 2)\nx   <- rbind(x1, x2)\nhead(x)\n\n            [,1]        [,2]\n[1,] -0.56047565 -0.60189285\n[2,] -0.23017749 -0.99369859\n[3,]  1.55870831  1.02678506\n[4,]  0.07050839  0.75106130\n[5,]  0.12928774 -1.50916654\n[6,]  1.71506499 -0.09514745\n\nsmoothScatter(x, xlab = \"x1\", ylab = \"x2\")\n\n\n\n\nYou can include code snippets of languages other than R, but note that the block header has no curly brackets around the language name.\n// [[Rcpp::export]]\nNumericVector timesTwo(NumericVector x) {\n    return x * 2;\n}\nYou can also write math expressions, e.g. \\(Y = X\\beta + \\epsilon\\), footnotes1, and tables, e.g. using knitr::kable().\n\n\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.6\n1.4\n0.2\nsetosa\n\n\n5.4\n3.9\n1.7\n0.4\nsetosa\n\n\n4.6\n3.4\n1.4\n0.3\nsetosa\n\n\n5.0\n3.4\n1.5\n0.2\nsetosa\n\n\n4.4\n2.9\n1.4\n0.2\nsetosa\n\n\n4.9\n3.1\n1.5\n0.1\nsetosa"
+  },
+  {
+    "objectID": "Untitled.html#stay-tuned",
+    "href": "Untitled.html#stay-tuned",
+    "title": "Your Document Title",
+    "section": "Stay Tuned",
+    "text": "Please visit the development page of the prettydoc package for latest updates and news. Comments, bug reports and pull requests are always welcome."
   }
 ]

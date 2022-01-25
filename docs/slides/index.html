@@ -117,6 +117,10 @@ name: sumario
 
 - [RMarkdown](#rmarkdown)
 
+
+- [RMarkdown - Conteúdo extra](#rmarkdown-extra)
+
+
 - [Git e GitHub](#git-e-github)
 
 
@@ -206,7 +210,11 @@ pacotes_necessarios &lt;- c("usethis",
                          "knitr",
                          "pagedown",
                          "xaringan",
-                         "readr")
+                         "readr",
+                         "dplyr",
+                         "DT",
+                         "reactable",
+                         "janitor")
 
 install.packages(pacotes_necessarios)
 ```
@@ -502,7 +510,7 @@ devtools::session_info()
 ```
 
 ```
-## ─ Session info ────────────────────────────────────────────────────────────
+## ─ Session info ────────────────────────────────────────────────
 ##  setting  value
 ##  version  R version 4.1.0 (2021-05-18)
 ##  os       macOS Big Sur 11.5.2
@@ -516,13 +524,15 @@ devtools::session_info()
 ##  rstudio  2021.09.0+351 Ghost Orchid (desktop)
 ##  pandoc   2.14.0.3 @ /Applications/RStudio.app/Contents/MacOS/pandoc/ (via rmarkdown)
 ## 
-## ─ Packages ────────────────────────────────────────────────────────────────
+## ─ Packages ────────────────────────────────────────────────────
 ##  package        * version    date (UTC) lib source
 ##  AmesHousing      0.0.4      2020-06-23 [1] CRAN (R 4.1.0)
 ##  assertthat       0.2.1      2019-03-21 [1] CRAN (R 4.1.0)
 ##  babynames        1.0.1      2021-04-12 [1] CRAN (R 4.1.0)
+##  base64enc        0.1-3      2015-07-28 [1] CRAN (R 4.1.0)
 ##  bit              4.0.4      2020-08-04 [1] CRAN (R 4.1.0)
 ##  bit64            4.0.5      2020-08-30 [1] CRAN (R 4.1.0)
+##  bookdown         0.24       2021-09-02 [1] CRAN (R 4.1.0)
 ##  bslib            0.3.1      2021-10-06 [1] CRAN (R 4.1.0)
 ##  cachem           1.0.6      2021-08-19 [1] CRAN (R 4.1.0)
 ##  callr            3.7.0      2021-04-20 [1] CRAN (R 4.1.0)
@@ -530,23 +540,28 @@ devtools::session_info()
 ##  cli              3.1.1      2022-01-20 [1] CRAN (R 4.1.2)
 ##  colorspace       2.0-2      2021-06-24 [1] CRAN (R 4.1.0)
 ##  crayon           1.4.2      2021-10-29 [1] CRAN (R 4.1.0)
+##  crosstalk        1.2.0      2021-11-04 [1] CRAN (R 4.1.0)
 ##  dados            0.0.0.9000 2021-10-25 [1] Github (cienciadedatos/dados@0aac90a)
+##  data.table       1.14.2     2021-09-27 [1] CRAN (R 4.1.0)
 ##  DBI              1.1.2      2021-12-20 [1] CRAN (R 4.1.0)
 ##  desc             1.4.0      2021-09-28 [1] CRAN (R 4.1.0)
 ##  devtools       * 2.4.3      2021-11-30 [1] CRAN (R 4.1.0)
 ##  digest           0.6.29     2021-12-01 [1] CRAN (R 4.1.0)
-##  dplyr            1.0.7      2021-06-18 [1] CRAN (R 4.1.0)
+##  dplyr          * 1.0.7      2021-06-18 [1] CRAN (R 4.1.0)
 ##  ellipsis         0.3.2      2021-04-29 [1] CRAN (R 4.1.0)
 ##  emo              0.0.0.9000 2021-08-12 [1] Github (hadley/emo@3f03b11)
 ##  evaluate         0.14       2019-05-28 [1] CRAN (R 4.1.0)
 ##  fansi            1.0.2      2022-01-14 [1] CRAN (R 4.1.2)
 ##  farver           2.1.0      2021-02-28 [1] CRAN (R 4.1.0)
 ##  fastmap          1.1.0      2021-01-25 [1] CRAN (R 4.1.0)
+##  flextable        0.6.10     2021-11-15 [1] CRAN (R 4.1.0)
 ##  forcats          0.5.1      2021-01-27 [1] CRAN (R 4.1.0)
 ##  fs               1.5.2      2021-12-08 [1] CRAN (R 4.1.0)
+##  ftExtra          0.3.0      2022-01-04 [1] CRAN (R 4.1.2)
 ##  fueleconomy      1.0.0      2020-03-23 [1] CRAN (R 4.1.0)
 ##  gapminder        0.3.0      2017-10-31 [1] CRAN (R 4.1.0)
 ##  gargle           1.2.0      2021-07-02 [1] CRAN (R 4.1.0)
+##  gdtools          0.2.3      2021-01-06 [1] CRAN (R 4.1.0)
 ##  generics         0.1.1      2021-10-25 [1] CRAN (R 4.1.0)
 ##  ggplot2        * 3.3.5      2021-06-25 [1] CRAN (R 4.1.0)
 ##  glue             1.6.1      2022-01-22 [1] CRAN (R 4.1.0)
@@ -557,6 +572,8 @@ devtools::session_info()
 ##  highr            0.9        2021-04-16 [1] CRAN (R 4.1.0)
 ##  hms              1.1.1      2021-09-26 [1] CRAN (R 4.1.0)
 ##  htmltools        0.5.2      2021-08-25 [1] CRAN (R 4.1.0)
+##  htmlwidgets      1.5.4      2021-09-08 [1] CRAN (R 4.1.0)
+##  janitor          2.1.0      2021-01-05 [1] CRAN (R 4.1.0)
 ##  jquerylib        0.1.4      2021-04-26 [1] CRAN (R 4.1.0)
 ##  jsonlite         1.7.3      2022-01-17 [1] CRAN (R 4.1.0)
 ##  knitr            1.37       2021-12-16 [1] CRAN (R 4.1.0)
@@ -570,17 +587,22 @@ devtools::session_info()
 ##  munsell          0.5.0      2018-06-12 [1] CRAN (R 4.1.0)
 ##  nasaweather      0.1        2014-07-22 [1] CRAN (R 4.1.0)
 ##  nycflights13     1.0.2      2021-04-12 [1] CRAN (R 4.1.0)
+##  officer          0.4.1      2021-11-14 [1] CRAN (R 4.1.0)
 ##  palmerpenguins   0.1.0      2020-07-23 [1] CRAN (R 4.1.0)
 ##  pillar           1.6.4      2021-10-18 [1] CRAN (R 4.1.0)
 ##  pixarfilms       0.2.1      2021-07-27 [1] CRAN (R 4.1.0)
 ##  pkgbuild         1.3.1      2021-12-20 [1] CRAN (R 4.1.0)
 ##  pkgconfig        2.0.3      2019-09-22 [1] CRAN (R 4.1.0)
 ##  pkgload          1.2.4      2021-11-30 [1] CRAN (R 4.1.0)
+##  prettydoc        0.4.1      2021-01-10 [1] CRAN (R 4.1.0)
 ##  prettyunits      1.1.1      2020-01-24 [1] CRAN (R 4.1.0)
 ##  processx         3.5.2      2021-04-30 [1] CRAN (R 4.1.0)
 ##  ps               1.6.0      2021-02-28 [1] CRAN (R 4.1.0)
 ##  purrr            0.3.4      2020-04-17 [1] CRAN (R 4.1.0)
 ##  R6               2.5.1      2021-08-19 [1] CRAN (R 4.1.0)
+##  Rcpp             1.0.8      2022-01-13 [1] CRAN (R 4.1.2)
+##  reactable        0.2.3      2020-10-04 [1] CRAN (R 4.1.0)
+##  reactR           0.4.4      2021-02-22 [1] CRAN (R 4.1.0)
 ##  readr            2.1.1      2021-11-30 [1] CRAN (R 4.1.0)
 ##  remotes          2.4.2      2021-11-30 [1] CRAN (R 4.1.0)
 ##  rlang            0.4.12     2021-10-18 [1] CRAN (R 4.1.0)
@@ -593,9 +615,11 @@ devtools::session_info()
 ##  sessioninfo      1.2.2      2021-12-06 [1] CRAN (R 4.1.0)
 ##  showtext         0.9-4      2021-08-14 [1] CRAN (R 4.1.0)
 ##  showtextdb       3.0        2020-06-04 [1] CRAN (R 4.1.0)
+##  snakecase        0.11.0     2019-05-25 [1] CRAN (R 4.1.0)
 ##  stringi          1.7.6      2021-11-29 [1] CRAN (R 4.1.0)
 ##  stringr          1.4.0      2019-02-10 [1] CRAN (R 4.1.0)
 ##  sysfonts         0.8.5      2021-08-09 [1] CRAN (R 4.1.0)
+##  systemfonts      1.0.3      2021-10-13 [1] CRAN (R 4.1.0)
 ##  testthat         3.1.1      2021-12-03 [1] CRAN (R 4.1.0)
 ##  tibble           3.1.6      2021-11-07 [1] CRAN (R 4.1.0)
 ##  tidyr            1.1.4      2021-09-27 [1] CRAN (R 4.1.0)
@@ -612,11 +636,13 @@ devtools::session_info()
 ##  xaringanExtra    0.5.4      2021-08-12 [1] Github (gadenbuie/xaringanExtra@5e2d80b)
 ##  xaringanthemer * 0.4.1      2021-11-21 [1] CRAN (R 4.1.0)
 ##  xfun             0.29       2021-12-14 [1] CRAN (R 4.1.0)
+##  xml2             1.3.3      2021-11-30 [1] CRAN (R 4.1.0)
 ##  yaml             2.2.1      2020-02-01 [1] CRAN (R 4.1.0)
+##  zip              2.2.0      2021-05-31 [1] CRAN (R 4.1.0)
 ## 
 ##  [1] /Library/Frameworks/R.framework/Versions/4.1/Resources/library
 ## 
-## ───────────────────────────────────────────────────────────────────────────
+## ───────────────────────────────────────────────────────────────
 ```
 ]
 
@@ -655,9 +681,6 @@ class: middle, center, inverse
 
   - Como gerar outros tipos de documentos?
   
-  - Como adicionar parâmetros no documento?
-  
-
 
 ]
 
@@ -747,7 +770,9 @@ class: exercicios
 
 ### Colocar em prática: 
   
-- Dentro do projeto do RStudio criado, crie um novo arquivo RMarkdown que gera um HTML. 
+- Dentro do projeto do RStudio criado, crie uma pasta chamada `relatorio`.
+
+- Crie um novo arquivo RMarkdown que gera um HTML, e salve ele na pasta `relatorio`. Dê o nome de `primeiro_relatorio.Rmd`.
 
 - O arquivo já vem com alguns conteúdos para servir de exemplo. Observe a estrutura deste arquivo! Tente imaginar o que será gerado.
 
@@ -757,6 +782,7 @@ class: exercicios
   - Altere o título, adicione seu nome, mude a data.
   - Escreva algo diferente no corpo do arquivo.
   
+
 
 ---
 class:  teoria
@@ -798,11 +824,26 @@ class: livecoding
 
 
 ---
+class: exercicios
+
+### Colocar em prática: 
+
+- No arquivo criado, experimente marcar os textos com Markdown.
+
+- Experimente o Visual Mode Editor do RStudio.
+
+- Adicione um link no seu relatório para a página dos cursos de extensão da USP: https://cursosextensao.usp.br/
+
+---
 class:  teoria
 
 ### Chunks de Código em R
 
 - Os chunks são campos onde podemos inserir código de R (ou Python, SQL,  Bash...) em um arquivo RMarkdown. 
+
+
+- Os chunks podem ter rótulos/nomes, para identificar o conteúdo gerado.
+
 
 - Existe um atalho do teclado para criar chunks no RStudio:  `Ctrl + ALt + I`. 
 
@@ -810,51 +851,6 @@ class:  teoria
 
 
 &lt;img src="img/create-chunk.png" width="90%" style="display: block; margin: auto;" /&gt;
-
----
-
-class:  teoria
-
-#### Exemplo:
-
-
-
-```r
-summary(dplyr::starwars[1:4])
-```
-
-```
-##      name               height           mass          hair_color       
-##  Length:87          Min.   : 66.0   Min.   :  15.00   Length:87         
-##  Class :character   1st Qu.:167.0   1st Qu.:  55.60   Class :character  
-##  Mode  :character   Median :180.0   Median :  79.00   Mode  :character  
-##                     Mean   :174.4   Mean   :  97.31                     
-##                     3rd Qu.:191.0   3rd Qu.:  84.50                     
-##                     Max.   :264.0   Max.   :1358.00                     
-##                     NA's   :6       NA's   :28
-```
-
----
-class:  teoria
-
-#### Exemplo:
-
-.left-code[
-
-```r
-library(ggplot2)
-ggplot(mtcars) +
-  aes(x = hp,
-      y = mpg,
-      colour = cyl) +
-  geom_point(size = 2L)
-```
-]
-
-.right-plot[
-![](index_files/figure-html/plot-exemplo-ggplot2-1.png)
-]
-
 
 ---
 class:  teoria
@@ -914,6 +910,85 @@ nrow(mtcars)
 ---
 class:  teoria
 
+### Diretório de trabalho em arquivos `.Rmd`
+
+- Quando usamos projetos do RStudio, o diretório de trabalho será a pasta principal do projeto.
+
+- Quando estamos trabalhando com arquivos `.Rmd`, por padrão o diretório de trabalho DO ARQUIVO será a pasta onde o arquivo está localizado.
+
+- Isso gera confusão! Atenção pois isso pode causar erros. Uma dica para escrever os caminhos de forma correta é utilizar a funcionalidade do RStudio: escreva aspas, coloque o cursor entre as pastas e aperte TAB.
+
+- Exemplo prático: comparar o uso de `getwd()` dentro e fora de um arquivo `.Rmd`.
+
+- Para acessar arquivos em pastas que estão em um "nível" anterior ao diretório de trabalho, utilize `"../"`. 
+
+---
+class: exercicios
+
+### Colocar em prática: 
+
+.pull-left[
+1) No arquivo `primeiro-relatorio.Rmd`, crie um chunk e faça a importação da base de dados de pinguins.
+
+```r
+caminho &lt;- "...." 
+pinguins &lt;- readr::read_csv(caminho)
+dplyr::glimpse(pinguins)
+```
+
+2) Lembre-se de se atentar aos caminhos! Atualmente o projeto deve estar estruturado dessa forma:
+
+]
+.pull-right[
+
+````
+├── dados
+│   └── pinguins.csv
+├── relatorios
+│   ├── primeiro-relatorio.Rmd
+└── projeto.Rproj
+```
+
+3) Aperte `knit` e observe o resultado. O código e o resultado deverá aparecer no relatório. Configure as opções de chunk para que apareça corretamente.
+]
+
+---
+class:  teoria
+
+### Opções globais de Chunk
+
+As opções globais de chunk são opções de chunk que são válidas para o documento inteiro. Algumas opções são úteis, como `fig.align = "center"`.
+Para configurar as opções globais de chunk, modifique o código abaixo e insira após o código `YAML` (retire os `#` no início de cada linha):
+
+- Ex:
+  - Configurações do chunk:
+`{r setup, include=FALSE}`
+  - Conteúdo do chunk:
+`knitr::opts_chunk$set(...)`
+
+---
+class: exercicios
+
+### Colocar em prática: 
+
+1) Adicione no seu relatório um chunk com o código para carregar o pacote dplyr: `library(dplyr)`
+
+2) Aperte o botão `knit` para ver o resultado. Repare que logo após o código aparece uma mensagem:
+
+```
+Attaching package: 'dplyr'
+The following objects are masked from 'package:stats':
+
+    filter, lag
+```
+
+3) Altere a opção global de chunk, de forma que não apareçam essas mensagens. 
+
+4) Aperte o botão `knit` para ver o resultado. Observe o que mudou.
+
+---
+class:  teoria
+
 ### Código inline
 
 - É útil para adicionar resultados de código em R dentro de parágrafos.
@@ -936,21 +1011,19 @@ As colunas presentes na base são
 ```
 
 
-
-
 ---
-class:  teoria
+class: exercicios
 
-### Opções globais de Chunk
+### Colocar em prática: 
 
-As opções globais de chunk são opções de chunk que são válidas para o documento inteiro. Algumas opções são úteis, como `fig.align = "center"`.
-Para configurar as opções globais de chunk, modifique o código abaixo e insira após o código `YAML` (retire os `#` no início de cada linha):
+1 ) O trecho a seguir apresenta um texto com resultados feitos com inline code. Adicione o seguinte código no seu relatório (o arquivo `primeiro_relatorio.Rmd`), substituindo os trechos coloridos por inline code:
 
-- Ex:
-  - Configurações do chunk:
-`{r setup, include=FALSE}`
-  - Conteúdo do chunk:
-`knitr::opts_chunk$set(...)`
+&gt; A base de dados pinguins apresenta dados referente à .colorido[344] pinguins, das seguintes espécies: .colorido[Pinguim-de-adélia, Pinguim-gentoo, e Pinguim-de-barbicha]. Os dados foram coletados entre os anos .colorido[2007] e .colorido[2009], nas seguintes ilhas: .colorido[Torgersen, Biscoe, e Dream]. O peso médio dos pinguins amostrados foi de .colorido[42] kg. Os dados foram obtidos através do pacote [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/).
+
+
+
+
+
 
 
 
@@ -988,79 +1061,66 @@ Sugestão de leitura: [Opções do knitr](https://yihui.name/knitr/options/#chun
 
 
 ---
+class: exercicios
+
+### Colocar em prática: 
+
+1) No seu relatório (o arquivo `primeiro_relatorio.Rmd`), utilizando R, adicione as seguintes imagens. Deixe-as centralizadas, sem que apareça o código, e ocupando 80% da largura da página:
+
+a) Utilize a URL: https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png
+
+b)  Na pasta inicial do projeto, crie uma pasta chamada `img/`. Nesta pasta, salve a imagem, e adicione a imagem no relatório utilizando caminhos relativos: https://allisonhorst.github.io/palmerpenguins/reference/figures/logo.png
+
+
+---
 class:  teoria
 
 ### Tabelas com R
 
+- Várias opções: `knitr::kable()`, `DT::datatable()` , `reactable::reactable()`, entre outras.
+
 
 ```r
-knitr::kable(x = head(dplyr::starwars[1:6]), format = "html")
+mtcars |&gt;
+  head(3) |&gt;
+  knitr::kable()
 ```
 
-&lt;table&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt; name &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; height &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; mass &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; hair_color &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; skin_color &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; eye_color &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Luke Skywalker &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 172 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 77 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; blond &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; fair &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; blue &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; C-3PO &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 167 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 75 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; gold &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; yellow &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; R2-D2 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 96 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 32 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; white, blue &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; red &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Darth Vader &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 202 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 136 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; none &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; white &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; yellow &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Leia Organa &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 150 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 49 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; brown &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; light &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; brown &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Owen Lars &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 178 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 120 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; brown, grey &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; light &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; blue &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
 
-- Outra opção:  `DT::datatable(dplyr::starwars)`  
+
+|              |  mpg| cyl| disp|  hp| drat|    wt|  qsec| vs| am| gear| carb|
+|:-------------|----:|---:|----:|---:|----:|-----:|-----:|--:|--:|----:|----:|
+|Mazda RX4     | 21.0|   6|  160| 110| 3.90| 2.620| 16.46|  0|  1|    4|    4|
+|Mazda RX4 Wag | 21.0|   6|  160| 110| 3.90| 2.875| 17.02|  0|  1|    4|    4|
+|Datsun 710    | 22.8|   4|  108|  93| 3.85| 2.320| 18.61|  1|  1|    4|    1|
+
+
+
+
+---
+class: exercicios
+
+### Colocar em prática: 
+
+1) Adicione a seguinte tabela no seu relatório, usando a função `kable()`:
+
+
+```r
+quantidade_de_especies &lt;- pinguins |&gt;
+  dplyr::count(especie, sort = TRUE) |&gt;
+  janitor::adorn_totals()
+```
+
+Ela deverá ficar assim:
+
+
+|Espécie             | Quantidade|
+|:-------------------|----------:|
+|Pinguim-de-adélia   |        152|
+|Pinguim-gentoo      |        124|
+|Pinguim-de-barbicha |         68|
+|Total               |        344|
+
 
 
 
@@ -1080,6 +1140,11 @@ Muito cuidado com a identação!
 Se descobrir, tente verificar o que há de errado no código (pode ser a falta de um parênteses, vírgula, entre outros).
 
   - Todos os objetos e pacotes usados no seu script precisam estar disponíveis no seu `.Rmd`. Verifique isso :)
+  
+  
+
+
+
 
 ---
 class: livecoding
@@ -1088,7 +1153,7 @@ class: livecoding
 
 - Alterando o output no YAML. Ex:
 
-  - Word: `output: word_document`
+  - Word: `output: word_document` ou `output: bookdown::word_document2`
 
   - HTML: `output: html_document`  
   
@@ -1099,6 +1164,17 @@ class: livecoding
   - Adicionando a linha no YAML: 
   `knit: pagedown::chrome_print`
   
+
+---
+class: exercicios
+
+### Colocar em prática: 
+
+
+1) Gere um PDF com o seu relatório utilizando a função `pagedown::chrome_print("caminho/ate/arquivo.html")`.
+
+2) Gere uma versão em word do seu relatório, alterando o `output` no YAML.
+
 ---
 class: livecoding
 
@@ -1134,6 +1210,64 @@ class: teoria
 
 .topnote[&lt;i class="far fa-flag"&gt;&lt;/i&gt; Slide adaptado do curso de [Relatórios](https://loja.curso-r.com/relatorios-e-apresentacoes-automaticas.html), da [Curso-R](https://curso-r.com/).]
 
+---
+class: exercicios
+
+### Colocar em prática: 
+
+1) No seu relatório, substitua no YAML output pelo seguinte código, aperte `knit` e observe o resultado:
+
+```
+output:
+  prettydoc::html_pretty:
+    theme: architect
+```
+2) Experimente algum dos temas seguintes: cayman, tactile, architect, leonids, hpstr. Aperte knit e observe o resultado. Qual tema vocês mais gostaram?
+
+
+
+---
+class: revisao
+
+### Revisão - R Markdown
+
+- O pacote rmarkdown possibilita  adicionar textos e códigos em um único arquivo.
+
+- Podemos utilizar códigos em R, Python, Markdown, HTML, CSS, SQL, e outros no RMarkdown.
+
+
+- O arquivo RMarkdown é estruturado em: YAML (metadados), textos marcados e campos de código (chamados de chunks).
+
+- Markdown é uma linguagem de marcação que possibilita marcar textos. Essa linguagem é utilizada nos arquivos RMarkdown e em muitos outros lugares. 
+
+- Os tipos mais básicos de arquivos exportados pelo RMarkdown são páginas de internet `.html`, arquivos word `.docx`, e arquivos `.pdf`. Existem muitos pacotes para expandir as possibilidades do RMarkdown e fazer outros tipos de documentos, como: livros, documentos científicos, currículos, blogs, sites, entre outros.
+
+
+---
+name: rmarkdown-extra
+class: middle, center, inverse
+
+## RMarkdown - Conteúdo extra
+
+.left[
+
+- Como adicionar parametros no relatório
+  
+- Como adicionar equações
+  
+- Como adicionar referências
+
+- Como citar o R em relatórios
+  
+- Como citar pacotes
+
+- Como usar um modelo de word para gerar um relatório
+
+- Como fazer referência cruzada
+  
+
+]
+
 
 ---
 class: teoria
@@ -1150,7 +1284,7 @@ Ex:
 
 ```
 ---
-title: "Relatório com Parâmentros"
+title: "Relatório com Parâmetros"
 author: "Beatriz"
 date: "Fevereiro de 2022"
 output: html_document
@@ -1177,7 +1311,9 @@ Recomendação de leitura: [R Markdown: The Definitive Guide - Chapter 15 Parame
 ---
 class: teoria
 
-### Extra: Adicionar equações
+### Adicionar equações
+
+- Podemos adicionar equações em LaTeX. Dica: [Equações em LaTeX no Mettzer](https://app.mettzer.com/latex), ou pesquise no google por "Equações em LaTeX".
   
 - Equação centralizada: Envolver a equação por dois `$`.
 
@@ -1191,34 +1327,183 @@ class: teoria
 
 
 ```md
-$${\text{Média}=\frac {a_{1}+a_{2}+\cdots +a_{n}}{n}}$$
+`$${\text{Média}=\frac {a_{1}+a_{2}+\cdots +a_{n}}{n}}$$`
 ```
-
-.small[Dica: [Equações em LaTeX no Mettzer](https://app.mettzer.com/latex), ou pesquise no google por "Equações em LaTeX".]
 
 ---
 class: teoria
 
-### Extra: Adicionar referências
+### Adicionar referências
 
-TO DO!
+- Podemos adicionar referências no texto usando um arquivo `.bib`. 
 
-- https://www.zotero.org/
+- Podemos gerar um arquivo `.bib` usando um gerenciador de referências. Eu utilizo o [Zotero](https://www.zotero.org/), a extensão [Better Bibtex for Zotero](https://retorque.re/zotero-better-bibtex/installation/) e a extensão do Zotero para o navegador.
 
-- https://retorque.re/zotero-better-bibtex/installation/
+- No arquivo `.bib`, cada referência deverá ter um rótulo, que usaremos para citar dentro do arquivo `.Rmd`, precedido de `@`.
+
+- Devemos indicar os arquivos `.bib` no YAML do relatório. Exemplo em um caso com 2 arquivos diferentes:
+
+```
+bibliography: [referencias/packages.bib, referencias/zotero.bib]
+```
+  
+
+---
+class: teoria
+
+### Citar o R - Função citation()
+
+.smaller[
+```
+&gt; citation() 
+
+To cite R in publications use:
+
+  R Core Team (2021). R: A language and environment for
+  statistical computing. R Foundation for Statistical
+  Computing, Vienna, Austria. URL https://www.R-project.org/.
+
+A BibTeX entry for LaTeX users is
+
+  @Manual{,
+    title = {R: A Language and Environment for Statistical Computing},
+    author = {{R Core Team}},
+    organization = {R Foundation for Statistical Computing},
+    address = {Vienna, Austria},
+    year = {2021},
+    url = {https://www.R-project.org/},
+  }
+
+We have invested a lot of time and effort in creating R,
+please cite it when using it for data analysis. See also
+‘citation("pkgname")’ for citing R packages.
+```
+]
+
+---
+class: teoria
+
+### Citar pacotes
+
+- Podemos gerar um `.bib` com as referências de pacotes utilizados usando a função `knitr::write_bib()`:
+
+
+```r
+pacotes &lt;- c("tidyverse")
+knitr::write_bib(pacotes, # pacotes para gerar a referencia
+                 # local para salvar o arquivo
+                 'packages.bib')
+```
+
+---
+class: teoria
+
+### Resultado
+
+````
+@Manual{R-tidyverse,
+  title = {tidyverse: Easily Install and Load the Tidyverse},
+  author = {Hadley Wickham},
+  year = {2021},
+  note = {R package version 1.3.1},
+  url = {https://CRAN.R-project.org/package=tidyverse},
+}
+
+@Article{tidyverse2019,
+  title = {Welcome to the {tidyverse}},
+  author = {Hadley Wickham and Mara Averick and Jennifer Bryan and Winston Chang and Lucy D'Agostino McGowan and Romain François and Garrett Grolemund and Alex Hayes and Lionel Henry and Jim Hester and Max Kuhn and Thomas Lin Pedersen and Evan Miller and Stephan Milton Bache and Kirill Müller and Jeroen Ooms and David Robinson and Dana Paige Seidel and Vitalie Spinu and Kohske Takahashi and Davis Vaughan and Claus Wilke and Kara Woo and Hiroaki Yutani},
+  year = {2019},
+  journal = {Journal of Open Source Software},
+  volume = {4},
+  number = {43},
+  pages = {1686},
+  doi = {10.21105/joss.01686},
+}
+```
 
 
 ---
-class: revisao
+class: teoria
 
-### Revisão - R Markdown
-
-- ....
+### Como citar no .Rmd
 
 
-- ....
+- Formas de usar os rótulos gerados no arquivo `.Rmd`:
 
-- ....
+
+|forma_de_citar                           |resultado                           |
+|:----------------------------------------|:-----------------------------------|
+|@tidyverse2019                           |Wickham et al. (2019)               |
+|[@R-tidyverse; @tidyverse2019]           |(Wickham 2021; Wickham et al. 2019) |
+|Segundo Wickham et al. [-@tidyverse2019] |Segundo Wickham et al. (2019)       |
+
+
+---
+class: teoria
+
+### Formatação das referências
+
+- O conteúdo do arquivo `.bib` é formatado a partir de um arquivo `.csl` (Citation Style Language).
+
+- Devemos informar caminho até o arquivo CSL no YAML, por exemplo:
+
+```
+csl: template/abnt.csl
+```
+
+- Lugares para baixar arquivos CSL:
+
+  - https://github.com/citation-style-language/styles
+  - https://citationstyles.org/
+  
+---
+class: teoria
+
+### Usar um modelo para word
+
+- Em alguns casos, somos obrigados a enviar arquivos `.docx` (ex: algumas revistas científicas apenas aceitam esse tipo de arquivo).
+
+- Podemos informar um template de arquivo word como referência. As regras de formatação serão copiadas. Não funciona perfeitamente!
+
+```
+output: 
+  bookdown::word_document2:
+    reference_docx: template/modelo.docx
+```  
+
+---
+class: teoria
+
+### Exportar um `.docx` tunado
+
+- Em alguns casos, somos obrigados a enviar arquivos `.docx` (ex: algumas revistas científicas apenas aceitam esse tipo de arquivo).
+
+- Exemplo de YAML:
+
+```
+output: 
+  bookdown::word_document2:
+    reference_docx: template/modelo.docx
+    number_sections: false
+bibliography: [referencias/packages.bib, referencias/zotero.bib]
+csl: template/abnt.csl
+```    
+
+---
+class: teoria
+
+### Referência cruzada
+
+
+- Funciona com outputs que são derivados do pacote bookdown. 
+  - Ex: `bookdown::html_document2`,  `bookdown::word_document2`
+
+- Usamos o rótulo do chunk (ou nome) onde a tabela ou imagem foi criada para fazer a referência cruzada. 
+  - Ex: `\@ref(fig:rotulo-da-imagem)` ou `\@ref(tab:rotulo-da-tabela)`.
+
+- Referência: https://bookdown.org/yihui/rmarkdown-cookbook/cross-ref.html
+  
+
 
 
 ---
@@ -1768,6 +2053,9 @@ class: teoria
 5. Push: Suba os commits para o GitHub
 
 6. Pull (extra): Baixe o estado atual do projeto
+
+---
+class: teoria
 
 ### Cuidados
 

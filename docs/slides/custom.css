@@ -88,7 +88,7 @@ h4 {
 }
 
 .smaller{
-   font-size: 0.6em;
+   font-size: 0.6em; !important
 }
 
 .rascunho::after{
@@ -120,4 +120,9 @@ h4 {
   width: 60%;
   float: right;
   padding-left: 1%;
+}
+
+
+.colorido{
+  background-color: #FDB525;
 }

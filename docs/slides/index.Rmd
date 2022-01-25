@@ -49,7 +49,7 @@ style_duo_accent(
   
   header_font_google = google_font("Quicksand"),
   text_font_google   = google_font("Work Sans", "300", "300i"),
-  code_font_google   = google_font("Fira Code"),
+  code_font_google   = google_font("Roboto Mono"),
   base_font_size = "27px",
   extra_css = list(".remark-code-line" = list("background-color" = "#f2f2f2"))
 )
@@ -161,6 +161,10 @@ name: sumario
 
 - [RMarkdown](#rmarkdown)
 
+
+- [RMarkdown - Conteúdo extra](#rmarkdown-extra)
+
+
 - [Git e GitHub](#git-e-github)
 
 
@@ -250,7 +254,11 @@ pacotes_necessarios <- c("usethis",
                          "knitr",
                          "pagedown",
                          "xaringan",
-                         "readr")
+                         "readr",
+                         "dplyr",
+                         "DT",
+                         "reactable",
+                         "janitor")
 
 install.packages(pacotes_necessarios)
 ```
@@ -587,9 +595,6 @@ class: middle, center, inverse
 
   - Como gerar outros tipos de documentos?
   
-  - Como adicionar parâmetros no documento?
-  
-
 
 ]
 
@@ -679,7 +684,9 @@ class: exercicios
 
 ### Colocar em prática: 
   
-- Dentro do projeto do RStudio criado, crie um novo arquivo RMarkdown que gera um HTML. 
+- Dentro do projeto do RStudio criado, crie uma pasta chamada `relatorio`.
+
+- Crie um novo arquivo RMarkdown que gera um HTML, e salve ele na pasta `relatorio`. Dê o nome de `primeiro_relatorio.Rmd`.
 
 - O arquivo já vem com alguns conteúdos para servir de exemplo. Observe a estrutura deste arquivo! Tente imaginar o que será gerado.
 
@@ -689,6 +696,7 @@ class: exercicios
   - Altere o título, adicione seu nome, mude a data.
   - Escreva algo diferente no corpo do arquivo.
   
+
 
 ---
 class:  teoria
@@ -730,11 +738,26 @@ class: livecoding
 
 
 ---
+class: exercicios
+
+### Colocar em prática: 
+
+- No arquivo criado, experimente marcar os textos com Markdown.
+
+- Experimente o Visual Mode Editor do RStudio.
+
+- Adicione um link no seu relatório para a página dos cursos de extensão da USP: https://cursosextensao.usp.br/
+
+---
 class:  teoria
 
 ### Chunks de Código em R
 
 - Os chunks são campos onde podemos inserir código de R (ou Python, SQL,  Bash...) em um arquivo RMarkdown. 
+
+
+- Os chunks podem ter rótulos/nomes, para identificar o conteúdo gerado.
+
 
 - Existe um atalho do teclado para criar chunks no RStudio:  `Ctrl + ALt + I`. 
 
@@ -744,38 +767,6 @@ class:  teoria
 ```{r echo=FALSE, out.width="90%"}
 knitr::include_graphics("img/create-chunk.png")
 ```
-
----
-
-class:  teoria
-
-#### Exemplo:
-
-
-```{r echo=TRUE}
-summary(dplyr::starwars[1:4])
-```
-
----
-class:  teoria
-
-#### Exemplo:
-
-.left-code[
-```{r plot-exemplo-ggplot2, echo=TRUE, fig.show="hide", out.width="95%", echo=TRUE}
-library(ggplot2)
-ggplot(mtcars) +
-  aes(x = hp,
-      y = mpg,
-      colour = cyl) +
-  geom_point(size = 2L)
-```
-]
-
-.right-plot[
-![](`r knitr::fig_chunk("plot-exemplo-ggplot2", "png")`)
-]
-
 
 ---
 class:  teoria
@@ -828,6 +819,85 @@ nrow(mtcars)
 ---
 class:  teoria
 
+### Diretório de trabalho em arquivos `.Rmd`
+
+- Quando usamos projetos do RStudio, o diretório de trabalho será a pasta principal do projeto.
+
+- Quando estamos trabalhando com arquivos `.Rmd`, por padrão o diretório de trabalho DO ARQUIVO será a pasta onde o arquivo está localizado.
+
+- Isso gera confusão! Atenção pois isso pode causar erros. Uma dica para escrever os caminhos de forma correta é utilizar a funcionalidade do RStudio: escreva aspas, coloque o cursor entre as pastas e aperte TAB.
+
+- Exemplo prático: comparar o uso de `getwd()` dentro e fora de um arquivo `.Rmd`.
+
+- Para acessar arquivos em pastas que estão em um "nível" anterior ao diretório de trabalho, utilize `"../"`. 
+
+---
+class: exercicios
+
+### Colocar em prática: 
+
+.pull-left[
+1) No arquivo `primeiro-relatorio.Rmd`, crie um chunk e faça a importação da base de dados de pinguins.
+
+```r
+caminho <- "...." 
+pinguins <- readr::read_csv(caminho)
+dplyr::glimpse(pinguins)
+```
+
+2) Lembre-se de se atentar aos caminhos! Atualmente o projeto deve estar estruturado dessa forma:
+
+]
+.pull-right[
+
+````
+├── dados
+│   └── pinguins.csv
+├── relatorios
+│   ├── primeiro-relatorio.Rmd
+└── projeto.Rproj
+```
+
+3) Aperte `knit` e observe o resultado. O código e o resultado deverá aparecer no relatório. Configure as opções de chunk para que apareça corretamente.
+]
+
+---
+class:  teoria
+
+### Opções globais de Chunk
+
+As opções globais de chunk são opções de chunk que são válidas para o documento inteiro. Algumas opções são úteis, como `fig.align = "center"`.
+Para configurar as opções globais de chunk, modifique o código abaixo e insira após o código `YAML` (retire os `#` no início de cada linha):
+
+- Ex:
+  - Configurações do chunk:
+`{r setup, include=FALSE}`
+  - Conteúdo do chunk:
+`knitr::opts_chunk$set(...)`
+
+---
+class: exercicios
+
+### Colocar em prática: 
+
+1) Adicione no seu relatório um chunk com o código para carregar o pacote dplyr: `library(dplyr)`
+
+2) Aperte o botão `knit` para ver o resultado. Repare que logo após o código aparece uma mensagem:
+
+```
+Attaching package: 'dplyr'
+The following objects are masked from 'package:stats':
+
+    filter, lag
+```
+
+3) Altere a opção global de chunk, de forma que não apareçam essas mensagens. 
+
+4) Aperte o botão `knit` para ver o resultado. Observe o que mudou.
+
+---
+class:  teoria
+
 ### Código inline
 
 - É útil para adicionar resultados de código em R dentro de parágrafos.
@@ -849,21 +919,19 @@ As colunas presentes na base são
 ```
 
 
-
-
 ---
-class:  teoria
+class: exercicios
 
-### Opções globais de Chunk
+### Colocar em prática: 
 
-As opções globais de chunk são opções de chunk que são válidas para o documento inteiro. Algumas opções são úteis, como `fig.align = "center"`.
-Para configurar as opções globais de chunk, modifique o código abaixo e insira após o código `YAML` (retire os `#` no início de cada linha):
+1 ) O trecho a seguir apresenta um texto com resultados feitos com inline code. Adicione o seguinte código no seu relatório (o arquivo `primeiro_relatorio.Rmd`), substituindo os trechos coloridos por inline code:
 
-- Ex:
-  - Configurações do chunk:
-`{r setup, include=FALSE}`
-  - Conteúdo do chunk:
-`knitr::opts_chunk$set(...)`
+> A base de dados pinguins apresenta dados referente à .colorido[`r nrow(pinguins)`] pinguins, das seguintes espécies: .colorido[`r knitr::combine_words(unique(pinguins$especie), and = "e ")`]. Os dados foram coletados entre os anos .colorido[`r min(pinguins$ano)`] e .colorido[`r max(pinguins$ano)`], nas seguintes ilhas: .colorido[`r knitr::combine_words(unique(pinguins$ilha), and = "e ")`]. O peso médio dos pinguins amostrados foi de .colorido[`r round(mean(pinguins$massa_corporal, na.rm = TRUE)/100)`] kg. Os dados foram obtidos através do pacote [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/).
+
+
+
+
+
 
 
 
@@ -900,15 +968,53 @@ Sugestão de leitura: [Opções do knitr](https://yihui.name/knitr/options/#chun
 
 
 ---
+class: exercicios
+
+### Colocar em prática: 
+
+1) No seu relatório (o arquivo `primeiro_relatorio.Rmd`), utilizando R, adicione as seguintes imagens. Deixe-as centralizadas, sem que apareça o código, e ocupando 80% da largura da página:
+
+a) Utilize a URL: https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png
+
+b)  Na pasta inicial do projeto, crie uma pasta chamada `img/`. Nesta pasta, salve a imagem, e adicione a imagem no relatório utilizando caminhos relativos: https://allisonhorst.github.io/palmerpenguins/reference/figures/logo.png
+
+
+---
 class:  teoria
 
 ### Tabelas com R
 
+- Várias opções: `knitr::kable()`, `DT::datatable()` , `reactable::reactable()`, entre outras.
+
 ```{r echo=TRUE}
-knitr::kable(x = head(dplyr::starwars[1:6]), format = "html")
+mtcars |>
+  head(3) |>
+  knitr::kable()
 ```
 
-- Outra opção:  `DT::datatable(dplyr::starwars)`  
+
+
+
+---
+class: exercicios
+
+### Colocar em prática: 
+
+1) Adicione a seguinte tabela no seu relatório, usando a função `kable()`:
+
+```{r echo=TRUE}
+quantidade_de_especies <- pinguins |>
+  dplyr::count(especie, sort = TRUE) |>
+  janitor::adorn_totals()
+```
+
+Ela deverá ficar assim:
+
+```{r echo = FALSE}
+quantidade_de_especies |>
+  knitr::kable(col.names = c("Espécie", "Quantidade"))
+```
+
 
 
 
@@ -928,6 +1034,11 @@ Muito cuidado com a identação!
 Se descobrir, tente verificar o que há de errado no código (pode ser a falta de um parênteses, vírgula, entre outros).
 
   - Todos os objetos e pacotes usados no seu script precisam estar disponíveis no seu `.Rmd`. Verifique isso :)
+  
+  
+
+
+
 
 ---
 class: livecoding
@@ -936,7 +1047,7 @@ class: livecoding
 
 - Alterando o output no YAML. Ex:
 
-  - Word: `output: word_document`
+  - Word: `output: word_document` ou `output: bookdown::word_document2`
 
   - HTML: `output: html_document`  
   
@@ -947,6 +1058,17 @@ class: livecoding
   - Adicionando a linha no YAML: 
   `knit: pagedown::chrome_print`
   
+
+---
+class: exercicios
+
+### Colocar em prática: 
+
+
+1) Gere um PDF com o seu relatório utilizando a função `pagedown::chrome_print("caminho/ate/arquivo.html")`.
+
+2) Gere uma versão em word do seu relatório, alterando o `output` no YAML.
+
 ---
 class: livecoding
 
@@ -1020,6 +1142,64 @@ exemplos_rmd |>
 ref_relatorios_curso_r()
 ```
 
+---
+class: exercicios
+
+### Colocar em prática: 
+
+1) No seu relatório, substitua no YAML output pelo seguinte código, aperte `knit` e observe o resultado:
+
+```
+output:
+  prettydoc::html_pretty:
+    theme: architect
+```
+2) Experimente algum dos temas seguintes: cayman, tactile, architect, leonids, hpstr. Aperte knit e observe o resultado. Qual tema vocês mais gostaram?
+
+
+
+---
+class: revisao
+
+### Revisão - R Markdown
+
+- O pacote rmarkdown possibilita  adicionar textos e códigos em um único arquivo.
+
+- Podemos utilizar códigos em R, Python, Markdown, HTML, CSS, SQL, e outros no RMarkdown.
+
+
+- O arquivo RMarkdown é estruturado em: YAML (metadados), textos marcados e campos de código (chamados de chunks).
+
+- Markdown é uma linguagem de marcação que possibilita marcar textos. Essa linguagem é utilizada nos arquivos RMarkdown e em muitos outros lugares. 
+
+- Os tipos mais básicos de arquivos exportados pelo RMarkdown são páginas de internet `.html`, arquivos word `.docx`, e arquivos `.pdf`. Existem muitos pacotes para expandir as possibilidades do RMarkdown e fazer outros tipos de documentos, como: livros, documentos científicos, currículos, blogs, sites, entre outros.
+
+
+---
+name: rmarkdown-extra
+class: middle, center, inverse
+
+## RMarkdown - Conteúdo extra
+
+.left[
+
+- Como adicionar parametros no relatório
+  
+- Como adicionar equações
+  
+- Como adicionar referências
+
+- Como citar o R em relatórios
+  
+- Como citar pacotes
+
+- Como usar um modelo de word para gerar um relatório
+
+- Como fazer referência cruzada
+  
+
+]
+
 
 ---
 class: teoria
@@ -1036,7 +1216,7 @@ Ex:
 
 ```
 ---
-title: "Relatório com Parâmentros"
+title: "Relatório com Parâmetros"
 author: "Beatriz"
 date: "Fevereiro de 2022"
 output: html_document
@@ -1063,7 +1243,9 @@ Recomendação de leitura: [R Markdown: The Definitive Guide - Chapter 15 Parame
 ---
 class: teoria
 
-### Extra: Adicionar equações
+### Adicionar equações
+
+- Podemos adicionar equações em LaTeX. Dica: [Equações em LaTeX no Mettzer](https://app.mettzer.com/latex), ou pesquise no google por "Equações em LaTeX".
   
 - Equação centralizada: Envolver a equação por dois `$`.
 
@@ -1080,31 +1262,191 @@ $${\text{Média}=\frac {a_{1}+a_{2}+\cdots +a_{n}}{n}}$$
 $${\text{Média}=\frac {a_{1}+a_{2}+\cdots +a_{n}}{n}}$$
 ```
 
-.small[Dica: [Equações em LaTeX no Mettzer](https://app.mettzer.com/latex), ou pesquise no google por "Equações em LaTeX".]
+---
+class: teoria
+
+### Adicionar referências
+
+- Podemos adicionar referências no texto usando um arquivo `.bib`. 
+
+- Podemos gerar um arquivo `.bib` usando um gerenciador de referências. Eu utilizo o [Zotero](https://www.zotero.org/), a extensão [Better Bibtex for Zotero](https://retorque.re/zotero-better-bibtex/installation/) e a extensão do Zotero para o navegador.
+
+- No arquivo `.bib`, cada referência deverá ter um rótulo, que usaremos para citar dentro do arquivo `.Rmd`, precedido de `@`.
+
+- Devemos indicar os arquivos `.bib` no YAML do relatório. Exemplo em um caso com 2 arquivos diferentes:
+
+```
+bibliography: [referencias/packages.bib, referencias/zotero.bib]
+```
+  
 
 ---
 class: teoria
 
-### Extra: Adicionar referências
+### Citar o R - Função citation()
 
-TO DO!
+.smaller[
+```
+> citation() 
 
-- https://www.zotero.org/
+To cite R in publications use:
 
-- https://retorque.re/zotero-better-bibtex/installation/
+  R Core Team (2021). R: A language and environment for
+  statistical computing. R Foundation for Statistical
+  Computing, Vienna, Austria. URL https://www.R-project.org/.
+
+A BibTeX entry for LaTeX users is
+
+  @Manual{,
+    title = {R: A Language and Environment for Statistical Computing},
+    author = {{R Core Team}},
+    organization = {R Foundation for Statistical Computing},
+    address = {Vienna, Austria},
+    year = {2021},
+    url = {https://www.R-project.org/},
+  }
+
+We have invested a lot of time and effort in creating R,
+please cite it when using it for data analysis. See also
+‘citation("pkgname")’ for citing R packages.
+```
+]
+
+---
+class: teoria
+
+### Citar pacotes
+
+- Podemos gerar um `.bib` com as referências de pacotes utilizados usando a função `knitr::write_bib()`:
+
+```{r echo=TRUE}
+pacotes <- c("tidyverse")
+knitr::write_bib(pacotes, # pacotes para gerar a referencia
+                 # local para salvar o arquivo
+                 'packages.bib')
+```
+
+---
+class: teoria
+
+### Resultado
+
+````
+@Manual{R-tidyverse,
+  title = {tidyverse: Easily Install and Load the Tidyverse},
+  author = {Hadley Wickham},
+  year = {2021},
+  note = {R package version 1.3.1},
+  url = {https://CRAN.R-project.org/package=tidyverse},
+}
+
+@Article{tidyverse2019,
+  title = {Welcome to the {tidyverse}},
+  author = {Hadley Wickham and Mara Averick and Jennifer Bryan and Winston Chang and Lucy D'Agostino McGowan and Romain François and Garrett Grolemund and Alex Hayes and Lionel Henry and Jim Hester and Max Kuhn and Thomas Lin Pedersen and Evan Miller and Stephan Milton Bache and Kirill Müller and Jeroen Ooms and David Robinson and Dana Paige Seidel and Vitalie Spinu and Kohske Takahashi and Davis Vaughan and Claus Wilke and Kara Woo and Hiroaki Yutani},
+  year = {2019},
+  journal = {Journal of Open Source Software},
+  volume = {4},
+  number = {43},
+  pages = {1686},
+  doi = {10.21105/joss.01686},
+}
+```
 
 
 ---
-class: revisao
+class: teoria
 
-### Revisão - R Markdown
-
-- ....
+### Como citar no .Rmd
 
 
-- ....
+- Formas de usar os rótulos gerados no arquivo `.Rmd`:
 
-- ....
+```{r}
+tibble::tibble(
+  forma_de_citar = as.character(), resultado = as.character()
+) |> 
+  tibble::add_row(
+    forma_de_citar = "@tidyverse2019",
+    resultado = "Wickham et al. (2019)"
+  )|> 
+  tibble::add_row(
+    forma_de_citar = "[@R-tidyverse; @tidyverse2019]",
+    resultado = "(Wickham 2021; Wickham et al. 2019)"
+  )|> 
+  tibble::add_row(
+    forma_de_citar = "Segundo Wickham et al. [-@tidyverse2019]",
+    resultado = "Segundo Wickham et al. (2019) "
+  ) |> 
+  knitr::kable()
+```
+
+
+---
+class: teoria
+
+### Formatação das referências
+
+- O conteúdo do arquivo `.bib` é formatado a partir de um arquivo `.csl` (Citation Style Language).
+
+- Devemos informar caminho até o arquivo CSL no YAML, por exemplo:
+
+```
+csl: template/abnt.csl
+```
+
+- Lugares para baixar arquivos CSL:
+
+  - https://github.com/citation-style-language/styles
+  - https://citationstyles.org/
+  
+---
+class: teoria
+
+### Usar um modelo para word
+
+- Em alguns casos, somos obrigados a enviar arquivos `.docx` (ex: algumas revistas científicas apenas aceitam esse tipo de arquivo).
+
+- Podemos informar um template de arquivo word como referência. As regras de formatação serão copiadas. Não funciona perfeitamente!
+
+```
+output: 
+  bookdown::word_document2:
+    reference_docx: template/modelo.docx
+```  
+
+---
+class: teoria
+
+### Exportar um `.docx` tunado
+
+- Em alguns casos, somos obrigados a enviar arquivos `.docx` (ex: algumas revistas científicas apenas aceitam esse tipo de arquivo).
+
+- Exemplo de YAML:
+
+```
+output: 
+  bookdown::word_document2:
+    reference_docx: template/modelo.docx
+    number_sections: false
+bibliography: [referencias/packages.bib, referencias/zotero.bib]
+csl: template/abnt.csl
+```    
+
+---
+class: teoria
+
+### Referência cruzada
+
+
+- Funciona com outputs que são derivados do pacote bookdown. 
+  - Ex: `bookdown::html_document2`,  `bookdown::word_document2`
+
+- Usamos o rótulo do chunk (ou nome) onde a tabela ou imagem foi criada para fazer a referência cruzada. 
+  - Ex: `\@ref(fig:rotulo-da-imagem)` ou `\@ref(tab:rotulo-da-tabela)`.
+
+- Referência: https://bookdown.org/yihui/rmarkdown-cookbook/cross-ref.html
+  
+
 
 
 ---
@@ -1693,6 +2035,9 @@ class: teoria
 5. Push: Suba os commits para o GitHub
 
 6. Pull (extra): Baixe o estado atual do projeto
+
+---
+class: teoria
 
 ### Cuidados
 
