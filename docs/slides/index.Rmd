@@ -10,7 +10,7 @@ output:
     css: [xaringan-themer.css, custom.css]
     nature:
       slideNumberFormat: "<a href='https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/'><i class='fas fa-external-link-alt'></i> Página do curso</a> - <a href='#sumario'>Guia</a> - %current%/%total%"
-      titleSlideClass: ["title-slide", "rascunho"]
+      titleSlideClass: ["title-slide"]
       highlightStyle: github
       highlightLines: true
       ratio: '16:9'
@@ -47,10 +47,10 @@ style_duo_accent(
   code_inline_background_color = "#faf0f4",
  
   
-  header_font_google = google_font("Quicksand"),
+  header_font_google = google_font("Montserrat"),
   text_font_google   = google_font("Work Sans", "300", "300i"),
   code_font_google   = google_font("Roboto Mono"),
-  base_font_size = "27px",
+ base_font_size = "25px",
   extra_css = list(".remark-code-line" = list("background-color" = "#f2f2f2"))
 )
 
@@ -114,9 +114,9 @@ profs |>
   - Em 2018 este grupo criou a Curso-R: https://curso-r.com/
 
 
-- Nathália Demétrio começou a ministrar  o curso de 'Introdução à Programação em R'.
+- Nathália Demétrio começou em 2019 a ministrar  o curso de 'Introdução à Programação em R'.
 
-- Em 2022, os cursos de 'Princípios de Visualização de Dados com R' e 'Relatórios Reprodutíveis com R' foram adicionados ao Programa de Verão IME/USP.
+- Em 2022, os cursos de 'Princípios de Visualização de Dados com R' (por Bruna Garbes) e 'Relatórios Reprodutíveis com R' (por Beatriz Milz) foram adicionados ao Programa de Verão IME/USP.
 
 ---
 
@@ -167,6 +167,7 @@ name: sumario
 
 - [Git e GitHub](#git-e-github)
 
+- [Exemplo prático](#exemplo-pratico)
 
 ---
 name: sobre-o-curso
@@ -1329,7 +1330,6 @@ knitr::write_bib(pacotes, # pacotes para gerar a referencia
 ---
 class: teoria
 
-### Resultado
 
 ````
 @Manual{R-tidyverse,
@@ -1465,7 +1465,7 @@ class: middle, center, inverse
   
   - Como configurar de forma que possamos usar o Git e GitHub diretamente do RStudio?
   
-  - Como disponibilizar um documento que fiz em RMarkdown na internet, usando o GitHub?
+  - Como disponibilizar um documento em RMarkdown na internet, usando o GitHub?
 
 ]
 
@@ -1520,6 +1520,21 @@ knitr::include_graphics("img/github.png")
 ref_pacotes_curso_r()
 ```
 
+
+---
+class: teoria
+
+### Protocolos 
+
+- Podemos utilizar o protocolo `https` ou o protocolo `ssh` para acessar o GitHub através do RStudio.
+
+- No geral, recomendamos usar o protocolo `https`.
+
+### Quando usar SSH?
+
+- Se você utiliza Linux, recomendamos usar o protocolo Secure Shell (`SSH`).
+
+
 ---
 
 class: teoria
@@ -1555,13 +1570,13 @@ class: teoria
 ### Configurando o Git e GitHub no RStudio
 
 
-#### Usando protocolo ssh
+#### Usando protocolo SSH
 
 - `r emo::ji("white_large_square")` Todas as etapas para o protocolo https (listadas no slide anterior)
 
 - `r emo::ji("white_large_square")` Criar as chaves SSH no RStudio
 
-- `r emo::ji("white_large_square")` Adicionar a chave ssh no ssh-agent
+- `r emo::ji("white_large_square")` Adicionar a chave SSH no SSH-agent
 
 - `r emo::ji("white_large_square")` Adicionar as chaves públicas no  GitHub
 
@@ -1571,7 +1586,7 @@ class: teoria
 
 
 
-Obs: Se você utiliza Linux, recomendamos usar `ssh`.
+Obs: Se você utiliza Linux, recomendamos usar `SSH`.
 
 
 
@@ -1705,6 +1720,7 @@ class: teoria
 
 - Utilize a função `usethis::git_sitrep()` e leia o resultado que aparece no console. A mensagem abaixo foi cortada para mostrar os trechos de interesse!
 
+- **Caso aconteça algum erro, .colorido[sempre peça ajuda enviando o resultado dessa função]**!
 
 ```r
 usethis::git_sitrep()
@@ -1729,29 +1745,31 @@ ref_pacotes_curso_r()
 
 class: teoria
 
+### Configurando com o protocolo SSH
+- Além das etapas anteriores (se apresentar para o `git` e configurar o PAT), é necessário seguir vários passos descritos nos próximos slides.
+
+- Passo a passo baseado no livro Happy Git with R, escrito pela Jenny Bryan: https://happygitwithr.com/ssh-keys.html#add-key-to-ssh-agent
+
+
+---
+
+class: teoria
+
 ### Configurando com o SSH (Parte 1)
-
-
 
 .pull-left[
 
-- Se você utiliza Linux, recomendamos usar o protocolo `ssh`.
-
-- Além das etapas anteriores (se apresentar para o `git` e configurar o PAT), é necessário seguir os seguintes passos: 
 
 ** CRIANDO UMA CHAVE SSH**
 
 - No RStudio, clique em `Tools` -> `Global Options...` -> `Git/SVN`. No campo `SSH RSA Key`, clique em `Create RSA Key`.
 
 
-
-Referência: https://happygitwithr.com/ssh-keys.html 
-
 ]
 
 .pull-right[
 
-```{r echo=FALSE, fig.align='center', out.width="90%"}
+```{r echo=FALSE, fig.align='center', out.width="80%"}
 knitr::include_graphics("img/ssh/etapa-1.png")
 ```
 
@@ -1782,14 +1800,13 @@ A sua senha será criada e aparecerá uma caixinha com ela. Pode clicar em `Clos
 
 Após fechar, veja se o campo `SSA RSA KEY` está preenchido.
 
-Referência: https://happygitwithr.com/ssh-keys.html 
 
 ]
 
 .pull-right[
 
 
-```{r echo=FALSE, fig.align='center', out.width="90%"}
+```{r echo=FALSE, fig.align='center', out.width="80%"}
 knitr::include_graphics("img/ssh/etapa-2.png")
 ```
 
@@ -1814,15 +1831,6 @@ class: teoria
 **Verificando se o ssh-agent está funcionando**
 
 
-
-
-
-Referência: https://happygitwithr.com/ssh-keys.html#add-key-to-ssh-agent
-
-]
-
-.pull-right[
-
 - **Mac OS ou Linux** - no terminal, escreva:
 
 ```
@@ -1838,12 +1846,19 @@ eval $(ssh-agent -s)
 
 
 
+
+
+]
+
+.pull-right[
+
+
+
 <br><br><br><br>
 A resposta esperada, nessa etapa, é algo como:
 ```
 Agent pid 14198
 ```
-
 
 ]
 
@@ -1864,9 +1879,9 @@ class: teoria
 
 .pull-left[
 
-**Adicionando a chave ssh no ssh-agent**
+**Adicionando a chave SSH no ssh-agent**
 
-- Se você definiu uma senha ao criar a chave ssh, ela será solicitada nessa etapa.
+- Se você definiu uma senha ao criar a chave SSH, ela será solicitada nessa etapa.
 
 
 - **Linux** - no terminal, escreva:
@@ -1888,9 +1903,6 @@ ssh-add -K ~/.ssh/id_rsa
 ```
 ssh-add ~/.ssh/id_rsa
 ```
-<br>
-
-Referência: https://happygitwithr.com/ssh-keys.html#add-key-to-ssh-agent
 
 ]
 
@@ -1900,8 +1912,7 @@ A resposta esperada, nessa etapa, é algo como:
 ```
 Identity added: /home/bea/.ssh/id_rsa
 ```
-
-```{r echo=FALSE, fig.align='center', out.width="100%"}
+```{r echo=FALSE, fig.align='center', out.width="80%"}
 knitr::include_graphics("img/ssh/etapa-5.png")
 ```
 
@@ -1925,7 +1936,7 @@ class: teoria
 
 **Adicionando a chave pública no GitHub**
 
-- No GitHub, vá em `Settings` -> `SSH and GPG keys` -> `New ssh key` (ou clique aqui: https://github.com/settings/ssh/new )  
+- No GitHub, vá em `Settings` -> `SSH and GPG keys` -> `New SSH key` (ou clique aqui: https://github.com/settings/ssh/new )  
 
 
 - No RStudio, clique em `Tools` -> `Global Options...` -> `Git/SVN`. No campo `SSH RSA Key`, clique em `View Public Key`.
@@ -1935,10 +1946,6 @@ class: teoria
 - No campo `Title`, escreva algo que ajude você a lembrar em qual computador essa chave está sendo usada. No campo `Key`, cole todo o conteúdo copiado na etapa anterior. Clique em `Add SSH key`.
 
 
-
-<br>
-
-Referência: https://happygitwithr.com/ssh-keys.html#add-key-to-ssh-agent
 
 
 ```{r echo=FALSE, results='asis'}
@@ -1952,19 +1959,14 @@ ref_pacotes_curso_r()
 
 class: teoria
 
-### Configurando com o SSH (Parte 6)
-
-
-
-**Dicas**
-
+### Configurando com o SSH (Parte 6) - Dicas
 
 - Confira se está funcionando executando o seguinte código na aba Terminal, no RStudio: 
 ```
 ssh -T git@github.com
 ```
 
-- Ao clonar um projeto, é importante utilizar o protocolo que foi configurado. O protocolo padrão utilizado pelo usethis é o `https`. Para alterar para o `ssh` , altere no `.Rprofile` o protocolo padrão a ser utilizado: 
+- Ao clonar um projeto, é importante utilizar o protocolo que foi configurado. O protocolo padrão utilizado pelo usethis é o `https`. Para alterar para o `SSH` , altere no `.Rprofile` o protocolo padrão a ser utilizado: 
 
   - Abrir o arquivo o `.Rprofile`: 
   
@@ -1980,11 +1982,6 @@ options(usethis.protocol = "ssh")
 
   - Salve o arquivo e reinicie o RStudio.
 
-
-<br>
-
-Referência: https://usethis.r-lib.org/reference/git_protocol.html
-
 ```{r echo=FALSE, results='asis'}
 ref_pacotes_curso_r()
 ```
@@ -1996,7 +1993,7 @@ class: teoria
 
 ### Versione com o Git e o GitHub
 
-```{r, eval=FALSE}
+```r
 usethis::use_git()
 ```
 
@@ -2005,24 +2002,435 @@ apareceu) você adiciona controle de versão.
 
 - Você receberá algumas instruções para seguir, mas está tudo certo.
 
-```{r, eval=FALSE}
+```r
 usethis::use_github()
 ```
 
 - O comando acima sincroniza a pasta com o GitHub.
 
-- Mais uma vez, você receberá algumas instruções, mas lembre-se  de alterar para o protocolo `ssh` caso tenha feito a configuração usando esse protocolo. Para isso, use o argumento `protocol = ssh`.
+- Mais uma vez, você receberá algumas instruções, mas lembre-se  de alterar para o protocolo `SSH` caso tenha feito a configuração usando esse protocolo. Para isso, use o argumento `protocol = ssh`.
 
 ```{r echo=FALSE, results='asis'}
 ref_pacotes_curso_r()
 ```
 
+---
+class: exercicios
+
+### Colocar em prática: Para casa  
+
+1) Configure o Git e GitHub no RStudio. Caso você utilize Linux, lembre-se de fazer a configuração com o protocolo `SSH`.
+
+Caso não funcione, não esqueça de informar o resultado da função `usethis::git_sitrep()`.
+
 
 ---
 
-class: teoria
+class: livecoding
 
 ### Resumo
+
+- Comece praticando nos seus projetos. Quando estiver confortável, pode começar a contribuir com projetos de outras pessoas! :)
+
+- Fluxo de trabalho: 
+
+1. Repositório: Criar projeto/pacote
+
+2. Adicionar Git
+
+3. Adicionar GitHub
+
+4. Commit: Edite e "Commite" as mudanças no código
+
+5. Push: Suba os commits para o GitHub
+
+6. Pull (extra): Baixe o estado atual do projeto
+
+
+---
+class: teoria
+
+### Interface Gráfica RStudio
+
+- O RStudio oferece um cliente Git **simples**, na aba "Git" (em inglês, é chamado de Git Pane).
+
+- Esse painel somente aparecerá em projetos que estejam versionados com Git.
+
+```{r, out.width="60%"}
+knitr::include_graphics("img/prints/git-pane.PNG")
+```
+
+
+
+---
+class: teoria
+
+### Git pane - Staged  `r emo::ji("white_check_mark")`
+
+```{r, out.width="70%"}
+knitr::include_graphics("img/prints/git-pane-stage.png")
+```
+
+---
+class: teoria
+
+### Git pane - Commit
+
+```{r, out.width="70%"}
+knitr::include_graphics("img/prints/git-pane-commit.PNG")
+```
+
+---
+class: teoria
+
+### Git pane - Commit
+
+```{r, out.width="70%"}
+knitr::include_graphics("img/prints/git_commit.PNG")
+```
+
+
+---
+class: teoria
+
+### Botão Diff -> Review changes
+
+```{r, out.width="70%"}
+knitr::include_graphics("img/prints/git-pane-diff.PNG")
+```
+
+---
+class: teoria
+
+### Botão `r emo::ji("clock3")` (history) -> Review changes
+
+```{r, out.width="70%"}
+knitr::include_graphics("img/prints/git-pane-history.PNG")
+```
+
+
+
+---
+class: teoria
+
+### Trabalhando com projetos no RStudio + GitHub
+
+- Três formas para começar:
+
+  - Clonando um repositório que existe no GitHub usando a interface do RStudio.
+
+  - Criando um projeto no R, iniciando o versionamento e criando um repositório no GitHub usando funções do `usethis`.
+  
+  -  A partir de um repositório existente no GitHub, fazer um fork e clonar usando funções do `usethis`.
+  
+
+
+---
+class: teoria
+
+### Método 1
+
+**Clonando um repositório que existe no GitHub usando a interface do RStudio**
+
+- [Crie um repositório no GitHub](https://github.com/new), ou abra a página de um repositório já existente. 
+
+.pull-left[
+- Criando um repositório no GitHub:
+
+```{r out.width="60%"}
+knitr::include_graphics("img/prints/novo-repo.PNG")
+```
+
+]
+
+.pull-right[
+
+Se o repositório não for "seu", faça um fork primeiro, e clone o seu fork. 
+
+```{r out.width="100%"}
+knitr::include_graphics("img/prints/fork.png")
+```
+
+]
+
+
+
+
+
+
+---
+class: teoria
+
+
+- No RStudio, crie um novo projeto: File > New Project 
+.pull-left[
+- Na aba "Create Project", selecione a opção **Version Control**.
+
+```{r out.width="100%"}
+knitr::include_graphics("img/prints/proj-version-control-1.PNG")
+```
+]
+
+.pull-right[
+
+- Na aba "Create Project from Version Control", selecione a opção **Git**.
+
+```{r out.width="100%"}
+knitr::include_graphics("img/prints/proj-version-control-2.png")
+```
+]
+
+
+
+
+---
+class: teoria
+
+
+- Na aba "Clone Git Repository":
+  - **Repository URL**: Cole o link para o repositório
+  - **Project directory name**: Após inserir o repository URL, esse campo será preenchido automaticamente.
+  - **Create project as subdirectory of**: Selecione o diretório onde você deseja manter sua cópia local do repositório.
+  
+```{r out.width="30%"}
+knitr::include_graphics("img/prints/proj-version-control-3.png")
+```
+
+- O **RStudio** irá fazer o clone do repositório, e abrirá um RProj para ele (caso não exista um ainda, será criado).
+
+---
+class: teoria
+
+
+
+### Método 2
+
+- **Criando um repositório novo, diretamente do RStudio**
+
+- Vamos usar a função `usethis::create_project()` 
+  - Cria um projeto `.Rproj`
+  - Argumento importante: `path = ` 	É o caminho para o diretório (pasta) onde queremos criar o projeto. Se o diretório já existe, é utilizado. Se não existe, é criado. 
+  - Cuidado com o nome do projeto, pois será o mesmo nome que será utilizado no repositório. Você não deve usar o nome de algum repositório já existente no seu GitHub.
+
+---
+class: teoria
+
+
+### Criando um projeto
+
+- No meu caso, tenho o hábito de deixar todos os repositórios do GitHub, na pasta `GitHub/`. No exemplo abaixo, dentro da pasta GitHub, criei o projeto chamado Teste. Esse será o nome da pasta criada e posteriormente do repositório no GitHub.
+
+```{r echo=TRUE, eval=FALSE}
+usethis::create_project("~/GitHub/Teste") 
+# ✔ Creating 'GitHub/Teste/'
+# ✔ Setting active project to 'C:/Users/beatr/Documents/GitHub/Teste'
+# ✔ Creating 'R/'
+# ✔ Writing 'Teste.Rproj'
+# ✔ Adding '.Rproj.user' to '.gitignore'
+# ✔ Opening 'GitHub/Teste/' in new RStudio session
+# ✔ Setting active project to '<no active project>'
+```
+- O RStudio abrirá outra janela, com o novo projeto criado.
+
+---
+class: teoria
+
+
+
+### Novo projeto criado! 
+
+- Projeto `r emo::ji("heavy_check_mark")`
+
+- Git `r emo::ji("x")`
+
+- GitHub `r emo::ji("x")`
+
+```{r out.width="50%"}
+knitr::include_graphics("img/prints/novo_projeto.png")
+```
+
+---
+class: teoria
+
+
+```{r echo=TRUE, eval=FALSE}
+usethis::use_git()
+# ✔ Setting active project to 'C:/Users/beatr/Documents/GitHub/Teste'
+# ✔ Initialising Git repo
+# ✔ Adding '.Rhistory', '.RData' to '.gitignore'
+# There are 2 uncommitted files:
+# * '.gitignore'
+# * 'Teste.Rproj'
+# Is it ok to commit them?
+# 
+{{# 1: Absolutely  }}
+# 2: Negative
+# 3: No
+# 
+# Selection: 1
+# ✔ Adding files
+# ✔ Commit with message 'Initial commit'
+# ● A restart of RStudio is required to activate the Git pane
+# Restart now?
+# 
+# 1: No way
+{{# 2: For sure}}
+# 3: Negative
+# 
+# Selection: 2
+```
+
+- O RStudio irá reiniciar para que apareça o painel do Git
+
+---
+class: teoria
+
+
+### Usando Git
+
+- Projeto `r emo::ji("heavy_check_mark")`
+
+- Git `r emo::ji("heavy_check_mark")`
+
+- GitHub `r emo::ji("x")`
+
+```{r out.width="50%"}
+knitr::include_graphics("img/prints/novo_projeto_com_git.png")
+```
+
+
+---
+class: teoria
+
+
+```{r echo=TRUE, eval=FALSE}
+usethis::use_github()
+# ✔ Setting active project to 'C:/Users/beatr/Documents/GitHub/Teste'
+# ✔ Checking that current branch is 'master'
+# Which git protocol to use? (enter 0 to exit) 
+# 
+# 1: ssh   <-- presumes that you have set up ssh keys
+{{# 2: https <-- choose this if you don't have ssh keys (or don't know if you do)}}
+# 
+# Selection: 2
+# ● Tip: To suppress this menu in future, put
+#   `options(usethis.protocol = "https")`
+#   in your script or in a user- or project-level startup file, '.Rprofile'.
+#   Call `usethis::edit_r_profile()` to open it for editing.
+# ● Check title and description
+#   Name:        Teste
+#   Description: 
+# Are title and description ok?
+# 
+# 1: No way
+{{# 2: Definitely}}
+# 3: Nope
+# 
+# Selection: 2
+# ✔ Creating GitHub repository
+# ✔ Setting remote 'origin' to 'https://github.com/beatrizmilz/Teste.git'
+# ✔ Pushing 'master' branch to GitHub and setting remote tracking branch
+# ✔ Opening URL 'https://github.com/beatrizmilz/Teste'
+```
+
+---
+class: teoria
+
+
+
+### Repositório criado!
+
+- Projeto `r emo::ji("heavy_check_mark")`
+
+- Git `r emo::ji("heavy_check_mark")`
+
+- GitHub `r emo::ji("heavy_check_mark")`
+
+```{r out.width="50%"}
+knitr::include_graphics("img/prints/criou-repositorio-github.PNG")
+```
+
+---
+class: teoria
+
+
+### Função para criar um arquivo `README.md`
+
+```{r, echo=TRUE, eval=FALSE}
+usethis::use_readme_md()
+```
+- O arquivo será criado e aberto, para ser editado e salvo.
+
+```{r, out.width="20%"}
+knitr::include_graphics("https://media2.giphy.com/media/1iu8uG2cjYFZS6wTxv/giphy-downsized.gif")
+```
+
+
+
+
+---
+class: teoria
+
+
+### Método 3
+
+- **A partir de um repositório existente, fazer um fork e clonar diretamente do RStudio**
+
+- Para isso, usaremos a função `usethis::create_from_github()`.
+
+- Argumentos importantes:
+  - `repo_spec = ` repositório que quer trabalhar. Deve estar no formato: "usuario_github/repositorio". Veja o exemplo abaixo.
+  - `destdir =` diretório onde quer que os arquivos sejam salvos
+  - `fork =` se igual a TRUE, irá fazer o fork do repositório. Só funcionará se o token do GitHub foi configurado corretamente.
+
+---
+class: teoria
+
+
+### Exemplo do uso da função `create_from_github()`
+
+- Exemplo: fork e clone do projeto [Lista de meetups R-Ladies no Brasil](https://github.com/R-Ladies-Sao-Paulo/RLadies-Brasil):
+
+
+```{r echo=TRUE, eval=FALSE}
+usethis::create_from_github("R-Ladies-Sao-Paulo/RLadies-Brasil",
+                   destdir = "C:/Users/beatr/Documents/GitHub", 
+                   fork = TRUE)
+# ✔ Creating 'C:/Users/beatr/Documents/GitHub/datascience-box/'
+# ✔ Forking 'R-Ladies-Sao-Paulo/RLadies-Brasil'
+# ✔ Cloning repo from 'https://github.com/beatrizmilz/RLadies-Brasil.git' into 'C:/Users/beatr/Documents/GitHub/RLadies-Brasil'
+# ✔ Setting active project to 'C:/Users/beatr/Documents/GitHub/RLadies-Brasil'
+# ✔ Adding 'upstream' remote: 'https://github.com/R-Ladies-Sao-Paulo/RLadies-Brasil.git'
+# ✔ Pulling changes from GitHub source repo 'upstream/master'
+# ✔ Setting remote tracking branch for local 'master' branch to 'upstream/master'
+# ✔ Opening 'C:/Users/beatr/Documents/GitHub/RLadies-Brasil/' in new RStudio session
+# ✔ Setting active project to 'C:/Users/beatr/Documents/GitHub/RLadies-Git-RStudio-2019'
+```
+
+---
+class: teoria
+
+### Cuidados
+
+- Cuidado para não enviar arquivos com senhas ou dados sigilos. Adicione no arquivo `.gitignore` o caminho para os arquivos que você não quer versionar. Caso não encontre esse arquivo, abra-o utilizando a função `usethis::edit_git_ignore()`:
+
+```r
+usethis::edit_git_ignore(scope = "project")
+```
+
+- Se uma base de dados tem mais do que 50Mb de tamanho, ela não deveria estar no seu repositório.
+
+- Nem sempre o comando Pull dá certo. Às vezes, você e a colega de trabalho fizeram mudanças no mesmo arquivo e, quando vão juntar, ocorre um conflito.
+
+```{r echo=FALSE, results='asis'}
+ref_pacotes_curso_r()
+```
+
+---
+
+class: livecoding
+
+### Fluxo de trabalho
 
 1. Repositório: Criar projeto/pacote
 
@@ -2037,30 +2445,91 @@ class: teoria
 6. Pull (extra): Baixe o estado atual do projeto
 
 ---
-class: teoria
+class: livecoding
 
-### Cuidados
+### Disponibilizar arquivos na internet
 
-- Se uma base de dados tem mais do que 50Mb de tamanho, ela não deveria estar no seu repositório.
+- Como disponibilizar um documento em RMarkdown na internet, usando o GitHub?
 
-- Nem sempre o comando Pull dá certo. Às vezes, você e a colega de trabalho fizeram mudanças no mesmo arquivo e, quando vão juntar, ocorre um conflito.
+- O arquivo `.html` da página principal deverá se chamar `index.html`. 
 
-```{r echo=FALSE, results='asis'}
-ref_pacotes_curso_r()
-```
-
+- Configure o repositório para ativar a GitHub Pages: 
+  - Abra a página do seu repositório
+  - Clique em Settings
+  - No menu lateral, clique em Pages
+  - Em source:
+      - Altere na opção `Branch` para main ou master (dependendo do caso do repositório). Não pode ser a opção `none`. 
+      - Selecione `root/` ou `docs/`, dependendo de onde os arquivos estão salvos.
+      - Clique em `Save`.
+    
+O GitHub oferecerá um link para acessar a página. 
 
 ---
 class: revisao
 
 ### Revisão - Git e GitHub
 
-- ....
+
+  - Com o controle de versão de arquivos, podemos guardar o histórico de alterações de todos os arquivos dentro de uma pasta (que chamamos de repositório).
+  
+  - Git é um sistema de versionamento. É um software que instalamos no computador.
+  
+  - GitHub é um site onde podemos armazenar repositórios versionados com Git. É um site que acessamos na internet..
+  
+  - Podemos usar o Git e GitHub diretamente via RStudio. Essa configuração pode ser um pouco trabalhosa, mas vale a pena.
+  
+  - Podemos disponibilizar documentos feitos com RMarkdown na internet, usando o GitHub. Esse slide é um exemplo :)
 
 
-- ....
+---
+name: exemplo-pratico
+class: middle, center, inverse
 
-- ....
+
+## Exemplo prático
+
+
+---
+class: livecoding
+
+
+### Exemplo prático
+
+
+Etapas:
+
+  - Criar um projeto no RStudio
+
+  - Iniciar o controle de versão com Git
+
+  - Iniciar um repositório no GitHub
+
+  - Criar um documento RMarkdown - O tipo de documento será escolhido previamente pela turma! 
+
+  - Adicionar conteúdo no `.Rmd`: parâmetros, código e resultados, código em linha, tabela, gráfico, imagens, etc.
+
+  - Disponibilizar o documento na internet com GitHub Pages ou Netlify
+
+  - Fazer alterações no `.Rmd` e atualizar a versão que está online
+
+---
+
+### Referências
+
+- [Slide](https://curso-r.github.io/main-pacotes/slides/index.html) do curso de [Pacotes](https://curso-r.com/cursos/pacotes/), da [Curso-R](https://curso-r.com/).
+
+
+- [Livro Zen do R](https://curso-r.github.io/zen-do-r/)
+
+- [Livro Ciência de Dados em R](https://livro.curso-r.com/)
+  
+- [Happy Git and GitHub for the useR - Jenny Bryan](https://happygitwithr.com/)
+
+
+- Documentação do pacote [usethis](https://usethis.r-lib.org/reference/create_package.html)
+
+- Mais referências disponíveis aqui: https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/bibliografia.html
+
 
 
 ---
@@ -2068,8 +2537,6 @@ class: center
 
 ## Agradecemos a atenção!
 
-
-Lembre-se de enviar as dúvidas no [discourse da Curso-R](https://discourse.curso-r.com/)!
 
 Slides criados usando os pacotes em R  📦 :
 

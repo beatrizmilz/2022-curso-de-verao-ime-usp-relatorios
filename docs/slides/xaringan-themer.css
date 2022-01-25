@@ -19,7 +19,7 @@
  *
  * ------------------------------------------------------- */
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:300,300i&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Quicksand&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Montserrat&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap);
 
 
@@ -29,12 +29,12 @@
   --text-font-is-google: 1;
   --text-font-family-fallback: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial;
   --text-font-base: sans-serif;
-  --header-font-family: Quicksand;
+  --header-font-family: Montserrat;
   --header-font-is-google: 1;
   --header-font-family-fallback: Georgia, serif;
   --code-font-family: 'Roboto Mono';
   --code-font-is-google: 1;
-  --base-font-size: 27px;
+  --base-font-size: 25px;
   --text-font-size: 1rem;
   --code-font-size: 0.9rem;
   --code-inline-font-size: 1em;
