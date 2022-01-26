@@ -114,7 +114,7 @@ profs |>
   - Em 2018 este grupo criou a Curso-R: https://curso-r.com/
 
 
-- Nathália Demétrio começou em 2019 a ministrar  o curso de 'Introdução à Programação em R'.
+- Nathália Demétrio começou em 2019 a ministrar  o curso de 'Introdução à Programação em R'. Material de 2022: [disponível neste link](https://github.com/natydemi/intro_R_language/tree/master/aulas).
 
 - Em 2022, os cursos de 'Princípios de Visualização de Dados com R' (por Bruna Garbes) e 'Relatórios Reprodutíveis com R' (por Beatriz Milz) foram adicionados ao Programa de Verão IME/USP.
 
@@ -924,6 +924,12 @@ As colunas presentes na base são
 class: exercicios
 
 ### Colocar em prática: 
+
+```{r}
+caminho <- "../dados/pinguins.csv" 
+pinguins <- readr::read_csv(caminho)
+dplyr::glimpse(pinguins)
+```
 
 1 ) O trecho a seguir apresenta um texto com resultados feitos com inline code. Adicione o seguinte código no seu relatório (o arquivo `primeiro_relatorio.Rmd`), substituindo os trechos coloridos por inline code:
 
