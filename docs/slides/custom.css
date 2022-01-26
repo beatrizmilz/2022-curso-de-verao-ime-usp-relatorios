@@ -126,3 +126,12 @@ h4 {
 .colorido{
   background-color: #FDB525;
 }
+
+.title-slide{
+  background-position: right;
+   background-image:url('img/hex_wall.png');
+}
+
+.title-slide h2{
+  font-size: 30px;
+}
