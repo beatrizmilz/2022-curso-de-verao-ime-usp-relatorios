@@ -105,9 +105,11 @@ Adicione pelo menos:
   
 ---
 
-9) No painel Git do RStudio, selecione os arquivos criados e faça um **Commit**. Clique no botão de **Push** (seta verde apontada para cima). Confira no repositório do GitHub se as suas mudanças aparecem por lá. Confira na página da internet se as mudanças estão lá.
+9) Quando estiver feliz com o resultado, lembre-se de fazer o **Commit** com as mudanças, e enviá-las para o GitHub clicando no botão de **Push** (seta verde apontada para cima).
+
+Confira no repositório do GitHub se as suas mudanças aparecem por lá. Confira na página da internet se as mudanças estão lá.
 
 
 ---
 
-10) Quando estiver feliz com o resultado, envie o link do relatório online e também do repositório do GitHub no formulário.
+10) Envie o link do relatório online e também do repositório do GitHub no formulário.

@@ -1416,12 +1416,16 @@ tibble::tibble(
     resultado = "Wickham et al. (2019)"
   )|> 
   tibble::add_row(
-    forma_de_citar = "[@R-tidyverse; @tidyverse2019]",
-    resultado = "(Wickham 2021; Wickham et al. 2019)"
+    forma_de_citar = "[@tidyverse2019; @R-tidyverse]",
+    resultado = "(Wickham et al. 2019; Wickham 2021)"
   )|> 
   tibble::add_row(
-    forma_de_citar = "Segundo Wickham et al. [-@tidyverse2019]",
-    resultado = "Segundo Wickham et al. (2019) "
+    forma_de_citar = "Em -@tidyverse2019, Hadley e colaboradores...",
+    resultado = "Em 2019, Hadley e colaboradores... "
+  ) |> 
+    tibble::add_row(
+    forma_de_citar = "Segundo Hadley Wickham e colaboradores [-@tidyverse2019]",
+    resultado = "Segundo Hadley Wickham e colaboradores (2019) "
   ) |> 
   knitr::kable()
 ```
@@ -1481,16 +1485,35 @@ csl: template/abnt.csl
 ---
 class: teoria
 
-### Referência cruzada
+### Referência cruzada - Elementos
 
 
 - Funciona com outputs que são derivados do pacote bookdown. 
   - Ex: `bookdown::html_document2`,  `bookdown::word_document2`
 
-- Usamos o rótulo do chunk (ou nome) onde a tabela ou imagem foi criada para fazer a referência cruzada. 
-  - Ex: `\@ref(fig:rotulo-da-imagem)` ou `\@ref(tab:rotulo-da-tabela)`.
+- **Figuras, tabelas, equações, etc:**
+  - Usamos o rótulo do chunk (ou nome) onde a tabela ou imagem foi criada para fazer a referência cruzada. 
+    - Ex: `\@ref(fig:rotulo-da-imagem)` , `\@ref(tab:rotulo-da-tabela)`, ou `\@ref(eq:rotulo-da-equacao)`.
+    - Referência: https://bookdown.org/yihui/rmarkdown-cookbook/cross-ref.html
+    
 
-- Referência: https://bookdown.org/yihui/rmarkdown-cookbook/cross-ref.html
+---
+class: teoria
+    
+### Referência cruzada - Capítulos/Seções
+
+
+- Funciona com outputs que são derivados do pacote bookdown. 
+  - Ex: `bookdown::html_document2`,  `bookdown::word_document2`
+    
+- **Capítulos:**
+  - Para fazer referência cruzada em capítulos/seções, devemos adicionar um rótulo para o capítulo, que deverá ser escrito logo após a cabeçalho (que delimitamos com `#`, `##`, etc). Para referenciar no texto, devemos usar `\@ref(rotulo-do-capitulo)`.
+    - Exemplo da criação do rótulo:  `# Introdução {#introducao}`
+    - Exemplo de uso no texto: `\@ref(introducao)` . 
+    - Referência: https://bookdown.org/yihui/bookdown/cross-references.html
+    
+
+
   
 
 
