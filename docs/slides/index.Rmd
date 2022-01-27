@@ -227,7 +227,12 @@ Que vocês saibam ao final do curso:
 
 - Ter frequência igual ou superior à 75% (ou seja, pode ter 1 falta).
 
-- [TO DO: preencher depois sobre os exercícios e trabalho final]
+
+- Para cada aula, teremos um formulário (Google Forms) que deverá ser respondido após as aulas. A maioria das perguntas são relacionadas ao acompanhamento do conteúdo e configuração das ferramentas necessárias. Alguns formulários envolverão o envio de tarefas.
+
+- Teremos um trabalho final, que deverá ser entregue até .colorido[data a ser definida].
+
+
 
 
 
@@ -925,10 +930,9 @@ class: exercicios
 
 ### Colocar em prática: 
 
-```{r}
+```{r include=FALSE}
 caminho <- "../dados/pinguins.csv" 
 pinguins <- readr::read_csv(caminho)
-dplyr::glimpse(pinguins)
 ```
 
 1 ) O trecho a seguir apresenta um texto com resultados feitos com inline code. Adicione o seguinte código no seu relatório (o arquivo `primeiro_relatorio.Rmd`), substituindo os trechos coloridos por inline code:
@@ -1117,7 +1121,7 @@ exemplos_rmd <- tibble::tibble(pacote = as.character(),
                   desc = "Livros",
                   exemplos = "- [Livro Ciência de Dados em R](https://livro.curso-r.com/) <br> - [R for Data Science](https://r4ds.had.co.nz/)") |> 
   
-  tibble::add_row(pacote = "[xaringan](https://github.com/yihui/xaringan)",
+  tibble::add_row(pacote = "[xaringan](https://github.com/yihui/xaringan) e [xaringanthemer](https://pkg.garrickadenbuie.com/xaringanthemer/)",
                   desc = "Apresentações",
                   exemplos = "- Essa apresentação <br> - [Build Your Own Universe - Garrick Aden-Buie & Travis Gerke](https://www.garrickadenbuie.com/talk/build-your-own-universe/)") |> 
   
@@ -1130,6 +1134,10 @@ exemplos_rmd <- tibble::tibble(pacote = as.character(),
                   desc = "Tutoriais interativos",
                   exemplos = "- [Text mining with tidy data principles](https://juliasilge.shinyapps.io/learntidytext/) <br> - [Teacups, Giraffes,  & Statistics](https://tinystats.github.io/teacups-giraffes-and-statistics/)") |> 
   
+  tibble::add_row(pacote = "[flexdashboard](https://pkgs.rstudio.com/flexdashboard/)",
+                  desc = "Dashboards estáticos",
+                  exemplos = "- [Exemplos da documentação](https://pkgs.rstudio.com/flexdashboard/articles/examples.html) <br> - [A COVID-19 em Sorocaba - Por Victor Dogo](https://victordogo.github.io/covid19-sorocaba/)") |> 
+  
   tibble::add_row(pacote = "[rticles](https://github.com/rstudio/rticles)",
                   desc = "Artigos científicos",
                   exemplos = "   ") |>  
@@ -1140,7 +1148,7 @@ exemplos_rmd <- tibble::tibble(pacote = as.character(),
 
 
 exemplos_rmd |> 
-  dplyr::slice(1:6) |>  
+  dplyr::slice(1:7) |>  
   knitr::kable(col.names = c("Pacote", "O que podemos fazer?", "Exemplos"))
 ```
 ]
@@ -1148,6 +1156,38 @@ exemplos_rmd |>
 ```{r echo=FALSE, results='asis'}
 ref_relatorios_curso_r()
 ```
+
+
+---
+class: teoria
+### Exemplos
+
+
+
+.pull-left[
+- Outros pacotes:
+
+  - [rticles](https://github.com/rstudio/rticles)
+
+  - [bslib](https://rstudio.github.io/bslib/)
+
+  - [rmdformats](https://github.com/juba/rmdformats)
+
+  - [officedown](https://github.com/davidgohel/officedown) 
+
+  - [postcards](https://github.com/seankross/postcards)
+
+]
+
+.pull-right[
+- Podemos criar!
+
+  - [abjTemplates](https://github.com/abjur/abjTemplates)
+
+  - [RLadiesTheme](https://github.com/R-Ladies-Sao-Paulo/RLadiesTheme)
+]
+
+
 
 ---
 class: exercicios
@@ -2451,6 +2491,7 @@ class: livecoding
 6. Pull (extra): Baixe o estado atual do projeto
 
 ---
+name: githubpages
 class: livecoding
 
 ### Disponibilizar arquivos na internet
