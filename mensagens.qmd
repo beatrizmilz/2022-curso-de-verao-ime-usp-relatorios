@@ -1,0 +1,20 @@
+---
+title: "Mural de mensagens"
+---
+
+```{r}
+#| echo=FALSE
+source("r/mural_de_mensagens.R")
+```
+
+
+```{r, results='asis'}
+#| echo=FALSE
+
+criar_mensagem_mural(titulo = "Em breve",
+                     texto = "Em breve",
+                     link = "",
+                     texto_link = "Em breve",
+                     data = "Em breve")
+```
+

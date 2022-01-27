@@ -3,12 +3,6 @@ params:
   num_aula: 0
 ---
 
-:::{.callout-warning}
-## Atenção!
-Página sujeita à alterações.
-:::
-
-
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(magrittr)
 googlesheets4::gs4_auth("milz.bea@gmail.com")
@@ -20,32 +14,47 @@ sheet_tarefas <- googlesheets4::read_sheet("1CN9PmWmNa4CEM9HI5jgYqHSK48K92n--BZW
 sheet_aulas <- googlesheets4::read_sheet("1CN9PmWmNa4CEM9HI5jgYqHSK48K92n--BZWXglH5NVE", sheet = "aulas") %>% 
   dplyr::mutate(data_aula_formatado = format(data_aula, "%d/%m/%Y"))
 
+sheet_links <- googlesheets4::read_sheet("1CN9PmWmNa4CEM9HI5jgYqHSK48K92n--BZWXglH5NVE", sheet = "links-extras")
+
 
 aulas_completo <- sheet_aulas %>% dplyr::left_join(sheet_semanas, "numero_semana")
 
 aula <- aulas_completo |> dplyr::filter(numero_aula == params$num_aula)
+
+links_extras <- sheet_links |> dplyr::filter(numero_aula == params$num_aula)
+
+
 
 ```
 
 
 ```{r, results="asis", echo=FALSE, message=FALSE, warning=FALSE}
 
-    cat(glue::glue(
-      "### Aula {aula$numero_aula} ({aula$data_aula_formatado})  \n\n"
-    ))
-    
-    cat("**Conteúdo**  \n\n")
-    cat(aula$conteudo, "  \n\n")
-    
-    
-    cat("**Tarefas**  \n\n")
-    
-     tarefa_aula <- dplyr::left_join(aula, sheet_tarefas)
 
-    tarefa_aula %>%
-      dplyr::pull(descricao_tarefa) %>%
-      paste0(., "\n\n") %>%
-      cat()
+cat(glue::glue(
+  "### Aula {aula$numero_aula} ({aula$data_aula_formatado})  \n\n"
+))
 
+cat("**Conteúdo**  \n\n")
+cat(aula$conteudo, "  \n\n")
+
+
+cat("**Tarefas**  \n\n")
+
+tarefa_aula <- dplyr::left_join(aula, sheet_tarefas)
+
+tarefa_aula %>%
+  dplyr::pull(descricao_tarefa) %>%
+  paste0(., "\n\n") %>%
+  cat()
+
+cat("**Links úteis (citados em aula)**  \n\n")
+
+links_extras |> 
+  dplyr::mutate(link_completo = glue::glue("<a href='{link}' target='_blank'>{nome_link}</a>")) |> 
+  dplyr::select(tema, link_completo) |> 
+  knitr::kable(col.names = c("Tema", "Link"))
 ```
+
+
 

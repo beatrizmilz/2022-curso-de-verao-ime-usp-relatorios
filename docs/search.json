@@ -4,7 +4,7 @@
     "href": "conteudo_aulas.html",
     "title": "Relatórios reprodutíveis com R",
     "section": "",
-    "text": "Atenção!\n\n\n\nPágina sujeita à alterações.\n\n\n\n\n\nConteúdo\nTarefas"
+    "text": "Conteúdo\nTarefas\nLinks úteis (citados em aula)\n\n\n\n\nTema\nLink"
   },
   {
     "objectID": "bibliografia.html#em-português",
@@ -32,14 +32,14 @@
     "href": "aula4.html",
     "title": "Aula 4",
     "section": "",
-    "text": "Atenção!\n\n\n\nPágina sujeita à alterações.\n\n\n\n\n\n\nAula 4 (14/02/2022)\nConteúdo\n\nGit e GitHub (continuação) - Slides\n\nFluxo de trabalho em projetos no RStudio usando controle de versão com Git e GitHub\nDisponibilizar os relatórios gerados em .html na internet\n\nCom GitHub Pages\n\n\n\nTarefas\n\nCriar um repositório e disponibilizar o relatório criado na Semana 1 na internet (com GitHub Pages ou Netlify).\nFazer um Pull Request para adicionar o link do relatório criado no material do curso."
+    "text": "Aula 4 (14/02/2022)\nConteúdo\n\nGit e GitHub (continuação) - Slides\n\nFluxo de trabalho em projetos no RStudio usando controle de versão com Git e GitHub\nDisponibilizar os relatórios gerados em .html na internet\n\nCom GitHub Pages\n\n\n\nTarefas\n\nCriar um repositório e disponibilizar o relatório criado nas aulas 1 e 2 na internet (com GitHub Pages). Enviar o link do repositório e da página gerada via formulário a ser disponibilizado.\n\nLinks úteis (citados em aula)\n\n\n\n\nTema\nLink\n\n\n\n\nEm breve\nEm breve"
   },
   {
     "objectID": "aula5.html",
     "href": "aula5.html",
     "title": "Aula 5",
     "section": "",
-    "text": "Atenção!\n\n\n\nPágina sujeita à alterações.\n\n\n\n\n\n\nAula 5 (16/02/2022)\nConteúdo\n\nExemplo prático com conceitos vistos em classe - Slides\n\nTarefas\n\nEntregar o trabalho final."
+    "text": "Aula 5 (16/02/2022)\nConteúdo\n\nExemplo prático com conceitos vistos em classe - Slides\n\nTarefas\n\nEntregar o trabalho final. Enviar o link do repositório e da página gerada via formulário a ser disponibilizado.\n\nLinks úteis (citados em aula)\n\n\n\n\nTema\nLink\n\n\n\n\nEm breve\nEm breve"
   },
   {
     "objectID": "profs.html#monitoria-em-ordem-alfabética",
@@ -53,7 +53,14 @@
     "href": "aula1.html",
     "title": "Aula 1",
     "section": "",
-    "text": "Atenção!\n\n\n\nPágina sujeita à alterações.\n\n\n\n\n\n\nAula 1 (02/02/2022)\nConteúdo\n\nIntrodução ao curso - Slides\nIntrodução ao conceito de reprodutibilidade - Slides\n\nReprodutibilidade no contexto do desenvolvimento em R: Usando projetos do RStudio (.Rprojs)\n\nRMarkdown - Slides\n\nIntrodução ao pacote RMarkdown\nComo criar arquivos .Rmd\nComo textos marcados com markdown no .Rmd\n\n\nTarefas\n\nLer o capítulo 2.3 do livro Ciência de Dados em R - Projetos\nLer o capítulo 3 do livro Zen do R - Rproj e diretórios\nLer o capítulo 4 do livro Ciência de Dados em R - Relatórios"
+    "text": "Aula 1 (02/02/2022)\nConteúdo\n\nIntrodução ao curso - Slides\nIntrodução ao conceito de reprodutibilidade - Slides\n\nReprodutibilidade no contexto do desenvolvimento em R: Usando projetos do RStudio (.Rprojs)\n\nRMarkdown - Slides\n\nIntrodução ao pacote RMarkdown\nComo criar arquivos .Rmd\nComo textos marcados com markdown no .Rmd\n\n\nTarefas\n\nLer o capítulo 2.3 do livro Ciência de Dados em R - Projetos\nLer o capítulo 3 do livro Zen do R - Rproj e diretórios\nLer o capítulo 4 do livro Ciência de Dados em R - Relatórios\n\nLinks úteis (citados em aula)\n\n\n\n\nTema\nLink\n\n\n\n\nEm breve\nEm breve"
+  },
+  {
+    "objectID": "mensagens.html",
+    "href": "mensagens.html",
+    "title": "Mural de mensagens",
+    "section": "",
+    "text": "Em breve - Em breve\n\n\n\nEm breve\n\nEm breve"
   },
   {
     "objectID": "informacoes-gerais.html#público-alvo",
@@ -67,7 +74,7 @@
     "href": "informacoes-gerais.html#pré-requisitos",
     "title": "Informações gerais",
     "section": "Pré-requisitos",
-    "text": "É recomendado que as pessoas participantes estejam familiarizadas com o conteúdo do curso Introdução à programação em R."
+    "text": "É recomendado que as pessoas participantes estejam familiarizadas com o conteúdo do curso Introdução à programação em R.\nObs: O material do curso de Introdução ao R, ministrado por Nathália Demétrio, está disponível neste link, caso queira consultar."
   },
   {
     "objectID": "informacoes-gerais.html#método-avaliativo",
@@ -95,7 +102,7 @@
     "href": "aula2.html",
     "title": "Aula 2",
     "section": "",
-    "text": "Atenção!\n\n\n\nPágina sujeita à alterações.\n\n\n\n\n\n\nAula 2 (07/02/2022)\nConteúdo\n\nRMarkdown (continuação) - Slides\n\nComo adicionar elementos no .Rmd, como: imagens, tabelas, gráficos, códigos e resultados.\nCriando .Rmd a partir de templates\nGerando diferentes tipos de relatórios: .html, .docx, .pdf\nUsando e gerenciando bibliografias com arquivos .bib\nRelatórios com parâmetros\n\n\nTarefas\n\nCriar um documento usando RMarkdown que gere um .html.\nConferir os exemplos de arquivos que podemos gerar com RMarkdown, e votar em um para ser usado no exemplo final do curso."
+    "text": "Aula 2 (07/02/2022)\nConteúdo\n\nRMarkdown (continuação) - Slides\n\nComo adicionar elementos no .Rmd, como: imagens, tabelas, gráficos, códigos e resultados.\nCriando .Rmd a partir de templates\nGerando diferentes tipos de relatórios: .html, .docx, .pdf\nUsando e gerenciando bibliografias com arquivos .bib\nRelatórios com parâmetros\n\n\nTarefas\n\nCriar um documento usando RMarkdown que gere um .html.\nConferir os exemplos de arquivos que podemos gerar com RMarkdown, e votar em um para ser usado no exemplo final do curso. Votar via formulário a ser disponibilizado.\n\nLinks úteis (citados em aula)\n\n\n\n\nTema\nLink\n\n\n\n\nEm breve\nEm breve"
   },
   {
     "objectID": "index.html",
@@ -109,7 +116,7 @@
     "href": "aula3.html",
     "title": "Aula 3",
     "section": "",
-    "text": "Atenção!\n\n\n\nPágina sujeita à alterações.\n\n\n\n\n\n\nAula 3 (09/02/2022)\nConteúdo\n\nGit e GitHub - Slides\n\nIntrodução ao controle de versão\nDiferença entre Git e GitHub\nComo configurar o Git e o GitHub no RStudio usando o pacote {usethis}\n\n\nTarefas\n\nCriar uma conta no GitHub (caso não tenha feito anteriormente).\nFazer a configuração do Git e GitHub no RStudio.\nLer o capítulo 4 do livro Zen do R - Git e GitHub."
+    "text": "Aula 3 (09/02/2022)\nConteúdo\n\nGit e GitHub - Slides\n\nIntrodução ao controle de versão\nDiferença entre Git e GitHub\nComo configurar o Git e o GitHub no RStudio usando o pacote {usethis}\n\n\nTarefas\n\nCriar uma conta no GitHub (caso não tenha feito anteriormente). Adicione informações básicas no seu perfil: nome, organização, foto (opcional), etc. Enviar o link da página no GitHub via formulário a ser disponibilizado.\nFazer a configuração do Git e GitHub no RStudio.\nLer o capítulo 4 do livro Zen do R - Git e GitHub.\n\nLinks úteis (citados em aula)\n\n\n\n\nTema\nLink\n\n\n\n\nEm breve\nEm breve"
   },
   {
     "objectID": "faq.html",
@@ -117,6 +124,20 @@
     "title": "Perguntas Frequentes (FAQ)",
     "section": "",
     "text": "O curso será online ou presencial?\n\n\nO curso será oferecido de forma online.\n\n\nApenas alunos da USP podem participar do curso?\n\n\nAs inscrições serão abertas para todas as pessoas interessadas.\n\n\nComo posso me inscrever?\n\n\nA inscrição será realizada através do IME-USP. Acompanhe as informações na página do Programa de Verão do IME-USP: https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php\n\n\nO curso é gratuito?\n\n\nNão, o curso é pago. Acompanhe as informações na página do Programa de Verão do IME-USP: https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php\n\n\nAs aulas serão gravadas?\n\n\nAs aulas poderão ser gravadas mediante ao acordo com as pessoas participantes da turma."
+  },
+  {
+    "objectID": "trabalho_final.html",
+    "href": "trabalho_final.html",
+    "title": "Trabalho final",
+    "section": "",
+    "text": "Objetivo: As pessoas participantes deverão criar documento com RMarkdown, versionar no GitHub e disponibilizar na internet. Esse trabalho final oferece orientações para que as pessoas pratiquem o que foi apresentado no curso.\nAtividade:\n\n\nCrie um Projeto do RStudio para realizar a tarefa. Lembre-se de boas práticas para nomear o projeto: não utilize espaços, caracteres especiais, acentuação. O seu projeto deverá chamar “trabalho_relatorios_nome_sobrenome” (tudo minúsculo, separado por _). Ex: trabalho_relatorios_beatriz_milz\n\nA função usethis::create_project() será útil neste passo:\nusethis::create_project(\"caminho/trabalho_relatorios_nome_sobrenome\")\nTodos os passos seguintes serão realizados neste projeto criado.\n\n\nInicie o versionamento com a seguinte função:\n\nusethis::use_git()\nSiga os passos até que o RStudio reinicie.\n\n\nCrie um repositório no GitHub que esteja vinculado à este projeto:\n\nusethis::use_github()\nSiga os passos até que uma janela do GitHub seja aberta e você possa ver o repositório criado. Guarde o link deste repositório!\n\n\nCrie a estrutura do seu projeto: uma pasta dados, onde adicionará bases de dados (se necessário), e uma pasta img para imagens (se necessário). Você pode criar manualmente, ou utilizando a função fs::dir_create():\n\nfs::dir_create(\"dados\")\nfs::dir_create(\"img\")\n\n\nCrie o arquivo RMarkdown que será utilizado.\n\n\nFile -> New File -> R Markdown… -> From template.\n\nEscolha um template que você tenha gostado, ou que possa ser útil no futuro.\nPense no tipo de relatório que quer criar, qual é o objetivo do mesmo e o público-alvo. Por exemplo:\n\nUma análise de dados da pesquisa, a ser apresentada para outras pessoas pesquisadoras.\nUm tutorial com código em R.\nUma página pessoal de divulgação.\n\nVocê deve salvar o arquivo com o nome index.Rmd. Clique em Knit assim que o arquivo for criado, e confira se o arquivo index.html foi gerado sem erros.\n\n\nNo painel Git do RStudio, selecione os arquivos criados e faça um Commit. Clique no botão de Push (seta verde apontada para cima). Confira no repositório do GitHub se as suas mudanças aparecem por lá.\n\n\n\nAtive o GitHub Pages para disponibilizar na internet. Isso deverá ser feito no GitHub, na aba Settings, e então na opção Pages. Siga as instruções neste slide, usando a opção root/.\n\nAnote o link que é fornecido pelo GitHub. Espere alguns minutos, e então veja se algum conteúdo aparece na página.\n\n\nAgora você pode usar sua criatividade e adicionar conteúdo no relatório.\n\nIsso depende do objetivo do relatório e o público-alvo.\nPense em quais opções de chunk utilizar em cada caso: você pretende mostrar o código ou escondê-lo? Faz sentido apra o seu público alvo ler o seu código?\nAdicione pelo menos:\n\nUm parágrafo de texto, com marcações.\nUm link para uma página da internet.\nUma imagem.\nUma tabela.\nCaso saiba usar ggplot, tente adicionar um gráfico.\nCaso seja uma análise de pesquisa, tente adicionar referências usando .bib.\n\n\n\nNo painel Git do RStudio, selecione os arquivos criados e faça um Commit. Clique no botão de Push (seta verde apontada para cima). Confira no repositório do GitHub se as suas mudanças aparecem por lá. Confira na página da internet se as mudanças estão lá.\n\n\n\nQuando estiver satisfeita(o) com o resultado, envie o link do relatório online e também do repositório do GitHub no formulário."
+  },
+  {
+    "objectID": "programacao-do-curso.html#slides-do-curso",
+    "href": "programacao-do-curso.html#slides-do-curso",
+    "title": "Programação do curso",
+    "section": "Slides do curso",
+    "text": ""
   },
   {
     "objectID": "programacao-do-curso.html#parte-1---reprodutibilidade-e-rmarkdown",

@@ -5,12 +5,6 @@ title: "Programação do curso"
 <!-- https://docs.google.com/spreadsheets/d/1CN9PmWmNa4CEM9HI5jgYqHSK48K92n--BZWXglH5NVE/edit#gid=34134925 -->
 
 
-:::{.callout-warning}
-## Atenção!
-Página sujeita à alterações.
-:::
-
-
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(magrittr)
 googlesheets4::gs4_auth("milz.bea@gmail.com")
@@ -26,6 +20,10 @@ sheet_aulas <- googlesheets4::read_sheet("1CN9PmWmNa4CEM9HI5jgYqHSK48K92n--BZWXg
 aulas_completo <- sheet_aulas %>% dplyr::left_join(sheet_semanas, "numero_semana") 
 
 ```
+## Slides do curso
+<center>
+<a href='https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/slides/' target='_blank'><img src='https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/slides/img/share-card.jpg' width='80%'>
+</a></center>
 
 
 ```{r, results="asis", echo=FALSE, message=FALSE, warning=FALSE}
