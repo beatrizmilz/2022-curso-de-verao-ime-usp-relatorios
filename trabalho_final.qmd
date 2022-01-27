@@ -3,7 +3,7 @@ title: "Trabalho final"
 
 ---
 
-**Objetivo:** As pessoas participantes deverão criar documento com RMarkdown,  versionar no GitHub e disponibilizar na internet. Esse trabalho final oferece orientações para que as pessoas pratiquem o que foi apresentado no curso.
+**Objetivo:** Você deverá criar um documento com RMarkdown, versionar no GitHub e disponibilizar na internet. Esse trabalho final oferece orientações para que você pratique o que foi apresentado no curso.
 
 
 
@@ -110,4 +110,4 @@ Adicione pelo menos:
 
 ---
 
-10) Quando estiver satisfeita(o) com o resultado, envie o link do relatório online e também do repositório do GitHub no formulário.
+10) Quando estiver feliz com o resultado, envie o link do relatório online e também do repositório do GitHub no formulário.
