@@ -21,6 +21,8 @@ site:
       - sidebar:infos
       - sidebar:material
       - mensagens.qmd
+      - text: 'Plataforma Cursos de Extensão USP'
+        href: https://cursosextensao.usp.br/course/view.php?id=2991
       - icon: github
         href: https://github.com/beatrizmilz/2022-curso-de-verao-ime-usp-relatorios
   sidebar:
@@ -43,6 +45,7 @@ site:
       align: left
       contents:
         - programacao-do-curso.qmd
+        - instrucoes-de-instalacao.qmd
         - section: "Aulas"
           contents:
            - aula1.qmd

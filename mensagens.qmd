@@ -2,19 +2,37 @@
 title: "Mural de mensagens"
 ---
 
-```{r}
+```{r message=FALSE}
 #| echo=FALSE
+
 source("r/mural_de_mensagens.R")
+
+googlesheets4::gs4_auth()
+sheet_mensagens <- googlesheets4::read_sheet("1CN9PmWmNa4CEM9HI5jgYqHSK48K92n--BZWXglH5NVE", sheet = "mensagens")
 ```
 
 
 ```{r, results='asis'}
 #| echo=FALSE
+sheet_mensagens |>
+  dplyr::mutate(
+    data = lubridate::as_date(data),
+    badge = dplyr::case_when(
+      novo == TRUE ~ "<span class='badge bg-success'>Novo</span>",
+      TRUE ~ ""
+    )
+  ) |> 
+  dplyr::group_split(texto) |>
+  purrr::map(
+    ~ criar_mensagem_mural(
+      titulo = .x$titulo[1],
+      texto = .x$texto[1],
+      link = .x$link[1],
+      data = .x$data[1],
+      badge = .x$badge[1]
+    )
+  ) 
 
-criar_mensagem_mural(titulo = "Em breve",
-                     texto = "Em breve",
-                     link = "",
-                     texto_link = "Em breve",
-                     data = "Em breve")
+
 ```
 

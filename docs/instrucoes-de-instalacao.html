@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="quarto-0.2.232">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Relatórios reprodutíveis com R - Informações gerais</title>
+  <title>Relatórios reprodutíveis com R - Pré-curso: Instalações necessárias</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -11,6 +11,69 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
 
   <!--[if lt IE 9]>
@@ -43,7 +106,7 @@
     "limit": 20
   }</script>
   <link rel="stylesheet" href="styles.css">
-<meta name="twitter:title" content="Relatórios reprodutíveis com R - Informações gerais">
+<meta name="twitter:title" content="Relatórios reprodutíveis com R - Pré-curso: Instalações necessárias">
 <meta name="twitter:image" content="https://www.ime.usp.br/verao/assets/images/logo_verao.png/img/preview.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -139,7 +202,7 @@
 </nav>
 <nav class="quarto-secondary-nav py-2 d-lg-none d-md-block " data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <div class="container-fluid d-flex justify-content-between">
-    <h1 class="quarto-secondary-nav-title mb-0 fs-3 d-inline">Informações gerais</h1>
+    <h1 class="quarto-secondary-nav-title mb-0 fs-3 d-inline">Pré-curso: Instalações necessárias</h1>
     <button type="button" class="quarto-btn-toggle btn d-lg-none py-0 px-1 d-inline-block border-0 ">
       <i class="bi bi-chevron-right"></i>
     </button>
@@ -153,27 +216,70 @@
     <nav class="me-lg-auto docked overflow-auto">
   <div class="sidebar-menu-container"> 
   <ul class="list-unstyled mt-1 px-3">
+      <li class="sidebar-item">
+  <a href="./programacao-do-curso.html" class="">Programação do curso</a>
+</li>
+      <li class="sidebar-item">
+  <a href="./instrucoes-de-instalacao.html" class="active">Pré-curso: Instalações necessárias</a>
+</li>
       <ul class="list-unstyled sidebar-section depth1">
     <li class="">
         <div class="me-auto">
-            <a class="sidebar-section-item d-inline-flex text-start w-100 " data-bs-toggle="collapse" data-bs-target="#informaçõessobreocurso-collapse" aria-expanded="true">
-              <div class="me-auto sidebar-section-item">Informações sobre o curso</div>
+            <a class="sidebar-section-item d-inline-flex text-start w-100 " data-bs-toggle="collapse" data-bs-target="#aulas-collapse" aria-expanded="true">
+              <div class="me-auto sidebar-section-item">Aulas</div>
             <div><i class="bi bi-chevron-right ms-2"></i></div>
             </a>
         </div>
-      <div class="collapse  show" id="informaçõessobreocurso-collapse">
+      <div class="collapse  show" id="aulas-collapse">
         <ul class="list-unstyled sidebar-item-contents">
           <li class="sidebar-item">
-  <a href="./informacoes-gerais.html" class="active">Informações gerais</a>
+  <a href="./aula1.html" class="">Aula 1</a>
 </li>
           <li class="sidebar-item">
-  <a href="./profs.html" class="">Docentes</a>
+  <a href="./aula2.html" class="">Aula 2</a>
 </li>
           <li class="sidebar-item">
-  <a href="./bibliografia.html" class="">Bibliografia</a>
+  <a href="./aula3.html" class="">Aula 3</a>
 </li>
           <li class="sidebar-item">
-  <a href="./faq.html" class="">Perguntas Frequentes (FAQ)</a>
+  <a href="./aula4.html" class="">Aula 4</a>
+</li>
+          <li class="sidebar-item">
+  <a href="./aula5.html" class="">Aula 5</a>
+</li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+      <ul class="list-unstyled sidebar-section depth1">
+    <li class="">
+        <div class="me-auto">
+            <a class="sidebar-section-item d-inline-flex text-start w-100 " data-bs-toggle="collapse" data-bs-target="#trabalhofinal-collapse" aria-expanded="true">
+              <div class="me-auto sidebar-section-item">Trabalho final</div>
+            <div><i class="bi bi-chevron-right ms-2"></i></div>
+            </a>
+        </div>
+      <div class="collapse  show" id="trabalhofinal-collapse">
+        <ul class="list-unstyled sidebar-item-contents">
+          <li class="sidebar-item">
+  <a href="./trabalho_final.html" class="">Trabalho final</a>
+</li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+      <ul class="list-unstyled sidebar-section depth1">
+    <li class="">
+        <div class="me-auto">
+            <a class="sidebar-section-item d-inline-flex text-start w-100 " data-bs-toggle="collapse" data-bs-target="#sobreomaterial-collapse" aria-expanded="true">
+              <div class="me-auto sidebar-section-item">Sobre o material</div>
+            <div><i class="bi bi-chevron-right ms-2"></i></div>
+            </a>
+        </div>
+      <div class="collapse  show" id="sobreomaterial-collapse">
+        <ul class="list-unstyled sidebar-item-contents">
+          <li class="sidebar-item">
+  <a href="./licenca.html" class="">Licença de uso</a>
 </li>
         </ul>
       </div>
@@ -186,69 +292,91 @@
   <div id="quarto-toc-sidebar" class=" pt-0 col col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-toc order-last"><nav id="TOC" role="doc-toc">
 <h2 id="toc-title">Nessa página</h2>
 <ul>
-<li><a href="#público-alvo" class="nav-link active" data-scroll-target="#público-alvo">Público Alvo</a></li>
-<li><a href="#pré-requisitos" class="nav-link" data-scroll-target="#pré-requisitos">Pré-requisitos</a></li>
-<li><a href="#método-avaliativo" class="nav-link" data-scroll-target="#método-avaliativo">Método avaliativo</a></li>
-<li><a href="#informações-gerais" class="nav-link" data-scroll-target="#informações-gerais">Informações gerais</a></li>
-<li><a href="#política-de-isenção-de-taxa-de-inscrição" class="nav-link" data-scroll-target="#política-de-isenção-de-taxa-de-inscrição">Política de isenção de taxa de inscrição</a></li>
+<li><a href="#instalações-obrigatórias" class="nav-link active" data-scroll-target="#instalações-obrigatórias">Instalações obrigatórias</a></li>
+<li><a href="#instalações-recomendadas" class="nav-link" data-scroll-target="#instalações-recomendadas">Instalações recomendadas</a></li>
 </ul>
 </nav></div>
   <div class="col mx-auto col-sm-12 col-md-9 col-lg-7 col-xl-7 px-lg-4 pe-xxl-4 ps-xxl-0">
 <main>
 <header id="title-block-header">
-<h1 class="title d-none d-lg-block display-7">Informações gerais</h1>
+<h1 class="title d-none d-lg-block display-7">Pré-curso: Instalações necessárias</h1>
 </header>
 
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div class="cell">
+
 </div>
-<div class="callout-caption-container flex-fill">
-Atenção!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Inscrições</strong> exclusivamente no site do <a href="https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php">Programa de Verão IME-USP</a>.</p>
-</div>
-</div>
-<section id="público-alvo" class="level2">
-<h2 class="anchored" data-anchor-id="público-alvo">Público Alvo</h2>
-<ul>
-<li><p>Estudantes de graduação que desejam se aprofundar no conhecimento do R.</p></li>
-<li><p>Profissionais do mercado de trabalho que usam o R e desejam aprimorar os seus conhecimentos.</p></li>
-<li><p>Pessoas na academia com interesse em tornar suas análises e códigos mais legíveis, reprodutíveis, eficientes e organizados.</p></li>
-</ul>
-</section>
-<section id="pré-requisitos" class="level2">
-<h2 class="anchored" data-anchor-id="pré-requisitos">Pré-requisitos</h2>
-<p>É recomendado que as pessoas participantes estejam familiarizadas com o conteúdo do curso Introdução à programação em R.</p>
-<p>Obs: O material do curso de Introdução ao R, ministrado por Nathália Demétrio, está disponível <a href="https://github.com/natydemi/intro_R_language/tree/master/aulas">neste link</a>, caso queira consultar.</p>
-</section>
-<section id="método-avaliativo" class="level2">
-<h2 class="anchored" data-anchor-id="método-avaliativo">Método avaliativo</h2>
-<ul>
-<li><p>Exercícios (em classe e extraclasse)</p></li>
-<li><p>Projeto prático final (extraclasse)</p></li>
-<li><p>Para receber o certificado, é necessário ter frequência de 75%.</p></li>
-</ul>
-</section>
-<section id="informações-gerais" class="level2">
-<h2 class="anchored" data-anchor-id="informações-gerais">Informações gerais</h2>
-<p><strong>Carga horária:</strong> 15h (5 aulas de 3h)</p>
-<p><strong>Local:</strong> Online</p>
-<p><strong>Datas:</strong> 2, 7, 9, 14, 16 de fevereiro de 2022 (2ª e 4ª)</p>
-<p><strong>Horário:</strong> Manhã (09h-12h)</p>
-<p><strong>Vagas:</strong> 70</p>
-</section>
-<section id="política-de-isenção-de-taxa-de-inscrição" class="level2">
-<h2 class="anchored" data-anchor-id="política-de-isenção-de-taxa-de-inscrição">Política de isenção de taxa de inscrição</h2>
-<p>Segue abaixo a política de Isenção que está no sistema para os cursos de verão:</p>
-<blockquote class="blockquote">
-<ol start="25" type="1">
-<li>Política de Isenções<br> ISENÇÃO<br> O aluno deverá fazer sua inscrição on-line no curso que desejar e efetuar o pagamento, para assegurar sua vaga. Após dois dias úteis solicitar isenção (via Sistema Web do Verão).<br> O sorteio das isenções, bem como, a divulgação dos contemplados ocorrerá no mês de dezembro. Aqueles que NÃO forem sorteados e desistirem de realizar o curso deverão solicitar a devolução da taxa de inscrição, na Secretaria do Programa de Verão. <br> No caso de ausência de interessados em alguma categoria, as vagas serão remanejadas de acordo com a procura ou será substituído por isenção para alunos indicados por docentes. A devolução da taxa, referente a isenção será feita via depósito em conta bancária.</li>
+<section id="instalações-obrigatórias" class="level2">
+<h2 class="anchored" data-anchor-id="instalações-obrigatórias">Instalações obrigatórias</h2>
+<ol type="1">
+<li><strong>Instalar o R</strong>:</li>
 </ol>
-</blockquote>
+<ul>
+<li><p>Download direto: <a href="https://vps.fmvz.usp.br/CRAN/" class="uri">https://vps.fmvz.usp.br/CRAN/</a></p></li>
+<li><p>Tutorial: <a href="https://livro.curso-r.com/1-1-instalacao-do-r.html" class="uri">https://livro.curso-r.com/1-1-instalacao-do-r.html</a></p></li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Instalar o RStudio</strong>:</li>
+</ol>
+<ul>
+<li><p>Download direto: <a href="https://www.rstudio.com/products/rstudio/download/#download" class="uri">https://www.rstudio.com/products/rstudio/download/#download</a></p></li>
+<li><p>Tutorial: <a href="https://livro.curso-r.com/1-2-instalacao-do-rstudio.html" class="uri">https://livro.curso-r.com/1-2-instalacao-do-rstudio.html</a></p></li>
+</ul>
+<ol start="3" type="1">
+<li><strong>Instalar o Git</strong>:</li>
+</ol>
+<ul>
+<li><p>Caso você utilize Linux ou Mac, confira antes se o Git já está instalado. Você pode conferir abrindo o terminal, e digitando <code>git</code>. Caso o terminal avise que você não tem <code>git</code> instalado, você precisará instalar.</p></li>
+<li><p>Download direto: <a href="http://git-scm.com/download/" class="uri">http://git-scm.com/download/</a></p></li>
+</ul>
+<ol start="4" type="1">
+<li><strong>Instalar pacotes</strong>:</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pacotes_necessarios <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"usethis"</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"devtools"</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"rmarkdown"</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"knitr"</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pagedown"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"bookdown"</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"xaringan"</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"readr"</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"dplyr"</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"DT"</span>,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"reactable"</span>,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"janitor"</span>,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"prettydoc"</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(pacotes_necessarios)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pacotes_exemplos <span class="ot">&lt;-</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"xaringanthemer"</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"distill"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"flexdashboard"</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"rmdformats"</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"bslib"</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"officedown"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"postcards"</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"rticles"</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(pacotes_exemplos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="instalações-recomendadas" class="level2">
+<h2 class="anchored" data-anchor-id="instalações-recomendadas">Instalações recomendadas</h2>
+<ol type="1">
+<li><strong>Google Chrome</strong>. Para exportar os relatórios em formato <code>PDF</code>, utilizaremos uma função que depende do uso do navegador Google Chrome.</li>
+</ol>
+<ul>
+<li><p>Download direto: <a href="https://www.google.com/intl/pt-BR/chrome/" class="uri">https://www.google.com/intl/pt-BR/chrome/</a></p></li>
+<li><p>Caso você utilize Linux, uma alternativa é instalar o Chromium: <a href="https://www.chromium.org/getting-involved/download-chromium/" class="uri">https://www.chromium.org/getting-involved/download-chromium/</a></p></li>
+<li><p>Mais informações em: <a href="https://livro.curso-r.com/1-3-instalacao-adicionais.html#pagedown-e-chrome" class="uri">https://livro.curso-r.com/1-3-instalacao-adicionais.html#pagedown-e-chrome</a></p></li>
+</ul>
+<ol start="2" type="1">
+<li><strong>LibreOffice</strong>. Para abrir documentos do Office, como <code>.pptx</code> e <code>.docx</code>, é necessário ter o Office ou alguma alternativa gratuita instalados. <strong>Caso não tenha</strong> nenhum software para abertura destes arquivos instalado, recomendo instalar o LibreOffice, pois é um software gratuito:</li>
+</ol>
+<ul>
+<li><p>Download direto: <a href="https://pt-br.libreoffice.org/baixe-ja/libreoffice-novo/" class="uri">https://pt-br.libreoffice.org/baixe-ja/libreoffice-novo/</a></p></li>
+<li><p>Tutorial de instalação: <a href="https://livro.curso-r.com/1-3-instalacao-adicionais.html#office" class="uri">https://livro.curso-r.com/1-3-instalacao-adicionais.html#office</a></p></li>
+</ul>
 
 
 </section>

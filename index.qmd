@@ -10,7 +10,42 @@ lang: pt
 **Inscrições** exclusivamente no site do [Programa de Verão IME-USP](https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php). <br>
 :::
 
- No curso utilizaremos a linguagem de programação R e a interface de desenvolvimento RStudio. Primeiramente será apresentada uma introdução ao conceito de reprodutibilidade no contexto de desenvolvimento em R, e discutiremos boas práticas ao longo do curso. 
+## Mensagem pública mais recente
+
+```{r message=FALSE}
+#| echo=FALSE
+
+source("r/mural_de_mensagens.R")
+
+googlesheets4::gs4_auth()
+sheet_mensagens <- googlesheets4::read_sheet("1CN9PmWmNa4CEM9HI5jgYqHSK48K92n--BZWXglH5NVE", sheet = "mensagens")
+```
+
+
+```{r, results='asis'}
+#| echo=FALSE
+mensagem_inicial <- sheet_mensagens |>
+  dplyr::mutate(
+    data = lubridate::as_date(data),
+    badge = dplyr::case_when(
+      novo == TRUE ~ "<span class='badge bg-success'>Novo</span>",
+      TRUE ~ ""
+    )
+  ) |> 
+  dplyr::filter(data == max(data))
+
+criar_mensagem_mural(
+  titulo = mensagem_inicial$titulo[1],
+  texto = mensagem_inicial$texto[1],
+  link = mensagem_inicial$link[1],
+  data = mensagem_inicial$data[1],
+  badge = mensagem_inicial$badge[1]
+) 
+```
+
+## Sobre o curso
+
+No curso utilizaremos a linguagem de programação R e a interface de desenvolvimento RStudio. Primeiramente será apresentada uma introdução ao conceito de reprodutibilidade no contexto de desenvolvimento em R, e discutiremos boas práticas ao longo do curso. 
  
 Utilizaremos o RMarkdown (<https://rmarkdown.rstudio.com/>), um pacote que possibilita criar relatórios reprodutíveis no R, como: listas de exercícios, relatórios, apresentações em HTML, apresentações em powerpoint, relatórios em word, relatórios interativos, entre outros. 
 
@@ -23,3 +58,6 @@ Além disso, o conceito de controle de versão com Git será apresentado e tamb�
 ## Dica
 Mais informações na página de [informações gerais sobre o curso](informacoes-gerais.qmd). 
 :::
+
+
+

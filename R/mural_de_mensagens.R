@@ -1,17 +1,18 @@
 criar_mensagem_mural <- function(titulo,
                                  texto,
                                  link,
-                                 texto_link,
-                                 data) {
+                                 data,
+                                 badge) {
+
   glue::glue(
     '<div class="card text-center">
 <div class="card-header">
-{data} - {titulo}
+{format(data, "%d/%m/%Y")} - {titulo} {badge}
 </div>
 <div class="card-body">
 
-<p class="card-text">{titulo}</p>
-<a href="{link}" class="btn btn-primary">{texto_link}</a></div>
+<p class="card-text">{texto}</p>
+<a href="{link}" class="btn btn-primary">Clique aqui</a></div>
 </div>'
   )
 
