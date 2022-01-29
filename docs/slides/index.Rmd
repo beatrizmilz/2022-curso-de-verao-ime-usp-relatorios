@@ -33,6 +33,32 @@ knitr::opts_chunk$set(
 )
 ```
 
+
+
+```{r metathis, echo=FALSE}
+library(metathis)
+meta() %>%
+  meta_name("github-repo" = "beatrizmilz/2022-curso-de-verao-ime-usp-relatorios") %>% 
+  meta_social(
+    title = "Relatórios reprodutíveis com R",
+    description = paste(
+      "Apresentação do curso Relatórios reprodutíveis com R"
+    ),
+    url = "https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/slides/",
+    image = "https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/slides/img/share-card.jpg",
+    image_alt = paste(
+      "Primeiro slide da apresentação do curso",
+      "Relatórios reprodutíveis com R",
+      "Ministrado por Beatriz Milz"
+    ),
+    og_type = "website",
+    og_author = "Beatriz Milz",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@beamilz"
+  )
+```
+
+
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
 style_duo_accent(
