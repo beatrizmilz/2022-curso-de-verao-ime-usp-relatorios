@@ -3,6 +3,7 @@ title: "Relatórios reprodutíveis com R"
 lang: pt
 ---
 
+
 <h3> ![](https://www.ime.usp.br/verao/assets/images/logo_verao.png){fig-align="center"} Curso de Verão IME-USP 2022 </h3>
 
 :::{.callout-warning}
