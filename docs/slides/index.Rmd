@@ -178,7 +178,7 @@ profs |>
 ---
 name: sumario
 
-## Guia
+## Guia de slides
 
 - [Sobre o curso](#sobre-o-curso)
 
@@ -203,6 +203,81 @@ class: middle, center, inverse
 
 ---
 
+## Código de conduta
+
+- Seja gentil! Estamos aqui para aprender, e estamos em etapas diferentes do aprendizado.
+
+- Não existe "pergunta burra". Não deveria ser comum ouvir "como você não sabe isso ainda?". 
+
+-  Objetivo é proporcionar uma experiência de livre de assédio e inclusiva para todas as pessoas que estão participando.
+
+- Qualquer pessoa que viole estas regras pode ser advertida ou removida da aula, conforme critérios das pessoas docentes. 
+
+- Leia completo em: <https://saopaulo2019.satrdays.org/codigodeconduta/> 
+
+
+---
+
+### Plataforma utilizada
+
+.pull-left[
+
+https://cursosextensao.usp.br/course/view.php?id=2991
+
+```{r}
+knitr::include_graphics("img/plataforma-usp.png")
+```
+
+]
+
+.pull-right[
+Apenas pessoas inscritas tem acesso:
+
+- Registro de presença
+
+- Acesso às aulas síncronas
+
+- Acesso às aulas gravadas;
+
+- Acesso aos links para formulários de acompanhamento
+
+- Fórum para enviar dúvidas
+
+- Recados e avisos
+
+]
+
+---
+
+### Página auxiliar
+
+.pull-left[
+
+https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/
+
+```{r}
+knitr::include_graphics("img/site-curso.png")
+```
+
+]
+
+.pull-right[
+Aberto para todas as pessoas:
+
+- [Slides](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/slides/)
+
+- [Informações sobre as pessoas docentes](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/profs.html)
+
+- [Instruções de instalação](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/instrucoes-de-instalacao.html)
+
+- [Programação do curso](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/programacao-do-curso.html)
+
+- [Direcionamentos para o trabalho final](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/trabalho_final.html)
+
+]
+
+---
+
 ### Objetivos de aprendizagem
 
 Que vocês saibam ao final do curso:
@@ -217,9 +292,58 @@ Que vocês saibam ao final do curso:
 
 - Como disponibilizar o documento na internet. 
 
+**Vamos alinhar baseado nas respostas do formulário pré-curso?**
+
 ---
 
 ### Dinâminca de aula
+
+- Aula terá momentos de apresentação teórica, demonstração com live-coding, e exercícios.
+
+- Para cada aula, teremos um formulário (Google Forms) que deverá ser respondido após as aulas. As perguntas são relacionadas ao acompanhamento do conteúdo e configuração das ferramentas necessárias. 
+
+- **Últimos 15 minutos de cada aula serão para responder esse formulário e tirar dúvidas**.
+
+- Intervalo: a cada 1h de aula, faremos uma pequena pausa. Tentem ficar longe da tela! 
+
+  - 10h00 - 5 min
+
+  - 11h00 - 5 min 
+
+---
+
+### Informações gerais
+
+- Gravação das aulas: caso não queira aparecer na gravação, mantenha sua câmera fechada.
+
+```{r, out.width="30%"}
+knitr::include_graphics("img/mconf.png")
+```
+
+
+- Dúvidas:
+
+  - Durante as aulas: enviem dúvidas no chat.
+
+  - Fora do horário de aulas:
+      - Durante o oferecimento do curso: [na plataforma USP Extensão](https://cursosextensao.usp.br/mod/forum/view.php?id=160206)
+      - Após a finalização do curso: [Fórum da Curso-R](https://discourse.curso-r.com/)
+
+
+---
+
+### Requisitos para o certificado
+
+
+- Teremos um trabalho final, que deverá ser entregue até **20/02** (1 semana após o final do curso). O trabalho final é obrigatório para o recebimento do certificado.
+
+- Certificado = Ter **frequência igual ou superior à 75%** (ou seja, pode ter 1 falta) + entrega do trabalho final.
+
+
+
+---
+
+### Estrutura do curso
 
 - São 5 aulas: 
 
@@ -230,37 +354,13 @@ Que vocês saibam ao final do curso:
   - Aula 5: exemplo para praticar os conteúdos das aulas anteriores.
   
 
-- Pratique depois da aula! Dica: [Podcast Naruhodo: Powerpoint é útil para a aprendizagem?](https://www.b9.com.br/shows/naruhodo/naruhodo-205-powerpoint-e-util-para-a-aprendizagem/)
-
 ---
+name: instalacao
+class: middle, center, inverse
 
-### Informações gerais
+## Instalações
 
-- Gravação das aulas: caso não queira aparecer na gravação, mantenha sua câmera fechada.
-
-- Dúvidas:
-
-  - Durante as aulas: enviem dúvidas no chat.
-
-  - Fora do horário de aulas:
-      - Durante o oferecimento do curso: [na plataforma USP Extensão](https://cursosextensao.usp.br/)
-      - Após a finalização do curso: [Fórum da Curso-R](https://discourse.curso-r.com/)
-
-
----
-
-### Requisitos para o certificado
-
-- Ter frequência igual ou superior à 75% (ou seja, pode ter 1 falta).
-
-
-- Para cada aula, teremos um formulário (Google Forms) que deverá ser respondido após as aulas. A maioria das perguntas são relacionadas ao acompanhamento do conteúdo e configuração das ferramentas necessárias. Alguns formulários envolverão o envio de tarefas.
-
-- Teremos um trabalho final, que deverá ser entregue até .colorido[data a ser definida].
-
-
-
-
+[Veja aqui!](https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/instrucoes-de-instalacao.html)
 
 ---
 
@@ -281,17 +381,21 @@ Que vocês saibam ao final do curso:
 - Instalar pacotes necessários:
 
 ```r
-pacotes_necessarios <- c("usethis",
-                         "rmarkdown",
-                         "knitr",
-                         "pagedown",
-                         "xaringan",
-                         "readr",
-                         "dplyr",
-                         "DT",
-                         "reactable",
-                         "janitor")
-
+pacotes_necessarios <- c(
+  "usethis",
+  "devtools",
+  "rmarkdown",
+  "knitr",
+  "pagedown",
+  "bookdown",
+  "xaringan",
+  "readr",
+  "dplyr",
+  "DT",
+  "reactable",
+  "janitor",
+  "prettydoc"
+)
 install.packages(pacotes_necessarios)
 ```
 
