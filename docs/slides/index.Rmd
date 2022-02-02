@@ -101,12 +101,12 @@ ref_relatorios_curso_r <- function(){
 ## Ministrantes e monitoria
 
 ```{r echo=FALSE, results='asis'}
-# googlesheets4::gs4_auth()
-# sheet_profs <- googlesheets4::read_sheet("1CN9PmWmNa4CEM9HI5jgYqHSK48K92n--BZWXglH5NVE", sheet = "info-profs")
+googlesheets4::gs4_auth()
+sheet_profs <- googlesheets4::read_sheet("1CN9PmWmNa4CEM9HI5jgYqHSK48K92n--BZWXglH5NVE", sheet = "info-profs")
 # 
 # readr::write_rds(x = sheet_profs, "data/sheet_profs.Rds")
 
-sheet_profs <- readr::read_rds("data/sheet_profs.Rds")
+#  sheet_profs <- readr::read_rds("data/sheet_profs.Rds")
 
 profs <- sheet_profs |> 
   dplyr::mutate(texto = glue::glue("- **{nome}** {
