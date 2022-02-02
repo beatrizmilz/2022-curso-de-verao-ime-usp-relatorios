@@ -67,7 +67,7 @@
     "href": "aula1.html",
     "title": "Aula 1",
     "section": "",
-    "text": "Aula 1 (02/02/2022)\nConteúdo\n\nIntrodução ao curso - Slides\nIntrodução ao conceito de reprodutibilidade - Slides\n\nReprodutibilidade no contexto do desenvolvimento em R: Usando projetos do RStudio (.Rprojs)\n\nRMarkdown - Slides\n\nIntrodução ao pacote RMarkdown\nComo criar arquivos .Rmd\nComo textos marcados com markdown no .Rmd\n\n\nTarefas\n\nLer o capítulo 2.3 do livro Ciência de Dados em R - Projetos\nLer o capítulo 3 do livro Zen do R - Rproj e diretórios\nLer o capítulo 4 do livro Ciência de Dados em R - Relatórios\nFazer as atividades do trabalho final referente à aula 1.\n\nLinks úteis (citados em aula)\n\n\n\n\nTema\nLink\n\n\n\n\nEm breve\nEm breve"
+    "text": "Aula 1 (02/02/2022)\nConteúdo\n\nIntrodução ao curso - Slides\nIntrodução ao conceito de reprodutibilidade - Slides\n\nReprodutibilidade no contexto do desenvolvimento em R: Usando projetos do RStudio (.Rprojs)\n\nRMarkdown - Slides\n\nIntrodução ao pacote RMarkdown\nComo criar arquivos .Rmd\n\n\nTarefas\n\nLer o capítulo 2.3 do livro Ciência de Dados em R - Projetos\nLer o capítulo 3 do livro Zen do R - Rproj e diretórios\nLer o capítulo 4 do livro Ciência de Dados em R - Relatórios\nFazer as atividades do trabalho final referente à aula 1.\n\nLinks úteis (citados em aula)\n\n\n\n\n\n\n\n\nTema\nLink\n\n\n\n\nInstalação\nTutorial para instalar o Git no Windows\n\n\nExtra\nMaterial do curso Introdução à Programação em R - Programa de Verão 2022\n\n\nRMarkdown\nPacote R Markdown\n\n\nRMarkdown\nCheatsheet do RMarkdown\n\n\nRMarkdown\nReference Guide do RMarkdown\n\n\nDúvidas\nComo colocar um HTML online de forma simples? Netllify Drop!\n\n\nDúvidas\nPacote renv - gestão das dependências (pacotes usados) nos projetos\n\n\nDúvidas - Séries temporais\nMaterial em disciplina em andamento: Laboratórios de Financial Analytics\n\n\nDúvidas - Séries temporais\nLivro referência em séries temporais: Forcasting: Principles and Practice\n\n\nDúvidas - Séries temporais\nLivro Using R for Introductory Econometrics\n\n\nDúvidas - Séries temporais\nLivro do Sillas Gonzaga sobre séries temporais usando R"
   },
   {
     "objectID": "mensagens.html",
@@ -116,7 +116,7 @@
     "href": "aula2.html",
     "title": "Aula 2",
     "section": "",
-    "text": "Aula 2 (07/02/2022)\nConteúdo\n\nRMarkdown (continuação) - Slides\n\nComo adicionar elementos no .Rmd, como: imagens, tabelas, gráficos, códigos e resultados.\nCriando .Rmd a partir de templates\nGerando diferentes tipos de relatórios: .html, .docx, .pdf\nUsando e gerenciando bibliografias com arquivos .bib\nRelatórios com parâmetros\n\n\nTarefas\n\nFazer as atividades do trabalho final referente à aula 2.\n\nLinks úteis (citados em aula)\n\n\n\n\n\n\n\n\nTema\nLink\n\n\n\n\nRMarkdown - Extra\nEquações: Desenhe o símbolo e descubra como escreve-lo em LaTeX."
+    "text": "Aula 2 (07/02/2022)\nConteúdo\n\nRMarkdown (continuação) - Slides\n\nComo textos marcados com markdown no .Rmd\nComo adicionar elementos no .Rmd, como: imagens, tabelas, gráficos, códigos e resultados.\nCriando .Rmd a partir de templates\nGerando diferentes tipos de relatórios: .html, .docx, .pdf  - Relatórios com parâmetros \nUsando e gerenciando bibliografias com arquivos .bib\n\n\nTarefas\n\nFazer as atividades do trabalho final referente à aula 2.\n\nLinks úteis (citados em aula)\n\n\n\n\n\n\n\n\nTema\nLink\n\n\n\n\nRMarkdown - Extra\nEquações: Desenhe o símbolo e descubra como escreve-lo em LaTeX."
   },
   {
     "objectID": "index.html#mensagem-pública-mais-recente",
@@ -145,6 +145,13 @@
     "title": "Perguntas Frequentes (FAQ)",
     "section": "",
     "text": "O curso será online ou presencial?\n\n\nO curso será oferecido de forma online.\n\n\nApenas alunos da USP podem participar do curso?\n\n\nAs inscrições serão abertas para todas as pessoas interessadas.\n\n\nComo posso me inscrever?\n\n\nA inscrição será realizada através do IME-USP. Acompanhe as informações na página do Programa de Verão do IME-USP: https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php\n\n\nO curso é gratuito?\n\n\nNão, o curso é pago. Acompanhe as informações na página do Programa de Verão do IME-USP: https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php\n\n\nAs aulas serão gravadas?\n\n\nAs aulas poderão ser gravadas mediante ao acordo com as pessoas participantes da turma."
+  },
+  {
+    "objectID": "trabalho_final.html#etapas-pré-codigo",
+    "href": "trabalho_final.html#etapas-pré-codigo",
+    "title": "Trabalho final",
+    "section": "Etapas pré-codigo",
+    "text": "Pense no tipo de relatório que quer criar, qual é o objetivo do mesmo e o público-alvo. Por exemplo:\n\nUma análise de dados da pesquisa, a ser apresentada para outras pessoas pesquisadoras.\nUm tutorial com código em R.\nUma página pessoal de divulgação.\n\nEscolha uma base de dados para utilizar! Segue algumas ideias:\n\nPacote dados\nRepositório tidytuesday (em inglês)\nMais pacotes da comunidade BR: mananciais, reservatoriosBR, qualR, Outros\nAlguma que você tenha interesse!"
   },
   {
     "objectID": "trabalho_final.html#aula-1",
@@ -208,12 +215,5 @@
     "title": "Programação do curso",
     "section": "Parte 3 - Exemplo prático final",
     "text": "Aula 5 (16/02/2022)\nConteúdo\n\nExemplo prático com conceitos vistos em classe - Slides"
-  },
-  {
-    "objectID": "trabalho_final.html#etapas-pré-codigo",
-    "href": "trabalho_final.html#etapas-pré-codigo",
-    "title": "Trabalho final",
-    "section": "Etapas pré-codigo",
-    "text": "Pense no tipo de relatório que quer criar, qual é o objetivo do mesmo e o público-alvo. Por exemplo:\n\nUma análise de dados da pesquisa, a ser apresentada para outras pessoas pesquisadoras.\nUm tutorial com código em R.\nUma página pessoal de divulgação.\n\nEscolha uma base de dados para utilizar! Segue algumas ideias:\n\nPacote dados\nRepositório tidytuesday (em inglês)\nMais pacotes da comunidade BR: mananciais, reservatoriosBR, qualR, Outros\nAlguma que você tenha interesse!"
   }
 ]

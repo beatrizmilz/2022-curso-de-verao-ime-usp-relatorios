@@ -140,7 +140,7 @@ profs |>
   - Em 2018 este grupo criou a Curso-R: https://curso-r.com/
 
 
-- Nathália Demétrio começou em 2019 a ministrar  o curso de 'Introdução à Programação em R'. Material de 2022: [disponível neste link](https://github.com/natydemi/intro_R_language/tree/master/aulas).
+- Nathália Demétrio começou em 2019 a ministrar  o curso de 'Introdução à Programação em R'. Material de 2022: [disponível neste link](https://github.com/natydemi/intro_R_language).
 
 - Em 2022, os cursos de 'Princípios de Visualização de Dados com R' (por Bruna Garbes) e 'Relatórios Reprodutíveis com R' (por Beatriz Milz) foram adicionados ao Programa de Verão IME/USP.
 
@@ -832,6 +832,113 @@ class: exercicios
   - Altere o título, adicione seu nome, mude a data.
   - Escreva algo diferente no corpo do arquivo.
   
+---
+class: livecoding
+
+### Templates de R Markdown
+
+.pull-left[
+
+  -  Pacotes também oferecem templates (`File > New File > R Markdown > From template`).
+  
+  - Os templates disponíveis dependem dos pacotes instalados.
+  
+]
+
+.pull-right[  
+```{r, out.width="90%"}
+knitr::include_graphics("img/rmd-from-template.png")
+```
+]
+
+---
+class: teoria
+### Exemplos
+
+.small[
+```{r echo=FALSE}
+exemplos_rmd <- tibble::tibble(pacote = as.character(),
+               desc = as.character(),
+               exemplos = as.character()) |> 
+  
+  tibble::add_row(pacote = "[blogdown](https://bookdown.org/yihui/blogdown/)",
+                  desc = "Blogs e sites",
+                  exemplos = "- [Site da Curso-R](https://curso-r.com/) <br> - [Site da Associação Brasileira de Jurimetria (ABJ)](https://abj.org.br/)") |> 
+  
+  tibble::add_row(pacote = "[distill](https://rstudio.github.io/distill/)",
+                  desc = "Blogs e sites",
+                  exemplos = "- [RStudio AI Blog](https://blogs.rstudio.com/ai/) <br> - [Laboratório da Associação Brasileira de Jurimetria (ABJ)](https://lab.abj.org.br/)") |> 
+  
+  tibble::add_row(pacote = "[bookdown](https://bookdown.org/)",
+                  desc = "Livros",
+                  exemplos = "- [Livro Ciência de Dados em R](https://livro.curso-r.com/) <br> - [R for Data Science](https://r4ds.had.co.nz/)") |> 
+  
+  tibble::add_row(pacote = "[xaringan](https://github.com/yihui/xaringan) e [xaringanthemer](https://pkg.garrickadenbuie.com/xaringanthemer/)",
+                  desc = "Apresentações",
+                  exemplos = "- Essa apresentação <br> - [Build Your Own Universe - Garrick Aden-Buie & Travis Gerke](https://www.garrickadenbuie.com/talk/build-your-own-universe/)") |> 
+  
+  tibble::add_row(pacote = "[pagedown](https://github.com/rstudio/pagedown)",
+                  desc = "Currículos, cartas e trabalhos acadêmicos",
+                  exemplos = "- [Relatório do Observatório da Insolvência](https://abjur.github.io/obsFase2/relatorio/obs_recuperacoes_abj.pdf) <br>  - [Meu currículo](https://beatrizmilz.github.io/resume/index.html) ") |> 
+
+
+  tibble::add_row(pacote = "[learnr](https://rstudio.github.io/learnr/)",
+                  desc = "Tutoriais interativos",
+                  exemplos = "- [Text mining with tidy data principles](https://juliasilge.shinyapps.io/learntidytext/) <br> - [Teacups, Giraffes,  & Statistics](https://tinystats.github.io/teacups-giraffes-and-statistics/)") |> 
+  
+  tibble::add_row(pacote = "[flexdashboard](https://pkgs.rstudio.com/flexdashboard/)",
+                  desc = "Dashboards estáticos",
+                  exemplos = "- [Exemplos da documentação](https://pkgs.rstudio.com/flexdashboard/articles/examples.html) <br> - [A COVID-19 em Sorocaba - Por Victor Dogo](https://victordogo.github.io/covid19-sorocaba/)") |> 
+  
+  tibble::add_row(pacote = "[rticles](https://github.com/rstudio/rticles)",
+                  desc = "Artigos científicos",
+                  exemplos = "   ") |>  
+  tibble::add_row(pacote = " ",
+                  desc = "Outros exemplos",
+                  exemplos = "[Newsletter Garimpo](https://nucleo.jor.br/newsletters/garimpo)") 
+  
+
+
+exemplos_rmd |> 
+  dplyr::slice(1:7) |>  
+  knitr::kable(col.names = c("Pacote", "O que podemos fazer?", "Exemplos"))
+```
+]
+
+```{r echo=FALSE, results='asis'}
+ref_relatorios_curso_r()
+```
+
+
+---
+class: teoria
+### Exemplos
+
+
+
+.pull-left[
+- Outros pacotes:
+
+  - [rticles](https://github.com/rstudio/rticles)
+
+  - [bslib](https://rstudio.github.io/bslib/)
+
+  - [rmdformats](https://github.com/juba/rmdformats)
+
+  - [officedown](https://github.com/davidgohel/officedown) 
+
+  - [postcards](https://github.com/seankross/postcards)
+
+]
+
+.pull-right[
+- Podemos criar!
+
+  - [abjTemplates](https://github.com/abjur/abjTemplates)
+
+  - [RLadiesTheme](https://github.com/R-Ladies-Sao-Paulo/RLadiesTheme)
+]
+
 
 
 ---
@@ -1209,113 +1316,6 @@ class: exercicios
 1) Gere um PDF com o seu relatório utilizando a função `pagedown::chrome_print("caminho/ate/arquivo.html")`.
 
 2) Gere uma versão em word do seu relatório, alterando o `output` no YAML.
-
----
-class: livecoding
-
-### Templates de R Markdown
-
-.pull-left[
-
-  -  Pacotes também oferecem templates (`File > New File > R Markdown > From template`).
-  
-  - Os templates disponíveis dependem dos pacotes instalados.
-  
-]
-
-.pull-right[  
-```{r, out.width="90%"}
-knitr::include_graphics("img/rmd-from-template.png")
-```
-]
-
----
-class: teoria
-### Exemplos
-
-.small[
-```{r echo=FALSE}
-exemplos_rmd <- tibble::tibble(pacote = as.character(),
-               desc = as.character(),
-               exemplos = as.character()) |> 
-  
-  tibble::add_row(pacote = "[blogdown](https://bookdown.org/yihui/blogdown/)",
-                  desc = "Blogs e sites",
-                  exemplos = "- [Site da Curso-R](https://curso-r.com/) <br> - [Site da Associação Brasileira de Jurimetria (ABJ)](https://abj.org.br/)") |> 
-  
-  tibble::add_row(pacote = "[distill](https://rstudio.github.io/distill/)",
-                  desc = "Blogs e sites",
-                  exemplos = "- [RStudio AI Blog](https://blogs.rstudio.com/ai/) <br> - [Laboratório da Associação Brasileira de Jurimetria (ABJ)](https://lab.abj.org.br/)") |> 
-  
-  tibble::add_row(pacote = "[bookdown](https://bookdown.org/)",
-                  desc = "Livros",
-                  exemplos = "- [Livro Ciência de Dados em R](https://livro.curso-r.com/) <br> - [R for Data Science](https://r4ds.had.co.nz/)") |> 
-  
-  tibble::add_row(pacote = "[xaringan](https://github.com/yihui/xaringan) e [xaringanthemer](https://pkg.garrickadenbuie.com/xaringanthemer/)",
-                  desc = "Apresentações",
-                  exemplos = "- Essa apresentação <br> - [Build Your Own Universe - Garrick Aden-Buie & Travis Gerke](https://www.garrickadenbuie.com/talk/build-your-own-universe/)") |> 
-  
-  tibble::add_row(pacote = "[pagedown](https://github.com/rstudio/pagedown)",
-                  desc = "Currículos, cartas e trabalhos acadêmicos",
-                  exemplos = "- [Relatório do Observatório da Insolvência](https://abjur.github.io/obsFase2/relatorio/obs_recuperacoes_abj.pdf) <br>  - [Meu currículo](https://beatrizmilz.github.io/resume/index.html) ") |> 
-
-
-  tibble::add_row(pacote = "[learnr](https://rstudio.github.io/learnr/)",
-                  desc = "Tutoriais interativos",
-                  exemplos = "- [Text mining with tidy data principles](https://juliasilge.shinyapps.io/learntidytext/) <br> - [Teacups, Giraffes,  & Statistics](https://tinystats.github.io/teacups-giraffes-and-statistics/)") |> 
-  
-  tibble::add_row(pacote = "[flexdashboard](https://pkgs.rstudio.com/flexdashboard/)",
-                  desc = "Dashboards estáticos",
-                  exemplos = "- [Exemplos da documentação](https://pkgs.rstudio.com/flexdashboard/articles/examples.html) <br> - [A COVID-19 em Sorocaba - Por Victor Dogo](https://victordogo.github.io/covid19-sorocaba/)") |> 
-  
-  tibble::add_row(pacote = "[rticles](https://github.com/rstudio/rticles)",
-                  desc = "Artigos científicos",
-                  exemplos = "   ") |>  
-  tibble::add_row(pacote = " ",
-                  desc = "Outros exemplos",
-                  exemplos = "[Newsletter Garimpo](https://nucleo.jor.br/newsletters/garimpo)") 
-  
-
-
-exemplos_rmd |> 
-  dplyr::slice(1:7) |>  
-  knitr::kable(col.names = c("Pacote", "O que podemos fazer?", "Exemplos"))
-```
-]
-
-```{r echo=FALSE, results='asis'}
-ref_relatorios_curso_r()
-```
-
-
----
-class: teoria
-### Exemplos
-
-
-
-.pull-left[
-- Outros pacotes:
-
-  - [rticles](https://github.com/rstudio/rticles)
-
-  - [bslib](https://rstudio.github.io/bslib/)
-
-  - [rmdformats](https://github.com/juba/rmdformats)
-
-  - [officedown](https://github.com/davidgohel/officedown) 
-
-  - [postcards](https://github.com/seankross/postcards)
-
-]
-
-.pull-right[
-- Podemos criar!
-
-  - [abjTemplates](https://github.com/abjur/abjTemplates)
-
-  - [RLadiesTheme](https://github.com/R-Ladies-Sao-Paulo/RLadiesTheme)
-]
 
 
 
