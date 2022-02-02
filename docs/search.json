@@ -158,7 +158,7 @@
     "href": "trabalho_final.html#aula-2",
     "title": "Trabalho final",
     "section": "Aula 2",
-    "text": "Crie o arquivo RMarkdown que será utilizado.\n\n\nFile -> New File -> R Markdown… -> From template.\n\nEscolha um template que você tenha gostado, ou que possa ser útil no futuro.\nPense no tipo de relatório que quer criar, qual é o objetivo do mesmo e o público-alvo. Por exemplo:\n\nUma análise de dados da pesquisa, a ser apresentada para outras pessoas pesquisadoras.\nUm tutorial com código em R.\nUma página pessoal de divulgação.\n\nVocê deve salvar o arquivo com o nome index.Rmd. Clique em Knit assim que o arquivo for criado, e confira se o arquivo index.html foi gerado sem erros.\n\nAgora você pode usar sua criatividade e adicionar conteúdo no relatório.\n\nIsso depende do objetivo do relatório e o público-alvo.\nPense em quais opções de chunk utilizar em cada caso: você pretende mostrar o código ou escondê-lo? Faz sentido apra o seu público alvo ler o seu código?\nAdicione pelo menos:\n\nUm parágrafo de texto, com marcações.\nUm link para uma página da internet.\nUma imagem.\nUma tabela.\nCaso saiba usar ggplot, tente adicionar um gráfico.\nCaso seja uma análise de pesquisa, tente adicionar referências usando .bib."
+    "text": "Crie o arquivo RMarkdown que será utilizado.\n\n\nFile -> New File -> R Markdown… -> From template.\n\nEscolha um template que você tenha gostado, ou que possa ser útil no futuro.\nVocê deve salvar o arquivo com o nome index.Rmd. Clique em Knit assim que o arquivo for criado, e confira se o arquivo index.html foi gerado sem erros.\n\nAgora você pode usar sua criatividade e adicionar conteúdo no relatório.\n\nIsso depende do objetivo do relatório e o público-alvo.\nPense em quais opções de chunk utilizar em cada caso: você pretende mostrar o código ou escondê-lo? Faz sentido apra o seu público alvo ler o seu código?\nAdicione pelo menos:\n\nUm parágrafo de texto, com marcações.\nUm link para uma página da internet.\nUma imagem.\nUma tabela.\nCaso saiba usar ggplot, tente adicionar um gráfico.\nCaso seja uma análise de pesquisa, tente adicionar referências usando .bib."
   },
   {
     "objectID": "trabalho_final.html#aula-3",
@@ -208,5 +208,12 @@
     "title": "Programação do curso",
     "section": "Parte 3 - Exemplo prático final",
     "text": "Aula 5 (16/02/2022)\nConteúdo\n\nExemplo prático com conceitos vistos em classe - Slides"
+  },
+  {
+    "objectID": "trabalho_final.html#etapas-pré-codigo",
+    "href": "trabalho_final.html#etapas-pré-codigo",
+    "title": "Trabalho final",
+    "section": "Etapas pré-codigo",
+    "text": "Pense no tipo de relatório que quer criar, qual é o objetivo do mesmo e o público-alvo. Por exemplo:\n\nUma análise de dados da pesquisa, a ser apresentada para outras pessoas pesquisadoras.\nUm tutorial com código em R.\nUma página pessoal de divulgação.\n\nEscolha uma base de dados para utilizar! Segue algumas ideias:\n\nPacote dados\nRepositório tidytuesday (em inglês)\nMais pacotes da comunidade BR: mananciais, reservatoriosBR, qualR, Outros\nAlguma que você tenha interesse!"
   }
 ]

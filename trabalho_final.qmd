@@ -9,7 +9,30 @@ title: "Trabalho final"
 
 **Atividade:**
 
+## Etapas pré-codigo
+
+- Pense no tipo de relatório que quer criar, qual é o objetivo do mesmo e o público-alvo. Por exemplo:
+
+  - Uma análise de dados da pesquisa, a ser apresentada para outras pessoas pesquisadoras.
+  
+  - Um tutorial com código em R.
+  
+  - Uma página pessoal de divulgação.
+
+- Escolha uma base de dados para utilizar! Segue algumas ideias:
+
+  - Pacote [dados](https://cienciadedatos.github.io/dados/)
+  
+  - Repositório [tidytuesday](https://github.com/rfordatascience/tidytuesday) (em inglês)
+  
+  - Mais pacotes da comunidade BR: [mananciais](https://beatrizmilz.github.io/mananciais/), [reservatoriosBR](https://brunomioto.github.io/reservatoriosBR/), [qualR](https://quishqa.github.io/qualR/), [Outros](https://materiais-estudo-r.netlify.app/portugues.html#pacotes-da-comunidade)
+  
+  - Alguma que você **tenha interesse**!
+
+
 ## Aula 1
+
+
 
 1) Crie um Projeto do RStudio para realizar a tarefa. Lembre-se de boas práticas para nomear o projeto: não utilize espaços, caracteres especiais, acentuação. O seu projeto deverá chamar "trabalho_relatorios_nome_sobrenome" (tudo minúsculo, separado por `_`). Ex: `trabalho_relatorios_beatriz_milz` 
 
@@ -40,14 +63,6 @@ fs::dir_create("img")
 > File -> New File -> R Markdown... -> From template.
 
 Escolha um template que você tenha gostado, ou que possa ser útil no futuro.
-
-Pense no tipo de relatório que quer criar, qual é o objetivo do mesmo e o público-alvo. Por exemplo:
-
-  - Uma análise de dados da pesquisa, a ser apresentada para outras pessoas pesquisadoras.
-  
-  - Um tutorial com código em R.
-  
-  - Uma página pessoal de divulgação.
 
 
 Você deve salvar o arquivo com o nome `index.Rmd`. Clique em `Knit` assim que o arquivo for criado, e confira se o arquivo `index.html` foi gerado sem erros.
