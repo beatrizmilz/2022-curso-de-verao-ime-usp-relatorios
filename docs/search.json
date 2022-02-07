@@ -11,28 +11,28 @@
     "href": "instrucoes-de-instalacao.html#instalações-obrigatórias",
     "title": "Pré-curso: Instalações necessárias",
     "section": "Instalações obrigatórias",
-    "text": "Instalar o R:\n\n\nDownload direto: https://vps.fmvz.usp.br/CRAN/\nTutorial: https://livro.curso-r.com/1-1-instalacao-do-r.html\n\n\nInstalar o RStudio:\n\n\nDownload direto: https://www.rstudio.com/products/rstudio/download/#download\nTutorial: https://livro.curso-r.com/1-2-instalacao-do-rstudio.html\n\n\nInstalar o Git:\n\n\nCaso você utilize Linux ou Mac, confira antes se o Git já está instalado. Você pode conferir abrindo o terminal, e digitando git. Caso o terminal avise que você não tem git instalado, você precisará instalar.\nDownload direto: http://git-scm.com/download/\n\n\nInstalar pacotes:\n\npacotes_necessarios <- c(\n  \"usethis\",\n  \"devtools\",\n  \"rmarkdown\",\n  \"knitr\",\n  \"pagedown\",\n  \"bookdown\",\n  \"xaringan\",\n  \"readr\",\n  \"dplyr\",\n  \"DT\",\n  \"reactable\",\n  \"janitor\",\n  \"prettydoc\"\n)\ninstall.packages(pacotes_necessarios)\npacotes_exemplos <-\n  c(\n    \"xaringanthemer\",\n    \"distill\",\n    \"flexdashboard\",\n    \"rmdformats\",\n    \"bslib\",\n    \"officedown\",\n    \"postcards\",\n    \"rticles\"\n  )\ninstall.packages(pacotes_exemplos)"
+    "text": "Instalações obrigatórias\n\nInstalar o R:\n\n\nDownload direto: https://vps.fmvz.usp.br/CRAN/\nTutorial: https://livro.curso-r.com/1-1-instalacao-do-r.html\n\n\nInstalar o RStudio:\n\n\nDownload direto: https://www.rstudio.com/products/rstudio/download/#download\nTutorial: https://livro.curso-r.com/1-2-instalacao-do-rstudio.html\n\n\nInstalar o Git:\n\n\nCaso você utilize Linux ou Mac, confira antes se o Git já está instalado. Você pode conferir abrindo o terminal, e digitando git. Caso o terminal avise que você não tem git instalado, você precisará instalar.\nDownload direto: http://git-scm.com/download/\n\n\nInstalar pacotes:\n\npacotes_necessarios <- c(\n  \"usethis\",\n  \"devtools\",\n  \"rmarkdown\",\n  \"knitr\",\n  \"pagedown\",\n  \"bookdown\",\n  \"xaringan\",\n  \"readr\",\n  \"dplyr\",\n  \"DT\",\n  \"reactable\",\n  \"janitor\",\n  \"prettydoc\"\n)\ninstall.packages(pacotes_necessarios)\npacotes_exemplos <-\n  c(\n    \"xaringanthemer\",\n    \"distill\",\n    \"flexdashboard\",\n    \"rmdformats\",\n    \"bslib\",\n    \"officedown\",\n    \"postcards\",\n    \"rticles\"\n  )\ninstall.packages(pacotes_exemplos)"
   },
   {
     "objectID": "instrucoes-de-instalacao.html#instalações-recomendadas",
     "href": "instrucoes-de-instalacao.html#instalações-recomendadas",
     "title": "Pré-curso: Instalações necessárias",
     "section": "Instalações recomendadas",
-    "text": "Google Chrome. Para exportar os relatórios em formato PDF, utilizaremos uma função que depende do uso do navegador Google Chrome.\n\n\nDownload direto: https://www.google.com/intl/pt-BR/chrome/\nCaso você utilize Linux, uma alternativa é instalar o Chromium: https://www.chromium.org/getting-involved/download-chromium/\nMais informações em: https://livro.curso-r.com/1-3-instalacao-adicionais.html#pagedown-e-chrome\n\n\nLibreOffice. Para abrir documentos do Office, como .pptx e .docx, é necessário ter o Office ou alguma alternativa gratuita instalados. Caso não tenha nenhum software para abertura destes arquivos instalado, recomendo instalar o LibreOffice, pois é um software gratuito:\n\n\nDownload direto: https://pt-br.libreoffice.org/baixe-ja/libreoffice-novo/\nTutorial de instalação: https://livro.curso-r.com/1-3-instalacao-adicionais.html#office"
+    "text": "Instalações recomendadas\n\nGoogle Chrome. Para exportar os relatórios em formato PDF, utilizaremos uma função que depende do uso do navegador Google Chrome.\n\n\nDownload direto: https://www.google.com/intl/pt-BR/chrome/\nCaso você utilize Linux, uma alternativa é instalar o Chromium: https://www.chromium.org/getting-involved/download-chromium/\nMais informações em: https://livro.curso-r.com/1-3-instalacao-adicionais.html#pagedown-e-chrome\n\n\nLibreOffice. Para abrir documentos do Office, como .pptx e .docx, é necessário ter o Office ou alguma alternativa gratuita instalados. Caso não tenha nenhum software para abertura destes arquivos instalado, recomendo instalar o LibreOffice, pois é um software gratuito:\n\n\nDownload direto: https://pt-br.libreoffice.org/baixe-ja/libreoffice-novo/\nTutorial de instalação: https://livro.curso-r.com/1-3-instalacao-adicionais.html#office"
   },
   {
     "objectID": "bibliografia.html#em-português",
     "href": "bibliografia.html#em-português",
     "title": "Bibliografia",
     "section": "Em Português",
-    "text": "Caio Lente, Athos Damiani, Beatriz Milz, Daniel Falbel, Fernando Correa, Julio Trecenti, Tereza Lacerda, William Amorim. Zen do R. Disponível em: https://curso-r.github.io/zen-do-r/git-github.html\nAthos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Correa, Julio Tricenti, Nicole Luduvice, William Amorim. Ciência de Dados em R. Disponível em: https://livro.curso-r.com/9-relatorios.html"
+    "text": "Em Português\nCaio Lente, Athos Damiani, Beatriz Milz, Daniel Falbel, Fernando Correa, Julio Trecenti, Tereza Lacerda, William Amorim. Zen do R. Disponível em: https://curso-r.github.io/zen-do-r/git-github.html\nAthos Damiani, Beatriz Milz, Caio Lente, Daniel Falbel, Fernando Correa, Julio Tricenti, Nicole Luduvice, William Amorim. Ciência de Dados em R. Disponível em: https://livro.curso-r.com/9-relatorios.html"
   },
   {
     "objectID": "bibliografia.html#em-inglês",
     "href": "bibliografia.html#em-inglês",
     "title": "Bibliografia",
     "section": "Em Inglês",
-    "text": "Yihui Xie, J. J. Allaire, Garrett Grolemund. R Markdown: The Definitive Guide. 2019. Chapman & Hall/CRC. Disponível em: https://bookdown.org/yihui/rmarkdown/\nYihui Xie, Christophe Dervieux, Emily Riederer. R Markdown Cookbook. 2021. Chapman & Hall/CRC. Disponível em: https://bookdown.org/yihui/rmarkdown-cookbook/\nJenny Bryan, the STAT 545 TAs, Jim Hester. Happy Git and GitHub for the useR. Disponível em: https://happygitwithr.com/\nThe Carpentries & Data Carpentry. Reproducible Research Introduction. Disponível em: https://datacarpentry.org/rr-intro/\nNational Center for Ecological Analysis and Synthesis (NCEAS). Reproducible Analysis With R. Disponível em: https://nceas.github.io/sasap-training/materials/reproducible_research_in_r_fairbanks/"
+    "text": "Em Inglês\nYihui Xie, J. J. Allaire, Garrett Grolemund. R Markdown: The Definitive Guide. 2019. Chapman & Hall/CRC. Disponível em: https://bookdown.org/yihui/rmarkdown/\nYihui Xie, Christophe Dervieux, Emily Riederer. R Markdown Cookbook. 2021. Chapman & Hall/CRC. Disponível em: https://bookdown.org/yihui/rmarkdown-cookbook/\nJenny Bryan, the STAT 545 TAs, Jim Hester. Happy Git and GitHub for the useR. Disponível em: https://happygitwithr.com/\nThe Carpentries & Data Carpentry. Reproducible Research Introduction. Disponível em: https://datacarpentry.org/rr-intro/\nNational Center for Ecological Analysis and Synthesis (NCEAS). Reproducible Analysis With R. Disponível em: https://nceas.github.io/sasap-training/materials/reproducible_research_in_r_fairbanks/"
   },
   {
     "objectID": "licenca.html",
@@ -60,7 +60,7 @@
     "href": "profs.html#monitoria-em-ordem-alfabética",
     "title": "Docentes",
     "section": "Monitoria (em ordem alfabética)",
-    "text": ""
+    "text": "Monitoria (em ordem alfabética)"
   },
   {
     "objectID": "aula1.html",
@@ -81,63 +81,63 @@
     "href": "informacoes-gerais.html#público-alvo",
     "title": "Informações gerais",
     "section": "Público Alvo",
-    "text": "Estudantes de graduação que desejam se aprofundar no conhecimento do R.\nProfissionais do mercado de trabalho que usam o R e desejam aprimorar os seus conhecimentos.\nPessoas na academia com interesse em tornar suas análises e códigos mais legíveis, reprodutíveis, eficientes e organizados."
+    "text": "Público Alvo\n\nEstudantes de graduação que desejam se aprofundar no conhecimento do R.\nProfissionais do mercado de trabalho que usam o R e desejam aprimorar os seus conhecimentos.\nPessoas na academia com interesse em tornar suas análises e códigos mais legíveis, reprodutíveis, eficientes e organizados."
   },
   {
     "objectID": "informacoes-gerais.html#pré-requisitos",
     "href": "informacoes-gerais.html#pré-requisitos",
     "title": "Informações gerais",
     "section": "Pré-requisitos",
-    "text": "É recomendado que as pessoas participantes estejam familiarizadas com o conteúdo do curso Introdução à programação em R.\nObs: O material do curso de Introdução ao R, ministrado por Nathália Demétrio, está disponível neste link, caso queira consultar."
+    "text": "Pré-requisitos\nÉ recomendado que as pessoas participantes estejam familiarizadas com o conteúdo do curso Introdução à programação em R.\nObs: O material do curso de Introdução ao R, ministrado por Nathália Demétrio, está disponível neste link, caso queira consultar."
   },
   {
     "objectID": "informacoes-gerais.html#método-avaliativo",
     "href": "informacoes-gerais.html#método-avaliativo",
     "title": "Informações gerais",
     "section": "Método avaliativo",
-    "text": "Exercícios (em classe e extraclasse)\nProjeto prático final (extraclasse)\nPara receber o certificado, é necessário ter frequência de 75%."
+    "text": "Método avaliativo\n\nExercícios (em classe e extraclasse)\nProjeto prático final (extraclasse)\nPara receber o certificado, é necessário ter frequência de 75%."
   },
   {
     "objectID": "informacoes-gerais.html#informações-gerais",
     "href": "informacoes-gerais.html#informações-gerais",
     "title": "Informações gerais",
     "section": "Informações gerais",
-    "text": "Carga horária: 15h (5 aulas de 3h)\nLocal: Online\nDatas: 2, 7, 9, 14, 16 de fevereiro de 2022 (2ª e 4ª)\nHorário: Manhã (09h-12h)\nVagas: 70"
+    "text": "Informações gerais\nCarga horária: 15h (5 aulas de 3h)\nLocal: Online\nDatas: 2, 7, 9, 14, 16 de fevereiro de 2022 (2ª e 4ª)\nHorário: Manhã (09h-12h)\nVagas: 70"
   },
   {
     "objectID": "informacoes-gerais.html#política-de-isenção-de-taxa-de-inscrição",
     "href": "informacoes-gerais.html#política-de-isenção-de-taxa-de-inscrição",
     "title": "Informações gerais",
     "section": "Política de isenção de taxa de inscrição",
-    "text": "Segue abaixo a política de Isenção que está no sistema para os cursos de verão:\n\n\nPolítica de Isenções ISENÇÃO O aluno deverá fazer sua inscrição on-line no curso que desejar e efetuar o pagamento, para assegurar sua vaga. Após dois dias úteis solicitar isenção (via Sistema Web do Verão). O sorteio das isenções, bem como, a divulgação dos contemplados ocorrerá no mês de dezembro. Aqueles que NÃO forem sorteados e desistirem de realizar o curso deverão solicitar a devolução da taxa de inscrição, na Secretaria do Programa de Verão.  No caso de ausência de interessados em alguma categoria, as vagas serão remanejadas de acordo com a procura ou será substituído por isenção para alunos indicados por docentes. A devolução da taxa, referente a isenção será feita via depósito em conta bancária."
+    "text": "Política de isenção de taxa de inscrição\nSegue abaixo a política de Isenção que está no sistema para os cursos de verão:\n\n\nPolítica de Isenções ISENÇÃO O aluno deverá fazer sua inscrição on-line no curso que desejar e efetuar o pagamento, para assegurar sua vaga. Após dois dias úteis solicitar isenção (via Sistema Web do Verão). O sorteio das isenções, bem como, a divulgação dos contemplados ocorrerá no mês de dezembro. Aqueles que NÃO forem sorteados e desistirem de realizar o curso deverão solicitar a devolução da taxa de inscrição, na Secretaria do Programa de Verão.  No caso de ausência de interessados em alguma categoria, as vagas serão remanejadas de acordo com a procura ou será substituído por isenção para alunos indicados por docentes. A devolução da taxa, referente a isenção será feita via depósito em conta bancária."
   },
   {
     "objectID": "aula2.html",
     "href": "aula2.html",
     "title": "Aula 2",
     "section": "",
-    "text": "Aula 2 (07/02/2022)\nConteúdo\n\nRMarkdown (continuação) - Slides\n\nComo textos marcados com markdown no .Rmd\nComo adicionar elementos no .Rmd, como: imagens, tabelas, gráficos, códigos e resultados.\nCriando .Rmd a partir de templates\nGerando diferentes tipos de relatórios: .html, .docx, .pdf  - Relatórios com parâmetros \nUsando e gerenciando bibliografias com arquivos .bib\n\n\nTarefas\n\nFazer as atividades do trabalho final referente à aula 2.\n\nLinks úteis (citados em aula)\n\n\n\n\n\n\n\n\nTema\nLink\n\n\n\n\nRMarkdown - Extra\nEquações: Desenhe o símbolo e descubra como escreve-lo em LaTeX."
+    "text": "Aula 2 (07/02/2022)\nConteúdo\n\nRMarkdown (continuação) - Slides\n\nComo textos marcados com markdown no .Rmd\nComo adicionar elementos no .Rmd, como: imagens, tabelas, gráficos, códigos e resultados.\nCriando .Rmd a partir de templates\n\n\nTarefas\n\nFazer as atividades do trabalho final referente à aula 2.\nExercícios dos slides: adicionar imagens e adicionar tabelas.\n\nLinks úteis (citados em aula)\n\n\n\n\n\n\n\n\nTema\nLink\n\n\n\n\nInstalações\nZotero - ferramenta para organizar referências\n\n\nDocumentação\nDocumentação da base Palmer Penguins\n\n\nExtra\nQuarto - Ferramenta similar ao RMarkdown\n\n\nExtra - mapas com R\nPacote geobr\n\n\nExtra - mapas com R\nPost - Criando mapas com os pacotes tidyverse e geobr\n\n\nExtra - Pipe\nPost sobre o pipe nativo: |>"
   },
   {
     "objectID": "index.html#mensagem-pública-mais-recente",
     "href": "index.html#mensagem-pública-mais-recente",
     "title": "Relatórios reprodutíveis com R",
     "section": "Mensagem pública mais recente",
-    "text": "29/01/2022 - Instruções para instalação Novo\n\n\n\nOlá! Logo o curso será iniciado e será importante que você instale os softwares necessários antes das aulas serem iniciadas. Confira as instruções, e caso tenha dificuldades, entre em contato.\n\nClique aqui"
+    "text": "Mensagem pública mais recente\n\n\n\n\n\n29/01/2022 - Instruções para instalação Novo\n\n\n\nOlá! Logo o curso será iniciado e será importante que você instale os softwares necessários antes das aulas serem iniciadas. Confira as instruções, e caso tenha dificuldades, entre em contato.\n\nClique aqui"
   },
   {
     "objectID": "index.html#sobre-o-curso",
     "href": "index.html#sobre-o-curso",
     "title": "Relatórios reprodutíveis com R",
     "section": "Sobre o curso",
-    "text": "No curso utilizaremos a linguagem de programação R e a interface de desenvolvimento RStudio. Primeiramente será apresentada uma introdução ao conceito de reprodutibilidade no contexto de desenvolvimento em R, e discutiremos boas práticas ao longo do curso.\nUtilizaremos o RMarkdown (https://rmarkdown.rstudio.com/), um pacote que possibilita criar relatórios reprodutíveis no R, como: listas de exercícios, relatórios, apresentações em HTML, apresentações em powerpoint, relatórios em word, relatórios interativos, entre outros.\nAprenderemos também a criar relatórios reprodutíveis utilizando relatórios parametrizados, que permitem especificar parâmetros para customizar a análise, o que é muito útil para criar relatórios que podem ser reutilizados.\nAlém disso, o conceito de controle de versão com Git será apresentado e também como podemos configurar o Git e o GitHub no RStudio para que seja possível versionar os projetos que criaremos em R. Também aprenderemos a disponibilizar o conteúdo criado no curso de forma online, através do GitHub.\n\n\n\n\n\n\nDica\n\n\n\nMais informações na página de informações gerais sobre o curso."
+    "text": "Sobre o curso\nNo curso utilizaremos a linguagem de programação R e a interface de desenvolvimento RStudio. Primeiramente será apresentada uma introdução ao conceito de reprodutibilidade no contexto de desenvolvimento em R, e discutiremos boas práticas ao longo do curso.\nUtilizaremos o RMarkdown (https://rmarkdown.rstudio.com/), um pacote que possibilita criar relatórios reprodutíveis no R, como: listas de exercícios, relatórios, apresentações em HTML, apresentações em powerpoint, relatórios em word, relatórios interativos, entre outros.\nAprenderemos também a criar relatórios reprodutíveis utilizando relatórios parametrizados, que permitem especificar parâmetros para customizar a análise, o que é muito útil para criar relatórios que podem ser reutilizados.\nAlém disso, o conceito de controle de versão com Git será apresentado e também como podemos configurar o Git e o GitHub no RStudio para que seja possível versionar os projetos que criaremos em R. Também aprenderemos a disponibilizar o conteúdo criado no curso de forma online, através do GitHub.\n\n\n\n\n\n\nDica\n\n\n\nMais informações na página de informações gerais sobre o curso."
   },
   {
     "objectID": "aula3.html",
     "href": "aula3.html",
     "title": "Aula 3",
     "section": "",
-    "text": "Aula 3 (09/02/2022)\nConteúdo\n\nGit e GitHub - Slides\n\nIntrodução ao controle de versão\nDiferença entre Git e GitHub\nComo configurar o Git e o GitHub no RStudio usando o pacote {usethis}\n\n\nTarefas\n\nCriar uma conta no GitHub (caso não tenha feito anteriormente). Adicione informações básicas no seu perfil: nome, organização, foto (opcional), etc.\nFazer a configuração do Git e GitHub no RStudio.\nFazer as atividades do trabalho final referente à aula 3.\nLer o capítulo 4 do livro Zen do R - Git e GitHub.\n\nLinks úteis (citados em aula)\n\n\n\n\nTema\nLink\n\n\n\n\nEm breve\nEm breve"
+    "text": "Aula 3 (09/02/2022)\nConteúdo\n\nRMarkdown (continuação) - Slides\n\nGerando diferentes tipos de relatórios: .html, .docx, .pdf\nRelatórios com parâmetros\nUsando e gerenciando bibliografias com arquivos .bib\n\nGit e GitHub - Slides\n\nIntrodução ao controle de versão\nDiferença entre Git e GitHub\nComo configurar o Git e o GitHub no RStudio usando o pacote {usethis}\n\n\nTarefas\n\nCriar uma conta no GitHub (caso não tenha feito anteriormente). Adicione informações básicas no seu perfil: nome, organização, foto (opcional), etc.\nFazer a configuração do Git e GitHub no RStudio.\nFazer as atividades do trabalho final referente à aula 3.\nLer o capítulo 4 do livro Zen do R - Git e GitHub.\n\nLinks úteis (citados em aula)\n\n\n\n\n\n\n\n\nTema\nLink\n\n\n\n\nRMarkdown - Extra\nEquações: Desenhe o símbolo e descubra como escreve-lo em LaTeX.\n\n\nEm breve\nEm breve"
   },
   {
     "objectID": "faq.html",
@@ -151,69 +151,69 @@
     "href": "trabalho_final.html#etapas-pré-codigo",
     "title": "Trabalho final",
     "section": "Etapas pré-codigo",
-    "text": "Pense no tipo de relatório que quer criar, qual é o objetivo do mesmo e o público-alvo. Por exemplo:\n\nUma análise de dados da pesquisa, a ser apresentada para outras pessoas pesquisadoras.\nUm tutorial com código em R.\nUma página pessoal de divulgação.\n\nEscolha uma base de dados para utilizar! Segue algumas ideias:\n\nPacote dados\nRepositório tidytuesday (em inglês)\nMais pacotes da comunidade BR: mananciais, reservatoriosBR, qualR, Outros\nAlguma que você tenha interesse!"
+    "text": "Etapas pré-codigo\n\nPense no tipo de relatório que quer criar, qual é o objetivo do mesmo e o público-alvo. Por exemplo:\n\nUma análise de dados da pesquisa, a ser apresentada para outras pessoas pesquisadoras.\nUm tutorial com código em R.\nUma página pessoal de divulgação.\n\nEscolha uma base de dados para utilizar! Segue algumas ideias:\n\nPacote dados\nRepositório tidytuesday (em inglês)\nMais pacotes da comunidade BR: mananciais, reservatoriosBR, qualR, Outros\nAlguma que você tenha interesse!"
   },
   {
     "objectID": "trabalho_final.html#aula-1",
     "href": "trabalho_final.html#aula-1",
     "title": "Trabalho final",
     "section": "Aula 1",
-    "text": "Crie um Projeto do RStudio para realizar a tarefa. Lembre-se de boas práticas para nomear o projeto: não utilize espaços, caracteres especiais, acentuação. O seu projeto deverá chamar “trabalho_relatorios_nome_sobrenome” (tudo minúsculo, separado por _). Ex: trabalho_relatorios_beatriz_milz\n\nA função usethis::create_project() será útil neste passo:\nusethis::create_project(\"caminho/trabalho_relatorios_nome_sobrenome\")\nTodos os passos seguintes serão realizados neste projeto criado.\n\nCrie a estrutura do seu projeto: uma pasta dados, onde adicionará bases de dados (se necessário), e uma pasta img para imagens (se necessário). Você pode criar manualmente, ou utilizando a função fs::dir_create():\n\nfs::dir_create(\"dados\")\nfs::dir_create(\"img\")"
+    "text": "Aula 1\n\nCrie um Projeto do RStudio para realizar a tarefa. Lembre-se de boas práticas para nomear o projeto: não utilize espaços, caracteres especiais, acentuação. O seu projeto deverá chamar “trabalho_relatorios_nome_sobrenome” (tudo minúsculo, separado por _). Ex: trabalho_relatorios_beatriz_milz\n\nA função usethis::create_project() será útil neste passo:\nusethis::create_project(\"caminho/trabalho_relatorios_nome_sobrenome\")\nTodos os passos seguintes serão realizados neste projeto criado.\n\nCrie a estrutura do seu projeto: uma pasta dados, onde adicionará bases de dados (se necessário), e uma pasta img para imagens (se necessário). Você pode criar manualmente, ou utilizando a função fs::dir_create():\n\nfs::dir_create(\"dados\")\nfs::dir_create(\"img\")"
   },
   {
     "objectID": "trabalho_final.html#aula-2",
     "href": "trabalho_final.html#aula-2",
     "title": "Trabalho final",
     "section": "Aula 2",
-    "text": "Crie o arquivo RMarkdown que será utilizado.\n\n\nFile -> New File -> R Markdown… -> From template.\n\nEscolha um template que você tenha gostado, ou que possa ser útil no futuro.\nVocê deve salvar o arquivo com o nome index.Rmd. Clique em Knit assim que o arquivo for criado, e confira se o arquivo index.html foi gerado sem erros.\n\nAgora você pode usar sua criatividade e adicionar conteúdo no relatório.\n\nIsso depende do objetivo do relatório e o público-alvo.\nPense em quais opções de chunk utilizar em cada caso: você pretende mostrar o código ou escondê-lo? Faz sentido apra o seu público alvo ler o seu código?\nAdicione pelo menos:\n\nUm parágrafo de texto, com marcações.\nUm link para uma página da internet.\nUma imagem.\nUma tabela.\nCaso saiba usar ggplot, tente adicionar um gráfico.\nCaso seja uma análise de pesquisa, tente adicionar referências usando .bib."
+    "text": "Aula 2\n\nCrie o arquivo RMarkdown que será utilizado.\n\n\nFile -> New File -> R Markdown… -> From template.\n\nEscolha um template que você tenha gostado, ou que possa ser útil no futuro.\nVocê deve salvar o arquivo com o nome index.Rmd. Clique em Knit assim que o arquivo for criado, e confira se o arquivo index.html foi gerado sem erros.\n\nAgora você pode usar sua criatividade e adicionar conteúdo no relatório.\n\nIsso depende do objetivo do relatório e o público-alvo.\nPense em quais opções de chunk utilizar em cada caso: você pretende mostrar o código ou escondê-lo? Faz sentido apra o seu público alvo ler o seu código?\nAdicione pelo menos:\n\nUm parágrafo de texto, com marcações.\nUm link para uma página da internet.\nUma imagem.\nUma tabela.\nCaso saiba usar ggplot, tente adicionar um gráfico.\nCaso seja uma análise de pesquisa, tente adicionar referências usando .bib."
   },
   {
     "objectID": "trabalho_final.html#aula-3",
     "href": "trabalho_final.html#aula-3",
     "title": "Trabalho final",
     "section": "Aula 3",
-    "text": "Inicie o versionamento com a seguinte função:\n\nusethis::use_git()\nSiga os passos até que o RStudio reinicie.\n\nCrie um repositório no GitHub que esteja vinculado à este projeto:\n\nusethis::use_github()\nSiga os passos até que uma janela do GitHub seja aberta e você possa ver o repositório criado. Guarde o link deste repositório!"
+    "text": "Aula 3\n\nInicie o versionamento com a seguinte função:\n\nusethis::use_git()\nSiga os passos até que o RStudio reinicie.\n\nCrie um repositório no GitHub que esteja vinculado à este projeto:\n\nusethis::use_github()\nSiga os passos até que uma janela do GitHub seja aberta e você possa ver o repositório criado. Guarde o link deste repositório!"
   },
   {
     "objectID": "trabalho_final.html#aula-4",
     "href": "trabalho_final.html#aula-4",
     "title": "Trabalho final",
     "section": "Aula 4",
-    "text": "No painel Git do RStudio, selecione os arquivos criados e faça um Commit. Clique no botão de Push (seta verde apontada para cima). Confira no repositório do GitHub se as suas mudanças aparecem por lá.\nAtive o GitHub Pages para disponibilizar na internet. Isso deverá ser feito no GitHub, na aba Settings, e então na opção Pages. Siga as instruções neste slide, usando a opção root/.\n\nAnote o link que é fornecido pelo GitHub. Espere alguns minutos, e então veja se algum conteúdo aparece na página.\n\nQuando estiver feliz com o resultado, lembre-se de fazer o Commit com as mudanças, e enviá-las para o GitHub clicando no botão de Push (seta verde apontada para cima).\n\nConfira no repositório do GitHub se as suas mudanças aparecem por lá. Confira na página da internet se as mudanças estão lá."
+    "text": "Aula 4\n\nNo painel Git do RStudio, selecione os arquivos criados e faça um Commit. Clique no botão de Push (seta verde apontada para cima). Confira no repositório do GitHub se as suas mudanças aparecem por lá.\nAtive o GitHub Pages para disponibilizar na internet. Isso deverá ser feito no GitHub, na aba Settings, e então na opção Pages. Siga as instruções neste slide, usando a opção root/.\n\nAnote o link que é fornecido pelo GitHub. Espere alguns minutos, e então veja se algum conteúdo aparece na página.\n\nQuando estiver feliz com o resultado, lembre-se de fazer o Commit com as mudanças, e enviá-las para o GitHub clicando no botão de Push (seta verde apontada para cima).\n\nConfira no repositório do GitHub se as suas mudanças aparecem por lá. Confira na página da internet se as mudanças estão lá."
   },
   {
     "objectID": "trabalho_final.html#aula-5",
     "href": "trabalho_final.html#aula-5",
     "title": "Trabalho final",
     "section": "Aula 5",
-    "text": "Envie o link do relatório online e também do repositório do GitHub no formulário."
+    "text": "Aula 5\n\nEnvie o link do relatório online e também do repositório do GitHub no formulário."
   },
   {
     "objectID": "programacao-do-curso.html#slides-do-curso",
     "href": "programacao-do-curso.html#slides-do-curso",
     "title": "Programação do curso",
     "section": "Slides do curso",
-    "text": ""
+    "text": "Slides do curso"
   },
   {
     "objectID": "programacao-do-curso.html#parte-1---reprodutibilidade-e-rmarkdown",
     "href": "programacao-do-curso.html#parte-1---reprodutibilidade-e-rmarkdown",
     "title": "Programação do curso",
     "section": "Parte 1 - Reprodutibilidade e RMarkdown",
-    "text": "Aula 1 (02/02/2022)\nConteúdo\n\nIntrodução ao curso - Slides\nIntrodução ao conceito de reprodutibilidade - Slides\n\nReprodutibilidade no contexto do desenvolvimento em R: Usando projetos do RStudio (.Rprojs)\n\nRMarkdown - Slides\n\nIntrodução ao pacote RMarkdown\nComo criar arquivos .Rmd\nComo textos marcados com markdown no .Rmd\n\n\n\n\nAula 2 (07/02/2022)\nConteúdo\n\nRMarkdown (continuação) - Slides\n\nComo adicionar elementos no .Rmd, como: imagens, tabelas, gráficos, códigos e resultados.\nCriando .Rmd a partir de templates\nGerando diferentes tipos de relatórios: .html, .docx, .pdf\nUsando e gerenciando bibliografias com arquivos .bib\nRelatórios com parâmetros"
+    "text": "Parte 1 - Reprodutibilidade e RMarkdown\n\nAula 1 (02/02/2022)\nConteúdo\n\nIntrodução ao curso - Slides\nIntrodução ao conceito de reprodutibilidade - Slides\n\nReprodutibilidade no contexto do desenvolvimento em R: Usando projetos do RStudio (.Rprojs)\n\nRMarkdown - Slides\n\nIntrodução ao pacote RMarkdown\nComo criar arquivos .Rmd\n\n\n\n\nAula 2 (07/02/2022)\nConteúdo\n\nRMarkdown (continuação) - Slides\n\nComo textos marcados com markdown no .Rmd\nComo adicionar elementos no .Rmd, como: imagens, tabelas, gráficos, códigos e resultados.\nCriando .Rmd a partir de templates\nGerando diferentes tipos de relatórios: .html, .docx, .pdf  - Relatórios com parâmetros \nUsando e gerenciando bibliografias com arquivos .bib"
   },
   {
     "objectID": "programacao-do-curso.html#parte-2---controle-de-versão-e-disponibilização-dos-resultados",
     "href": "programacao-do-curso.html#parte-2---controle-de-versão-e-disponibilização-dos-resultados",
     "title": "Programação do curso",
     "section": "Parte 2 - Controle de versão e disponibilização dos resultados",
-    "text": "Aula 3 (09/02/2022)\nConteúdo\n\nGit e GitHub - Slides\n\nIntrodução ao controle de versão\nDiferença entre Git e GitHub\nComo configurar o Git e o GitHub no RStudio usando o pacote {usethis}\n\n\n\n\nAula 4 (14/02/2022)\nConteúdo\n\nGit e GitHub (continuação) - Slides\n\nFluxo de trabalho em projetos no RStudio usando controle de versão com Git e GitHub\nDisponibilizar os relatórios gerados em .html na internet\n\nCom GitHub Pages"
+    "text": "Parte 2 - Controle de versão e disponibilização dos resultados\n\nAula 3 (09/02/2022)\nConteúdo\n\nRMarkdown (continuação) - Slides\n\nGerando diferentes tipos de relatórios: .html, .docx, .pdf\nRelatórios com parâmetros\nUsando e gerenciando bibliografias com arquivos .bib\n\nGit e GitHub - Slides\n\nIntrodução ao controle de versão\nDiferença entre Git e GitHub\nComo configurar o Git e o GitHub no RStudio usando o pacote {usethis}\n\n\n\n\nAula 4 (14/02/2022)\nConteúdo\n\nGit e GitHub (continuação) - Slides\n\nFluxo de trabalho em projetos no RStudio usando controle de versão com Git e GitHub\nDisponibilizar os relatórios gerados em .html na internet\n\nCom GitHub Pages"
   },
   {
     "objectID": "programacao-do-curso.html#parte-3---exemplo-prático-final",
     "href": "programacao-do-curso.html#parte-3---exemplo-prático-final",
     "title": "Programação do curso",
     "section": "Parte 3 - Exemplo prático final",
-    "text": "Aula 5 (16/02/2022)\nConteúdo\n\nExemplo prático com conceitos vistos em classe - Slides"
+    "text": "Parte 3 - Exemplo prático final\n\nAula 5 (16/02/2022)\nConteúdo\n\nExemplo prático com conceitos vistos em classe - Slides"
   }
 ]
