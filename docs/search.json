@@ -200,7 +200,7 @@
     "href": "programacao-do-curso.html#parte-1---reprodutibilidade-e-rmarkdown",
     "title": "Programação do curso",
     "section": "Parte 1 - Reprodutibilidade e RMarkdown",
-    "text": "Parte 1 - Reprodutibilidade e RMarkdown\n\nAula 1 (02/02/2022)\nConteúdo\n\nIntrodução ao curso - Slides\nIntrodução ao conceito de reprodutibilidade - Slides\n\nReprodutibilidade no contexto do desenvolvimento em R: Usando projetos do RStudio (.Rprojs)\n\nRMarkdown - Slides\n\nIntrodução ao pacote RMarkdown\nComo criar arquivos .Rmd\n\n\n\n\nAula 2 (07/02/2022)\nConteúdo\n\nRMarkdown (continuação) - Slides\n\nComo textos marcados com markdown no .Rmd\nComo adicionar elementos no .Rmd, como: imagens, tabelas, gráficos, códigos e resultados.\nCriando .Rmd a partir de templates\nGerando diferentes tipos de relatórios: .html, .docx, .pdf  - Relatórios com parâmetros \nUsando e gerenciando bibliografias com arquivos .bib"
+    "text": "Parte 1 - Reprodutibilidade e RMarkdown\n\nAula 1 (02/02/2022)\nConteúdo\n\nIntrodução ao curso - Slides\nIntrodução ao conceito de reprodutibilidade - Slides\n\nReprodutibilidade no contexto do desenvolvimento em R: Usando projetos do RStudio (.Rprojs)\n\nRMarkdown - Slides\n\nIntrodução ao pacote RMarkdown\nComo criar arquivos .Rmd\n\n\n\n\nAula 2 (07/02/2022)\nConteúdo\n\nRMarkdown (continuação) - Slides\n\nComo textos marcados com markdown no .Rmd\nComo adicionar elementos no .Rmd, como: imagens, tabelas, gráficos, códigos e resultados.\nCriando .Rmd a partir de templates"
   },
   {
     "objectID": "programacao-do-curso.html#parte-2---controle-de-versão-e-disponibilização-dos-resultados",
