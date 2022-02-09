@@ -46,14 +46,14 @@
     "href": "aula4.html",
     "title": "Aula 4",
     "section": "",
-    "text": "Aula 4 (14/02/2022)\nConteúdo\n\nGit e GitHub (continuação) - Slides\n\nFluxo de trabalho em projetos no RStudio usando controle de versão com Git e GitHub\nDisponibilizar os relatórios gerados em .html na internet\n\nCom GitHub Pages\n\n\n\nTarefas\n\nFazer as atividades do trabalho final referente à aula 4.\n\nLinks úteis (citados em aula)\n\n\n\n\nTema\nLink\n\n\n\n\nEm breve\nEm breve"
+    "text": "Aula 4 (14/02/2022)\nConteúdo\n\nGit e GitHub - Slides\n\nIntrodução ao controle de versão\nDiferença entre Git e GitHub\nComo configurar o Git e o GitHub no RStudio usando o pacote {usethis}\n\n\nTarefas\n\nCriar uma conta no GitHub (caso não tenha feito anteriormente). Adicione informações básicas no seu perfil: nome, organização, foto (opcional), etc.\nFazer a configuração do Git e GitHub no RStudio.\nLer o capítulo 4 do livro Zen do R - Git e GitHub.\nFazer as atividades do trabalho final referente à aula 4.\n\nLinks úteis (citados em aula)\n\n\n\n\nTema\nLink\n\n\n\n\nEm breve\nEm breve"
   },
   {
     "objectID": "aula5.html",
     "href": "aula5.html",
     "title": "Aula 5",
     "section": "",
-    "text": "Aula 5 (16/02/2022)\nConteúdo\n\nExemplo prático com conceitos vistos em classe - Slides\n\nTarefas\n\nEntregar o trabalho final. Enviar o link do repositório e da página gerada via formulário a ser disponibilizado.\n\nLinks úteis (citados em aula)\n\n\n\n\nTema\nLink\n\n\n\n\nEm breve\nEm breve"
+    "text": "Aula 5 (16/02/2022)\nConteúdo\n\nGit e GitHub (continuação) - Slides\n\nFluxo de trabalho em projetos no RStudio usando controle de versão com Git e GitHub\nDisponibilizar os relatórios gerados em .html na internet\n\nCom GitHub Pages\n\n\n\nTarefas\n\nEntregar o trabalho final. Enviar o link do repositório e da página gerada via formulário a ser disponibilizado.\n\nLinks úteis (citados em aula)\n\n\n\n\nTema\nLink\n\n\n\n\nEm breve\nEm breve"
   },
   {
     "objectID": "profs.html#monitoria-em-ordem-alfabética",
@@ -116,7 +116,7 @@
     "href": "aula2.html",
     "title": "Aula 2",
     "section": "",
-    "text": "Aula 2 (07/02/2022)\nConteúdo\n\nRMarkdown (continuação) - Slides\n\nComo textos marcados com markdown no .Rmd\nComo adicionar elementos no .Rmd, como: imagens, tabelas, gráficos, códigos e resultados.\nCriando .Rmd a partir de templates\n\n\nTarefas\n\nFazer as atividades do trabalho final referente à aula 2.\nExercícios dos slides: adicionar imagens e adicionar tabelas.\n\nLinks úteis (citados em aula)\n\n\n\n\n\n\n\n\nTema\nLink\n\n\n\n\nInstalações\nZotero - ferramenta para organizar referências\n\n\nDocumentação\nDocumentação da base Palmer Penguins\n\n\nExtra\nQuarto - Ferramenta similar ao RMarkdown\n\n\nExtra - mapas com R\nPacote geobr\n\n\nExtra - mapas com R\nPost - Criando mapas com os pacotes tidyverse e geobr\n\n\nExtra - Pipe\nPost sobre o pipe nativo: |>"
+    "text": "Aula 2 (07/02/2022)\nConteúdo\n\nRMarkdown (continuação) - Slides\n\nComo textos marcados com markdown no .Rmd\nComo adicionar elementos no .Rmd, como: imagens, tabelas, gráficos, códigos e resultados.\nCriando .Rmd a partir de templates\n\n\nTarefas\n\nFazer as atividades do trabalho final referente à aula 2.\nExercícios dos slides: adicionar imagens e adicionar tabelas.\n\nLinks úteis (citados em aula)\n\n\n\n\n\n\n\n\nTema\nLink\n\n\n\n\nInstalações\nZotero - ferramenta para organizar referências\n\n\nDocumentação\nDocumentação da base Palmer Penguins\n\n\nExtra\nQuarto - Ferramenta similar ao RMarkdown\n\n\nExtra - mapas com R\nPacote geobr\n\n\nExtra - mapas com R\nPost - Criando mapas com os pacotes tidyverse e geobr\n\n\nExtra - Pipe\nPost sobre o pipe nativo: |>\n\n\nDúvidas\nklippy: adicionar um botão de copiar o código em todos os campos de código"
   },
   {
     "objectID": "index.html#mensagem-pública-mais-recente",
@@ -137,7 +137,7 @@
     "href": "aula3.html",
     "title": "Aula 3",
     "section": "",
-    "text": "Aula 3 (09/02/2022)\nConteúdo\n\nRMarkdown (continuação) - Slides\n\nGerando diferentes tipos de relatórios: .html, .docx, .pdf\nRelatórios com parâmetros\nUsando e gerenciando bibliografias com arquivos .bib\n\nGit e GitHub - Slides\n\nIntrodução ao controle de versão\nDiferença entre Git e GitHub\nComo configurar o Git e o GitHub no RStudio usando o pacote {usethis}\n\n\nTarefas\n\nCriar uma conta no GitHub (caso não tenha feito anteriormente). Adicione informações básicas no seu perfil: nome, organização, foto (opcional), etc.\nFazer a configuração do Git e GitHub no RStudio.\nFazer as atividades do trabalho final referente à aula 3.\nLer o capítulo 4 do livro Zen do R - Git e GitHub.\n\nLinks úteis (citados em aula)\n\n\n\n\n\n\n\n\nTema\nLink\n\n\n\n\nRMarkdown - Extra\nEquações: Desenhe o símbolo e descubra como escreve-lo em LaTeX.\n\n\nEm breve\nEm breve"
+    "text": "Aula 3 (09/02/2022)\nConteúdo\n\nRMarkdown (continuação) - Slides\n\nGerando diferentes tipos de relatórios: .html, .docx, .pdf\nRelatórios com parâmetros\nUsando e gerenciando bibliografias com arquivos .bib\n\n\nTarefas\n\nFazer as atividades do trabalho final referente à aula 3.\n\nLinks úteis (citados em aula)\n\n\n\n\n\n\n\n\nTema\nLink\n\n\n\n\nRMarkdown - Extra\nEquações: Desenhe o símbolo e descubra como escreve-lo em LaTeX.\n\n\nTabelas\nPacote kableExtra: deixar as tabelas com kable() mais bonitas\n\n\nTabelas\nCheat sheet do pacote flextable (tabelas para o word)\n\n\nTabelas\nLivro do pacote flextable (tabelas para o word)\n\n\nWord\nCriando um relatório personalizado no Word através do R Markdown\n\n\nDicas\nDicas para relatórios: gráficos, tabelas, e dicas gerais\n\n\nDicas\nDicas para desvendar erros\n\n\nLaTeX\nInstalação do LaTeX\n\n\nLaTeX\nGuia sobre o LaTex\n\n\nTemplates\nPacote Pagedown para gerar PDFs sem LaTeX\n\n\nTemplates\nPacote thesisdown - template para tese com LaTeX\n\n\nTemplates\nPacote prettydoc - templates bonitinhos para RMarkdown\n\n\nDúvidas\nPacote styler - para indentar o código\n\n\nParâmetros\nCapítulo de livro sobre Relatórios com parâmetros\n\n\nLaTeX\nEquações com LaTeX\n\n\nReferências\nBetter bibtex for Zotero\n\n\nReferências\nZotero - gerenciador de referências"
   },
   {
     "objectID": "faq.html",
@@ -200,20 +200,20 @@
     "href": "programacao-do-curso.html#parte-1---reprodutibilidade-e-rmarkdown",
     "title": "Programação do curso",
     "section": "Parte 1 - Reprodutibilidade e RMarkdown",
-    "text": "Parte 1 - Reprodutibilidade e RMarkdown\n\nAula 1 (02/02/2022)\nConteúdo\n\nIntrodução ao curso - Slides\nIntrodução ao conceito de reprodutibilidade - Slides\n\nReprodutibilidade no contexto do desenvolvimento em R: Usando projetos do RStudio (.Rprojs)\n\nRMarkdown - Slides\n\nIntrodução ao pacote RMarkdown\nComo criar arquivos .Rmd\n\n\n\n\nAula 2 (07/02/2022)\nConteúdo\n\nRMarkdown (continuação) - Slides\n\nComo textos marcados com markdown no .Rmd\nComo adicionar elementos no .Rmd, como: imagens, tabelas, gráficos, códigos e resultados.\nCriando .Rmd a partir de templates"
+    "text": "Parte 1 - Reprodutibilidade e RMarkdown\n\nAula 1 (02/02/2022)\nConteúdo\n\nIntrodução ao curso - Slides\nIntrodução ao conceito de reprodutibilidade - Slides\n\nReprodutibilidade no contexto do desenvolvimento em R: Usando projetos do RStudio (.Rprojs)\n\nRMarkdown - Slides\n\nIntrodução ao pacote RMarkdown\nComo criar arquivos .Rmd\n\n\n\n\nAula 2 (07/02/2022)\nConteúdo\n\nRMarkdown (continuação) - Slides\n\nComo textos marcados com markdown no .Rmd\nComo adicionar elementos no .Rmd, como: imagens, tabelas, gráficos, códigos e resultados.\nCriando .Rmd a partir de templates\n\n\n\n\nAula 3 (09/02/2022)\nConteúdo\n\nRMarkdown (continuação) - Slides\n\nGerando diferentes tipos de relatórios: .html, .docx, .pdf\nRelatórios com parâmetros\nUsando e gerenciando bibliografias com arquivos .bib"
   },
   {
     "objectID": "programacao-do-curso.html#parte-2---controle-de-versão-e-disponibilização-dos-resultados",
     "href": "programacao-do-curso.html#parte-2---controle-de-versão-e-disponibilização-dos-resultados",
     "title": "Programação do curso",
     "section": "Parte 2 - Controle de versão e disponibilização dos resultados",
-    "text": "Parte 2 - Controle de versão e disponibilização dos resultados\n\nAula 3 (09/02/2022)\nConteúdo\n\nRMarkdown (continuação) - Slides\n\nGerando diferentes tipos de relatórios: .html, .docx, .pdf\nRelatórios com parâmetros\nUsando e gerenciando bibliografias com arquivos .bib\n\nGit e GitHub - Slides\n\nIntrodução ao controle de versão\nDiferença entre Git e GitHub\nComo configurar o Git e o GitHub no RStudio usando o pacote {usethis}\n\n\n\n\nAula 4 (14/02/2022)\nConteúdo\n\nGit e GitHub (continuação) - Slides\n\nFluxo de trabalho em projetos no RStudio usando controle de versão com Git e GitHub\nDisponibilizar os relatórios gerados em .html na internet\n\nCom GitHub Pages"
+    "text": "Parte 2 - Controle de versão e disponibilização dos resultados\n\nAula 4 (14/02/2022)\nConteúdo\n\nGit e GitHub - Slides\n\nIntrodução ao controle de versão\nDiferença entre Git e GitHub\nComo configurar o Git e o GitHub no RStudio usando o pacote {usethis}\n\n\n\n\nAula 5 (16/02/2022)\nConteúdo\n\nGit e GitHub (continuação) - Slides\n\nFluxo de trabalho em projetos no RStudio usando controle de versão com Git e GitHub\nDisponibilizar os relatórios gerados em .html na internet\n\nCom GitHub Pages"
   },
   {
     "objectID": "programacao-do-curso.html#parte-3---exemplo-prático-final",
     "href": "programacao-do-curso.html#parte-3---exemplo-prático-final",
     "title": "Programação do curso",
     "section": "Parte 3 - Exemplo prático final",
-    "text": "Parte 3 - Exemplo prático final\n\nAula 5 (16/02/2022)\nConteúdo\n\nExemplo prático com conceitos vistos em classe - Slides"
+    "text": "Parte 3 - Exemplo prático final\n\nAula NA (NA)\nConteúdo\nNA\nConteúdo"
   }
 ]
