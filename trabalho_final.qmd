@@ -55,8 +55,8 @@ fs::dir_create("img")
 ```
 
 
-## Aula 2
-
+## Aulas 2
+ 
 
 3) Crie o arquivo RMarkdown que será utilizado. 
 
@@ -67,7 +67,7 @@ Escolha um template que você tenha gostado, ou que possa ser útil no futuro.
 
 Você deve salvar o arquivo com o nome `index.Rmd`. Clique em `Knit` assim que o arquivo for criado, e confira se o arquivo `index.html` foi gerado sem erros.
 
-
+## Aula 3
 
 4) Agora você pode usar sua criatividade e adicionar conteúdo no relatório. 
 
@@ -91,7 +91,7 @@ Adicione pelo menos:
   
 
 
-## Aula 3
+## Aula 4
 
 5) Inicie o versionamento com a seguinte função:
 
@@ -113,7 +113,7 @@ Siga os passos até que uma janela do GitHub seja aberta e você possa ver o rep
 
 
 
-## Aula 4
+## Aula 5
 
 7) No painel Git do RStudio, selecione os arquivos criados e faça um **Commit**. Clique no botão de **Push** (seta verde apontada para cima). Confira no repositório do GitHub se as suas mudanças aparecem por lá.
 
@@ -130,6 +130,6 @@ Anote o link que é fornecido pelo GitHub. Espere alguns minutos, e então veja 
 Confira no repositório do GitHub se as suas mudanças aparecem por lá. Confira na página da internet se as mudanças estão lá.
 
 
-## Aula 5
+## Pós curso
 
 10) Envie o link do relatório online e também do repositório do GitHub no formulário.
