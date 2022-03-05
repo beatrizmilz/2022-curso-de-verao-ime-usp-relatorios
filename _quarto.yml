@@ -46,6 +46,7 @@ site:
       contents:
         - programacao-do-curso.qmd
         - instrucoes-de-instalacao.qmd
+        - parte-pratica.qmd
         - section: "Aulas"
           contents:
            - aula1.qmd

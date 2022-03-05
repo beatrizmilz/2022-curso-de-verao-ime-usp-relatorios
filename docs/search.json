@@ -35,6 +35,27 @@
     "text": "Em Inglês\nYihui Xie, J. J. Allaire, Garrett Grolemund. R Markdown: The Definitive Guide. 2019. Chapman & Hall/CRC. Disponível em: https://bookdown.org/yihui/rmarkdown/\nYihui Xie, Christophe Dervieux, Emily Riederer. R Markdown Cookbook. 2021. Chapman & Hall/CRC. Disponível em: https://bookdown.org/yihui/rmarkdown-cookbook/\nJenny Bryan, the STAT 545 TAs, Jim Hester. Happy Git and GitHub for the useR. Disponível em: https://happygitwithr.com/\nThe Carpentries & Data Carpentry. Reproducible Research Introduction. Disponível em: https://datacarpentry.org/rr-intro/\nNational Center for Ecological Analysis and Synthesis (NCEAS). Reproducible Analysis With R. Disponível em: https://nceas.github.io/sasap-training/materials/reproducible_research_in_r_fairbanks/"
   },
   {
+    "objectID": "parte-pratica.html#arquivos-.rmd",
+    "href": "parte-pratica.html#arquivos-.rmd",
+    "title": "Códigos escritos durante a aula",
+    "section": "Arquivos .Rmd",
+    "text": "Arquivos .Rmd\n\n\n\nArquivo\nUrl\n\n\n\n\naula-3-exemplo-params.Rmd\nhttps://github.com/beatrizmilz/parte-pratica-curso-de-verao-relatorios/blob/main/aula-3-exemplo-params.Rmd\n\n\naula2-index.Rmd\nhttps://github.com/beatrizmilz/parte-pratica-curso-de-verao-relatorios/blob/main/aula2-index.Rmd\n\n\naula2-pinguins.Rmd\nhttps://github.com/beatrizmilz/parte-pratica-curso-de-verao-relatorios/blob/main/aula2-pinguins.Rmd\n\n\naula5-results-as-is.Rmd\nhttps://github.com/beatrizmilz/parte-pratica-curso-de-verao-relatorios/blob/main/aula5-results-as-is.Rmd\n\n\nduvida-lucas.Rmd\nhttps://github.com/beatrizmilz/parte-pratica-curso-de-verao-relatorios/blob/main/duvida-lucas.Rmd\n\n\nexemplo-tex.Rmd\nhttps://github.com/beatrizmilz/parte-pratica-curso-de-verao-relatorios/blob/main/exemplo-tex.Rmd\n\n\nindex.Rmd\nhttps://github.com/beatrizmilz/parte-pratica-curso-de-verao-relatorios/blob/main/index.Rmd"
+  },
+  {
+    "objectID": "parte-pratica.html#arquivos-.html",
+    "href": "parte-pratica.html#arquivos-.html",
+    "title": "Códigos escritos durante a aula",
+    "section": "Arquivos .html",
+    "text": "Arquivos .html\n\n\n\nArquivo\nUrl\n\n\n\n\naula-3-exemplo-params.html\nhttps://beatrizmilz.github.io/parte-pratica-curso-de-verao-relatorios/aula-3-exemplo-params.html\n\n\naula2-index.html\nhttps://beatrizmilz.github.io/parte-pratica-curso-de-verao-relatorios/aula2-index.html\n\n\naula2-pinguins.html\nhttps://beatrizmilz.github.io/parte-pratica-curso-de-verao-relatorios/aula2-pinguins.html\n\n\naula5-results-as-is.html\nhttps://beatrizmilz.github.io/parte-pratica-curso-de-verao-relatorios/aula5-results-as-is.html\n\n\nduvida-lucas.html\nhttps://beatrizmilz.github.io/parte-pratica-curso-de-verao-relatorios/duvida-lucas.html\n\n\nindex.html\nhttps://beatrizmilz.github.io/parte-pratica-curso-de-verao-relatorios/index.html\n\n\nrelatorio_pinguins_2007.html\nhttps://beatrizmilz.github.io/parte-pratica-curso-de-verao-relatorios/relatorio_pinguins_2007.html\n\n\nrelatorio_pinguins_2008.html\nhttps://beatrizmilz.github.io/parte-pratica-curso-de-verao-relatorios/relatorio_pinguins_2008.html\n\n\nrelatorio_pinguins_2009.html\nhttps://beatrizmilz.github.io/parte-pratica-curso-de-verao-relatorios/relatorio_pinguins_2009.html"
+  },
+  {
+    "objectID": "parte-pratica.html#arquivos-.r",
+    "href": "parte-pratica.html#arquivos-.r",
+    "title": "Códigos escritos durante a aula",
+    "section": "Arquivos .R",
+    "text": "Arquivos .R\n\n\n\nArquivo\nUrl\n\n\n\n\naula_3_purrr_pinguins.R\nhttps://github.com/beatrizmilz/parte-pratica-curso-de-verao-relatorios/blob/main/aula_3_purrr_pinguins.R\n\n\naula-1-exemplo-importacao.R\nhttps://github.com/beatrizmilz/parte-pratica-curso-de-verao-relatorios/blob/main/aula-1-exemplo-importacao.R\n\n\naula4-configurando_github.R\nhttps://github.com/beatrizmilz/parte-pratica-curso-de-verao-relatorios/blob/main/aula4-configurando_github.R\n\n\nexemplo-create-from-github.R\nhttps://github.com/beatrizmilz/parte-pratica-curso-de-verao-relatorios/blob/main/exemplo-create-from-github.R"
+  },
+  {
     "objectID": "licenca.html",
     "href": "licenca.html",
     "title": "Licença de uso",
@@ -74,7 +95,7 @@
     "href": "mensagens.html",
     "title": "Mural de mensagens",
     "section": "",
-    "text": "[[1]]\n\n\n29/01/2022 - Instruções para instalação Novo\n\n\n\nOlá! Logo o curso será iniciado e será importante que você instale os softwares necessários antes das aulas serem iniciadas. Confira as instruções, e caso tenha dificuldades, entre em contato.\n\nClique aqui"
+    "text": "29/01/2022 - Instruções para instalação\n\n\n\nOlá! Logo o curso será iniciado e será importante que você instale os softwares necessários antes das aulas serem iniciadas. Confira as instruções, e caso tenha dificuldades, entre em contato.\n\nClique aqui\n\n\n\n\n05/03/2022 - Trabalhos finais disponíveis Novo\n\n\n\nOlá! O curso terminou e os trabalhos finais entregues já estão disponíveis! Agradecemos todas as pessoas que participaram. Até 2023!\n\nClique aqui"
   },
   {
     "objectID": "informacoes-gerais.html#público-alvo",
@@ -123,7 +144,7 @@
     "href": "index.html#mensagem-pública-mais-recente",
     "title": "Relatórios reprodutíveis com R",
     "section": "Mensagem pública mais recente",
-    "text": "Mensagem pública mais recente\n\n\n\n\n\n29/01/2022 - Instruções para instalação Novo\n\n\n\nOlá! Logo o curso será iniciado e será importante que você instale os softwares necessários antes das aulas serem iniciadas. Confira as instruções, e caso tenha dificuldades, entre em contato.\n\nClique aqui"
+    "text": "Mensagem pública mais recente\n\n\n\n\n\n05/03/2022 - Trabalhos finais disponíveis\n\n\n\nOlá! O curso terminou e os trabalhos finais entregues já estão disponíveis! Agradecemos todas as pessoas que participaram. Até 2023!\n\nClique aqui"
   },
   {
     "objectID": "index.html#sobre-o-curso",
@@ -145,6 +166,13 @@
     "title": "Perguntas Frequentes (FAQ)",
     "section": "",
     "text": "O curso será online ou presencial?\n\n\nO curso será oferecido de forma online.\n\n\nApenas alunos da USP podem participar do curso?\n\n\nAs inscrições serão abertas para todas as pessoas interessadas.\n\n\nComo posso me inscrever?\n\n\nA inscrição será realizada através do IME-USP. Acompanhe as informações na página do Programa de Verão do IME-USP: https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php\n\n\nO curso é gratuito?\n\n\nNão, o curso é pago. Acompanhe as informações na página do Programa de Verão do IME-USP: https://www.ime.usp.br/verao/index.php/turmas/apresentacao.php\n\n\nAs aulas serão gravadas?\n\n\nAs aulas poderão ser gravadas mediante ao acordo com as pessoas participantes da turma."
+  },
+  {
+    "objectID": "trabalho_final.html#pessoas-que-entregaram-os-trabalhos-finais",
+    "href": "trabalho_final.html#pessoas-que-entregaram-os-trabalhos-finais",
+    "title": "Trabalho final",
+    "section": "Pessoas que entregaram os trabalhos finais",
+    "text": "Pessoas que entregaram os trabalhos finais"
   },
   {
     "objectID": "trabalho_final.html#etapas-pré-codigo",

@@ -7,7 +7,50 @@ title: "Trabalho final"
 
 **RECOMENDAÇÃO**: Faça as etapas sugeridas após cada aula.
 
-**Atividade:**
+
+## Pessoas que entregaram os trabalhos finais
+
+```{r}
+#| message: FALSE
+#| echo: FALSE
+url <- "https://docs.google.com/spreadsheets/d/1nqrxNLDIGYzY1Ps6iRCA-HZiB5ZI7WUXKkBXPyJp1Kc/edit#gid=758033737"
+googlesheets4::gs4_auth(email = "milz.bea@gmail.com")
+sheet <- googlesheets4::read_sheet(url, "trabalho-divulgar")
+
+
+sheet |>
+  dplyr::mutate(icon_github = dplyr::case_when(
+    !is.na(github) ~ glue::glue(
+      '<center><a href="{github}" target="_blank"><i class="fab fa-github"></i></a></center>'
+    ),
+    TRUE ~ ""
+  ),
+  url = dplyr::case_when(
+    !is.na(url) ~ glue::glue(
+      '<center><a href="{url}" target="_blank"><i class="fa fa-book"></i></a></center>'
+    ),
+    TRUE ~ ""
+  ),
+  repo_spec = stringr::str_remove(repo, "https://github.com/"),
+   repo = dplyr::case_when(
+    !is.na(repo) ~ glue::glue(
+      '<a href="{repo}" target="_blank">{repo_spec}</a>'
+    ),
+    TRUE ~ ""
+  )
+  
+  ) |> 
+  dplyr::select(nome, icon_github, repo, url) |> 
+    reactable::reactable(searchable = TRUE, columns = list(
+        icon_github = reactable::colDef(html = TRUE, name = "GitHub", maxWidth = 100),
+        nome = reactable::colDef(html = TRUE, name = "Nome"),
+        url = reactable::colDef(html = TRUE, name = "Trabalho", maxWidth = 150),
+        repo = reactable::colDef(html = TRUE, name = "Repositório")),
+        defaultPageSize = 20
+    )
+```
+
+
 
 ## Etapas pré-codigo
 
@@ -133,3 +176,11 @@ Confira no repositório do GitHub se as suas mudanças aparecem por lá. Confira
 ## Pós curso
 
 10) Envie o link do relatório online e também do repositório do GitHub no formulário.
+
+
+ 
+<!-- inicio font awesome -->
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
+
+<!-- final font awesome -->
+

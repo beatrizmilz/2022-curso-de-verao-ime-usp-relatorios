@@ -18,11 +18,12 @@ sheet_mensagens |>
   dplyr::mutate(
     data = lubridate::as_date(data),
     badge = dplyr::case_when(
-      novo == TRUE ~ "<span class='badge bg-success'>Novo</span>",
+      novo == "VERDADEIRO" ~ "<span class='badge bg-success'>Novo</span>",
       TRUE ~ ""
     )
   ) |> 
-  dplyr::group_split(texto) |>
+  #dplyr::arrange(desc(data)) |> 
+  dplyr::group_split(titulo) |>
   purrr::map(
     ~ criar_mensagem_mural(
       titulo = .x$titulo[1],
@@ -30,8 +31,10 @@ sheet_mensagens |>
       link = .x$link[1],
       data = .x$data[1],
       badge = .x$badge[1]
-    )
-  ) 
+    ) 
+  ) |> 
+  unlist() |> 
+  cat()
 
 
 ```
