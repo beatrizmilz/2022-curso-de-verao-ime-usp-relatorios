@@ -27,9 +27,9 @@ Obs: O material do curso de Introdução ao R, ministrado por Nathália Demétri
 
 - Exercícios (em classe e extraclasse)
 
-- Projeto prático final (extraclasse)
+- Trabalho prático final (extraclasse)
 
-- Para receber o certificado, é necessário ter frequência de 75%.
+- Para receber o certificado, é necessário ter frequência de 75% e aprovação no trabalho final.
 
 
 ## Informações gerais
